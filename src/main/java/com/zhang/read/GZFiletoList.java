@@ -37,7 +37,7 @@ public class GZFiletoList {
 
     /*@Test
     public void fun() {
-        String path = "C:\\Users\\octopus\\Desktop\\log\\athena-2019-04-18-09-1.log.gz";
+        String path = ";
         List<String> list = getGzFileToList(path);
         // System.out.println(list.size());
     }*/
