@@ -22,7 +22,7 @@ public class download {
 
     /**
     *@Description:从远程下载文件到本地
-    *@Param:  remoteUrl远程url;localdir本地存放的地址
+    *@Param:  remoteUrl远程url; localdir本地存放的地址
     *@return: 没有返回值
     *@Author: zhangyu
     */

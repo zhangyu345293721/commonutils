@@ -2,7 +2,6 @@ package com.zhang.read;
 
 import org.apache.commons.io.Charsets;
 import org.apache.commons.io.IOUtils;
-
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.List;
