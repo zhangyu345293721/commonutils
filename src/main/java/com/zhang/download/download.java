@@ -28,6 +28,7 @@ public class download {
     */
     public void getFileFromRemote(String remoteUrl, String localDir) {
         try {
+
             URL url = new URL(remoteUrl);
             byte[] data = IOUtils.toByteArray(url);
             FileUtils.writeByteArrayToFile(new File(localDir), data);
