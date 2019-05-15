@@ -22,13 +22,13 @@ public class download {
 
     /**
     *@Description:从远程下载文件到本地
-    *@Param:  remoteUrl远程url; localdir本地存放的地址
+    *@Param:  remoteUrl: 远程url; localdir: 本地存放的地址
     *@return: 没有返回值
     *@Author: zhangyu
     */
+
     public void getFileFromRemote(String remoteUrl, String localDir) {
         try {
-
             URL url = new URL(remoteUrl);
             byte[] data = IOUtils.toByteArray(url);
             FileUtils.writeByteArrayToFile(new File(localDir), data);
