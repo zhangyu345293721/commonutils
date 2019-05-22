@@ -15,8 +15,8 @@ import java.io.FileReader;
 public class WriteJson {
     @Test
     public void entityToJson() throws Exception {
-        Person user = new Person("zhangyu", "male", 19);
-        String text = JSON.toJSONString(user);
+        Person person = new Person("zhangyu", "male", 19);
+        String text = JSON.toJSONString(person);
         System.out.println(text);
     }
 }
