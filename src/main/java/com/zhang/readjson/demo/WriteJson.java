@@ -19,26 +19,4 @@ public class WriteJson {
         String text = JSON.toJSONString(user);
         System.out.println(text);
     }
-
-    /**
-     * @Description: 文件读出成为字符串的形式
-     * @Param: 无参数
-     * @return: 返回值为String类型
-     * @Author: zhangyu
-     */
-    public String fileRead() throws Exception {
-        File file = new File("C:\\Users\\octopus\\Desktop\\person.json");
-        FileReader reader = new FileReader(file);
-        BufferedReader bReader = new BufferedReader(reader);
-        StringBuilder sb = new StringBuilder();
-        String s = "";
-        while ((s = bReader.readLine()) != null) {//逐行读取文件内容，不读取换行符和末尾的空格
-            sb.append(s);
-            // System.out.println(s);
-        }
-        bReader.close();
-        String str = sb.toString();
-        // System.out.println(str );
-        return str;
-    }
 }
