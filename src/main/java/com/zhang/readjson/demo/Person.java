@@ -16,6 +16,7 @@ public class Person {
         this.sex = sex;
         this.age = age;
     }
+    public Person(){}
 
 
     public String getName() {
