@@ -28,6 +28,7 @@ public class ConnectDatabase {
     //驱动名称
     private static String jdbcName = "com.mysql.jdbc.Driver";
 
+    // 测试类
     @Test
     public void fun() {
         String robotMapString = getRobotMapFromDatabase();
@@ -80,10 +81,9 @@ public class ConnectDatabase {
         List<StationData> stationDataList = new ArrayList();
         //SAXReader reader = new SAXReader();
         try {
-            //Document document = //(Document) reader.read(new File(mapPath));
             Document document = org.dom4j.DocumentHelper.parseText(mapPath);
             Element mapRoot = document.getRootElement();
-            Element stationsElement = (Element) mapRoot.element("stations");
+            Element stationsElement = mapRoot.element("stations");
             List<Element> stationElementList = stationsElement.elements("station");
             for (Element stationElement : stationElementList) {
                 StationData stationData = new StationData();
@@ -103,5 +103,4 @@ public class ConnectDatabase {
         }
         return stationDataList;
     }
-
 }
