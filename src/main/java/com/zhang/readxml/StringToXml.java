@@ -3,8 +3,6 @@ package com.zhang.readxml;
 import org.dom4j.Document;
 import org.junit.jupiter.api.Test;
 
-import java.util.Calendar;
-
 /**
  * @program: utilsdemo
  * @description: 将字符串转成xml格式
