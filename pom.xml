@@ -57,6 +57,16 @@
       <artifactId>mysql-connector-java</artifactId>
       <version>5.0.7</version>
     </dependency>
+      <dependency>
+          <groupId>io.github.oliviercailloux</groupId>
+          <artifactId>google-or-tools</artifactId>
+          <version>6.7.2</version>
+      </dependency>
+    <dependency>
+      <groupId>io.github.oliviercailloux</groupId>
+      <artifactId>google-or-tools</artifactId>
+      <version>6.7.2</version>
+    </dependency>
 
 
   </dependencies>
