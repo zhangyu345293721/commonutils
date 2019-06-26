@@ -23,9 +23,10 @@ public class TestMapDemo {
         List<Person> list = new ArrayList();
         list.add(new Person(1, "zhangsan"));
         list.add(new Person(2, "lisi"));
+        list.add(new Person(3, "lisi"));
         list.add(new Person(3, "wangwu"));
         list.add(new Person(4, null));
-        // jdk8将链表变成map的方法
+        // jdk8 将链表变成map的方法
         /* Map<String, Person> personMap = list.stream().filter(e -> (e.getName() != null)).collect(Collectors.toMap(Person::getName, e -> e));
         System.out.println(personMap);
         System.out.println(personMap.get(null));
@@ -36,9 +37,13 @@ public class TestMapDemo {
         // System.out.println(map);
         List<Person> newList = list.stream().filter(e -> (e.getName() != null)).collect(Collectors.toList());
         System.out.println(newList);*/
-
-        Map<String ,List<Person>> map= list.stream().filter(e -> (e.getName() != null)).collect(Collectors.groupingBy(Person::getName));
-
+        Map<String, List<Person>> map = list.stream().filter(e -> (e.getName() != null)).collect(Collectors.groupingBy(Person::getName));
+        for (String name : map.keySet()) {
+            // System.out.println(map.get(name).get(0).getName());
+            for (Person person : map.get(name)) {
+                System.out.println(person.getName() + "---" + person.getId());
+            }
+        }
     }
 }
 
