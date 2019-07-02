@@ -3,7 +3,7 @@ import com.alibaba.fastjson.JSONObject;
 import org.junit.jupiter.api.Test;
 
 /**
- * @program: utilsdemo
+ * @program: utildemos
  * @description: 测试fastjson
  * @author: zhangyu
  * @create: 2019-06-18 11:19
