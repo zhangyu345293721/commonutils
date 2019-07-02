@@ -170,10 +170,12 @@ public class StreamTest {
                 new User("lisi", 24),
                 new User("lisi", 24),
                 new User("wangwu", 18),
-                new User("tangtuo", 26)
+                new User("tangtuo", 26),
+                new User("null", 26)
         );
-        User user = list.stream().findFirst().get();
-        System.out.println(user);
+        List<User> users = list.stream().filter(e -> (e.getName() != "null")).collect(Collectors.toList());
+        //System.out.println(user);
+        users.stream().forEach(e -> System.out.println(e.getName()));
     }
 
     @Test
@@ -201,5 +203,20 @@ public class StreamTest {
         // numList.stream().sorted().collect(Collectors.toList());
         Map<Integer, Long> map = numList.stream().collect(Collectors.groupingBy(e -> e, Collectors.counting()));
         System.out.println(map);
+    }
+
+    @Test
+    public void StreamListFun2() {
+        List<User> users = new ArrayList<>(Arrays.asList(new User("zhangsan", 23),
+                new User("lisi", 24),
+                // new User("lisi", 24),
+                new User("wangwu", 18),
+                new User("tangtuo", 26)
+        ));
+        // numList.stream().sorted().collect(Collectors.toList());
+        Map<String, Integer> map = users.stream().collect(Collectors.toMap(e -> e.getName(), e -> e.getAge()));
+        for (String key : map.keySet()) {
+            System.out.println(key + ":" + map.get(key));
+        }
     }
 }
