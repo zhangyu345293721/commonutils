@@ -8,6 +8,7 @@ package com.zhang.collectordemo;
  */
 
 import org.junit.jupiter.api.Test;
+import org.omg.CORBA.INTERNAL;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,12 +38,10 @@ public class TestMapDemo {
         // System.out.println(map);
         List<Person> newList = list.stream().filter(e -> (e.getName() != null)).collect(Collectors.toList());
         System.out.println(newList);*/
-        Map<String, List<Person>> map = list.stream().filter(e -> (e.getName() != null)).collect(Collectors.groupingBy(Person::getName));
+        Map<String, Long> map = list.stream().filter(e -> (e.getName() != null)).collect(Collectors.groupingBy(Person::getName,Collectors.counting()));
         for (String name : map.keySet()) {
             // System.out.println(map.get(name).get(0).getName());
-            for (Person person : map.get(name)) {
-                System.out.println(person.getName() + "---" + person.getId());
-            }
+            System.out.println(name + map.get(name));
         }
     }
 }

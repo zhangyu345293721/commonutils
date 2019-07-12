@@ -11,7 +11,7 @@ import java.util.List;
  * @author: zhangyu
  * @create: 2019-04-30 18:28
  */
-public class WiteListToFile {
+public class ListToFile {
     /**
      * @Description: 将list里面数据写入到文件
      * @Param: String filePath 文件要保存的路径 List<String > infoList 保存信息的list

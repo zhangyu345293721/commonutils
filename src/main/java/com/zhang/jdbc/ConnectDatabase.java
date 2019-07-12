@@ -63,9 +63,7 @@ public class ConnectDatabase {
 
             System.out.println("获取数据库连接成功！");
         } catch (SQLException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
-            System.out.println("获取数据库连接失败！");
         } finally {
             try {
                 con.close();
