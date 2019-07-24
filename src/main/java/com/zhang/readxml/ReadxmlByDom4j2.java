@@ -21,9 +21,9 @@ import java.util.List;
  * 用DOM方式读取xml文件 测试解析xml中的内容
  *
  * @author zhangyu
+ * @Date 2019.7.17
  */
-public class ReadxmlByDom4j {
-
+public class ReadxmlByDom4j2 {
     @Test
     public void fun() {
         List<Book> bookList = getBookList("books.xml");

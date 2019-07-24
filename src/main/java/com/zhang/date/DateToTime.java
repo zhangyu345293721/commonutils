@@ -16,8 +16,8 @@ public class DateToTime {
     @Test
     public void fun() {
         Calendar calendar = Calendar.getInstance();
-        //这里需要注意一下,calendar传入的月份,是从0开始计数的(也就是说,2月相当于实际的三月)
-        calendar.set(2019, 6, 10, 10, 0, 0);
+        //需要注意一下,calendar传入的月份,是从0开始计数的(也就是说,2月相当于实际的三月)
+        calendar.set(2019, 6, 1, 1, 0, 0);
         long time = calendar.getTimeInMillis();
         System.out.println(time);
         long shortTime = getWholeHourTimeMillis(time);

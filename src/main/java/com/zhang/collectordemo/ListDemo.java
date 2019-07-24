@@ -25,19 +25,10 @@ public class ListDemo {
         list.add(3);
         list.add(3);
         // jdk8 将链表变成map的方法
-        /* Map<String, Person> personMap = list.stream().filter(e -> (e.getName() != null)).collect(Collectors.toMap(Person::getName, e -> e));
-        System.out.println(personMap);
-        System.out.println(personMap.get(null));
-        // 从map中添加数据
-        // System.out.println(personMap.get(2).getName());
-        // Map<Integer, String> map = list.stream().collect(Collectors.toMap(Person::getId, Person::getName));
-        // map.put(4, "zhangyu");
-        // System.out.println(map);
-        List<Person> newList = list.stream().filter(e -> (e.getName() != null)).collect(Collectors.toList());
-        System.out.println(newList);*/
-        Map<Integer, Long> map = list.stream().collect(Collectors.groupingBy(Integer::intValue, Collectors.counting()));
+        Map<Integer, Double> map = list.stream().collect(Collectors.groupingBy(Integer::intValue, Collectors.averagingInt(Integer::intValue)));
         // System.out.println(map.get(name).get(0).getName());
-        map.keySet().stream().mapToLong(name -> name + map.get(name)).forEach(System.out::println);
+        //map.keySet().stream().mapToLong(name -> name + map.get(name)).forEach(System.out::println);
+        System.out.println(map);
     }
 
     @Test
@@ -49,10 +40,24 @@ public class ListDemo {
         list.add(new Person(3, "wangwu"));
         list.add(new Person(4, null));
 
-        Map<String, Double> map = list.stream().filter(e -> (e.getName() != null)).collect(Collectors.groupingBy(Person::getName, Collectors.averagingInt(Person::getId)));
+        Map<String, Double> map = list.stream().filter(e -> e.getName() != null).collect(Collectors.groupingBy(Person::getName, Collectors.averagingInt(Person::getId)));
         for (String name : map.keySet()) {
-            // System.out.println(map.get(name).get(0).getName());
             System.out.println(name + ":" + map.get(name));
+        }
+    }
+
+    @Test
+    public void fun3() {
+        List<Person> list = new ArrayList();
+        list.add(new Person(1, "zhangsan"));
+        list.add(new Person(2, "lisi"));
+        list.add(new Person(4, "lisi"));
+        list.add(new Person(5, "wangwu"));
+        list.add(new Person(6, null));
+
+        Map<Integer, Person> map = list.stream().collect(Collectors.toMap(Person::getId, e -> e));
+        for (Integer id : map.keySet()) {
+            System.out.println(id + ":" + map.get(id).toString());
         }
     }
 }

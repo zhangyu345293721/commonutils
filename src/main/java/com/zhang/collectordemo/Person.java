@@ -27,11 +27,11 @@ public class Person {
         this.name = name;
     }
 
-   /* @Override
+    @Override
     public String toString() {
         return "Person{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 '}';
-    }*/
+    }
 }
