@@ -42,7 +42,7 @@ public class GetShelfScore {
             // 现在创建 matcher 对象
             Matcher m = r.matcher(line);
             if (m.find()) {
-                //System.out.println(m.group(1) + ":" + m.group(2));
+                // System.out.println(m.group(1) + ":" + m.group(2));
                 String shelfScore = m.group(1) + "," + m.group(2);
                 shelfSocres.add(shelfScore);
             }

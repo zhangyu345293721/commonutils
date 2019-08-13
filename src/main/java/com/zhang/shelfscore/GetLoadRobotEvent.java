@@ -38,7 +38,7 @@ public class GetLoadRobotEvent {
             // 现在创建 matcher 对象
             Matcher m = r.matcher(line);
             if (m.find()) {
-                //System.out.println(m.group(1) + ":" + m.group(2));
+                // System.out.println(m.group(1) + ":" + m.group(2));
                 String shelfCode = m.group(4);
                 System.out.println(shelfCode);
                 shelfSocres.add(shelfCode);

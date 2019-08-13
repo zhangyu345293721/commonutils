@@ -48,7 +48,7 @@ public class CountShelfNumber {
         for (String shelfCode : result.keySet()) {
             int sum = 0;
             for (String s : list) {
-                //System.out.println(s);
+                // System.out.println(s);
                 String s1 = s.split(",")[0];
                 // System.out.println(s1);
                 if (shelfCode.equals(s1)) {
