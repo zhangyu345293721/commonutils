@@ -29,8 +29,6 @@ public class GetLoadRobotEvent {
     public List<String> getShelfScore() {
         List<String> shelfSocres = new ArrayList<>();
         List<String> list = ReadFileToLine.getFileToList("d:/software/athena-2019-07-08-09-1.log");
-        // list.stream().forEach(e -> System.out.println(e));
-        // String pattern = ".*\"shelfCode\":\"(\\S\\d+)\".*\"shelfScore\":(\\d+).*";
         String shelfLoadRegex = "^(.*)\\sINFO.*show shelf occupied cells.*robotId:(\\d*),\\staskId:(\\d*).*shelfCode:(.*),\\soccupiedCells.*loc=\\((.*),(.*)\\),.*$";
         Pattern r = Pattern.compile(shelfLoadRegex);
         // 创建 Pattern 对象
@@ -38,7 +36,6 @@ public class GetLoadRobotEvent {
             // 现在创建 matcher 对象
             Matcher m = r.matcher(line);
             if (m.find()) {
-                // System.out.println(m.group(1) + ":" + m.group(2));
                 String shelfCode = m.group(4);
                 System.out.println(shelfCode);
                 shelfSocres.add(shelfCode);

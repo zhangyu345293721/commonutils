@@ -77,7 +77,7 @@ public class ConnectDatabase2 {
 
     public static List<StationData> getStationDataList(String mapPath) {
         List<StationData> stationDataList = new ArrayList();
-        //SAXReader reader = new SAXReader();
+        // SAXReader reader = new SAXReader();
         try {
             Document document = org.dom4j.DocumentHelper.parseText(mapPath);
             Element mapRoot = document.getRootElement();
@@ -93,7 +93,6 @@ public class ConnectDatabase2 {
                 stationData.setX(Integer.valueOf(locationX));
                 stationData.setY(Integer.valueOf(locationY));
                 stationDataList.add(stationData);
-
             }
         } catch (Exception e) {
             // TODO Auto-generated catch block
