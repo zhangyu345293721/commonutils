@@ -6,6 +6,7 @@
         <year>2014</year>  
         <price>89</price>  
     </book> 
+    
     <book id="2">
         <name>安徒生童话</name>  
         <author>安徒生</author>  
