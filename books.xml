@@ -6,13 +6,15 @@
         <author>乔治马丁</author>  
         <year>2014</year>  
         <price>89</price>  
-    </book>  
+    </book> 
+    
     <book id="2">
         <name>安徒生童话</name>  
         <author>安徒生</author>  
         <year>2004</year>  
         <price>77</price>  
-    </book>  
+    </book> 
+    
     <book id="3">
         <name>think think think</name>  
         <author>aaa</author>  
