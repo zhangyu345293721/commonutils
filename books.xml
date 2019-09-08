@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <bookstore>
     <book id="1">
         <name> 冰与火之歌</name>  
@@ -13,7 +12,6 @@
         <year>2004</year>  
         <price>77</price>  
     </book> 
-    
     <book id="3">
         <name>think think think</name>  
         <author>aaa</author>  
