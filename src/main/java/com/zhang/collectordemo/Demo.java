@@ -25,4 +25,10 @@ public class Demo {
         int a = 2;
         System.out.println(a > 1 ? "a>1" : "a<=1");
     }
+
+    @Test
+    public void fun3() {
+        int a = 2;
+        System.out.println(a > 1 ? "a>1" : "a<=1");
+    }
 }
