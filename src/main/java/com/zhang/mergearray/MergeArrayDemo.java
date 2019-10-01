@@ -1,11 +1,15 @@
-package com.zhang.mergearray;
+package com.zhang.MergeArray;
 
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
+import java.util.Collections;
 
 /**
+ * @program: utilsdemo
+ * @description: 测试合并数组
  * @author: zhangyu
+ * @create: 2019-07-20 00:26
  */
 public class MergeArrayDemo {
     @Test

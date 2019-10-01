@@ -22,11 +22,12 @@ public class GreedyAlgo2 {
                 {2, 1, 2, 0, 5},
                 {2, 1, 4, 9, 0}
         };
+        double[] row = {3, 5, 10, 3, 8};
+
         // 保存已经遍历过的行
         Set<Integer> set = new HashSet<>();
         double totalDistance = 0;
         int index = -1;
-        double[] row = {3, 5, 10, 3, 8};
         for (int i = 0; i < arr.length; i++) {
             Pair<Double, Integer> nextPair = getNextPoint(set, row);
             // 获取已经遍历过的行
@@ -50,7 +51,7 @@ public class GreedyAlgo2 {
             }
         }
         // 输出按照行的顺序
-        System.out.println(minIndex);
+        // System.out.println(minIndex);
         return new Pair<>(min, minIndex);
     }
 }

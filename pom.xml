@@ -66,6 +66,11 @@
             <artifactId>jedis</artifactId>
             <version>2.9.0</version>
         </dependency>
+        <dependency>
+            <groupId>org.raistlic.lib</groupId>
+            <artifactId>commons-core</artifactId>
+            <version>1.4</version>
+        </dependency>
     </dependencies>
 
     <build>
