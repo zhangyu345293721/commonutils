@@ -1,0 +1,5 @@
+
+^squid:S2259K"BA "NullPointerException" could be thrown; "date" is nullable here.(¦‘¿Íüÿÿÿÿ
+?squid:S1148I"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+Ssquid:UselessImportCheck"/Remove this unused import 'java.util.Calendar'.(ÿÛö´
+?squid:S1148&"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ

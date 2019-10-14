@@ -1,0 +1,4 @@
+
+Wsquid:UselessImportCheck".Remove this unused import 'java.util.HashMap'.(™˜”€ùÿÿÿÿ
+Ksquid:S2864;"4Iterate over the "entrySet" instead of the "keySet".(ÿ×òÀ
+Ksquid:S2864,"4Iterate over the "entrySet" instead of the "keySet".(„Þ´¥

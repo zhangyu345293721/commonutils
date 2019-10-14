@@ -1,0 +1,4 @@
+
+Qsquid:S1118":Add a private constructor to hide the implicit public one.(è–ÅÙ
+Fsquid:S2093"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ
+?squid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ

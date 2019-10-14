@@ -1,0 +1,7 @@
+
+_squid:S2095"CUse try-with-resources or close this "Jedis" in a "finally" clause.(¨÷ëğüÿÿÿÿ
+Rsquid:S28645"4Iterate over the "entrySet" instead of the "keySet".(üØ£½8˜Ú×ÒÛ-
+Tsquid:S1854C"7Remove this useless assignment to local variable "map".(¢¿8ÁÛ¸ÒÛ-
+Esquid:S1481C"(Remove this unused "map" local variable.(¢¿8ÁÛ¸ÒÛ-
+Csquid:S1905C"&Remove this unnecessary cast to "Map".(¢¿8ó‚¸ÒÛ-
+fsquid:S2095<"CUse try-with-resources or close this "Jedis" in a "finally" clause.(¨÷ëğüÿÿÿÿ8í¬ÎÊÛ-

@@ -1,0 +1,5 @@
+
+Vsquid:S1118":Add a private constructor to hide the implicit public one.(î˜¾¿ûÿÿÿÿ
+?squid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+Bsquid:S1481"+Remove this unused "sizeOf" local variable.(ëÊë‰
+Qsquid:S1854":Remove this useless assignment to local variable "sizeOf".(ëÊë‰

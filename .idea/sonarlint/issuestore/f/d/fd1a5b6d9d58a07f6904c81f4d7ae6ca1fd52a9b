@@ -1,0 +1,7 @@
+
+Lsquid:S14811")Remove this unused "path" local variable.(ĞÇº½úÿÿÿÿ8¸¸¯ÂË-
+Vsquid:S1197 "8Move the array designator from the variable to the type.(ñü¹ë8ÓéÁÃË-
+dsquid:S10751"ARefactor your code to get this URI from a customizable parameter.(ĞÇº½úÿÿÿÿ8¬áŠÂË-
+[squid:S18541"8Remove this useless assignment to local variable "path".(ĞÇº½úÿÿÿÿ8¸¸¯ÂË-
+dsquid:S1075G"ARefactor your code to get this URI from a customizable parameter.(¢ª¤›ûÿÿÿÿ8¥¼´ÂË-
+Qsquid:S2864>"4Iterate over the "entrySet" instead of the "keySet".(ı€†[8¸áëšÉ-

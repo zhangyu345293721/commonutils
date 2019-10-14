@@ -1,0 +1,6 @@
+
+~squid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ë…†½úÿÿÿÿ8½´úÖ-
+bsquid:UselessImportCheck"2Remove this unused import 'java.util.Collections'.(¢³ïÓşÿÿÿÿ8½´úÖ-
+´squid:S1598"This file "MergeArrayDemo.java" should be located in "com\zhang\MergeArray" directory, not in "D:\utilsdemo\src\main\java\com\zhang\mergearray".(ë…†½úÿÿÿÿ8½´úÖ-
+Osquid:S2589"8Remove this expression which always evaluates to "false"(€Øî¤
+Tsquid:S2589"8Remove this expression which always evaluates to "false"(ßºáˆûÿÿÿÿ

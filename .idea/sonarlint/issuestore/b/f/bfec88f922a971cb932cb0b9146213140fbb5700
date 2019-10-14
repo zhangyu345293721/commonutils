@@ -1,0 +1,16 @@
+
+Nsquid:S1135b"2Complete the task associated to this TODO comment.(ÕÌ®şÿÿÿÿ
+rsquid:S2068"V'Password' detected in this expression, review this potentially hard-coded credential.(«±õÊúÿÿÿÿ
+^squid:S20957"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(ª÷ÅÖ
+csquid:S20956"GUse try-with-resources or close this "Statement" in a "finally" clause.(íñéşÿÿÿÿ
+^squid:S1854 "BRemove this useless assignment to local variable "robotMapString".(®ö‘éúÿÿÿÿ
+]squid:S2259E"AA "NullPointerException" could be thrown; "con" is nullable here.(éÆ“šûÿÿÿÿ
+Nsquid:S1135@"2Complete the task associated to this TODO comment.(ÕÌ®şÿÿÿÿ
+?squid:S1148A"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+7squid:S20685" Remove this hard-coded password.(ıåê˜
+Nsquid:S1135,"2Complete the task associated to this TODO comment.(ÕÌ®şÿÿÿÿ
+Nsquid:S1135G"2Complete the task associated to this TODO comment.(ÕÌ®şÿÿÿÿ
+Osquid:S1481 "3Remove this unused "robotMapString" local variable.(®ö‘éúÿÿÿÿ
+?squid:S1148H"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+?squid:S1148c"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+?squid:S1148-"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ

@@ -1,0 +1,14 @@
+
+{squid:S1488c"]Immediately return this expression instead of assigning it to the temporary variable "time2".(ö³×ğ8Üò§şÈ-
+jsquid:S2095G"GUse try-with-resources or close this "Statement" in a "finally" clause.(íñéşÿÿÿÿ8Á«ùûÈ-
+dsquid:S2259R"AA "NullPointerException" could be thrown; "con" is nullable here.(éÆ“šûÿÿÿÿ8Üò§şÈ-
+Jsquid:S1612-",Replace this lambda with a method reference.(©ºªÂ8á¼ÔÿÈ-
+Fsquid:S1148f"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Üò§şÈ-
+rsquid:S2068"V'Password' detected in this expression, review this potentially hard-coded credential.(«±õÊúÿÿÿÿ
+>squid:S2068F" Remove this hard-coded password.(ıåê˜8Üò§şÈ-
+esquid:S2095H"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(ª÷ÅÖ8Üò§şÈ-
+Fsquid:S1148>"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Üò§şÈ-
+Fsquid:S1148T"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Üò§şÈ-
+psquid:S2077H"RUse a variable binding mechanism to construct this query instead of concatenation.(ª÷ÅÖ8Üò§şÈ-
+Fsquid:S1148N"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Üò§şÈ-
+Wsquid:S2864("4Iterate over the "entrySet" instead of the "keySet".(àêŠ©şÿÿÿÿ8‡›ªşÈ-
