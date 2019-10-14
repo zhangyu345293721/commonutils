@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
- * List测试demo
+ * 测试把list中的一个对象移到最后面
  *
  * @author: zhangyu
  */

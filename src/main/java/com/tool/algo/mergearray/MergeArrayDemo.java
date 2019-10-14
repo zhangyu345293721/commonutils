@@ -1,4 +1,4 @@
-package com.tool.array.mergearray;
+package com.tool.algo.mergearray;
 
 import org.junit.jupiter.api.Test;
 

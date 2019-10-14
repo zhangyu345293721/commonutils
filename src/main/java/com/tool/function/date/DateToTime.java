@@ -37,6 +37,33 @@ public class DateToTime {
         return -1;
     }
 
-    // todo:将毫秒值边上date
-    // todo：将date变成毫秒值
+    /**
+     * 把时间转成毫秒值    2019-09-27 15:18:48:310
+     *
+     * @param date 时间参数
+     * @return 返回长整型13位毫秒数
+     */
+    public static long getLongTime(String date) {
+        long time = -1;
+        try {
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS");
+            time = simpleDateFormat.parse(date).getTime();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return time;
+    }
+
+    /**
+     * 将毫秒值转成日期时间    2019-09-27 15:18:48:310
+     *
+     * @param time 时间参数
+     * @return 返回长整型13位毫秒数
+     */
+    public static String getDateTime(long time) {
+        Date d = new Date(time);
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss:SSS");
+        return String.valueOf(sdf.format(d));
+    }
+
 }

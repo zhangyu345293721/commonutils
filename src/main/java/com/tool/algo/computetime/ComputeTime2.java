@@ -1,11 +1,11 @@
 package com.tool.algo.computetime;
 
 import com.tool.bean.Use;
+import com.tool.function.date.DateToTime;
 import com.tool.readfile.files.ListToFile;
 import com.tool.readfile.files.ReadFileToLine;
 import org.junit.jupiter.api.Test;
 
-import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -45,7 +45,7 @@ public class ComputeTime2 {
                     long time1 = use1.getTime();
                     long time2 = use2.getTime();
                     if (time2 - time1 > 1000) {
-                        System.out.println(getDateTime(use1.getTime()) + "," + use1.getThread() + "===" + getDateTime(use2.getTime()) + "," + use2.getThread());
+                        System.out.println(DateToTime.getDateTime(use1.getTime()) + "," + use1.getThread() + "===" + DateToTime.getDateTime(use2.getTime()) + "," + use2.getThread());
                         System.out.println(time2 - time1);
                     }
                     if (time2 - time1 <= 1000) {
@@ -83,36 +83,6 @@ public class ComputeTime2 {
             newList.add(use);
         }
         return newList;
-    }
-
-
-    /**
-     * 把时间转成毫秒值    2019-09-27 15:18:48:310
-     *
-     * @param date 时间参数
-     * @return 返回长整型13位毫秒数
-     */
-    public long getLongTime(String date) {
-        long time = -1;
-        try {
-            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS");
-            time = simpleDateFormat.parse(date).getTime();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return time;
-    }
-
-    /**
-     * 将毫秒值转成日期时间    2019-09-27 15:18:48:310
-     *
-     * @param date 时间参数
-     * @return 返回长整型13位毫秒数
-     */
-    public String getDateTime(long time) {
-        Date d = new Date(time);
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss:SSS");
-        return String.valueOf(sdf.format(d));
     }
 
 
@@ -155,8 +125,8 @@ public class ComputeTime2 {
             if (line.contains("BinPacking Solution start")) {
                 int index2 = line.indexOf("INFO");
                 endTime = line.substring(0, index2).trim();
-                long longTime1 = getLongTime(startTime);
-                long longTime2 = getLongTime(endTime);
+                long longTime1 = DateToTime.getLongTime(startTime);
+                long longTime2 = DateToTime.getLongTime(endTime);
                 Long gapTime = longTime2 - longTime1;
                 if (flag == 0) {
                     if (gapTime > 0 && gapTime < 1000) {

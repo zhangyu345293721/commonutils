@@ -1,4 +1,4 @@
-package com.tool.regex;
+package com.tool.function;
 
 import org.junit.jupiter.api.Test;
 
@@ -13,7 +13,7 @@ import java.util.regex.Pattern;
  * @author: zhangyu
  * @create: 2019-08-19 15:21
  */
-public class Demo {
+public class ReverseString {
 
     @Test
     public void fun() {
