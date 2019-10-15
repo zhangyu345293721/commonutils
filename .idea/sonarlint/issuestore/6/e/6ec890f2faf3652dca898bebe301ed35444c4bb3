@@ -1,14 +1,0 @@
-
-?squid:S1148/"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
-Nsquid:S1135c"2Complete the task associated to this TODO comment.(ÕÌ®şÿÿÿÿ
-Msquid:UselessImportCheck")Remove this unused import 'java.io.File'.(†Ğ¥Å
-Nsquid:S1135."2Complete the task associated to this TODO comment.(ÕÌ®şÿÿÿÿ
-]squid:S2259E"AA "NullPointerException" could be thrown; "con" is nullable here.(éÆ“šûÿÿÿÿ
-^squid:S20959"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(ª÷ÅÖ
-csquid:S20958"GUse try-with-resources or close this "Statement" in a "finally" clause.(íñéşÿÿÿÿ
-?squid:S1148H"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
-?squid:S1148d"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
-Nsquid:S1135G"2Complete the task associated to this TODO comment.(ÕÌ®şÿÿÿÿ
-rsquid:S2068"V'Password' detected in this expression, review this potentially hard-coded credential.(îŞã“ıÿÿÿÿ
-7squid:S20687" Remove this hard-coded password.(ıåê˜
-?squid:S1148B"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ

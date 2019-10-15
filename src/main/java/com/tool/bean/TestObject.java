@@ -1,19 +1,20 @@
-package com.tool.function.jdk8demo;
+package com.tool.bean;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * @author: zhangyu
  */
-
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 public class TestObject {
-    // "Ron", "M", 10, "ron.zheng@tfschange.com", false),
     private String name;
     private String sex;
-    private Integer age;
-    private String mail;
-    private Boolean flag;
+    private int age;
+    private String email;
+    private boolean isLeader;
+
 }

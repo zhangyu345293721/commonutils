@@ -1,4 +1,4 @@
-package com.tool.function.jdk8demo;
+package com.tool;
 
 import org.junit.jupiter.api.Test;
 

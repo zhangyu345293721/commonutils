@@ -1,12 +1,0 @@
-
-’squid:S1319"oThe type of the "tour" object should be an interface such as "List" rather than the implementation "ArrayList".(áõÙüÿÿÿÿ8Óã¿µÖ-
-:squid:S1643}"Use a StringBuilder instead.(„Ğ¢é8Óã¿µÖ-
-|squid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÿà™ˆÿÿÿÿÿ8Óã¿µÖ-
-{squid:S4144V"]Update this method so that its implementation is not identical to "getCitiesList" on line 36.(¤¥ïü8Óã¿µÖ-
-Usquid:S1135"2Complete the task associated to this TODO comment.(ƒŠ® úÿÿÿÿ8Óã¿µÖ-
-Lsquid:S21407")Use "java.util.Random.nextInt()" instead.(Ş£ƒŠşÿÿÿÿ8Óã¿µÖ-
-Jsquid:S1905G"'Remove this unnecessary cast to "City".(—€Ô‚ÿÿÿÿÿ8 ßáÖ-
-|squid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÿà™ˆÿÿÿÿÿ8Óã¿µÖ-
-Lsquid:S21409")Use "java.util.Random.nextInt()" instead.(ù§„†øÿÿÿÿ8Óã¿µÖ-
-“squid:S1319$"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(¥Ï“ıùÿÿÿÿ8Óã¿µÖ-
-squid:S1319V"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(¤¥ïü8Óã¿µÖ-

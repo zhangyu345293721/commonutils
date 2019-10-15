@@ -1,4 +1,4 @@
-package com.tool.function;
+package com.tool.algo.arrangementselect;
 
 import org.junit.jupiter.api.Test;
 
@@ -10,8 +10,6 @@ import java.util.regex.Pattern;
 /**
  * @program: utilsdemo
  * @description: 按照要求反转字符串
- * @author: zhangyu
- * @create: 2019-08-19 15:21
  */
 public class ReverseString {
 

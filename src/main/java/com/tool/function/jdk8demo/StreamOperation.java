@@ -30,7 +30,7 @@ public class StreamOperation {
     // 测试filter
     @Test
     public void fun1() {
-        List<TestObject> arrList = list.stream().filter(TestObject::isLeader).collect(Collectors.toList());
+        List<TestObject> arrList = list.stream().filter(TestObject::getFlag).collect(Collectors.toList());
         arrList.stream().forEach((e -> System.out.println(e.getName())));
     }
 
@@ -94,7 +94,7 @@ public class StreamOperation {
     @Test
     public void fun9() {
         list.stream()
-                .filter(u -> u.isLeader())
+                .filter(u -> u.getFlag())
                 .findFirst()
                 .ifPresent(u -> System.out.println(u.getName()));
     }

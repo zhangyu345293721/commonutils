@@ -1,7 +1,0 @@
-
-Hsquid:S1481'"*Remove this unused "flag1" local variable.(çåú×8¥ÎæÈ-
-Wsquid:S1854'"9Remove this useless assignment to local variable "flag1".(çåú×8¥ÎæÈ-
-Msquid:S1481*"*Remove this unused "flag2" local variable.(®ª¶»ûÿÿÿÿ8õ’æÈ-
-\squid:S1854*"9Remove this useless assignment to local variable "flag2".(®ª¶»ûÿÿÿÿ8õ’æÈ-
-jsquid:S1223"LRename this method to prevent any misunderstanding or make it a constructor.(œéê8ˆ©ÓÈ-
-msquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œéê8ˆ©ÓÈ-

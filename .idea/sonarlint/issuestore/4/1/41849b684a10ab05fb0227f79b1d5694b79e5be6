@@ -1,8 +1,0 @@
-
-Isquid:S1168"+Return an empty collection instead of null.(¥¹ï8Ç­şÇÖ-
-qsquid:S00101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(À³Úøûÿÿÿÿ8Ç­şÇÖ-
-wsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(œœÕ¼8Ç­şÇÖ-
-squid:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(í”Æ»8Ç­şÇÖ-
-msquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(í”Æ»8Ç­şÇÖ-
-Rsquid:S2209;"5Change this instance-reference to a static reference.(ëÀı8É»†ÈÖ-
-msquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(şáş¸8Ç­şÇÖ-

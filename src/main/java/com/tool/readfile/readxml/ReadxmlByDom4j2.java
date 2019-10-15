@@ -8,6 +8,7 @@ package com.tool.readfile.readxml;
  */
 
 
+import com.tool.bean.Book;
 import org.dom4j.Document;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;

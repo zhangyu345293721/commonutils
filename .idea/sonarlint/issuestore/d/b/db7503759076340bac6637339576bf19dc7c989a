@@ -1,5 +1,0 @@
-
-ysquid:S4276+"[Refactor this code to use the more specialised Functional Interface 'UnaryOperator<String>'(Àì Ñ8úÚ‹Š×-
-Zsquid:S1854+"<Remove this useless assignment to local variable "function".(Àì Ñ8úÚ‹Š×-
-csquid:S1192"FDefine a constant instead of duplicating this literal " Bob!" 3 times.(ÄÏv8œøò‰×-
-Ksquid:S1481+"-Remove this unused "function" local variable.(Àì Ñ8úÚ‹Š×-

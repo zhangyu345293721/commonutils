@@ -1,4 +1,4 @@
-package com.tool.readfile.readxml;
+package com.tool.bean;
 
 /**
  * @program: playback

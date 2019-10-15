@@ -1,7 +1,5 @@
 package com.tool.function.md5;
 
-import org.junit.jupiter.api.Test;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.math.BigInteger;
@@ -13,11 +11,6 @@ import java.security.MessageDigest;
  * @author: zhangyu
  */
 public class ComputeMd5 {
-    @Test
-    public void fun() {
-        String s = getFileMD5Value("D:\\software\\f.txt");
-        System.out.println(s.length());
-    }
 
     /**
      * 通过传入文件，得到文件的地址

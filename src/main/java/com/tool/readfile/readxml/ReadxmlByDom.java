@@ -7,6 +7,7 @@ package com.tool.readfile.readxml;
  * @create: 2019-05-20 15:12
  */
 
+import com.tool.bean.Book;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.NodeList;
