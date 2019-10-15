@@ -1,10 +1,8 @@
 package com.tool.function.collector.testsort.collector.collectordemo;
 
 /**
- * @program: utilsdemo
- * @description: 测试map
+ * 测试map
  * @author: zhangyu
- * @create: 2019-06-18 14:08
  */
 
 import com.tool.bean.Person;

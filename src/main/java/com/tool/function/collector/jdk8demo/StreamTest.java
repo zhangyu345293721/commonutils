@@ -6,10 +6,8 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 /**
- * @program: utilsdemo
- * @description: 测试jdk8的新特性
+ * 测试jdk8的新特性
  * @author: zhangyu
- * @create: 2019-05-28 15:00
  */
 public class StreamTest {
     // 将小写字母变成大写字母

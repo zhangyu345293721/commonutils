@@ -1,7 +1,6 @@
 package com.tool.algo.shelfscore;
 
-import com.tool.readfile.files.ListToFile;
-import com.tool.readfile.files.ReadFileToLine;
+import com.tool.base.file.FileUtils;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -21,14 +20,14 @@ public class GetLoadRobotEvent {
     @Test
     public void fun() {
         List<String> list = getShelfScore();
-        ListToFile.listToFile("robot_event.txt", list);
+        FileUtils.listToFile("robot_event.txt", list);
         Map<String, Long> map = list.stream().collect(Collectors.groupingBy(e -> e, Collectors.counting()));
         System.out.println("map的长度:" + map.size());
     }
 
     public List<String> getShelfScore() {
         List<String> shelfSocres = new ArrayList<>();
-        List<String> list = ReadFileToLine.getFileToList("d:/software/athena-2019-07-08-09-1.log");
+        List<String> list = FileUtils.getFileToList("d:/software/athena-2019-07-08-09-1.log");
         String shelfLoadRegex = "^(.*)\\sINFO.*show shelf occupied cells.*robotId:(\\d*),\\staskId:(\\d*).*shelfCode:(.*),\\soccupiedCells.*loc=\\((.*),(.*)\\),.*$";
         Pattern r = Pattern.compile(shelfLoadRegex);
         // 创建 Pattern 对象

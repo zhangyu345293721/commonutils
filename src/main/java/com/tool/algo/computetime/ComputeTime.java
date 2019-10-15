@@ -1,7 +1,6 @@
 package com.tool.algo.computetime;
 
-import com.tool.readfile.files.GZFiletoList;
-import com.tool.readfile.files.ListToFile;
+import com.tool.base.file.FileUtils;
 import org.junit.jupiter.api.Test;
 
 import java.text.SimpleDateFormat;
@@ -20,7 +19,7 @@ public class ComputeTime {
     public void fun() {
         String[] fileNames = {"beetle-2019-09-27-15-1.log.gz", "beetle-2019-09-27-15-2.log.gz", "beetle-2019-09-27-16-1.log.gz", "beetle-2019-09-27-16-2.log.gz"};
         String path = "C:\\Users\\octopus\\Desktop\\beetle929\\" + fileNames[0];
-        List<String> list = GZFiletoList.getGzFileToList(path);
+        List<String> list = FileUtils.getGzFileToList(path);
 
         // 生成时间的链表
         List<Integer> timeList = getTimeList(list);
@@ -136,6 +135,6 @@ public class ComputeTime {
         for (int key : map.keySet()) {
             line.add(key + "," + map.get(key));
         }
-        ListToFile.listToFile(mapName, line);
+        FileUtils.listToFile(mapName, line);
     }
 }

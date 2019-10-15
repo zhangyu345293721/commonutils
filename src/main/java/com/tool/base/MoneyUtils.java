@@ -5,60 +5,58 @@ import java.math.RoundingMode;
 
 /**
  * 金钱处理工具类
- * 
  */
 public class MoneyUtils {
-	
-	/**
-	 * 汉语中数字大写
-	 */
-	 private static final String[] CN_UPPER_NUMBER = {"零","壹","贰","叁","肆","伍","陆","柒","捌","玖" };
-	 
-	 /**
-	  * 汉语中货币单位大写
-	  */
-	 private static final String[] CN_UPPER_MONETRAY_UNIT = { "分", "角", "元","拾", "佰", "仟", "万", "拾", 
-		 													  "佰", "仟", "亿", "拾", "佰", "仟", "兆", "拾",
-		 													  "佰", "仟" };
-	 /**
-	  * 特殊字符：整
-	  */
-	 private static final String CN_FULL = "";
-	 
-	 /**
-	  * 特殊字符：负
-	  */
-	 private static final String CN_NEGATIVE = "负";
-	 /**
-	  * 零元整
-	  */
-	 private static final String CN_ZEOR_FULL = "零元整";
-	 
-	 /**
-	  * 金额的精度，默认值为2
-	  */
-	 private static final int MONEY_PRECISION = 2;
-	 
-	 /**
-	  * 人民币转换为大写,格式为：x万x千x百x十x元x角x分
-	  *
-	  * @param numberOfMoney 传入的金额
-	  * @return
-	  */
-	 public static String number2CNMontray(String numberOfMoney) {
-		 return number2CNMontray(new BigDecimal(numberOfMoney));
-	 }
-	 
 
-	/**
-	 * 人民币转换为大写,格式为：x万x千x百x十x元x角x分
-	 *
-	 * @param numberOfMoney
-	 * 					传入的金额
-	 * @return
-	 */
-	public static String number2CNMontray(BigDecimal numberOfMoney) {
-		StringBuffer sb = new StringBuffer();
+    /**
+     * 汉语中数字大写
+     */
+    private static final String[] CN_UPPER_NUMBER = {"零", "壹", "贰", "叁", "肆", "伍", "陆", "柒", "捌", "玖"};
+
+    /**
+     * 汉语中货币单位大写
+     */
+    private static final String[] CN_UPPER_MONETRAY_UNIT = {"分", "角", "元", "拾", "佰", "仟", "万", "拾",
+            "佰", "仟", "亿", "拾", "佰", "仟", "兆", "拾",
+            "佰", "仟"};
+    /**
+     * 特殊字符：整
+     */
+    private static final String CN_FULL = "";
+
+    /**
+     * 特殊字符：负
+     */
+    private static final String CN_NEGATIVE = "负";
+    /**
+     * 零元整
+     */
+    private static final String CN_ZEOR_FULL = "零元整";
+
+    /**
+     * 金额的精度，默认值为2
+     */
+    private static final int MONEY_PRECISION = 2;
+
+    /**
+     * 人民币转换为大写,格式为：x万x千x百x十x元x角x分
+     *
+     * @param numberOfMoney 传入的金额
+     * @return
+     */
+    public static String number2CNMontray(String numberOfMoney) {
+        return number2CNMontray(new BigDecimal(numberOfMoney));
+    }
+
+
+    /**
+     * 人民币转换为大写,格式为：x万x千x百x十x元x角x分
+     *
+     * @param numberOfMoney 传入的金额
+     * @return
+     */
+    public static String number2CNMontray(BigDecimal numberOfMoney) {
+        StringBuffer sb = new StringBuffer();
         int signum = numberOfMoney.signum();
         // 零元整的情况
         if (signum == 0) {
@@ -127,155 +125,143 @@ public class MoneyUtils {
             sb.append(CN_FULL);
         }
         return sb.toString();
-	}
-	
-	/**
-	 * 将人民币转换为会计格式金额(xxxx,xxxx,xxxx.xx),保留两位小数
-	 *
-	 * @param money
-	 * 				待转换的金额
-	 * @return
-	 */
-	public static String accountantMoney(BigDecimal money){
-		return accountantMoney(money, 2, 1);
-	}
-	
-	/**
-	 * 格式化金额，显示为xxx万元，xxx百万,xxx亿
-	 *
-	 * @param money 
-	 * 				待处理的金额
-	 * @param scale  
-	 * 				小数点后保留的位数
-	 * @param divisor 
-	 * 				格式化值（10:十元、100:百元,1000千元，10000万元......）
-	 * @return
-	 */
-	public static String getFormatMoney(BigDecimal money,int scale,double divisor){
-		return formatMoney(money, scale, divisor) + getCellFormat(divisor);
-	}
-	
-	/**
-	 * 获取会计格式的人民币(格式为:xxxx,xxxx,xxxx.xx)
-	 *
-	 * @param money 
-	 * 				待处理的金额
-	 * @param scale 
-	 * 				小数点后保留的位数
-	 * @param divisor 
-	 * 				格式化值（10:十元、100:百元,1000千元，10000万元......）
-	 * @return
-	 */
-	public static String getAccountantMoney(BigDecimal money, int scale, double divisor){  
+    }
+
+    /**
+     * 将人民币转换为会计格式金额(xxxx,xxxx,xxxx.xx),保留两位小数
+     *
+     * @param money 待转换的金额
+     * @return
+     */
+    public static String accountantMoney(BigDecimal money) {
+        return accountantMoney(money, 2, 1);
+    }
+
+    /**
+     * 格式化金额，显示为xxx万元，xxx百万,xxx亿
+     *
+     * @param money   待处理的金额
+     * @param scale   小数点后保留的位数
+     * @param divisor 格式化值（10:十元、100:百元,1000千元，10000万元......）
+     * @return
+     */
+    public static String getFormatMoney(BigDecimal money, int scale, double divisor) {
+        return formatMoney(money, scale, divisor) + getCellFormat(divisor);
+    }
+
+    /**
+     * 获取会计格式的人民币(格式为:xxxx,xxxx,xxxx.xx)
+     *
+     * @param money   待处理的金额
+     * @param scale   小数点后保留的位数
+     * @param divisor 格式化值（10:十元、100:百元,1000千元，10000万元......）
+     * @return
+     */
+    public static String getAccountantMoney(BigDecimal money, int scale, double divisor) {
         return accountantMoney(money, scale, divisor) + getCellFormat(divisor);
-    }  
-	
-	/**
-	 * 将人民币转换为会计格式金额(xxxx,xxxx,xxxx.xx)
-	 *
-	 * @param money 
-	 * 				待处理的金额
-	 * @param scale 
-	 * 				小数点后保留的位数
-	 * @param divisor 
-	 * 				格式化值
-	 * @return
-	 */
-	private static String accountantMoney(BigDecimal money,int scale,double divisor){
-		String disposeMoneyStr = formatMoney(money, scale, divisor);  
+    }
+
+    /**
+     * 将人民币转换为会计格式金额(xxxx,xxxx,xxxx.xx)
+     *
+     * @param money   待处理的金额
+     * @param scale   小数点后保留的位数
+     * @param divisor 格式化值
+     * @return
+     */
+    private static String accountantMoney(BigDecimal money, int scale, double divisor) {
+        String disposeMoneyStr = formatMoney(money, scale, divisor);
         //小数点处理  
-        int dotPosition = disposeMoneyStr.indexOf(".");  
+        int dotPosition = disposeMoneyStr.indexOf(".");
         String exceptDotMoeny = null;//小数点之前的字符串  
         String dotMeony = null;//小数点之后的字符串  
-        if(dotPosition > 0){  
-            exceptDotMoeny = disposeMoneyStr.substring(0,dotPosition);  
-            dotMeony = disposeMoneyStr.substring(dotPosition);  
-        }else{  
-            exceptDotMoeny = disposeMoneyStr;  
-        }  
+        if (dotPosition > 0) {
+            exceptDotMoeny = disposeMoneyStr.substring(0, dotPosition);
+            dotMeony = disposeMoneyStr.substring(dotPosition);
+        } else {
+            exceptDotMoeny = disposeMoneyStr;
+        }
         //负数处理  
-        int negativePosition = exceptDotMoeny.indexOf("-");  
-        if(negativePosition == 0){  
-            exceptDotMoeny = exceptDotMoeny.substring(1);  
-        }  
-        StringBuffer reverseExceptDotMoney = new StringBuffer(exceptDotMoeny);  
+        int negativePosition = exceptDotMoeny.indexOf("-");
+        if (negativePosition == 0) {
+            exceptDotMoeny = exceptDotMoeny.substring(1);
+        }
+        StringBuffer reverseExceptDotMoney = new StringBuffer(exceptDotMoeny);
         reverseExceptDotMoney.reverse();//字符串倒转  
-        char[] moneyChar = reverseExceptDotMoney.toString().toCharArray();  
+        char[] moneyChar = reverseExceptDotMoney.toString().toCharArray();
         StringBuffer returnMeony = new StringBuffer();//返回值  
-        for(int i = 0; i < moneyChar.length; i++){  
-            if(i != 0 && i % 3 == 0){  
+        for (int i = 0; i < moneyChar.length; i++) {
+            if (i != 0 && i % 3 == 0) {
                 returnMeony.append(",");//每隔3位加','  
-            }  
-            returnMeony.append(moneyChar[i]);  
-        }  
+            }
+            returnMeony.append(moneyChar[i]);
+        }
         returnMeony.reverse();//字符串倒转  
-        if(dotPosition > 0){  
-            returnMeony.append(dotMeony);  
-        }  
-        if(negativePosition == 0){  
-            return "-" + returnMeony.toString();  
-        }else{  
-            return returnMeony.toString();  
-        }  
-	}
-	
-	/**
-	 * 格式化金额，显示为xxx万元，xxx百万,xxx亿
-	 * @param money 
-	 * 				待处理的金额
-	 * @param scale  
-	 * 				小数点后保留的位数
-	 * @param divisor 
-	 * 				格式化值
-	 * @return
-	 */
-	private static String formatMoney(BigDecimal money,int scale,double divisor){
-		if (divisor == 0) {
-			return "0.00";
-		}
-		if (scale < 0) {
-			return "0.00";
-		}
-		BigDecimal divisorBD = new BigDecimal(divisor);
-		return money.divide(divisorBD, scale, RoundingMode.HALF_UP).toString();
-	}
-	
-	private static String getCellFormat(double divisor){
-		String str = String.valueOf(divisor);
-		int len = str.substring(0,str.indexOf(".")).length();
-		String cell = "";
-		switch(len){
-			case 1:
-				cell = "元";
-				break;
-			case 2:
-				cell = "十元";
-				break;
-			case 3:
-				cell = "百元";
-				break;
-			case 4:
-				cell = "千元";
-				break;
-			case 5:
-				cell = "万元";
-				break;
-			case 6:
-				cell = "十万元";
-				break;
-			case 7:
-				cell = "百万元";
-				break;
-			case 8:
-				cell = "千万元";
-				break;
-			case 9:
-				cell = "亿元";
-				break;
-			case 10:
-				cell = "十亿元";
-				break;
-		}
-		return cell;
-	}
+        if (dotPosition > 0) {
+            returnMeony.append(dotMeony);
+        }
+        if (negativePosition == 0) {
+            return "-" + returnMeony.toString();
+        } else {
+            return returnMeony.toString();
+        }
+    }
+
+    /**
+     * 格式化金额，显示为xxx万元，xxx百万,xxx亿
+     *
+     * @param money   待处理的金额
+     * @param scale   小数点后保留的位数
+     * @param divisor 格式化值
+     * @return
+     */
+    private static String formatMoney(BigDecimal money, int scale, double divisor) {
+        if (divisor == 0) {
+            return "0.00";
+        }
+        if (scale < 0) {
+            return "0.00";
+        }
+        BigDecimal divisorBD = new BigDecimal(divisor);
+        return money.divide(divisorBD, scale, RoundingMode.HALF_UP).toString();
+    }
+
+    private static String getCellFormat(double divisor) {
+        String str = String.valueOf(divisor);
+        int len = str.substring(0, str.indexOf(".")).length();
+        String cell = "";
+        switch (len) {
+            case 1:
+                cell = "元";
+                break;
+            case 2:
+                cell = "十元";
+                break;
+            case 3:
+                cell = "百元";
+                break;
+            case 4:
+                cell = "千元";
+                break;
+            case 5:
+                cell = "万元";
+                break;
+            case 6:
+                cell = "十万元";
+                break;
+            case 7:
+                cell = "百万元";
+                break;
+            case 8:
+                cell = "千万元";
+                break;
+            case 9:
+                cell = "亿元";
+                break;
+            case 10:
+                cell = "十亿元";
+                break;
+        }
+        return cell;
+    }
 }

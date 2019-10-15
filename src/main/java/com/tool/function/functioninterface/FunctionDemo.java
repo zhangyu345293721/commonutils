@@ -5,10 +5,8 @@ import org.junit.jupiter.api.Test;
 import java.util.function.*;
 
 /**
- * @program: utilsdemo
- * @description: 测试Function例子
+ *  测试Function例子
  * @author: zhangyu
- * @create: 2019-09-25 10:16
  */
 public class FunctionDemo {
 

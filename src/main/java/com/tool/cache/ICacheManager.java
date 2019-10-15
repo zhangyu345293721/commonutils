@@ -4,10 +4,8 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * @program: utilsdemo
- * @description: ICacheManager
+ * ICacheManager
  * @author: zhangyu
- * @create: 2019-08-07 15:15
  */
 public interface ICacheManager {
     /**

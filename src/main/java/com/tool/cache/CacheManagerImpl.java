@@ -5,10 +5,8 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * @program: utilsdemo
- * @description: CacheManagerImpl
+ * CacheManagerImpl
  * @author: zhangyu
- * @create: 2019-08-07 15:17
  */
 public class CacheManagerImpl implements ICacheManager {
     private static Map<String, EntityCache> caches = new ConcurrentHashMap<>();

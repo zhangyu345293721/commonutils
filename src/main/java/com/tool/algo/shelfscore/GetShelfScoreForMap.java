@@ -1,7 +1,6 @@
 package com.tool.algo.shelfscore;
 
-import com.tool.readfile.files.GZFiletoList;
-import com.tool.readfile.files.ListToFile;
+import com.tool.base.file.FileUtils;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -31,7 +30,7 @@ public class GetShelfScoreForMap {
             String strs[] = {s + "-1.log.gz", s + "-2.log.gz"};
             List<String> list = getAlllist(strs);
             List<String> shelfScoreList = getShelfScore(list);
-            ListToFile.listToFile("shelf_score_6_18_" + i + ".csv", shelfScoreList);
+            FileUtils.listToFile("shelf_score_6_18_" + i + ".csv", shelfScoreList);
         }
         long endTime = System.currentTimeMillis();
         System.out.println((endTime - startTime) / 1000 + "秒");
@@ -69,7 +68,7 @@ public class GetShelfScoreForMap {
         List<String> newList = new ArrayList<>();
         String path = "D:\\software\\618\\";
         for (String fileName : strs) {
-            List<String> list = GZFiletoList.getGzFileToList(path + fileName);
+            List<String> list = FileUtils.getGzFileToList(path + fileName);
             newList.addAll(list);
         }
         return newList;

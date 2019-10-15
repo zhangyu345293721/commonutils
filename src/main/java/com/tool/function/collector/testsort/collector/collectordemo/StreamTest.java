@@ -8,10 +8,8 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
- * @program: utilsdemo
- * @description: 测试stream
+ *  测试stream
  * @author: zhangyu
- * @create: 2019-06-19 18:26
  */
 public class StreamTest {
     @Test

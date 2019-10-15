@@ -7,10 +7,7 @@ import lombok.NoArgsConstructor;
 import java.io.Serializable;
 
 /**
- * @program: utilsdemo
- * @description:
- * @author: zhangyu
- * @create: 2019-08-12 11:57
+ * person的bean
  */
 @Data
 @AllArgsConstructor

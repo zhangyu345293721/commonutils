@@ -3,10 +3,8 @@ package com.tool.cache;
 import java.util.logging.Logger;
 
 /**
- * @program: utilsdemo
- * @description: CacheListener
+ *  CacheListener
  * @author: zhangyu
- * @create: 2019-08-07 15:18
  */
 public class CacheListener {
     Logger logger = Logger.getLogger("cacheLog");

@@ -1,7 +1,6 @@
 package com.tool.algo.shelfscore;
 
-import com.tool.readfile.files.ListToFile;
-import com.tool.readfile.files.ReadFileToLine;
+import com.tool.base.file.FileUtils;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -16,32 +15,9 @@ import java.util.stream.Collectors;
  * @create: 2019-07-08 11:00
  */
 public class CountShelfNumber {
-   /* @Test
-    public void fun() {
-        List<String> list = ReadFileToLine.getFileToList("shelf_score.csv");
-        //list.stream().map(e->e.split(",")[0],);
-        //  Map<String, Long> result = items.stream().collect(Collectors.groupingBy(e -> e, Collectors.counting()));
-        Map<String, Integer> map = new HashMap<>();
-        for (String s : list) {
-            String[] strs = s.split(",");
-            map.put(strs[0], Integer.valueOf(strs[1]));
-        }
-        System.out.println(map.size());
-    }*/
-
-  /*  @Test
-    public void fun2() {
-        //  Map<String, Long> result = items.stream().collect(Collectors.groupingBy(e -> e, Collectors.counting()));
-        List<String> list = ReadFileToLine.getFileToList("shelf_score.csv");
-        Map<String, Long> result = list.stream().collect(Collectors.groupingBy(e -> e.split(",")[0], Collectors.counting()));
-        for (String key : result.keySet()) {
-            System.out.println(key + ":" + result.get(key));
-        }
-    }*/
-
     @Test
     public void fun3() {
-        List<String> list = ReadFileToLine.getFileToList("shelf_score.csv");
+        List<String> list = FileUtils.getFileToList("shelf_score.csv");
         System.out.println(list.size());
         Map<String, Long> result = list.stream().collect(Collectors.groupingBy(e -> e.split(",")[0], Collectors.counting()));
         for (String shelfCode : result.keySet()) {
@@ -64,6 +40,6 @@ public class CountShelfNumber {
             // System.out.println(shelfCode + ":" + result.get(shelfCode));
             avgShelfScoreList.add(shelfCode + "," + result.get(shelfCode));
         }
-        ListToFile.listToFile("avg_shelf_score.csv", avgShelfScoreList);
+        FileUtils.listToFile("avg_shelf_score.csv", avgShelfScoreList);
     }
 }

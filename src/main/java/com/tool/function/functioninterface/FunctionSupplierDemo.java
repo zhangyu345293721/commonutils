@@ -7,10 +7,9 @@ import java.util.function.DoubleSupplier;
 import java.util.function.Supplier;
 
 /**
- * @program: utilsdemo
- * @description: 测试functionsupplier
+ * 测试functionsupplier
+ *
  * @author: zhangyu
- * @create: 2019-09-27 13:26
  */
 public class FunctionSupplierDemo {
 

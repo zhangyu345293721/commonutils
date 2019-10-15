@@ -1,9 +1,8 @@
 package com.tool.algo.computetime;
 
 import com.tool.bean.Use;
+import com.tool.base.file.FileUtils;
 import com.tool.function.date.DateToTime;
-import com.tool.readfile.files.ListToFile;
-import com.tool.readfile.files.ReadFileToLine;
 import org.junit.jupiter.api.Test;
 
 import java.util.*;
@@ -18,7 +17,7 @@ public class ComputeTime2 {
     @Test
     public void fun() {
         // 0:代表开始，1代表结束
-        List<String> list = ReadFileToLine.getFileToList("newList.csv");
+        List<String> list = FileUtils.getFileToList("newList.csv");
         List<Use> newList = convertStrToUse(list);
 
        /* for (Use use : newList) {
@@ -167,6 +166,6 @@ public class ComputeTime2 {
         for (int key : map.keySet()) {
             line.add(key + "," + map.get(key));
         }
-        ListToFile.listToFile(mapName, line);
+        FileUtils.listToFile(mapName, line);
     }
 }

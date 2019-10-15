@@ -3,10 +3,8 @@ package com.tool.bean;
 import lombok.Data;
 
 /**
- * @program: utilsdemo
- * @description: 测试User
+ * 测试User
  * @author: zhangyu
- * @create: 2019-06-19 18:35
  */
 
 @Data

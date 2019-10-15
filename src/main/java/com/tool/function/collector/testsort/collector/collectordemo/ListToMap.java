@@ -8,10 +8,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
- * @program: utilsdemo
- * @description:
  * @author: zhangyu
- * @create: 2019-08-19 10:14
  */
 public class ListToMap {
     public static void main(String[] args) {

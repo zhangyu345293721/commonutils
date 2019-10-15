@@ -3,10 +3,8 @@ package com.tool.cache;
 import lombok.Data;
 
 /**
- * @program: utilsdemo
- * @description: cache
+ * cache
  * @author: zhangyu
- * @create: 2019-08-07 15:15
  */
 @Data
 public class EntityCache {

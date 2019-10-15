@@ -8,10 +8,9 @@ import java.util.Comparator;
 import java.util.List;
 
 /**
- * @program: utilsdemo
- * @description: 测试排序
+ * 测试排序
+ *
  * @author: zhangyu
- * @create: 2019-08-12 17:50
  */
 public class SortDemo {
     @Test

@@ -11,10 +11,8 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
- * @program: utilsdemo
- * @description: 测试函数式编程
+ * 测试函数式编程
  * @author: zhangyu
- * @create: 2019-06-18 14:55
  */
 
 public class StreamDemo {

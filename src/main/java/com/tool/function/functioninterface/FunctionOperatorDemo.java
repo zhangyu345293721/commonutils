@@ -7,10 +7,8 @@ import java.util.function.Function;
 import java.util.function.UnaryOperator;
 
 /**
- * @program: utilsdemo
- * @description: 测试Operator类
+ * 测试Operator类
  * @author: zhangyu
- * @create: 2019-09-27 13:34
  */
 public class FunctionOperatorDemo {
 

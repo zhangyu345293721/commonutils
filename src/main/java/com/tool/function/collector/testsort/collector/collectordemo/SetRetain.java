@@ -3,10 +3,8 @@ package com.tool.function.collector.testsort.collector.collectordemo;
 import java.util.ArrayList;
 
 /**
- * @program: utilsdemo
- * @description: set求交集
+ * set求交集
  * @author: zhangyu
- * @create: 2019-06-25 15:38
  */
 public class SetRetain {
     public static boolean compare(int[] arr1, int[] arr2) {
