@@ -1,0 +1,12 @@
+
+_squid:S00112…"FDefine and throw a dedicated exception instead of using a generic one.(ï‰Åæ
+osquid:S2293`"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ö”½7
+usquid:S2293~"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÀŞ‰¾şÿÿÿÿ
+csquid:S2095"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(âûáş
+squid:S1319"xThe type of the "sensitiveWordMap" object should be an interface such as "Map" rather than the implementation "HashMap".(ÃÖ§Ò
+Wsquid:S1075z"ARefactor your code to get this URI from a customizable parameter.(¡“#
+jsquid:S00116"SRename this field "ENCODING" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ä·	
+csquid:S00112w"FDefine and throw a dedicated exception instead of using a generic one.(¬ÏÍªúÿÿÿÿ
+osquid:S2737ˆ"WAdd logic to this catch clause or eliminate it and rethrow the exception automatically.(ö™û
+Fsquid:S2093|"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ
+?squid:S1148&"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ

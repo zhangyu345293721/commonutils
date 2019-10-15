@@ -1,0 +1,16 @@
+
+Csquid:S2129ï"$Remove this "BigDecimal" constructor(¨…ŒÎ8´©‡ÉÜ-
+nsquid:S3776<"RRefactor this method to reduce its Cognitive Complexity from 32 to the 15 allowed.(Û³éÈýÿÿÿÿ
+dsquid:S3027»"FPut single-quotes around '.' to use the faster "indexOf(char)" method.(ãŽX8´©‡ÉÜ-
+jsquid:S3027Å"FPut single-quotes around '-' to use the faster "indexOf(char)" method.(ñü¸‹øÿÿÿÿ8´©‡ÉÜ-
+esquid:S3027õ"FPut single-quotes around '.' to use the faster "indexOf(char)" method.(§Ëã—8´©‡ÉÜ-
+~squid:S1149É"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(ƒéë8´©‡ÉÜ-
+Esquid:S1940K")Use the opposite operator ("<=") instead.(á“éøúÿÿÿÿ
+Esquid:S1940P")Use the opposite operator ("<=") instead.(˜ãÈÒøÿÿÿÿ
+vsquid:S1149="_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(í…Ò‰
+X"squid:SwitchLastCaseIsDefaultCheck÷""Add a default case to this switch.(ý¦Á8´©‡ÉÜ-
+Esquid:S1940~")Use the opposite operator ("<=") instead.(á“éøúÿÿÿÿ
+~squid:S1149Ì"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(é‡âÅ8´©‡ÉÜ-
+Vsquid:S1118
+":Add a private constructor to hide the implicit public one.(âæíÓûÿÿÿÿ
+@squid:S2111ï"!Use "BigDecimal.valueOf" instead.(¨…ŒÎ8´©‡ÉÜ-

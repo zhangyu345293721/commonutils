@@ -1,0 +1,4 @@
+
+\squid:S2259'"@A "NullPointerException" could be thrown; "bi" is nullable here.(úØÒ©ûÿÿÿÿ
+?squid:S1148%"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+]squid:S1118":Add a private constructor to hide the implicit public one.(è– ûÿÿÿÿ8’“ÌÜ-

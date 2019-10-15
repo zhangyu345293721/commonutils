@@ -1,0 +1,9 @@
+
+:squid:S2629K"$Invoke method(s) only conditionally.(Î®
+]squid:S2142H"FEither re-interrupt this method or rethrow the "InterruptedException".(‘í†
+Dsquid:S16047"(Make this anonymous inner class a lambda(Ó›ï¦üÿÿÿÿ
+Tsquid:UselessImportCheck"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ
+Ssquid:UselessImportCheck"*Remove this unused import 'java.util.Map'.(¼è½Òşÿÿÿÿ
+Wsquid:UselessImportCheck".Remove this unused import 'java.util.HashMap'.(™˜”€ùÿÿÿÿ
+Tsquid:UselessImportCheck"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ
+?squid:S1148I"#Use a logger to log this exception.(Âşÿâûÿÿÿÿ

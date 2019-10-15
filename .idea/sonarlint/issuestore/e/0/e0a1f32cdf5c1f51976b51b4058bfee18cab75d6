@@ -1,0 +1,35 @@
+
+Qsquid:S2864Ú"4Iterate over the "entrySet" instead of the "keySet".(½Ö²’ûÿÿÿÿ
+fsquid:S1192#"JDefine a constant instead of duplicating this literal "zhangsan" 13 times.(…Õ°ıÿÿÿÿ
+dsquid:S1192%"HDefine a constant instead of duplicating this literal "wangwu" 13 times.(ïö¸ªıÿÿÿÿ
+esquid:S1192&"IDefine a constant instead of duplicating this literal "tangtuo" 13 times.(†÷–´úÿÿÿÿ
+Nsquid:S3655"7Call "Optional#isPresent()" before accessing the value.(ğéÓÅ
+ksquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(îûáÍúÿÿÿÿ
+ksquid:S00100""NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ö¦ÏÅÿÿÿÿÿ
+fsquid:S00100/"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Â¢¿„
+ksquid:S00100A"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ô–ó¿şÿÿÿÿ
+fsquid:S00100L"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²İöÛ
+fsquid:S00100W"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´’ŒÙ
+fsquid:S00100b"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ãÅŸÌ
+ksquid:S00100m"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñÂ–”úÿÿÿÿ
+esquid:S00100}"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿ‘²f
+lsquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­¤ÈÃşÿÿÿÿ
+lsquid:S00100™"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ªû‰üÿÿÿÿ
+gsquid:S00100¨"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«ôÌá
+lsquid:S00100¶"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬ÄÓÿÿÿÿÿ
+gsquid:S00100É"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íŞ»—
+lsquid:S00100Ñ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…½õğÿÿÿÿÿ
+Dsquid:S16046"(Make this anonymous inner class a lambda(«§Ã€üÿÿÿÿ
+Hsquid:S1612)",Replace this lambda with a method reference.(Ùÿ¥Àıÿÿÿÿ
+Hsquid:S1612=",Replace this lambda with a method reference.(Ùÿ¥Àıÿÿÿÿ
+Hsquid:S1612H",Replace this lambda with a method reference.(±úÇˆùÿÿÿÿ
+Csquid:S1612S",Replace this lambda with a method reference.(âü¿‰
+Hsquid:S1612^",Replace this lambda with a method reference.(²§’çøÿÿÿÿ
+Hsquid:S1612i",Replace this lambda with a method reference.(ŸÚ°šıÿÿÿÿ
+Csquid:S1612y",Replace this lambda with a method reference.(ù¥ÿ¯
+Isquid:S1612„",Replace this lambda with a method reference.(°öüÂûÿÿÿÿ
+Isquid:S1612•",Replace this lambda with a method reference.(ÑÆì—ıÿÿÿÿ
+Isquid:S1612¢",Replace this lambda with a method reference.(Èİïşÿÿÿÿ
+Isquid:S1612Å",Replace this lambda with a method reference.(õ™É©şÿÿÿÿ
+Csquid:S1612Ù",Replace this lambda with a method reference.(öĞÓ)
+Csquid:S1612Ù",Replace this lambda with a method reference.(öĞÓ)

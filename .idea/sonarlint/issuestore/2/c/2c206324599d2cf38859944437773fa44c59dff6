@@ -1,0 +1,7 @@
+
+Qsquid:S1118":Add a private constructor to hide the implicit public one.(—ô¦Ï
+nsquid:S1192m"XUse already-defined constant 'DATE_NOFUll_FORMAT' instead of duplicating its value here.(§ùd
+Gsquid:S00108")Either remove or fill this block of code.(±Ÿ—±ÿÿÿÿÿ
+tsquid:S1192d"XUse already-defined constant 'TIME_NOFUll_FORMAT' instead of duplicating its value here.(ƒ«Ïúÿÿÿÿ
+rsquid:S00115,"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(©˜¿¼
+wsquid:S00115)"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Ï²¡ùÿÿÿÿ

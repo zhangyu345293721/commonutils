@@ -1,0 +1,8 @@
+
+Tsquid:S1197O"8Move the array designator from the variable to the type.(¡þÏÖøÿÿÿÿ
+psquid:S2293-"YReplace the type specification in this constructor call with the diamond operator ("<>").(²ò“È
+nsquid:S1450"WRemove the "document" field and declare it as a local variable in the relevant methods.(û±Ç¿
+psquid:S1450"TRemove the "books" field and declare it as a local variable in the relevant methods.(õ¶ðÕùÿÿÿÿ
+^squid:S00112("FDefine and throw a dedicated exception instead of using a generic one.(°ú—¯
+?squid:S1148$"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+?squid:S1148W"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ

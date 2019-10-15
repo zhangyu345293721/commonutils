@@ -1,0 +1,11 @@
+
+8squid:S1643a"Use a StringBuilder instead.(—¦áùÿÿÿÿ
+†"squid:ClassVariableVisibilityCheck"XMake minMatchTYpe a static final constant or non-public and provide accessors if needed.(Íè™º
+Isquid:S1444"2Make this "public static maxMatchType" field final(Äôàœ
+ksquid:S00100q"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤š¸şÿÿÿÿ
+„ squid:ForLoopCounterChangedCheck:"XRefactor the code in order to not assign to this loop counter from within the loop body.(îÕ™
+†"squid:ClassVariableVisibilityCheck"XMake maxMatchType a static final constant or non-public and provide accessors if needed.(Äôàœ
+Isquid:S1444"2Make this "public static minMatchTYpe" field final(Íè™º
+t
+squid:S135v"YReduce the total number of break and continue statements in this loop to use at most one.(÷µ•˜øÿÿÿÿ
+osquid:S22934"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÓŠÓd
