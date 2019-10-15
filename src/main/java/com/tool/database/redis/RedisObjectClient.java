@@ -6,10 +6,7 @@ import com.tool.database.redis.redisserializable.SerializeObjectTool;
 import redis.clients.jedis.Jedis;
 
 /**
- * @program: utilsdemo
- * @description:
  * @author: zhangyu
- * @create: 2019-08-12 12:02
  */
 public class RedisObjectClient {
     public static void main(String[] args) {

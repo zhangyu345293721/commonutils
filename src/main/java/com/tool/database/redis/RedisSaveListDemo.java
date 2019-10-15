@@ -14,10 +14,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
- * @program: utilsdemo
- * @description:
  * @author: zhangyu
- * @create: 2019-08-12 12:02
  */
 public class RedisSaveListDemo {
     @Test

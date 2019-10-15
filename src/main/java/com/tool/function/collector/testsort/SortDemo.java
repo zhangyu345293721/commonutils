@@ -14,7 +14,7 @@ import java.util.List;
  */
 public class SortDemo {
     @Test
-    public void fun() {
+    public void SortTestDemo() {
         List<Person> list = new ArrayList<>();
         Person p1 = new Person();
         p1.setUserName("zhangyu");

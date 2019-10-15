@@ -8,7 +8,8 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
- *  测试stream
+ * 测试stream
+ *
  * @author: zhangyu
  */
 public class StreamTest {
@@ -156,7 +157,7 @@ public class StreamTest {
                 new User("tangtuo", 26)
         );
         List<String> words = Arrays.asList("aa", "bb", "cc");
-        List<String> users = list.stream().map(user -> user.getName().toUpperCase()).collect(Collectors.toList());
+        List<String> users = list.stream().map(user -> user.getUserName().toUpperCase()).collect(Collectors.toList());
         List<String> collect = words.stream().map(s -> s.toUpperCase()).collect(Collectors.toList());
         System.out.println(collect);
         System.out.println(users);
@@ -171,9 +172,9 @@ public class StreamTest {
                 new User("tangtuo", 26),
                 new User("null", 26)
         );
-        List<User> users = list.stream().filter(e -> (e.getName() != "null")).collect(Collectors.toList());
+        List<User> users = list.stream().filter(e -> (e.getUserName() != "null")).collect(Collectors.toList());
         //System.out.println(user);
-        users.stream().forEach(e -> System.out.println(e.getName()));
+        users.stream().forEach(e -> System.out.println(e.getUserName()));
     }
 
     @Test
@@ -187,7 +188,7 @@ public class StreamTest {
 
         for (int i = 0; i < users.size(); i++) {
             for (int j = i + 1; j < users.size(); j++) {
-                if (users.get(i).getAge() == users.get(j).getAge() && users.get(i).getName().equals(users.get(j).getName())) {
+                if (users.get(i).getAge() == users.get(j).getAge() && users.get(i).getUserName().equals(users.get(j).getUserName())) {
                     users.remove(i);
                 }
             }
@@ -212,9 +213,42 @@ public class StreamTest {
                 new User("tangtuo", 26)
         ));
         // numList.stream().sorted().collect(Collectors.toList());
-        Map<String, Integer> map = users.stream().collect(Collectors.toMap(e -> e.getName(), e -> e.getAge()));
+        Map<String, Integer> map = users.stream().collect(Collectors.toMap(e -> e.getUserName(), e -> e.getAge()));
         for (String key : map.keySet()) {
             System.out.println(key + ":" + map.get(key));
         }
+    }
+
+    /**
+     * 获取int的list中的最大值的下标
+     *
+     * @param list list
+     * @return 返回int最下值的下标
+     */
+    private static int getListMinValueIndex(List<Integer> list) {
+        int min = list.get(0);
+        //最大值下标
+        int min_a = 0;
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i) < list.get(min_a)) {
+                min = list.get(i);
+                min_a = i;
+            }
+        }
+        return min_a;
+    }
+
+    @Test
+    public void getMaxValueInListDemo() {
+        List<Integer> list = Arrays.asList(1, 2, 3, 4, 9);
+        int maxIndex = getListMinValueIndex(list);
+        System.out.println(maxIndex);
+    }
+
+    @Test
+    public void getMinValueInListDemo() {
+        List<Integer> list = Arrays.asList(1, 2, 3, 4, 9);
+        int minIndex = getListMinValueIndex(list);
+        System.out.println(minIndex);
     }
 }

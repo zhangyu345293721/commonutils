@@ -14,11 +14,11 @@ public class ListToMap {
     public static void main(String[] args) {
         List<User> userList = new ArrayList<>();
         User user1 = new User();
-        user1.setId(1L);
+        user1.setId(1);
         user1.setAge(12);
 
         User user2 = new User();
-        user2.setId(2L);
+        user2.setId(2);
         user2.setAge(13);
 
         userList.add(user1);
@@ -35,7 +35,7 @@ public class ListToMap {
         // Map<Long, User> maps = userList.stream().collect(Collectors.toMap(User::getId, Function.identity()));
         // Map<Long, User> maps = userList.stream().collect(Collectors.toMap(User::getId, e -> e));
 
-        Map<Long, Integer> maps = userList.stream().collect(Collectors.toMap(User::getId, User::getAge));
+        Map<Integer, Integer> maps = userList.stream().collect(Collectors.toMap(User::getId, User::getAge));
         System.out.println(maps);
     }
 }

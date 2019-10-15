@@ -7,10 +7,8 @@ import redis.clients.jedis.Jedis;
 import java.util.Map;
 
 /**
- * @program: utilsdemo
- * @description: 测试Redis
+ * 测试Redis
  * @author: zhangyu
- * @create: 2019-08-12 14:40
  */
 public class RedisConnectionDemo {
     @Test

@@ -13,7 +13,7 @@ public class ListDemo {
 
     // 对链表的位置进行交换
     @Test
-    public void fun() {
+    public void swapListIndexDemo() {
         List<Integer> list = new ArrayList<>();
         list.add(1);
         list.add(2);
@@ -27,18 +27,14 @@ public class ListDemo {
     }
 
     @Test
-    public void fun2() {
+    public void permutationTestDemo() {
         for (List<String> list : Permutation.of(Arrays.asList("a", "b", "c"))) {
-            // System.out.println(list);
-            for (String ele : list) {
-                System.out.println(ele);
-            }
+            System.out.println(list);
         }
     }
 
     @Test
-    public void fun3() {
-        // Permutation.of()
+    public void permutationTestDemo2() {
         System.out.println(Permutation.of(Arrays.asList("a", "b", "c"), 3).iterator());
         Iterator iter = Permutation.of(Arrays.asList("a", "b", "c"), 3).iterator();
         List<List<String>> list = new ArrayList<>();
@@ -48,7 +44,16 @@ public class ListDemo {
             List<String> oneList = (List<String>) iter.next();
             System.out.println(list.add(oneList));
         }
-
         System.out.println(list);
+    }
+    @Test
+    public void fun() {
+        List<Integer> list = new ArrayList<>();
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.add(4);
+
+        list.stream().filter(e -> e > 2).forEach(r -> System.out.println(r));
     }
 }

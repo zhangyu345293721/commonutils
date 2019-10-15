@@ -7,8 +7,8 @@ import java.util.Calendar;
 import java.util.Date;
 
 /**
- * @program: utilsdemo
- * @description: date时间变成毫秒值
+ * date时间变成毫秒值
+ *
  * @author: zhangyu
  */
 public class DateToTime {

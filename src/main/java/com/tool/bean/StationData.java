@@ -1,4 +1,4 @@
-package com.tool.database.jdbc;
+package com.tool.bean;
 
 import lombok.Data;
 

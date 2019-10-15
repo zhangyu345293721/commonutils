@@ -12,14 +12,16 @@ import java.util.stream.Collectors;
 
 /**
  * 测试函数式编程
+ *
  * @author: zhangyu
  */
 
 public class StreamDemo {
     /**
-    *@Description: 统计一个字符出现的个数，利用jdk8的新特性
-    *@Author: zhangyu
-    */
+     * 统计一个字符出现的个数，利用jdk8的新特性
+     *
+     * @author: zhangyu
+     */
     @Test
     public void fun() {
         List<String> items = Arrays.asList("apple", "apple", "banana", "apple", "orange", "banana", "papaya");

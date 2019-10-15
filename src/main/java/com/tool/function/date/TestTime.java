@@ -7,25 +7,15 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * @program: utilsdemo
- * @description: 测试时间
+ * 测试时间
+ *
  * @author: zhangyu
  */
 public class TestTime {
-
-    @Test
-    public void fun() {
-        /*
-        long l = new Date().getTime();
-        System.out.println(String.valueOf(l).length());
-        */
-        // 将时间换成毫秒值
-        String time = "2019-06-01 00:00:00";
-        long timeMillis = getTimeMillis(time);
-        System.out.println(timeMillis);
-        //System.out.println(String.valueOf(timeMillis).length());
-    }
-
+    /**
+     * @param time time
+     * @return 返回长整型数
+     */
     public long getTimeMillis(String time) {
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         long timeMillis = -1;
@@ -38,31 +28,11 @@ public class TestTime {
         return timeMillis;
     }
 
-    @Test
-    public void fun2() {
-        Long timeMillis = 1559322000000l;
-        System.out.println(timeMillis);
-
-    }
-
-    @Test
-    public void fun3() {
-        long startTime = 1559318400000l;
-        long endTime = 1559322000000l;
-        DateFormat formatter = new SimpleDateFormat("yyyyMMddHH");
-        System.out.println(formatter.format(startTime));
-        System.out.println(formatter.format(endTime));
-
-    }
-
-    @Test
-    public void fun4() {
-        String d = "2019060100";
-        long timeMillis = getLongTimeMillis(d);
-        System.out.println(timeMillis);
-    }
-
-    public Long getLongTimeMillis(String d) {
+    /**
+     * @param d 传入字符串
+     * @return 返回长整型数
+     */
+    public Long getLongTimeMillisFromDateStr(String d) {
         Date date = null;
         try {
             DateFormat formatter = new SimpleDateFormat("yyyyMMddHH");
@@ -72,4 +42,37 @@ public class TestTime {
         }
         return date.getTime();
     }
+
+    /**
+     * 将long类型毫秒数转成固定格式字符串
+     *
+     * @param time time
+     * @return 返回字符串
+     */
+    private String getFixFormatDate(long time) {
+        DateFormat formatter = new SimpleDateFormat("yyyyMMddHH");
+        return formatter.format(time);
+    }
+
+    @Test
+    public void fixFormatDateDemo() {
+        long startTime = 1559318400000l;
+        System.out.println(getFixFormatDate(startTime));
+    }
+
+    @Test
+    public void longTimeMillisFromDateStrDemo() {
+        String d = "2019060100";
+        long timeMillis = getLongTimeMillisFromDateStr(d);
+        System.out.println(timeMillis);
+    }
+
+    @Test
+    public void timeMillisFromDate() {
+        // 将时间换成毫秒值
+        String time = "2019-06-01 00:00:00";
+        long timeMillis = getTimeMillis(time);
+        System.out.println(timeMillis);
+    }
+
 }

@@ -4,7 +4,7 @@ import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 
 /**
- * 转换工具类<br>
+ * 时间转换工具类
  * 若待转换值为null或者出现异常，则使用默认值
  */
 public class ConvertUtils {
@@ -91,8 +91,8 @@ public class ConvertUtils {
     /**
      * sql date 转换为 util date
      *
-     * @param date
-     * @return
+     * @param date date
+     * @return 返回日期
      */
     public static java.util.Date sqlDateToDate(java.sql.Date date) {
         return new java.util.Date(date.getTime());

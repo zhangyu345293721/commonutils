@@ -10,6 +10,9 @@ import java.util.regex.Pattern;
  */
 public class StringUtils {
 
+    private static final int INDEX_NOT_FOUND = -1;
+    private static final String NULL = "null";
+    private static final String PLACEHOLDER = "\\?";
     /**
      * 将半角的符号转换成全角符号.(即英文字符转中文字符)
      *
@@ -358,12 +361,6 @@ public class StringUtils {
             return false;
         }
     }
-
-    private static final int INDEX_NOT_FOUND = -1;
-
-    private static final String NULL = "null";
-
-    private static final String PLACEHOLDER = "\\?";
 
     /**
      * 判断字符串是否为空

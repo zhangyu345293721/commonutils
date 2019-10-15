@@ -1,5 +1,6 @@
 package com.tool.function.groupbydemo;
 
+import com.tool.bean.User;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -17,7 +18,7 @@ import java.util.stream.Collectors;
 public class TestGroupBy {
     // 对统计此时进行分组
     @Test
-    public void fun() {
+    public void GroupDemo1() {
         User u1 = new User(1, "aa", "aap", 23);
         User u2 = new User(2, "aa", "aap", 23);
         User u3 = new User(3, "bb", "aap", 23);
@@ -44,7 +45,7 @@ public class TestGroupBy {
 
     // 对重复次数进行统计
     @Test
-    public void fun2() {
+    public void GroupDemo2() {
         List<String> parameterList = Arrays.asList("1", "2", "2", "3", "3", "4", "4", "5", "6", "7", "8");
         Map<String, Long> map = parameterList.stream().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
         for (String name : map.keySet()) {
@@ -54,7 +55,7 @@ public class TestGroupBy {
 
     // 找出重复的字符,对它进行过滤
     @Test
-    public void fun3() {
+    public void GroupFileterDemo() {
         List<String> parameterList = Arrays.asList("1", "2", "2", "3", "3", "4", "4", "5", "6", "7", "8");
 
         List<String> resultList = parameterList.stream().collect(Collectors.collectingAndThen(Collectors

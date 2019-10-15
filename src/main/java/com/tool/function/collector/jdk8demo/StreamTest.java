@@ -7,12 +7,13 @@ import java.util.stream.Collectors;
 
 /**
  * 测试jdk8的新特性
+ *
  * @author: zhangyu
  */
 public class StreamTest {
     // 将小写字母变成大写字母
     @Test
-    public void fun1() {
+    public void Small2BigStringDemo() {
         List<String> list = Arrays.asList("a", "b", "c", "d"); //使用asLit之后，不能再加入新的元素
         // list.add("f");
         List<String> collect = list.stream().map(String::toUpperCase).collect(Collectors.toList());
@@ -22,7 +23,7 @@ public class StreamTest {
 
     // 对list中的每个元素进行map操作
     @Test
-    public void fun2() {
+    public void Each2PowDemo() {
         List<Integer> num = Arrays.asList(1, 2, 3, 4, 5);
         List<Double> collect1 = num.stream().map(n -> Math.pow(n, 2)).collect(Collectors.toList());
         // 对collect1进行操作
@@ -31,7 +32,7 @@ public class StreamTest {
 
     // 把set集合转成list
     @Test
-    public void fun3() {
+    public void set2ListDemo() {
         Set<Integer> num = new HashSet<>();
         num.add(1);
         num.add(1);
@@ -45,7 +46,7 @@ public class StreamTest {
 
     // 过滤掉字符串中为空
     @Test
-    public void fun4() {
+    public void filterStringIsNull() {
         List<String> strings = Arrays.asList("abc", "", "bc", "efd", "abcd", "", "jkl");
         List<String> filtered = strings.stream().filter(t -> !t.isEmpty()).collect(Collectors.toList());
         System.out.println(filtered);
@@ -53,14 +54,14 @@ public class StreamTest {
 
     // 测试sorted进行排序后再打印
     @Test
-    public void fun6() {
+    public void listSortedDemo() {
         Random random = new Random(1);
         random.ints().limit(10).sorted().forEach(System.out::println);
     }
 
     // 统计不为空的个数
     @Test
-    public void fun7() {
+    public void CountIsNotNullDemo() {
         List<String> strings = Arrays.asList("abc", "", "bc", "efd", "abcd", "", "jkl");
         long count = strings.stream().filter(t -> t.isEmpty()).count();
         System.out.println(count);
@@ -68,7 +69,7 @@ public class StreamTest {
 
     // 统计出现次数
     @Test
-    public void fun8() {
+    public void statisticAppearTime() {
         List<String> strings = Arrays.asList("abc", "", "bc", "efd", "abcd", "", "jkl");
         List<String> filtered = strings.stream().filter(e -> !e.isEmpty()).collect(Collectors.toList());
         // 过滤掉为空的字符串
@@ -80,7 +81,7 @@ public class StreamTest {
 
     // stream的统计流计算
     @Test
-    public void fun9() {
+    public void statisticDemo() {
         List<Integer> numbers = Arrays.asList(3, 2, 3, 7, 3, 5);
         IntSummaryStatistics statistics = numbers.stream().mapToInt((x) -> x).summaryStatistics();
         System.out.println(statistics.getMax());

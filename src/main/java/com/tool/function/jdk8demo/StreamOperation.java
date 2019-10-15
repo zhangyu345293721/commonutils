@@ -1,5 +1,6 @@
 package com.tool.function.jdk8demo;
 
+import com.tool.bean.TestObject;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -7,10 +8,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * @program: utilsdemo
- * @description:
  * @author: zhangyu
- * @create: 2019-08-13 18:17
  */
 public class StreamOperation {
 

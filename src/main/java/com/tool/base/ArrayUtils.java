@@ -1,10 +1,7 @@
 package com.tool.base;
 
 import java.lang.reflect.Array;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Enumeration;
-import java.util.List;
+import java.util.*;
 
 /**
  * 数组的工具类
@@ -239,7 +236,6 @@ public class ArrayUtils {
      */
     public static <E> Class<E> getElementType(E[] array) {
         Class<?> clas = array.getClass();
-        @SuppressWarnings("unchecked")
         Class<E> type = (Class<E>) clas.getComponentType();
         return type;
     }
@@ -610,6 +606,64 @@ public class ArrayUtils {
             target[i] = (E) Array.get(origin, i);
         }
         return Arrays.asList(target);
+    }
+
+    /**
+     * 获取int的list中的最大值
+     *
+     * @param list
+     * @return 返回int最大值
+     */
+    private static int getListMaxValue(List<Integer> list) {
+        return Collections.max(list);
+    }
+
+    /**
+     * 获取int的list中的最大值的下标
+     *
+     * @param list
+     * @return 返回int最大值
+     */
+    private static int getListMaxValueIndex(List<Integer> list) {
+        int max = list.get(0);
+        //最大值下标
+        int max_a = 0;
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i) > list.get(max_a)) {
+                max = list.get(i);
+                max_a = i;
+            }
+        }
+        return max_a;
+    }
+
+    /**
+     * 获取int的list中的最小值
+     *
+     * @param list
+     * @return 返回int最小值
+     */
+    private static int getListMinValue(List<Integer> list) {
+        return Collections.min(list);
+    }
+
+    /**
+     * 获取int的list中的最大值的下标
+     *
+     * @param list list
+     * @return 返回int最下值的下标
+     */
+    private static int getListMinValueIndex(List<Integer> list) {
+        int min = list.get(0);
+        //最大值下标
+        int min_a = 0;
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i) < list.get(min_a)) {
+                min = list.get(i);
+                min_a = i;
+            }
+        }
+        return min_a;
     }
 
     /**

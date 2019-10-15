@@ -7,6 +7,7 @@ package com.tool.database.jdbc;
  * @create: 2019-05-24 11:54
  */
 
+import com.tool.bean.StationData;
 import org.dom4j.Document;
 import org.dom4j.Element;
 import org.junit.jupiter.api.Test;

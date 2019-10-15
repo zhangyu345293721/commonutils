@@ -1,24 +1,26 @@
 package com.tool.bean;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
- * 测试User
+ * user类
+ *
  * @author: zhangyu
  */
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class User {
-    private String name;
-    private int age;
-
-    private Long id;
-
-    public User() {
-    }
+    private Integer id;
+    private String userName;
+    private String password;
+    private Integer age;
 
     public User(String name, int age) {
-        this.name = name;
+        this.userName = name;
         this.age = age;
     }
 }

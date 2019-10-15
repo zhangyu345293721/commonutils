@@ -7,10 +7,7 @@ import org.junit.jupiter.api.Test;
 import redis.clients.jedis.Jedis;
 
 /**
- * @program: utilsdemo
- * @description:
  * @author: zhangyu
- * @create: 2019-08-12 12:02
  */
 public class RedisSaveObjectDemo {
     @Test

@@ -10,10 +10,9 @@ import java.util.stream.Collectors;
 
 
 /**
- * @program: utilsdemo
- * @description: 计算货架更新的频次
+ * 计算货架更新的频次
+ *
  * @author: zhangyu
- * @create: 2019-08-14 11:54
  */
 
 public class StatisticShelfToStationDemo {
@@ -49,10 +48,11 @@ public class StatisticShelfToStationDemo {
     }
 
     /**
-     * @Description: 获取货架的链表
-     * @Param: 输入传入的开始时间和结束时间
+     * 获取货架的链表
+     *
+     * @param : 输入传入的开始时间和结束时间
      * @return: 货架的链表
-     * @Author: zhangyu
+     * @author: zhangyu
      */
     public List<String> getShelfCode(long start, long end) {
         List<String> shelfCodes = new ArrayList<>();
@@ -88,10 +88,11 @@ public class StatisticShelfToStationDemo {
     }
 
     /**
-     * @Description:将String的字符串换成long类型
-     * @Param: 传入String的date类型数
+     * 将String的字符串换成long类型
+     *
+     * @param: 传入String的date类型数
      * @return: 时间的毫秒值
-     * @Author: zhangyu
+     * @author: zhangyu
      */
     private long converseDateTo(String date) {
         try {
