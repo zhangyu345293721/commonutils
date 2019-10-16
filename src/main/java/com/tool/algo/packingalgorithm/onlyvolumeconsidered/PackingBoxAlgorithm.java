@@ -1,5 +1,7 @@
 package com.tool.algo.packingalgorithm.onlyvolumeconsidered;
 
+import com.tool.base.RandomUtils;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -43,10 +45,12 @@ public class PackingBoxAlgorithm {
         while (goodsList.size() > 0) {
             // 每次都取最前面商品
             Map.Entry<String, Integer> goodsEntry = goodsList.get(0);
-            for (Map.Entry<String, Integer> boxEntry : boxsList) {
+            for (int i = 0; i < boxsList.size(); i++) {
                 // 每个箱子能装商品的编码
                 List<String> goodsId = new ArrayList<>();
-                if (boxEntry.getValue() >= goodsEntry.getValue()) {
+                if (boxsList.get(i).getValue() >= goodsEntry.getValue()) {
+                    int randomIndex = RandomUtils.intSeed(i, boxsList.size() - 1);
+                    Map.Entry<String, Integer> boxEntry = boxsList.get(randomIndex);
                     // 箱子剩余大小
                     int remainVolume = boxEntry.getValue() - goodsEntry.getValue();
                     goodsId.add(goodsEntry.getKey());
