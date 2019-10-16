@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
 
 /**
  * 测试装箱算法
@@ -49,5 +50,13 @@ public class PackingBoxAlgorithmTestDemo {
         long endTime = System.currentTimeMillis();
         System.out.println("程序的运行时间：" + (endTime - startTime) + "ms");
 
+    }
+
+    @Test
+    public void randomIntDemo() {
+        for (int i = 0; i < 10; i++) {
+            int num = new Random().nextInt(1);
+            System.out.println(num);
+        }
     }
 }
