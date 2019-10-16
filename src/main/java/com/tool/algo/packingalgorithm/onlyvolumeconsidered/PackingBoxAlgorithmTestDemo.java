@@ -39,8 +39,12 @@ public class PackingBoxAlgorithmTestDemo {
         goodsType.put("12", 1);
 
         long startTime = System.currentTimeMillis();
-        PackingBoxAlgorithm algorithm = new PackingBoxAlgorithm(boxsType, goodsType);
-        Map<String, Long> resultMap = algorithm.getResult();
+        PackingBoxContext context = new PackingBoxContext();
+        context.setGoodsMap(goodsType);
+        context.setBoxsMap(boxsType);
+        PackingBoxAlgorithm algorithm = new PackingBoxAlgorithm();
+        Map<String, Long> resultMap = algorithm.calculate(context);
+
         System.out.println(resultMap.toString());
         long endTime = System.currentTimeMillis();
         System.out.println("程序的运行时间：" + (endTime - startTime) + "ms");

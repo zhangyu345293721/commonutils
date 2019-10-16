@@ -1,6 +1,8 @@
 package com.tool.algo.packingalgorithm.onlyvolumeconsidered;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -13,31 +15,30 @@ import java.util.stream.Collectors;
  * @author: zhangyu
  */
 public class PackingBoxAlgorithm {
-    List<Map.Entry<String, Integer>> boxsList;
-    List<Map.Entry<String, Integer>> goodsList;
+
     // 计算结果    订单编号组成的List为key,箱子型号为value
     private Map<List<String>, String> resultMap = new HashMap();
 
-    /**
-     * 根据箱型以及订单中的商品，返回每个箱型和需要箱子多少只。
-     *
-     * @param boxsMap  箱子型号和体积的map
-     * @param goodsMap 物品型号和体积的map
-     * @return 无返回值
-     */
-    public PackingBoxAlgorithm(Map<String, Integer> boxsMap, Map<String, Integer> goodsMap) {
+    public Map<String, Long> calculate(PackingBoxContext context) {
+        Map<String, Integer> boxsMap = context.getBoxsMap();
+        Map<String, Integer> goodsMap = context.getGoodsMap();
         List<Map.Entry<String, Integer>> goodsList = goodsMap.entrySet().stream().sorted((entry1, entry2) -> entry2.getValue().compareTo(entry1.getValue())).collect(Collectors.toList());
         List<Map.Entry<String, Integer>> boxsList = boxsMap.entrySet().stream().sorted((entry1, entry2) -> entry1.getValue().compareTo(entry2.getValue())).collect(Collectors.toList());
-        this.boxsList = boxsList;
-        this.goodsList = goodsList;
+
         //开始执行装箱操作
-        executePackingBox();
+        executePackingBox(boxsList, goodsList);
+        Map<String, Long> boxsTypeAndNumMap = resultMap.values().stream().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+        //System.out.println(boxsTypeAndNumMap.toString());
+        return boxsTypeAndNumMap;
     }
 
     /**
      * 执行装箱操作
+     *
+     * @param boxsList  顺序排序的box
+     * @param goodsList 倒序排序的goods
      */
-    private void executePackingBox() {
+    private void executePackingBox(List<Map.Entry<String, Integer>> boxsList, List<Map.Entry<String, Integer>> goodsList) {
         // 终止条件为商品数量为空
         while (goodsList.size() > 0) {
             // 每次都取最前面商品
@@ -64,9 +65,9 @@ public class PackingBoxAlgorithm {
     /**
      * 箱子中剩下的体积能装的商品
      *
-     * @param remainVolume 箱子的剩余容量
-     * @param goodsList    商品的链表
-     * @param goodsId      该箱子能装物品的id
+     * @param remainVolume 箱子剩余容量
+     * @param goodsList    商品链表
+     * @param goodsId      该箱子能装物品id
      */
     private void remainBoxVolumeUse(int remainVolume, List<Map.Entry<String, Integer>> goodsList, List<String> goodsId) {
         for (int i = 0; i < goodsList.size(); i++) {
@@ -77,17 +78,6 @@ public class PackingBoxAlgorithm {
                 remainVolume -= goodsEntry.getValue();
             }
         }
-    }
-
-    /**
-     * 统计箱子型号和数量
-     *
-     * @return 箱子的型号, 箱子数量map
-     */
-    public Map<String, Long> getResult() {
-        System.out.println(resultMap.toString());
-        Map<String, Long> boxsTypeAndNumMap = resultMap.values().stream().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
-        return boxsTypeAndNumMap;
     }
 }
 
