@@ -1,7 +1,7 @@
 package com.tool.base.file;
 
+import com.tool.base.RandomUtils;
 import com.tool.base.date.DateUtils;
-import com.tool.base.math.RandomUtils;
 import org.apache.commons.io.Charsets;
 import org.apache.commons.io.IOUtils;
 

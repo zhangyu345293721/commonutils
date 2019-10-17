@@ -30,7 +30,6 @@ public class PackingBoxAlgorithm {
         //开始执行装箱操作
         executePackingBox(boxsList, goodsList);
         Map<String, Long> boxsTypeAndNumMap = resultMap.values().stream().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
-        // System.out.println(boxsTypeAndNumMap.toString());
         return boxsTypeAndNumMap;
     }
 

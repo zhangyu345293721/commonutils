@@ -28,9 +28,11 @@ public class ListDemo {
 
     @Test
     public void permutationTestDemo() {
+        List<List<String>> newList = new ArrayList<>();
         for (List<String> list : Permutation.of(Arrays.asList("a", "b", "c"))) {
-            System.out.println(list);
+            newList.add(new ArrayList<>(list));
         }
+        System.out.println(newList);
     }
 
     @Test
@@ -46,6 +48,7 @@ public class ListDemo {
         }
         System.out.println(list);
     }
+
     @Test
     public void fun() {
         List<Integer> list = new ArrayList<>();

@@ -17,6 +17,7 @@ public class PackingBoxAlgorithmTestDemo {
 
         Map<String, Integer> boxsType = new HashMap();
 
+        // 箱子类型
         boxsType.put("A", 10);
         boxsType.put("B", 35);
         boxsType.put("C", 25);
