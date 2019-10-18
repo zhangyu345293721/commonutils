@@ -21,7 +21,7 @@ public class FileDemo {
     }
 
     @Test
-    public void fun2() {
+    public void getFileListTestDemo() {
         String path = "D:\\var\\geekplus\\playback\\logTempDir";
         List<String> paths = FileUtils.getFilesPath(path);
         System.out.println(paths);
