@@ -5,10 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * @program: utilsdemo
- * @description:
  * @author: zhangyu
- * @create: 2019-09-25 15:08
  */
 public class SelectDemo {
     /**
@@ -31,8 +28,6 @@ public class SelectDemo {
     private static void arrangementSelect(String[] dataList, String[] resultList, int resultIndex, List<List<String>> list) {
         int resultLen = resultList.length;
         if (resultIndex >= resultLen) { // 全部选择完时，输出排列结果
-            //System.out.println(Arrays.asList(resultList));
-            // System.out.println(resultLen);
             list.add(Arrays.asList(resultList));
             return;
         }

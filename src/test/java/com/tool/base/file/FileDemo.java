@@ -6,10 +6,9 @@ import java.io.File;
 import java.util.List;
 
 /**
- * @program: utilsdemo
- * @description: 测试文件夹是不是存在, 不存在就新建一个
+ * 测试文件夹是不是存在, 不存在就新建一个
+ *
  * @author: zhangyu
- * @create: 2019-05-23 10:04
  */
 public class FileDemo {
     @Test
