@@ -1,6 +1,7 @@
 package com.tool.base;
 
 import java.util.*;
+import java.util.function.Function;
 
 /**
  * 集合工具类
@@ -126,5 +127,16 @@ public class CollectionUtil {
      */
     public static <E> Set<E> newSet(int initialCapacity, double loadFactor) {
         return new HashSet<E>(initialCapacity, (float) loadFactor);
+    }
+
+    /**
+     * 获取map的最小key的value
+     *
+     * @param map 传入map的值
+     * @return String
+     */
+    public static String getMinKeysValue(Map<Integer, String> map) {
+        int key = map.keySet().stream().min(Comparator.comparing(Function.identity())).get();
+        return map.get(key);
     }
 }

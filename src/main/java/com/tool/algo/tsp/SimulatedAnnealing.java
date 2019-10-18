@@ -1,10 +1,9 @@
 package com.tool.algo.tsp;
 
 /**
- * @program: utilsdemo
- * @description: SimulatedAnnealing类
+ * SimulatedAnnealing类
+ *
  * @author: zhangyu
- * @create: 2019-09-25 12:32
  */
 public class SimulatedAnnealing {
 

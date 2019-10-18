@@ -15,14 +15,12 @@ import java.util.Set;
  */
 public class SensitiveWordInit {
     private String ENCODING = "GBK";    //字符编码
-    @SuppressWarnings("rawtypes")
     public HashMap sensitiveWordMap;
 
     SensitiveWordInit() {
         super();
     }
 
-    @SuppressWarnings("rawtypes")
     Map initKeyWord() {
         try {
             //读取敏感词库
@@ -67,7 +65,6 @@ public class SensitiveWordInit {
      *
      * @param keyWordSet 敏感词库
      */
-    @SuppressWarnings({"rawtypes", "unchecked"})
     private void addSensitiveWordToHashMap(Set<String> keyWordSet) {
         sensitiveWordMap = new HashMap(keyWordSet.size());     //初始化敏感词容器，减少扩容操作
         String key = null;
@@ -101,10 +98,9 @@ public class SensitiveWordInit {
     /**
      * 读取敏感词库中的内容，将内容添加到set集合中
      *
-     * @return
+     * @return 返回set
      * @throws Exception
      */
-    @SuppressWarnings("resource")
     private Set<String> readSensitiveWordFile() throws Exception {
         Set<String> set = null;
 

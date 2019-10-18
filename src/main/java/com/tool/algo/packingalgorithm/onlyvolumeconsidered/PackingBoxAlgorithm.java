@@ -1,5 +1,7 @@
 package com.tool.algo.packingalgorithm.onlyvolumeconsidered;
 
+import com.tool.base.RandomUtils;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -28,7 +30,6 @@ public class PackingBoxAlgorithm {
         //开始执行装箱操作
         executePackingBox(boxsList, goodsList);
         Map<String, Long> boxsTypeAndNumMap = resultMap.values().stream().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
-        //System.out.println(boxsTypeAndNumMap.toString());
         return boxsTypeAndNumMap;
     }
 
@@ -43,10 +44,11 @@ public class PackingBoxAlgorithm {
         while (goodsList.size() > 0) {
             // 每次都取最前面商品
             Map.Entry<String, Integer> goodsEntry = goodsList.get(0);
-            for (Map.Entry<String, Integer> boxEntry : boxsList) {
+            for (int i = 0; i < boxsList.size(); i++) {
                 // 每个箱子能装商品的编码
                 List<String> goodsId = new ArrayList<>();
-                if (boxEntry.getValue() >= goodsEntry.getValue()) {
+                if (boxsList.get(i).getValue() >= goodsEntry.getValue()) {
+                    Map.Entry<String, Integer> boxEntry = getRandomEntry(i, boxsList);
                     // 箱子剩余大小
                     int remainVolume = boxEntry.getValue() - goodsEntry.getValue();
                     goodsId.add(goodsEntry.getKey());
@@ -71,12 +73,27 @@ public class PackingBoxAlgorithm {
      */
     private void remainBoxVolumeUse(int remainVolume, List<Map.Entry<String, Integer>> goodsList, List<String> goodsId) {
         for (int i = 0; i < goodsList.size(); i++) {
-            Map.Entry<String, Integer> goodsEntry = goodsList.get(i);
-            if (remainVolume > goodsEntry.getValue()) {
+            if (remainVolume > goodsList.get(i).getValue()) {
+                Map.Entry<String, Integer> goodsEntry = getRandomEntry(i, goodsList);
                 goodsId.add(goodsEntry.getKey());
                 goodsList.remove(goodsEntry);
                 remainVolume -= goodsEntry.getValue();
             }
+        }
+    }
+
+    /**
+     * @param i         下标
+     * @param entryList 实例链表
+     * @return 返回实例
+     */
+    public Map.Entry<String, Integer> getRandomEntry(int i, List<Map.Entry<String, Integer>> entryList) {
+        // 随机index在[i,size]直接
+        int randomIndex = RandomUtils.intSeed(i, entryList.size());
+        if (randomIndex < entryList.size()) {
+            return entryList.get(randomIndex);
+        } else {
+            return entryList.get(i);
         }
     }
 }

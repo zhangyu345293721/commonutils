@@ -8,6 +8,7 @@ package com.tool.array;
 
 
 import org.junit.jupiter.api.Test;
+import org.raistlic.common.permutation.Permutation;
 
 import java.util.*;
 
@@ -46,10 +47,16 @@ public class ArraysTest {
         System.out.println(newArr.length + ":" + newArr[0].length);
         for (int i = 0; i < newArr.length; i++) {
             for (int j = 0; j < newArr[0].length; j++) {
-                System.out.print(newArr[i][j]+" ");
+                System.out.print(newArr[i][j] + " ");
             }
             System.out.println();
         }
     }
+
+    @Test
+    public void fun11() {
+        Permutation.of(Arrays.asList("a", "b", "c"));
+    }
 }
+
 

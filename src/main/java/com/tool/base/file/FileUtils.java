@@ -1,7 +1,7 @@
 package com.tool.base.file;
 
+import com.tool.base.RandomUtils;
 import com.tool.base.date.DateUtils;
-import com.tool.base.math.RandomUtils;
 import org.apache.commons.io.Charsets;
 import org.apache.commons.io.IOUtils;
 
@@ -310,8 +310,9 @@ public class FileUtils {
     }
 
     /**
-     * @Author：zhangyu
-     * @Description：获取某个目录下所有直接下级文件，不包括目录下的子目录的下的文件
+     * 获取某个目录下所有直接下级文件，不包括目录下的子目录的下的文件
+     *
+     * @author：zhangyu
      */
     public static List<String> getFilesPath(String path) {
         List<String> filesPath = new ArrayList<String>();
@@ -328,6 +329,7 @@ public class FileUtils {
         return filesPath;
     }
 
+
     /**
      * 从远程下载文件到本地
      *
@@ -343,5 +345,21 @@ public class FileUtils {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    /**
+     * 根据路径得到文件的字符串
+     *
+     * @param path 路径
+     * @return 返回文件的字符串
+     */
+    public static String getFile2String(String path) {
+        String str = null;
+        try {
+            str = IOUtils.toString(new InputStreamReader(new FileInputStream(path), "utf-8"));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return str;
     }
 }

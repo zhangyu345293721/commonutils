@@ -8,17 +8,35 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * @program: utilsdemo
- * @description: 按照要求反转字符串
+ * 按照要求反转字符串
  */
 public class ReverseString {
 
     @Test
     public void fun() {
         String s = "abcdefg";
-        List<String> list = getStringList(s, 2);
-        String s1 = getReverseString(list);
+        String s1 = getReverseString(s, 2);
         System.out.println(s1);
+    }
+
+    /**
+     * 一个字符串按照要求返回
+     *
+     * @param str 字符串
+     * @param n   位置
+     * @return 返回字符串
+     */
+    public String getReverseString(String str, int n) {
+        List<String> list = getStringList(str, n);
+        StringBuffer sb = new StringBuffer();
+        for (int i = 0; i < list.size(); i++) {
+            if ((i & 1) == 0) {
+                sb.append(new StringBuffer(list.get(i)).reverse().toString());
+            } else {
+                sb.append(list.get(i));
+            }
+        }
+        return sb.toString();
     }
 
     private ArrayList<String> getStringList(String str, int n) {
@@ -33,17 +51,5 @@ public class ReverseString {
             list.add(str.substring(n * list.size()));
         }
         return list;
-    }
-
-    public String getReverseString(List<String> list) {
-        StringBuffer sb = new StringBuffer();
-        for (int i = 0; i < list.size(); i++) {
-            if (i % 2 == 0) {
-                sb.append(new StringBuffer(list.get(i)).reverse().toString());
-            } else {
-                sb.append(list.get(i));
-            }
-        }
-        return sb.toString();
     }
 }
