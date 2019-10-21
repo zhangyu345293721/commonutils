@@ -17,13 +17,9 @@ import java.util.stream.Collectors;
  * @author: zhangyu
  */
 public class RedisSaveListDemo {
-    @Test
-    public void redisSaveList() {
-        Jedis redis = new Jedis("172.16.8.90", 6379);
-        redis.auth("root");
+    private List<Person> personList = new ArrayList<>();
 
-        List<Person> persons = new ArrayList<>();
-
+    {
         Person p1 = new Person();
         p1.setAge(19);
         p1.setPassword("12345");
@@ -34,10 +30,16 @@ public class RedisSaveListDemo {
         p2.setPassword("hhahah");
         p2.setUserName("lisi");
 
-        persons.add(p1);
-        persons.add(p2);
+        personList.add(p1);
+        personList.add(p2);
+    }
 
-        Map<String, Person> map = persons.stream().collect(Collectors.toMap(Person::getUserName, e -> e));
+    @Test
+    public void redisSaveList() {
+        Jedis redis = new Jedis("172.16.8.90", 6379);
+        redis.auth("root");
+        // list变成map
+        Map<String, Person> map = personList.stream().collect(Collectors.toMap(Person::getUserName, e -> e));
         String personsInfo = JSON.toJSONString(map);
         System.out.println(personsInfo);
         redis.set("personsInfo", personsInfo);
@@ -47,7 +49,7 @@ public class RedisSaveListDemo {
         Map<String, Person> personMap = new HashMap<>();
         map1.forEach((k, v) -> personMap.put(k, JSON.parseObject(v.toString(), Person.class)));
 
-        for(String s:personMap.keySet()){
+        for (String s : personMap.keySet()) {
             System.out.println(personMap.get(s) instanceof Person);
         }
     }
@@ -60,17 +62,9 @@ public class RedisSaveListDemo {
         String personsInfo = redis.get("personsInfo");
         System.out.println(personsInfo);
         //字符串转map
-        JSONObject jsonObject = JSONObject.parseObject(personsInfo);
-        Map<String, Object> map = (Map<String, Object>) jsonObject;//    //json对象转Map
-
+        Map<String, Object> jsonObject = JSONObject.parseObject(personsInfo, Map.class);
         Map<String, Person> personMap = new HashMap<>();
-
-       /* for (String s : map.keySet()) {
-            if (map.get(s) instanceof Person) {
-                personMap.put(s, (Person) map.get(s));
-            }
-        }*/
-        System.out.println(personMap);
+        jsonObject.forEach((k, v) -> personMap.put(k, JSONObject.parseObject(v.toString(), Person.class)));
 
     }
 }
