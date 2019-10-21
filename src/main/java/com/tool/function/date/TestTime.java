@@ -75,4 +75,9 @@ public class TestTime {
         System.out.println(timeMillis);
     }
 
+    @Test
+    public void fun() {
+        System.out.println("\\n");
+    }
+
 }
