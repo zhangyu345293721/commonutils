@@ -1,7 +1,5 @@
 
-_squid:S2095"CUse try-with-resources or close this "Jedis" in a "finally" clause.(¨÷ëğüÿÿÿÿ
-_squid:S2095<"CUse try-with-resources or close this "Jedis" in a "finally" clause.(¨÷ëğüÿÿÿÿ
-Msquid:S1854C"7Remove this useless assignment to local variable "map".(¢¿
-Ksquid:S28645"4Iterate over the "entrySet" instead of the "keySet".(üØ£½
-<squid:S1905C"&Remove this unnecessary cast to "Map".(¢¿
->squid:S1481C"(Remove this unused "map" local variable.(¢¿
+]squid:S2095"CUse try-with-resources or close this "Jedis" in a "finally" clause.(¨÷ëğüÿÿÿÿ
+zsquid:S1171"YMove the contents of this initializer to a standard constructor or to field initializers.(ÒÌâ–øÿÿÿÿ8¿—öòİ-
+Isquid:S2864"4Iterate over the "entrySet" instead of the "keySet".(üØ£½
+]squid:S2095"CUse try-with-resources or close this "Jedis" in a "finally" clause.(¨÷ëğüÿÿÿÿ

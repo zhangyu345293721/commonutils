@@ -1,8 +1,0 @@
-
-psquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(œœÕ¼
-‡squid:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(í”Æ»
-Ksquid:S2209;"5Change this instance-reference to a static reference.(ëÀı
-jsquid:S00101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(À³Úøûÿÿÿÿ
-fsquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(í”Æ»
-fsquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(şáş¸
-Bsquid:S1168"+Return an empty collection instead of null.(¥¹ï

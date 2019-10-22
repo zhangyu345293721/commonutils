@@ -1,15 +1,0 @@
-
-Gsquid:S1148¡"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÊÜÉÜ-
-vsquid:S00117†"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“øØêşÿÿÿÿ8á˜§ÉÜ-
-Gsquid:S1148ş"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Á¤ÉÜ-
-Esquid:S1905‹"&Remove this unnecessary cast to "int".(è§¹8Á¤ÉÜ-
-?squid:S11480"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
-Tsquid:S2209÷"5Change this instance-reference to a static reference.(ÌİÈœ8ÒÂ¦ÉÜ-
-Gsquid:S1148¸"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÊÜÉÜ-
-vsquid:S00117ö"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“øØêşÿÿÿÿ8ÒÂ¦ÉÜ-
-Gsquid:S1148­"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Á¤ÉÜ-
-Qsquid:S1118":Add a private constructor to hide the implicit public one.(Ò®ÜÄ
-Tsquid:S2209ˆ"5Change this instance-reference to a static reference.(ÚäÇ§8á˜§ÉÜ-
-Bsquid:S1148Ê"#Use a logger to log this exception.(òçøì8Á¤ÉÜ-
-osquid:S1192ë"KDefine a constant instead of duplicating this literal "yyyy-MM-dd" 4 times.(ğ£¨µüÿÿÿÿ8Á¤ÉÜ-
-osquid:S00117‡"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Å³÷Œşÿÿÿÿ

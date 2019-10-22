@@ -1,6 +1,0 @@
-
-fsquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÚøØô
-]squid:S1075 "ARefactor your code to get this URI from a customizable parameter.(Ú¨ë’üÿÿÿÿ
-hsquid:S2095""LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(ù£Üúÿÿÿÿ
-rsquid:S1488*"[Immediately return this expression instead of assigning it to the temporary variable "str".(‰™Âñ
-csquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(€’óèúÿÿÿÿ

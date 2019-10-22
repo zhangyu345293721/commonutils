@@ -302,7 +302,7 @@ public class FileUtils {
     public static List<String> getFileToList(String filePath) {
         List<String> readFileList = null;
         try {
-            readFileList = org.apache.commons.io.FileUtils.readLines(new File(filePath));
+            readFileList = org.apache.commons.io.FileUtils.readLines(new File(filePath), com.google.common.base.Charsets.UTF_8);
         } catch (Exception e) {
             e.printStackTrace();
         }

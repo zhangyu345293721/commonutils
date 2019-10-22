@@ -1,7 +1,7 @@
 
-Jsquid:S2864="4Iterate over the "entrySet" instead of the "keySet".(ý€†[
-]squid:S1075F"ARefactor your code to get this URI from a customizable parameter.(¢ª¤›ûÿÿÿÿ
-Osquid:S1197"8Move the array designator from the variable to the type.(ñü¹ë
-Esquid:S14810")Remove this unused "path" local variable.(ÐÇº½úÿÿÿÿ
-]squid:S10750"ARefactor your code to get this URI from a customizable parameter.(ÐÇº½úÿÿÿÿ
-Tsquid:S18540"8Remove this useless assignment to local variable "path".(ÐÇº½úÿÿÿÿ
+Esquid:S1481/")Remove this unused "path" local variable.(ÐÇº½úÿÿÿÿ
+Tsquid:S1854/"8Remove this useless assignment to local variable "path".(ÐÇº½úÿÿÿÿ
+Osquid:S1197"8Move the array designator from the variable to the type.(ñü¹ë
+]squid:S1075/"ARefactor your code to get this URI from a customizable parameter.(ÐÇº½úÿÿÿÿ
+Jsquid:S2864<"4Iterate over the "entrySet" instead of the "keySet".(ý€†[
+]squid:S1075E"ARefactor your code to get this URI from a customizable parameter.(¢ª¤›ûÿÿÿÿ
