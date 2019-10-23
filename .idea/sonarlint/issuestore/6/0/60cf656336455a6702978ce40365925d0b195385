@@ -1,9 +1,0 @@
-
-Usquid:UnusedPrivateMethodp"0Remove this unused private "getTimeList" method.(•Åè
-]squid:UnusedPrivateMethod^"3Remove this unused private "getAppearTimes" method.(‡Î¢¨øÿÿÿÿ
-Lsquid:S1066ƒ"/Merge this if statement with the enclosing one.(•è®Àøÿÿÿÿ
-Rsquid:S35189";Make sure "count" can't be zero before doing this division.(„÷Âœ
-Qsquid:S2864¦"4Iterate over the "entrySet" instead of the "keySet".(û‹éúÿÿÿÿ
-Ksquid:S2864&"4Iterate over the "entrySet" instead of the "keySet".(»ÞÏ¶
-Usquid:S2130K"9Use "Integer.parseInt" for this string-to-int conversion.(¶¸š°ùÿÿÿÿ
-Ksquid:S2864>"4Iterate over the "entrySet" instead of the "keySet".(«—‡ä

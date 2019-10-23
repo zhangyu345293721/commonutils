@@ -34,9 +34,9 @@ public class GuavaTestDemo {
         System.out.println(imap);
     }
 
-    // 测试map
     @Test
     public void listMapTestDemo() {
+        // 测试有key重复的map
         Multimap<String, Integer> map = ArrayListMultimap.create();
         map.put("a", 1);
         map.put("a", 2);
@@ -49,9 +49,12 @@ public class GuavaTestDemo {
         set.add("c");
         System.out.println(set.count("a"));
 
+        // 测试使用不重复map
         BiMap<String, String> biMap = HashBiMap.create();
         biMap.put("a", "123");
         biMap.put("a", "1234");
+        Map<String, String> map1 = new HashMap<>();
+        biMap.forEach((k, v) -> map1.put(k, v));
         System.out.println(biMap.get("a"));
 
         Table<String, String, Integer> tables = HashBasedTable.create();
@@ -80,17 +83,15 @@ public class GuavaTestDemo {
         System.out.println(list);
     }
 
-    // 将字符串变成map
+    // 将字符串变成map  BiMap强制其value的唯一性
     @Test
     public void string2MapTestDemo() {
         String str = "xiaoming=11,xiaohong=23";
         Map<String, Integer> map = new HashMap<>();
         Splitter.on(",").withKeyValueSeparator("=").split(str).forEach((k, v) -> map.put(k, Integer.valueOf(v)));
-
         for (String s : map.keySet()) {
             System.out.println(s + ":" + map.get(s));
         }
-
     }
 
     // 测试guava支持正则分隔
