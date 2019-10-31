@@ -121,6 +121,45 @@ public class ArraysTest {
         int[] nums2 = {2, 5, 6};
         merge(nums1, 3, nums2, 3);
     }
+
+    @Test
+    public void splitListTestDemo() {
+        List<Integer> integers = new ArrayList<>();
+        integers.add(1);
+        integers.add(2);
+        integers.add(3);
+        integers.add(4);
+        integers.add(5);
+        integers.add(5);
+
+        Map<Integer, List<Integer>> map = get(integers, 2);
+        System.out.println(map.toString());
+
+    }
+
+    /**
+     * 切割list
+     *
+     * @param source
+     */
+    public static <T> Map<Integer, List<T>> get(List<T> source, int n) {
+        Map<Integer, List<T>> result = new LinkedHashMap<>();
+        int remaider = source.size() % n;
+        int number = source.size() / n;
+        int offset = 0;//偏移量
+        for (int i = 0; i < n; i++) {
+            List<T> value = null;
+            if (remaider > 0) {
+                value = source.subList(i * number + offset, (i + 1) * number + offset + 1);
+                remaider--;
+                offset++;
+            } else {
+                value = source.subList(i * number + offset, (i + 1) * number + offset);
+            }
+            result.put(i, value);
+        }
+        return result;
+    }
 }
 
 

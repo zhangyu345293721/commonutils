@@ -2,7 +2,6 @@ package com.tool.database.redis;
 
 
 import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
 import com.tool.bean.Person;
 import org.junit.jupiter.api.Test;
 import redis.clients.jedis.Jedis;
@@ -58,13 +57,7 @@ public class RedisSaveListDemo {
     public void getPersonsInfo() {
         Jedis redis = new Jedis("172.16.8.90", 6379);
         redis.auth("root");
-
         String personsInfo = redis.get("personsInfo");
         System.out.println(personsInfo);
-        //字符串转map
-        Map<String, Object> jsonObject = JSONObject.parseObject(personsInfo, Map.class);
-        Map<String, Person> personMap = new HashMap<>();
-        jsonObject.forEach((k, v) -> personMap.put(k, JSONObject.parseObject(v.toString(), Person.class)));
-
     }
 }

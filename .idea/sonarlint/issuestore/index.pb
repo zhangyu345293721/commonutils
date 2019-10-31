@@ -171,3 +171,13 @@ f
 6src/main/java/com/tool/function/treetool/TreeTool.java,4\1\4189dd1de35ba4a61185a56d1e1cd56b8becdb36
 ]
 -src/test/java/com/tool/person/PersonTest.java,c\a\ca195dd380816693ec2efb427c8a0a38b50d1d5e
+k
+;src/main/java/com/tool/function/generics/GenericsClass.java,0\e\0e8e8218bc110d7f22b2e1e5f1d5c5be9a262f92
+n
+>src/main/java/com/tool/function/generics/GenericsFunction.java,e\c\ecbb7e41cbe13cde5f1d4b148d0cf2e3b7d288bd
+s
+Csrc/main/java/com/tool/function/generics/GenericsClassTestDemo.java,b\5\b532cc80f5e358d59250d20c6b7da2cac79687bb
+i
+9src/main/java/com/tool/function/generics/GenericsImp.java,5\5\558e2a4cf298d8bd1e398762ceefec68fbcf5885
+o
+?src/main/java/com/tool/function/generics/GenericsInterface.java,7\e\7efe5cb2d81ebcd8dd15767824bfd3dc7634132a
