@@ -12,10 +12,30 @@ import java.util.*;
 public class SplitList {
     @Test
     public void splitListTestDemo() {
+        List<Double> list = new ArrayList(Arrays.asList(1.2, 0.6, 0.8, 0.4));
+        List<String> splitList = new ArrayList(Arrays.asList("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"));
+        Map<Integer, List<String>> map = getSplitMap(splitList, list);
+        // {0=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]}
+        System.out.println(map);
+
+    }
+
+    @Test
+    public void splitListTestDemo2() {
+        List<Double> list = new ArrayList(Arrays.asList(0.2, 0.6, 0.8, 0.4));
+        List<String> splitList = new ArrayList(Arrays.asList("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"));
+        Map<Integer, List<String>> map = getSplitMap(splitList, list);
+        // {0=[1, 2], 1=[3, 4, 5, 6, 7, 8], 2=[9, 10, 11
+        System.out.println(map);
+
+    }
+
+    @Test
+    public void splitListTestDemo3() {
         List<Double> list = new ArrayList(Arrays.asList(0.1, 0.2, 0.3, 0.4));
         List<String> splitList = new ArrayList(Arrays.asList("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"));
         Map<Integer, List<String>> map = getSplitMap(splitList, list);
-
+        // {0=[1, 2], 1=[3, 4, 5, 6, 7, 8], 2=[9, 10, 11
         System.out.println(map);
 
     }
@@ -24,7 +44,7 @@ public class SplitList {
      * 将list按照规则进行分区间
      *
      * @param splitList 要划分的链表
-     * @param list      输入要划分的规则
+     * @param list      输入要划分的规则 （一般情况下元素值相减和为1;也考虑到了和不为1的情况）
      * @return 返回map
      */
     private <T> Map<Integer, List<T>> getSplitMap(List<T> splitList, List<Double> list) {

@@ -26,4 +26,22 @@ public class FileDemo {
         List<String> paths = FileUtils.getFilesPath(path);
         System.out.println(paths);
     }
+
+    // 获取一个文件夹下的所有文件
+    @Test
+    public void fileTestDemo() {
+        File[] files = new File("D:\\22").listFiles(File::isFile);
+        for (File file : files) {
+            System.out.println(file.getName());
+        }
+    }
+
+    // 获取一个文件夹下的所有文件
+    @Test
+    public void fileTestDemo2() {
+        File[] files = new File("D:\\22").listFiles(File::isFile);
+        for (File file : files) {
+            System.out.println(file.getFreeSpace());
+        }
+    }
 }
