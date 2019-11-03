@@ -1,4 +1,4 @@
-package com.tool;
+package com.tool.python;
 
 import jep.Interpreter;
 import jep.JepException;
@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
  *
  * @author: zhangyu
  */
-public class TestDemo {
+public class ExecPython {
     @Test
     public static void main(String[] args) {
         try (Interpreter interp = new SharedInterpreter()) {

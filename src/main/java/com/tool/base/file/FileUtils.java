@@ -24,7 +24,7 @@ public class FileUtils {
      * @param filePath 指定的文件路径
      * @param isNew    true：新建、false：不新建
      * @return 存在返回TRUE，不存在返回FALSE
-     * <p>
+     *
      * 判断指定路径是否存在，如果不存在，根据参数决定是否新建
      */
     public static boolean isExist(String filePath, boolean isNew) {
@@ -312,10 +312,11 @@ public class FileUtils {
     /**
      * 获取某个目录下所有直接下级文件，不包括目录下的子目录的下的文件
      *
-     * @author：zhangyu
+     * @param path 输入路径
+     * @return 得到string的list
      */
     public static List<String> getFilesPath(String path) {
-        List<String> filesPath = new ArrayList<String>();
+        List<String> filesPath = new ArrayList();
         File file = new File(path);
         File[] tempList = file.listFiles();
         for (int i = 0; i < tempList.length; i++) {
