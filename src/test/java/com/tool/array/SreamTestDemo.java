@@ -1,7 +1,9 @@
 package com.tool.array;
 
+import com.tool.bean.Person;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -72,5 +74,31 @@ public class SreamTestDemo {
         String[][] data = new String[][]{{"a", "b"}, {"c", "d"}, {"e", "f"}};
         List<String> list = Stream.of(data).flatMap(e -> Arrays.stream(e)).collect(Collectors.toList());
         System.out.println(list);
+    }
+
+    // 使用join对字符串进行拼接
+    @Test
+    public void personTestDemo() {
+        Person p1 = new Person("zhangyu", "123456", 12);
+        Person p2 = new Person("tangtuo", "334", 24);
+        Person p3 = new Person("lisi", "wangwu", 25);
+        List<Person> artists = Arrays.asList(p1, p2, p3);
+        String result = artists.stream().map(Person::getUserName).collect(Collectors.joining(",", "[", "]"));
+        System.out.println(result);
+    }
+
+    @Test
+    public void parallelDiceRollsTestDemo() {
+        List<Integer> list = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
+        int totalSum = addInteger(list);
+        System.out.println("totalSum = " + totalSum);
+        double average = list.parallelStream().mapToInt(e -> e).summaryStatistics().getAverage();
+        System.out.println(average);
+        long totalPowSum = list.stream().mapToInt(e -> e).map(x -> x * x).summaryStatistics().getSum();
+        System.out.println("totalPowSum = " + totalPowSum);
+    }
+
+    public int addInteger(List<Integer> values) {
+        return values.parallelStream().mapToInt(i -> i).sum();
     }
 }

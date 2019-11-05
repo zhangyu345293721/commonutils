@@ -1,5 +1,7 @@
 package com.tool.base;
 
+import org.junit.jupiter.api.Test;
+
 import java.lang.reflect.Array;
 import java.util.*;
 
@@ -689,5 +691,12 @@ public class ArrayUtils {
         public E nextElement() {
             return es[index++];
         }
+    }
+
+    @Test
+    public void ArrayUtilsTestDemo() {
+        double[][] arr = {{1, 1}};
+        boolean flag = ArrayUtils.isEmpty(arr);
+        System.out.println(flag);
     }
 }
