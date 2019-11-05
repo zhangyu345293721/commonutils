@@ -1,4 +1,4 @@
-package com.tool.beanConvert;
+package com.tool.beanconvert;
 
 import java.beans.BeanInfo;
 import java.beans.IntrospectionException;
