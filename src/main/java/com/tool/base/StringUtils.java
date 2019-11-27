@@ -13,6 +13,7 @@ public class StringUtils {
     private static final int INDEX_NOT_FOUND = -1;
     private static final String NULL = "null";
     private static final String PLACEHOLDER = "\\?";
+
     /**
      * 将半角的符号转换成全角符号.(即英文字符转中文字符)
      *
@@ -135,7 +136,7 @@ public class StringUtils {
      * @return 返回布尔值
      */
     public static boolean isAllLowerCase(String value) {
-        if (value == null || "".equals(value)) {
+        if (value == null || "".equals(value.trim())) {
             return false;
         }
         for (int i = 0; i < value.length(); i++) {
@@ -153,7 +154,7 @@ public class StringUtils {
      * @return 返回布尔值
      */
     public static boolean isAllUpperCase(String value) {
-        if (value == null || "".equals(value)) {
+        if (value == null || "".equals(value.trim())) {
             return false;
         }
         for (int i = 0; i < value.length(); i++) {
@@ -262,20 +263,6 @@ public class StringUtils {
         htmlStr = m_space.replaceAll(""); // 过滤空格回车标签  
 
         return htmlStr.trim(); // 返回文本字符串
-    }
-
-    /**
-     * 判断数组是否不为空
-     *
-     * @param array array
-     * @return boolean
-     */
-    public static <T> boolean isNotEmptyArray(T[] array) {
-        if (array != null && array.length > 0) {
-            return true;
-        } else {
-            return false;
-        }
     }
 
     /**

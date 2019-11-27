@@ -1,9 +1,13 @@
 package com.tool.string;
 
 import org.junit.jupiter.api.Test;
+import org.raistlic.common.permutation.Combination;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 import java.util.function.Predicate;
 
 /**
@@ -49,5 +53,14 @@ public class StringTestDemo {
         Date date = new Date(time);
         System.out.println(date);
 
+    }
+
+    @Test
+    public void combinationTestDemo() {
+        List<Integer> list = new ArrayList<>(Arrays.asList(1, 3, 2, 4, 5));
+        Combination<Integer> combination = Combination.of(list, 2);
+        List<List<Integer>> allList = new ArrayList<>();
+        combination.forEach(e -> allList.add(new ArrayList<>(e)));
+        System.out.println(allList.size());
     }
 }

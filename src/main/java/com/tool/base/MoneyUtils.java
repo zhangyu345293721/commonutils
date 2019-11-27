@@ -1,5 +1,7 @@
 package com.tool.base;
 
+import org.junit.jupiter.api.Test;
+
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
@@ -263,5 +265,13 @@ public class MoneyUtils {
                 break;
         }
         return cell;
+    }
+
+    @Test
+    public void moneyUtilsTestDemo() {
+        String num = "1234.4";
+        BigDecimal b = new BigDecimal(num);
+        String str = number2CNMontray(b);
+        System.out.println(str);
     }
 }

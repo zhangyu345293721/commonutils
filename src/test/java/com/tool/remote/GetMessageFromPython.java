@@ -1,5 +1,7 @@
 package com.tool.remote;
 
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import org.junit.Test;
 
 import java.io.*;
@@ -56,12 +58,18 @@ public class GetMessageFromPython {
 
     @Test
     public void pythonTestDemo3() throws Exception {
-        String message = "2,3";
+        String msgType = "data1";
         int port = 12346;
         InetAddress addr = InetAddress.getLocalHost();
         String ip = addr.getHostName();
-        String responseMessage = getMessageFromRemotePort(message, ip, port);
+        String responseMessage = getMessageFromRemotePort(msgType, ip, port);
         System.out.println(responseMessage);
+        // System.out.println(responseMessage.substring(responseMessage.length() - 3));
+        JSONObject object = JSONObject.parseObject(responseMessage);
+        JSONArray arr = object.getJSONArray(msgType);
+        // List<Integer> list = arr.stream().map(e -> (int) e).collect(Collectors.toList());
+        System.out.println(arr.get(0));
+        System.out.println(arr.size());
     }
 
     /**
@@ -87,15 +95,12 @@ public class GetMessageFromPython {
             // 获取服务进程的输入流
             InputStream is = socket.getInputStream();
             BufferedReader br = new BufferedReader(new InputStreamReader(is, "utf-8"));
-            String tmp = null;
+            String tmp = new String();
             // 读取内容
             while ((tmp = br.readLine()) != null) {
                 sb.append(tmp).append('\n');
             }
             // System.out.print(sb.toString());
-            // 解析结果
-            // JSONArray res = JSON.parseArray(sb.toString());
-            //  System.out.println(res.size());
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -107,7 +112,7 @@ public class GetMessageFromPython {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-            System.out.print("远程接口调用结束.");
+            // System.out.print("远程接口调用结束.");
         }
         return sb.toString();
     }

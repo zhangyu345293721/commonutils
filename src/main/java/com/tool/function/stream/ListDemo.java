@@ -31,7 +31,7 @@ public class ListDemo {
         Iterator iter = Permutation.of(Arrays.asList("a", "b", "c"), 3).iterator();
         List<List<String>> list = new ArrayList<>();
         BigInteger b = Permutation.of(Arrays.asList("a", "b", "c")).getPermutationCount();
-        System.out.println(b);
+        //System.out.println(b);
         while (iter.hasNext()) {
             List<String> oneList = (List<String>) iter.next();
             System.out.println(list.add(oneList));
@@ -48,7 +48,7 @@ public class ListDemo {
     }
 
     @Test
-    public void stringDistctTestDemo() {
+    public void stringDistinctTestDemo() {
         List<String> list = Arrays.asList("Hello", "World");
         List<String[]> newList = list.stream().map(word -> word.split("")).distinct().collect(Collectors.toList());
         newList.stream().forEach(e -> System.out.println(e[0]));
@@ -57,7 +57,7 @@ public class ListDemo {
     @Test
     public void mapTestFlatMapTestDemo() {
         List<String> list = Arrays.asList("hello welcome", "world hello", "hello world", "hello world welcome");
-        //map和flatmap的区别
+        // map和flatmap的区别
         list.stream().map(item -> Arrays.stream(item.split(" "))).distinct().collect(Collectors.toList()).forEach(System.out::println);
         System.out.println("---------- ");
         list.stream().flatMap(item -> Arrays.stream(item.split(" "))).distinct().collect(Collectors.toList()).forEach(System.out::println);
@@ -82,13 +82,14 @@ public class ListDemo {
         words.add("hello");
         words.add("word");
 
-        //将words数组中的元素再按照字符拆分，然后字符去重，最终达到["h", "e", "l", "o", "w", "r", "d"]
-        //如果使用map，是达不到直接转化成List<String>的结果
+        // 将words数组中的元素再按照字符拆分，然后字符去重，最终达到["h", "e", "l", "o", "w", "r", "d"]
+        // 如果使用map，是达不到直接转化成List<String>的结果
         List<String> stringList = words.stream()
                 .flatMap(word -> Arrays.stream(word.split("")))
                 .distinct()
                 .collect(Collectors.toList());
-        stringList.forEach(e -> System.out.print(e));
+
+        System.out.println(stringList);
     }
 
     @Test
@@ -107,13 +108,16 @@ public class ListDemo {
     }
 
     /**
+     * 将字符串转成字符流
+     *
      * @param s 输入字符串
      * @return 输出流
      */
     public static Stream<Character> characterStream(String s) {
         List<Character> result = new ArrayList<>();
-        for (char c : s.toCharArray())
+        for (char c : s.toCharArray()) {
             result.add(c);
+        }
         return result.stream();
     }
 }

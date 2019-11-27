@@ -15,7 +15,7 @@ public class ArrayUtils {
      * 判断数组是否为空
      *
      * @param array
-     * @return
+     * @return 布尔值
      */
     public static boolean isNotEmpty(Object[] array) {
         return !isEmpty(array);
@@ -30,7 +30,6 @@ public class ArrayUtils {
     public static boolean isEmpty(Object[] array) {
         return array == null || array.length == 0;
     }
-
 
     /**
      * 数组是否为空
@@ -197,7 +196,7 @@ public class ArrayUtils {
      * 判断参数是否是一个数组
      *
      * @param obj 对象
-     * @return
+     * @return 布尔值
      */
     public static boolean isArray(Object obj) {
         return obj != null && obj.getClass().isArray();
@@ -207,7 +206,7 @@ public class ArrayUtils {
      * 将参数组装成数组
      *
      * @param obj 参数对象
-     * @return
+     * @return 返回对象数组
      */
     public static <E> E[] asArray(E... obj) {
         return obj;
@@ -217,7 +216,7 @@ public class ArrayUtils {
      * 将参数集合转换为数组表示
      *
      * @param collection 集合参数
-     * @return
+     * @return 布尔值
      */
     public static <E> E[] asArray(Collection<E> collection) {
         if (collection == null || collection.size() == 0) {
@@ -234,7 +233,7 @@ public class ArrayUtils {
      * 获取数组元素的实际数据类型
      *
      * @param array 数组
-     * @return
+     * @return 布尔值
      */
     public static <E> Class<E> getElementType(E[] array) {
         Class<?> clas = array.getClass();
@@ -246,7 +245,7 @@ public class ArrayUtils {
      * 获取数组元素的实际数据类型
      *
      * @param array 数组
-     * @return
+     * @return 布尔值
      */
     public static Class<?> getElementType(Object array) {
         if (!isArray(array)) {
@@ -259,7 +258,7 @@ public class ArrayUtils {
      * 数组转化为List
      *
      * @param array 数组
-     * @return
+     * @return 布尔值
      */
     public static <E> List<E> toList(E[] array) {
         return Arrays.asList(array);
@@ -269,7 +268,7 @@ public class ArrayUtils {
      * 数组转化为List
      *
      * @param array 数组
-     * @return
+     * @return 布尔值
      */
     public static List<Boolean> toList(boolean[] array) {
         int length = Array.getLength(array);
@@ -280,7 +279,7 @@ public class ArrayUtils {
      * 数组转化为List
      *
      * @param array 数组
-     * @return
+     * @return 布尔值
      */
     public static List<Byte> toList(byte[] array) {
         int length = Array.getLength(array);
@@ -291,7 +290,7 @@ public class ArrayUtils {
      * 数组转化为List
      *
      * @param array 数组
-     * @return
+     * @return 布尔值
      */
     public static List<Character> toList(char[] array) {
         int length = Array.getLength(array);
@@ -302,7 +301,7 @@ public class ArrayUtils {
      * 数组转化为List
      *
      * @param array 数组
-     * @return
+     * @return 布尔值
      */
     public static List<Double> toList(double[] array) {
         int length = Array.getLength(array);
@@ -313,7 +312,7 @@ public class ArrayUtils {
      * 数组转化为List
      *
      * @param array 数组
-     * @return
+     * @return 布尔值
      */
     public static List<Float> toList(float[] array) {
         int length = Array.getLength(array);
@@ -324,7 +323,7 @@ public class ArrayUtils {
      * 数组转化为List
      *
      * @param array 数组
-     * @return
+     * @return 布尔值
      */
     public static List<Integer> toList(int[] array) {
         int length = Array.getLength(array);
@@ -335,7 +334,7 @@ public class ArrayUtils {
      * 数组转化为List
      *
      * @param array 数组
-     * @return
+     * @return 布尔值
      */
     public static List<Long> toList(long[] array) {
         int length = Array.getLength(array);
@@ -346,7 +345,7 @@ public class ArrayUtils {
      * 数组转化为List
      *
      * @param array 数组
-     * @return
+     * @return 布尔值
      */
     public static List<Short> toList(short[] array) {
         int length = Array.getLength(array);
@@ -698,5 +697,11 @@ public class ArrayUtils {
         double[][] arr = {{1, 1}};
         boolean flag = ArrayUtils.isEmpty(arr);
         System.out.println(flag);
+    }
+
+    @Test
+    public void arrayTest() {
+        Integer arr[] = null;
+        System.out.println(isEmpty(arr));
     }
 }

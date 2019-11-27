@@ -1,8 +1,12 @@
 package com.tool.base.file;
 
+import com.tool.base.RandomUtils;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -44,4 +48,46 @@ public class FileDemo {
             System.out.println(file.getFreeSpace());
         }
     }
+
+    @Test
+    public void fileReadTestDemo() {
+        List<String> lists = FileUtils.getFileToList("C:\\Users\\octopus\\Desktop\\sku_info.csv");
+
+        List<String> newList = new ArrayList<>();
+        for (String str : lists) {
+            int randomNumber = RandomUtils.intSeed(0, 9);
+            str = str + "," + randomNumber;
+            newList.add(str);
+        }
+        FileUtils.listToFile("C:\\Users\\octopus\\Desktop\\sku_info2.csv", newList);
+    }
+
+    @Test
+    public void millist2Date() throws Exception {
+        long milliSecond = 1555924579970l;
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        Date date2 = null;
+        try {
+            Date date = new Date();
+            date.setTime(milliSecond);
+            String str = sdf.format(date);
+            date2 = sdf.parse(str);
+        } catch (Exception e) {
+
+        }
+        System.out.println(date2.getTime());
+    }
+
+    @Test
+    public void Date2MilisTestDemo() {
+        try {
+            String times = "2019-05-23 04:00:00";
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            Date date = simpleDateFormat.parse(times);
+            System.out.println(date.getTime());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 }

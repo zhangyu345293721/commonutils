@@ -6,7 +6,6 @@ import java.time.*;
 import java.time.temporal.ChronoField;
 import java.time.temporal.ChronoUnit;
 
-import static java.time.temporal.ChronoUnit.SECONDS;
 import static java.time.temporal.TemporalAdjusters.*;
 
 /**
@@ -16,20 +15,22 @@ import static java.time.temporal.TemporalAdjusters.*;
  */
 
 public class TimeDemo {
+    // jdk8的localDate
     @Test
     public void localDateTestDemo() {
         LocalDate date = LocalDate.of(2019, 10, 30);
         int year = date.getYear();
-        Month month = date.getMonth();
-        int day = date.getDayOfMonth();
-        DayOfWeek dow = date.getDayOfWeek();
-        int len = date.lengthOfMonth(); // 一个月的长度
-        boolean leap = date.isLeapYear();
         System.out.println(year);
+        Month month = date.getMonth();
         System.out.println(month);
+        int day = date.getDayOfMonth();
         System.out.println(day);
+        DayOfWeek dow = date.getDayOfWeek();
         System.out.println(dow);
+        // 一个月的长度
+        int len = date.lengthOfMonth();
         System.out.println(len);
+        boolean leap = date.isLeapYear();
         System.out.println(leap);
 
         LocalDate today = LocalDate.now();
@@ -43,40 +44,60 @@ public class TimeDemo {
         System.out.println(day1);
     }
 
+    // jdk8的localTime
     @Test
     public void localTimeTestDemo() {
         LocalTime time = LocalTime.of(17, 45, 32);
         int hour = time.getHour();
-        int minute = time.getMinute();
-        int second = time.getSecond();
         System.out.println(hour);
+        int minute = time.getMinute();
         System.out.println(minute);
+        int second = time.getSecond();
         System.out.println(second);
     }
 
     @Test
+    public void localTimeTestDemo2() {
+        LocalTime time = LocalTime.now();
+        // 获取小时
+        int hour = time.getHour();
+        System.out.println(hour);
+        // 获取分钟
+        int minute = time.getMinute();
+        System.out.println(minute);
+        // 获取秒
+        int second = time.getSecond();
+        System.out.println(second);
+    }
+
+    // jdk8测试localDataTime
+    @Test
     public void LocalDateTimeTestDemo() {
         LocalDateTime dt1 = LocalDateTime.of(2014, 3, 12, 13, 45, 20);
-        // LocalDateTime dt2=LocalDateTime.of(date,time)
         System.out.println(dt1.getDayOfWeek());
+        // 获取localDate
         LocalDate date1 = dt1.toLocalDate();
+        // 获取LocalTime
         LocalTime time1 = dt1.toLocalTime();
         System.out.println(date1.getMonth().getValue());
         System.out.println(time1.getHour());
     }
 
+    // jdk8的priod,直接计算间隔多少天
     @Test
     public void priodTestDemo() {
         Period tenDays = Period.between(LocalDate.of(2014, 3, 8), LocalDate.of(2014, 3, 18));
         System.out.println(tenDays.getDays());
     }
 
+    // 间隔多少秒
     @Test
     public void durationTestDemo() {
         Duration time = Duration.between(LocalDateTime.of(2014, 3, 12, 13, 45, 20), LocalDateTime.of(2019, 3, 12, 13, 45, 20));
-        System.out.println(time.get(SECONDS));
+        System.out.println(time.getSeconds());
     }
 
+    // 可以修改时间类
     @Test
     public void modifyLocalTestDemo() {
         LocalDate date1 = LocalDate.of(2014, 3, 18);
@@ -86,6 +107,7 @@ public class TimeDemo {
         System.out.println(date4.toString());
     }
 
+    // localTime平移操作
     @Test
     public void LocalDateTestDemo() {
         LocalDate date1 = LocalDate.of(2014, 3, 18);

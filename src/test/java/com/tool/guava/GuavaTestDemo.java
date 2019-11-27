@@ -20,11 +20,14 @@ import java.util.concurrent.TimeUnit;
  */
 public class GuavaTestDemo {
 
+    /**
+     * 不可变list,set,map
+     */
     @Test
     public void ImmutableTestDemo() {
         ImmutableList<String> list = ImmutableList.of("a", "b", "c");
         for (String s : list) {
-            System.out.println(s);
+            System.out.print(s + " ");
         }
 
         ImmutableSet<String> iSet = ImmutableSet.of("e1", "e2");
@@ -36,7 +39,7 @@ public class GuavaTestDemo {
 
     @Test
     public void listMapTestDemo() {
-        // 测试有key重复的map
+        // 有key重复的map
         Multimap<String, Integer> map = ArrayListMultimap.create();
         map.put("a", 1);
         map.put("a", 2);
@@ -46,22 +49,30 @@ public class GuavaTestDemo {
         Multiset<String> set = HashMultiset.create();
         set.add("a");
         set.add("a");
+        set.add("a");
         set.add("c");
         System.out.println(set.count("a"));
+        System.out.println(set.elementSet());
+    }
 
-        // 测试使用不重复map
+    // 测试使用不重复map
+    @Test
+    public void biMapTestDemo() {
         BiMap<String, String> biMap = HashBiMap.create();
         biMap.put("a", "123");
         biMap.put("a", "1234");
         Map<String, String> map1 = new HashMap<>();
         biMap.forEach((k, v) -> map1.put(k, v));
         System.out.println(biMap.get("a"));
+    }
 
+    // 测试使用table
+    @Test
+    public void tableTestDemo() {
         Table<String, String, Integer> tables = HashBasedTable.create();
         tables.put("1", "1", 1);
         tables.put("1", "2", 2);
         System.out.println(tables.toString());
-
     }
 
     // 测试连接字符串
@@ -85,10 +96,31 @@ public class GuavaTestDemo {
 
     // 将字符串变成map  BiMap强制其value的唯一性
     @Test
+    public void string2LinkedMapTestDemo() {
+        String str = "xiaoming=11,xiaohong=23,xiaohong=24";
+        Map<String, Integer> map = new LinkedHashMap<>();
+
+        Splitter.on(",").split(str).forEach(e -> {
+            String strs[] = e.split("=");
+            map.put(strs[0], Integer.valueOf(strs[1]));
+        });
+
+        for (String s : map.keySet()) {
+            System.out.println(s + ":" + map.get(s));
+        }
+    }
+
+    // 将字符串变成map  BiMap强制其value的唯一性
+    @Test
     public void string2MapTestDemo() {
-        String str = "xiaoming=11,xiaohong=23";
-        Map<String, Integer> map = new HashMap<>();
-        Splitter.on(",").withKeyValueSeparator("=").split(str).forEach((k, v) -> map.put(k, Integer.valueOf(v)));
+        String str = "xiaoming=11,xiaohong=23 ";
+        Map<String, Integer> map = new LinkedHashMap<>();
+
+        Splitter.on(",").split(str).forEach(e -> {
+            String strs[] = e.split("=");
+            map.put(strs[0], Integer.valueOf(strs[1]));
+        });
+
         for (String s : map.keySet()) {
             System.out.println(s + ":" + map.get(s));
         }

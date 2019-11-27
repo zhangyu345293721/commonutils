@@ -341,7 +341,6 @@ public class DateUtils {
         if (value == null) {
             return null;
         }
-
         SimpleDateFormat sdf = DateFormatUtils.getFormat(format);
         return sdf.format(value);
     }

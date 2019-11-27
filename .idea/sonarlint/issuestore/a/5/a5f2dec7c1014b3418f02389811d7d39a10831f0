@@ -1,15 +1,14 @@
 
-nsquid:S3776:"RRefactor this method to reduce its Cognitive Complexity from 32 to the 15 allowed.(Û³éÈýÿÿÿÿ
-Esquid:S1940N")Use the opposite operator ("<=") instead.(˜ãÈÒøÿÿÿÿ
-dsquid:S3027¯"FPut single-quotes around '.' to use the faster "indexOf(char)" method.(ãŽX8´©‡ÉÜ-
-Vsquid:S1118	":Add a private constructor to hide the implicit public one.(âæíÓûÿÿÿÿ
-Esquid:S1940|")Use the opposite operator ("<=") instead.(á“éøúÿÿÿÿ
-~squid:S1149À"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(é‡âÅ8´©‡ÉÜ-
-@squid:S2111á"!Use "BigDecimal.valueOf" instead.(¨…ŒÎ8´©‡ÉÜ-
-jsquid:S3027¹"FPut single-quotes around '-' to use the faster "indexOf(char)" method.(ñü¸‹øÿÿÿÿ8´©‡ÉÜ-
-esquid:S3027ç"FPut single-quotes around '.' to use the faster "indexOf(char)" method.(§Ëã—8´©‡ÉÜ-
-Esquid:S1940I")Use the opposite operator ("<=") instead.(á“éøúÿÿÿÿ
-~squid:S1149½"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(ƒéë8´©‡ÉÜ-
-Csquid:S2129á"$Remove this "BigDecimal" constructor(¨…ŒÎ8´©‡ÉÜ-
-vsquid:S1149;"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(í…Ò‰
-X"squid:SwitchLastCaseIsDefaultChecké""Add a default case to this switch.(ý¦Á8´©‡ÉÜ-
+Esquid:S1940K")Use the opposite operator ("<=") instead.(á“éøúÿÿÿÿ
+~squid:S1149Â"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(é‡âÅ8´©‡ÉÜ-
+Esquid:S1940P")Use the opposite operator ("<=") instead.(˜ãÈÒøÿÿÿÿ
+Esquid:S1940~")Use the opposite operator ("<=") instead.(á“éøúÿÿÿÿ
+dsquid:S3027±"FPut single-quotes around '.' to use the faster "indexOf(char)" method.(ãŽX8´©‡ÉÜ-
+Csquid:S2129ã"$Remove this "BigDecimal" constructor(¨…ŒÎ8´©‡ÉÜ-
+jsquid:S3027»"FPut single-quotes around '-' to use the faster "indexOf(char)" method.(ñü¸‹øÿÿÿÿ8´©‡ÉÜ-
+X"squid:SwitchLastCaseIsDefaultCheckë""Add a default case to this switch.(ý¦Á8´©‡ÉÜ-
+nsquid:S3776<"RRefactor this method to reduce its Cognitive Complexity from 32 to the 15 allowed.(Û³éÈýÿÿÿÿ
+vsquid:S1149="_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(í…Ò‰
+~squid:S1149¿"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(ƒéë8´©‡ÉÜ-
+@squid:S2111ã"!Use "BigDecimal.valueOf" instead.(¨…ŒÎ8´©‡ÉÜ-
+esquid:S3027é"FPut single-quotes around '.' to use the faster "indexOf(char)" method.(§Ëã—8´©‡ÉÜ-

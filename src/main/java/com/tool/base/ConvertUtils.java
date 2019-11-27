@@ -2,6 +2,7 @@ package com.tool.base;
 
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * 时间转换工具类
@@ -16,7 +17,7 @@ public class ConvertUtils {
      * @param defaultValue 默认日期
      * @return 返回日期
      */
-    public static java.util.Date strToDate(String str, java.util.Date defaultValue) {
+    public static Date strToDate(String str, Date defaultValue) {
         return strToDate(str, "yyyy-MM-dd HH:mm:ss", defaultValue);
     }
 
@@ -28,7 +29,7 @@ public class ConvertUtils {
      * @param defaultValue 默认日期
      * @return 返回日期
      */
-    public static java.util.Date strToDate(String str, String format, java.util.Date defaultValue) {
+    public static java.util.Date strToDate(String str, String format, Date defaultValue) {
         SimpleDateFormat fmt = new SimpleDateFormat(format);
         try {
             defaultValue = fmt.parse(str);
@@ -44,7 +45,7 @@ public class ConvertUtils {
      * @param defaultValue 默认字符串
      * @return 返回字符串
      */
-    public static String dateToStr(java.util.Date date, String defaultValue) {
+    public static String dateToStr(Date date, String defaultValue) {
         return dateToStr(date, "yyyy-MM-dd HH:mm:ss", defaultValue);
     }
 
@@ -56,7 +57,7 @@ public class ConvertUtils {
      * @param defaultValue 默认值
      * @return 返回字符串
      */
-    public static String dateToStr(java.util.Date date, String format, String defaultValue) {
+    public static String dateToStr(Date date, String format, String defaultValue) {
         SimpleDateFormat sdf = new SimpleDateFormat(format);
         try {
             defaultValue = sdf.format(date);
@@ -84,7 +85,7 @@ public class ConvertUtils {
      * @param date date
      * @return 返回date类型
      */
-    public static java.sql.Date dateToSqlDate(java.util.Date date) {
+    public static java.sql.Date dateToSqlDate(Date date) {
         return new java.sql.Date(date.getTime());
     }
 
@@ -95,7 +96,7 @@ public class ConvertUtils {
      * @return 返回日期
      */
     public static java.util.Date sqlDateToDate(java.sql.Date date) {
-        return new java.util.Date(date.getTime());
+        return new Date(date.getTime());
     }
 
     /**
@@ -104,7 +105,7 @@ public class ConvertUtils {
      * @param date date
      * @return 返回Timestamp
      */
-    public static Timestamp dateToSqlTimestamp(java.util.Date date) {
+    public static Timestamp dateToSqlTimestamp(Date date) {
         return new Timestamp(date.getTime());
     }
 
@@ -115,6 +116,6 @@ public class ConvertUtils {
      * @return 返回date
      */
     public static java.util.Date qlTimestampToDate(Timestamp date) {
-        return new java.util.Date(date.getTime());
+        return new Date(date.getTime());
     }
 }

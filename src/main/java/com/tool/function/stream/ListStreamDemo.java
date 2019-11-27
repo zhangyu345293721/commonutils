@@ -25,7 +25,7 @@ public class ListStreamDemo {
         list.add(2);
         list.add(3);
         list.add(3);
-        Map<Integer, Double> map = list.stream().collect(Collectors.groupingBy(Integer::intValue, Collectors.averagingInt(Integer::intValue)));
+        Map<Integer, Long> map = list.stream().collect(Collectors.groupingBy(Integer::intValue, Collectors.counting()));
         System.out.println(map);
     }
 
@@ -34,10 +34,10 @@ public class ListStreamDemo {
     public void groupAndComputeAgeAverage() {
         List<Person> list = new ArrayList();
         list.add(new Person("zhangsan", "11", 12));
-        list.add(new Person("zhangsan", "11", 12));
+        list.add(new Person("zhangsan", "11", 14));
         list.add(new Person(null, "11", 12));
         list.add(new Person("zhangsan", "11", 12));
-        list.add(new Person("zhangsan", "11", 12));
+        list.add(new Person("zhangsan", "11", 13));
 
         Map<String, Double> map = list.stream().filter(e -> e.getUserName() != null).collect(Collectors.groupingBy(Person::getUserName, Collectors.averagingInt(Person::getAge)));
         for (String name : map.keySet()) {
@@ -50,10 +50,10 @@ public class ListStreamDemo {
     public void personTestDemo3() {
         List<Person> list = new ArrayList();
         list.add(new Person("zhangsan", "11", 12));
-        list.add(new Person("zhangsan", "11", 12));
-        list.add(new Person("zhangsan", "11", 12));
-        list.add(new Person("zhangsan", "11", 12));
-        list.add(new Person("zhangsan", "11", 12));
+        list.add(new Person("zhangsan", "11", 13));
+        list.add(new Person("zhangsan", "11", 14));
+        list.add(new Person("zhangsan", "11", 15));
+        list.add(new Person("zhangsan", "11", 16));
 
         Map<Integer, Person> map = list.stream().collect(Collectors.toMap(Person::getAge, e -> e));
         for (Integer id : map.keySet()) {
@@ -117,8 +117,13 @@ public class ListStreamDemo {
         List<String> filtered = strings.stream().filter(e -> !e.isEmpty()).collect(Collectors.toList());
         // 过滤掉为空的字符串
         System.out.println(filtered);
+    }
+
+    @Test
+    public void mergeStringList() {
+        List<String> strings = Arrays.asList("abc", "", "bc", "efd", "abcd", "", "jkl");
         // 对字符串进行拼接
-        String mergeString = filtered.stream().collect(Collectors.joining(" "));
+        String mergeString = strings.stream().filter(e -> !e.isEmpty()).collect(Collectors.joining(" "));
         System.out.println(mergeString);
     }
 
@@ -140,8 +145,6 @@ public class ListStreamDemo {
 
     /**
      * 统计一个字符出现的个数，利用jdk8的新特性
-     *
-     * @author: zhangyu
      */
     @Test
     public void groupAndCount() {
@@ -154,8 +157,8 @@ public class ListStreamDemo {
     public void StreamFun() {
         //1.数组
         String[] arr = new String[]{"ab", "cd", "df"};
-        Stream<String> arrStream = Arrays.stream(arr);
-        System.out.println(arrStream.findFirst().get());
+        String str = Arrays.stream(arr).findFirst().get();
+        System.out.println(str);
         //2.集合
         List<String> list = Arrays.asList("ab", "cd", "df");
         Stream<String> colStream = list.stream();
@@ -197,6 +200,7 @@ public class ListStreamDemo {
         list.stream().forEach(user -> System.out.println(user));
     }
 
+    // jdk8之后的排序
     @Test
     public void StreamSortedFun() {
         List<User> list = Arrays.asList(new User("zhangsan", 23),
@@ -219,6 +223,7 @@ public class ListStreamDemo {
         list.stream().filter(e -> e.getAge() > 20).forEach(user -> System.out.println(user));
     }
 
+    // 打印部分元素
     @Test
     public void StreamLimitFun() {
         List<User> list = Arrays.asList(new User("zhangsan", 23),
@@ -230,6 +235,7 @@ public class ListStreamDemo {
         list.stream().limit(3).forEach(user -> System.out.println(user));
     }
 
+    // 跳过某个元素
     @Test
     public void StreamSkipFun() {
         List<User> list = Arrays.asList(new User("zhangsan", 23),
@@ -274,17 +280,19 @@ public class ListStreamDemo {
 
     }
 
+    // 打印两个元素
     @Test
     public void StreamConditionFun() {
         List<User> list = Arrays.asList(new User("zhangsan", 23),
                 new User("lisi", 24),
                 new User("lisi", 24),
-                new User("wangwu", 18),
+                new User("wangwu", 28),
                 new User("tangtuo", 26)
         );
         list.stream().filter(user -> user.getAge() > 24).sorted(Comparator.comparing(User::getAge)).limit(2).forEach(user -> System.out.println(user));
     }
 
+    //
     @Test
     public void StreamMapFun() {
         List<User> list = Arrays.asList(new User("zhangsan", 23),
@@ -314,6 +322,7 @@ public class ListStreamDemo {
         users.stream().forEach(e -> System.out.println(e.getUserName()));
     }
 
+    // 移除某个元素
     @Test
     public void StreamDeleteFun() {
         List<User> users = new ArrayList<>(Arrays.asList(new User("zhangsan", 23),
@@ -333,24 +342,24 @@ public class ListStreamDemo {
         users.stream().forEach(user -> System.out.println(user));
     }
 
+    // 统计元素出现的个数
     @Test
     public void StreamListFun() {
         List<Integer> numList = Arrays.asList(1, 2, 3, 3, 4, 5, 10, 7, 8, 9, 6);
-        // numList.stream().sorted().collect(Collectors.toList());
         Map<Integer, Long> map = numList.stream().collect(Collectors.groupingBy(e -> e, Collectors.counting()));
         System.out.println(map);
     }
 
+    // 将list转成map,且遇到重复的选后那一个
     @Test
     public void StreamListFun2() {
         List<User> users = new ArrayList<>(Arrays.asList(new User("zhangsan", 23),
                 new User("lisi", 24),
-                // new User("lisi", 24),
+                new User("lisi", 25),
                 new User("wangwu", 18),
                 new User("tangtuo", 26)
         ));
-        // numList.stream().sorted().collect(Collectors.toList());
-        Map<String, Integer> map = users.stream().collect(Collectors.toMap(e -> e.getUserName(), e -> e.getAge()));
+        Map<String, Integer> map = users.stream().collect(Collectors.toMap(e -> e.getUserName(), e -> e.getAge(), (o1, o2) -> o2));
         for (String key : map.keySet()) {
             System.out.println(key + ":" + map.get(key));
         }
@@ -421,7 +430,7 @@ public class ListStreamDemo {
 
     // 打印出每个字符串的长度
     @Test
-    public void fun5() {
+    public void printEachStringLength() {
         list.stream()
                 .map(TestObject::getName)
                 .map(String::length)
@@ -450,19 +459,17 @@ public class ListStreamDemo {
     // 测试findAny
     @Test
     public void findAnyTestDemo() {
-        list.stream()
-                .filter(u -> u.getName().equals("Ron"))
-                .findAny()
-                .ifPresent(u -> System.out.println(u.getAge()));
+        list.stream().filter(u -> u.getName().
+                equals("Ron")).findAny().
+                ifPresent(u -> System.out.println(u.getAge()));
     }
 
     // 测试findFirst
     @Test
     public void findFirstTestDemo() {
-        list.stream()
-                .filter(u -> u.getFlag())
-                .findFirst()
-                .ifPresent(u -> System.out.println(u.getName()));
+        list.stream().
+                filter(u -> u.getFlag()).
+                findFirst().ifPresent(u -> System.out.println(u.getName()));
     }
 
     private static List<Person> personList = new ArrayList<>();
@@ -498,8 +505,8 @@ public class ListStreamDemo {
     // 求年纪最大那个人的名字
     @Test
     public void getMaxAgeName() {
-        Person person = personList.stream().filter(e -> e.getAge() == personList.stream().mapToInt(e1 -> e1.getAge()).max().getAsInt()).findFirst().get();
+        int maxAge = personList.stream().mapToInt(e1 -> e1.getAge()).max().orElse(0);
+        Person person = personList.stream().filter(e -> e.getAge() == maxAge).findFirst().get();
         System.out.println(person.userName);
     }
-
 }

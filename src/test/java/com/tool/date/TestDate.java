@@ -1,5 +1,6 @@
 package com.tool.date;
 
+import com.tool.base.date.DateUtils;
 import org.junit.jupiter.api.Test;
 
 import java.text.ParseException;
@@ -12,11 +13,13 @@ import java.util.Date;
 public class TestDate {
 
     @Test
-    public void getTimeMillis() {
-        long time1 = getMillisTime("2019-10-15 14:15:35");
-        System.out.println(time1);
+    public void getTimeMillis() throws Exception {
 
-        long time2 = getMillisTime("2019-10-15 15:15:35");
+        long milliSecond = 1551798059000L;
+        Date date = new Date();
+        date.setTime(milliSecond);
+        String str = new SimpleDateFormat("yyyy-MM-dd").format(date);
+        long time2 = new SimpleDateFormat("yyyy-MM-dd").parse(str).getTime();
         System.out.println(time2);
     }
 
@@ -43,5 +46,12 @@ public class TestDate {
         }
         long millis = date.getTime();
         return millis;
+    }
+
+
+    @Test
+    public void DateUtilsTestDemo() {
+        Date time=DateUtils.string2Date("2019-10-19", "yyyy-MM-dd");
+        System.out.println(time.getTime());
     }
 }

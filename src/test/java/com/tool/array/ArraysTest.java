@@ -160,6 +160,13 @@ public class ArraysTest {
         }
         return result;
     }
+
+    @Test
+    public void listTestDemo() {
+        List<Integer> list = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6));
+        int num = list.stream().findFirst().get().intValue();
+        System.out.println(num);
+    }
 }
 
 

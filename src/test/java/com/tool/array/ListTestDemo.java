@@ -78,4 +78,11 @@ public class ListTestDemo {
         int key = map.keySet().stream().min(Comparator.comparing(Function.identity())).get();
         return map.get(key);
     }
+
+    @Test
+    public void listPrintTestDemo() {
+
+        List<Integer> list = new ArrayList(Arrays.asList(1, 2, 3, 4));
+        System.out.println(list);
+    }
 }

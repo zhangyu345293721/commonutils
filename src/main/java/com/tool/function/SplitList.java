@@ -12,12 +12,10 @@ import java.util.*;
 public class SplitList {
     @Test
     public void splitListTestDemo() {
-        List<Double> list = new ArrayList(Arrays.asList(1.2, 0.6, 0.8, 0.4));
+        List<Double> list = new ArrayList(Arrays.asList(0.2, 0.2, 0.3, 0.3));
         List<String> splitList = new ArrayList(Arrays.asList("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"));
         Map<Integer, List<String>> map = getSplitMap(splitList, list);
-        // {0=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]}
         System.out.println(map);
-
     }
 
     @Test

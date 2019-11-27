@@ -6,9 +6,7 @@ import org.apache.commons.io.Charsets;
 import org.apache.commons.io.IOUtils;
 
 import java.io.*;
-import java.math.BigInteger;
 import java.net.URL;
-import java.security.MessageDigest;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.zip.GZIPInputStream;
@@ -24,7 +22,7 @@ public class FileUtils {
      * @param filePath 指定的文件路径
      * @param isNew    true：新建、false：不新建
      * @return 存在返回TRUE，不存在返回FALSE
-     *
+     * <p>
      * 判断指定路径是否存在，如果不存在，根据参数决定是否新建
      */
     public static boolean isExist(String filePath, boolean isNew) {
@@ -46,7 +44,6 @@ public class FileUtils {
     public static String getFileName(String type, String prefix, String suffix) {
         String date = DateUtils.getCurrentTime("yyyyMMddHH24mmss");   //当前时间
         String random = RandomUtils.generateNumberString(10);   //10位随机数
-
         //返回文件名
         return prefix + date + random + suffix + "." + type;
     }
@@ -95,11 +92,11 @@ public class FileUtils {
     /**
      * 删除所有文件，包括文件夹
      *
-     * @param dirpath 文件的路径
+     * @param dirPath 文件的路径
      * @return 无返回值
      */
-    public static void deleteAll(String dirpath) {
-        File path = new File(dirpath);
+    public static void deleteAll(String dirPath) {
+        File path = new File(dirPath);
         try {
             if (!path.exists())
                 return;// 目录不存在退出
@@ -192,35 +189,6 @@ public class FileUtils {
     }
 
     /**
-     * 获取文件的MD5
-     *
-     * @param file 文件
-     * @return 返回字符串
-     */
-    public static String getFileMD5(File file) {
-        if (!file.exists() || !file.isFile()) {
-            return null;
-        }
-        MessageDigest digest = null;
-        FileInputStream in = null;
-        byte buffer[] = new byte[1024];
-        int len;
-        try {
-            digest = MessageDigest.getInstance("MD5");
-            in = new FileInputStream(file);
-            while ((len = in.read(buffer, 0, 1024)) != -1) {
-                digest.update(buffer, 0, len);
-            }
-            in.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;
-        }
-        BigInteger bigInt = new BigInteger(1, digest.digest());
-        return bigInt.toString(16);
-    }
-
-    /**
      * 获取文件的后缀
      *
      * @param file 文件
@@ -249,23 +217,22 @@ public class FileUtils {
      * @return 返回布尔类型值
      */
     public boolean renameDir(String oldPath, String newPath) {
-        File oldFile = new File(oldPath);// 文件或目录   
-        File newFile = new File(newPath);// 文件或目录   
-
-        return oldFile.renameTo(newFile);// 重命名   
+        File oldFile = new File(oldPath);
+        File newFile = new File(newPath);
+        return oldFile.renameTo(newFile);
     }
 
     /**
      * 将list里面数据写入到文件
      *
-     * @param: String filePath 文件要保存的路径 List<String > infoList 保存信息的list
-     * @return: 返回空
-     * @author: zhangyu
+     * @param filePath 文件要保存的路径
+     * @param infoList 保存信息的list
+     * @return 返回空
      */
-    public static void listToFile(String filePath, List<String> infolist) {
+    public static void listToFile(String filePath, List<String> infoList) {
         try {
             File filename = new File(filePath);
-            org.apache.commons.io.FileUtils.writeLines(filename, infolist, true);
+            org.apache.commons.io.FileUtils.writeLines(filename, infoList, true);
             long sizeOf = org.apache.commons.io.FileUtils.sizeOf(new File(filePath));
             // System.out.println(sizeOf);
         } catch (Exception e) {
@@ -276,8 +243,8 @@ public class FileUtils {
     /**
      * 将.gz压缩文件每行读入到list当中
      *
-     * @param: String path 文件的路径
-     * @return: List<String> 存储文件每行数据的list
+     * @param filePath 文件的路径
+     * @return 存储文件每行数据的list
      */
     public static List<String> getGzFileToList(String filePath) {
         InputStream in = null;
@@ -296,8 +263,8 @@ public class FileUtils {
     /**
      * 将文件每行读入到list当中
      *
-     * @param: String path 文件的路径
-     * @return: List<String> 存储文件每行数据的list
+     * @param filePath 文件的路径
+     * @return 存储文件每行数据的list
      */
     public static List<String> getFileToList(String filePath) {
         List<String> readFileList = null;
@@ -334,9 +301,9 @@ public class FileUtils {
     /**
      * 从远程下载文件到本地
      *
-     * @param: remoteUrl: 远程url; localdir: 本地存放的地址
-     * @return: 没有返回值
-     * @author: zhangyu
+     * @param remoteUrl 远程url
+     * @param localDir  本地存放的地址
+     * @return 没有返回值
      */
     public void getFileFromRemote(String remoteUrl, String localDir) {
         try {

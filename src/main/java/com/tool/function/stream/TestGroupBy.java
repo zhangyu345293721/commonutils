@@ -30,7 +30,8 @@ public class TestGroupBy {
         list.addAll(Arrays.asList(u1, u2, u3, u4, u5, u6, u7));
 
         // 统计出现个数,双重统计
-        Map<String, Map<Integer, Long>> map = list.stream().collect(Collectors.groupingBy(User::getUserName, Collectors.groupingBy(User::getAge, Collectors.counting())));
+        Map<String, Map<Integer, Long>> map = list.stream().
+                collect(Collectors.groupingBy(User::getUserName, Collectors.groupingBy(User::getAge, Collectors.counting())));
 
         for (String name : map.keySet()) {
             System.out.println(name + ";" + map.get(name));

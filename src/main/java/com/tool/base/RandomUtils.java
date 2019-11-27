@@ -235,5 +235,4 @@ public class RandomUtils {
         }
         return (char) (getRandom().nextInt(y - x + 1) + x);
     }
-
 }

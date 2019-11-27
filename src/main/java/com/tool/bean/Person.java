@@ -1,6 +1,7 @@
 package com.tool.bean;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -10,7 +11,8 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Person  {
+@Builder
+public class Person {
     public String userName;
     public String password;
     public int age;
