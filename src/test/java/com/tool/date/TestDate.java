@@ -15,10 +15,11 @@ public class TestDate {
     @Test
     public void getTimeMillis() throws Exception {
 
-        long milliSecond = 1551798059000L;
+        long milliSecond = 1569859200000l;
         Date date = new Date();
         date.setTime(milliSecond);
         String str = new SimpleDateFormat("yyyy-MM-dd").format(date);
+        System.out.println(str);
         long time2 = new SimpleDateFormat("yyyy-MM-dd").parse(str).getTime();
         System.out.println(time2);
     }
