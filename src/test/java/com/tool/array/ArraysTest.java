@@ -43,7 +43,6 @@ public class ArraysTest {
                 newArr[i - 1][j - 1] = arr[i][j];
             }
         }
-
         System.out.println(newArr.length + ":" + newArr[0].length);
         for (int i = 0; i < newArr.length; i++) {
             for (int j = 0; j < newArr[0].length; j++) {

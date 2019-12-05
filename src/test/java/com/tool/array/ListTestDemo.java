@@ -47,7 +47,6 @@ public class ListTestDemo {
         System.out.println(list);
     }
 
-    // 把一个数字移动到最后
     @Test
     public void JudgeEvenAndOdd() {
         int a = 4;
@@ -79,10 +78,31 @@ public class ListTestDemo {
         return map.get(key);
     }
 
+    /**
+     * 判断某个数是奇数还是偶数
+     * <p>
+     * 可以让某个数&1
+     * 如果等于0;则说明这个数是奇数
+     * 如果等于1,；则说明这个数是偶数
+     */
     @Test
     public void listPrintTestDemo() {
+        int num1 = 3;
+        int judge = num1 & 1;
+        System.out.println(judge);
+    }
 
-        List<Integer> list = new ArrayList(Arrays.asList(1, 2, 3, 4));
-        System.out.println(list);
+    /**
+     * 异或求出list中出现一次的那个数
+     * 使用异或运算
+     */
+    @Test
+    public void findOnlyOneNumber() {
+        List<Integer> list = Arrays.asList(1, 2, 2, 1, 3);
+        int ele = 0;
+        for (int num : list) {
+            ele ^= num;
+        }
+        System.out.println(ele);
     }
 }
