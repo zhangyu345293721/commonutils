@@ -83,9 +83,9 @@ public class Tour {
         return this;
     }
 
-    public ArrayList<City> getAllCities() {
+   /* public ArrayList<City> getAllCities() {
         return citiesList;
-    }
+    }*/
 
     /** Gets the total distance of the citiesList*/
     public int getDistance(){

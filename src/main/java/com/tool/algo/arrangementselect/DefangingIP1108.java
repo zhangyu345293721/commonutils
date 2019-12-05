@@ -33,7 +33,7 @@ public class DefangingIP1108 {
      * @return
      */
     public String defangIPaddr2(String address) {
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
         for (char ch : address.toCharArray()) {
             if (ch == '.') {
                 sb.append("[.]");

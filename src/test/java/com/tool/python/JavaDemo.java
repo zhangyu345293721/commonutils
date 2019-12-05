@@ -4,7 +4,7 @@ import jep.Interpreter;
 import jep.JepException;
 import jep.SharedInterpreter;
 
-public class Test {
+public class JavaDemo {
     public static void main(String[] args) {
         try (Interpreter interp = new SharedInterpreter()) {
             interp.exec("import sys");

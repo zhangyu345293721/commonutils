@@ -65,7 +65,9 @@ public class ConnectDatabase {
             e.printStackTrace();
         } finally {
             try {
-                con.close();
+                if(con!=null){
+                    con.close();
+                }
             } catch (SQLException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();

@@ -8,8 +8,6 @@ import org.junit.jupiter.api.Test;
  * @author: zhangyu
  */
 public class RepeatedSubstring459 {
-
-
     @Test
     public void repeatedSubstring() {
         String s = "bb";

@@ -22,12 +22,12 @@ public class LongestCommon14 {
      */
     public String longestCommonPrefix(String[] strs) {
         if (strs == null || strs.length < 1) {
-            return new String();
+            return "";
         }
         if (strs.length < 2) {
             return strs[0];
         }
-        String longestStr = new String();
+        String longestStr = "";
         for (int i = 1; i <= strs[0].length(); i++) {
             String sub = strs[0].substring(0, i);
             boolean flag = isAllMatch(sub, strs);

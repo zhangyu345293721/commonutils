@@ -30,7 +30,7 @@ public class IdcardUtils {
      * @return
      */
     public boolean isValidatedAllIdcard(String idcard) {
-        return this.isValidate18Idcard(idcard);
+        return IdcardUtils.isValidate18Idcard(idcard);
     }
 
     /**
@@ -86,13 +86,13 @@ public class IdcardUtils {
         }
 
         if (null != c) {
-            int bit[] = new int[idcard17.length()];
+            int bit[] = null;
             bit = converCharToInt(c);
             int sum17 = 0;
             sum17 = getPowerSum(bit);
             // 将和值与11取模得到余数进行校验码判断
             checkCode = getCheckCodeBySum(sum17);
-            if (null == checkCode) {
+            if ("-1" == checkCode) {
                 return false;
             }
             // 将身份证的第18位与算出来的校码进行匹配，不相等就为假
@@ -189,6 +189,8 @@ public class IdcardUtils {
             case 0:
                 checkCode = "1";
                 break;
+            default:
+                checkCode = "-1";
         }
         return checkCode;
     }
@@ -215,10 +217,8 @@ public class IdcardUtils {
      */
     public static int getUserSex(String idno) {
         String sex = "1";
-        if (idno != null) {
-            if (idno.length() > 15) {
-                sex = idno.substring(16, 17);
-            }
+        if (idno != null && idno.length() > 15) {
+            sex = idno.substring(16, 17);
         }
 
         return Integer.parseInt(sex) % 2 == 0 ? 0 : 1;

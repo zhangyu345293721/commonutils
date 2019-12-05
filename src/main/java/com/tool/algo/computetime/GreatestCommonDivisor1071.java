@@ -26,16 +26,16 @@ public class GreatestCommonDivisor1071 {
      */
     public String gcdOfStrings(String str1, String str2) {
         if (str1 == null || str1.length() < 1) {
-            return new String();
+            return "";
         }
         if (str2 == null || str2.length() < 1) {
-            return new String();
+            return "";
         }
         if (str2.equals(str1)) {
             return str1;
         }
-        String shortStr = null;
-        String longStr = null;
+        String shortStr = "";
+        String longStr = "";
         if (str1.length() > str2.length()) {
             shortStr = str2;
             longStr = str1;
@@ -47,10 +47,8 @@ public class GreatestCommonDivisor1071 {
         List<String> allSubString = getAllSubString(shortStr);
         for (String str : allSubString) {
             boolean flag = isDivides(str, shortStr, longStr);
-            if (flag) {
-                if (temp.length() < str.length()) {
-                    temp = str;
-                }
+            if (flag && temp.length() < str.length()) {
+                temp = str;
             }
         }
         return temp;
@@ -79,7 +77,7 @@ public class GreatestCommonDivisor1071 {
      * @return
      */
     private String getString(String str, String shortStr) {
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
         String[] strs = shortStr.split(str);
         for (String s : strs) {
             sb.append(s);

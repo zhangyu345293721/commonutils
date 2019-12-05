@@ -36,8 +36,8 @@ public class StatisticShelfToStationDemo {
         List<String> shelfCodes = getShelfCode(start, end);
         Map<String, Long> shelfCodeMap = shelfCodes.stream().collect(Collectors.groupingBy(String::valueOf, Collectors.counting()));
         Map<String, Double> newShelfCodeMap = new HashMap<>();
-        for (String key : shelfCodeMap.keySet()) {
-            // System.out.println(key + ":" + String.format("%.2f", shelfCodeMap.get(key) / numberHour));
+        for (Map.Entry<String, Long> entry : shelfCodeMap.entrySet()) {
+            String key = entry.getKey();
             newShelfCodeMap.put(key, Double.valueOf(String.format("%.2f", (shelfCodeMap.get(key) / numberHour))));
         }
         System.out.println("总共有货架" + newShelfCodeMap.size() + "个");
@@ -79,7 +79,9 @@ public class StatisticShelfToStationDemo {
             System.out.println("获取数据库连接失败！");
         } finally {
             try {
-                con.close();
+                if (con != null) {
+                    con.close();
+                }
             } catch (SQLException e) {
                 e.printStackTrace();
             }

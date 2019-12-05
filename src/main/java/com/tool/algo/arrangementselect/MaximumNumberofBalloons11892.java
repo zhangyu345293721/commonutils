@@ -31,7 +31,8 @@ public class MaximumNumberofBalloons11892 {
         List<Integer> list = new ArrayList<>();
         Map<Character, Integer> map1 = getMap("balloon");
         Map<Character, Integer> map2 = getMap(text);
-        for (Character ch : map1.keySet()) {
+        for (Map.Entry<Character, Integer> entry : map1.entrySet()) {
+            Character ch = entry.getKey();
             if (map2.containsKey(ch)) {
                 int num1 = map1.get(ch);
                 int num2 = map2.get(ch);

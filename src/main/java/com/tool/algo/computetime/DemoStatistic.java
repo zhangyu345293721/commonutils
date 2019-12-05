@@ -22,7 +22,8 @@ public class DemoStatistic {
 
         Map<Integer, Long> map = list.stream().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
 
-        for (int key : map.keySet()) {
+        for (Map.Entry<Integer, Long> entry : map.entrySet()) {
+            int key = entry.getKey();
             System.out.println(key + ":" + map.get(key));
         }
     }

@@ -11,16 +11,15 @@ import java.util.*;
  * @author: zhangyu
  */
 public class ChangeTwoNumberIndex {
+    private Random random = new Random();
 
     // 交换两个元素的位置
     @Test
     public void changeListIndexTestDemo() {
         List<String> list = new ArrayList<>();
         list.addAll(Arrays.asList("a", "b", "c", "d", "e", "f", "g"));
-
         int randomIndex1 = 0;
         int randomIndex2 = 0;
-        Random random = new Random();
         while (randomIndex1 == randomIndex2) {
             randomIndex1 = random.nextInt(list.size());
             randomIndex2 = random.nextInt(list.size());

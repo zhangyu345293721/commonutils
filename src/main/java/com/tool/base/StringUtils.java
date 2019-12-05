@@ -10,6 +10,9 @@ import java.util.regex.Pattern;
  */
 public class StringUtils {
 
+    private StringUtils() {
+    }
+
     private static final int INDEX_NOT_FOUND = -1;
     private static final String NULL = "null";
     private static final String PLACEHOLDER = "\\?";
@@ -111,7 +114,6 @@ public class StringUtils {
                 }
                 return buf.toString();
         }
-
     }
 
     /**
@@ -190,16 +192,13 @@ public class StringUtils {
         if (resourceString == null || "".equals(resourceString) || length < 1) {
             return resourceString;
         }
-
         if (resourceString.length() < length) {
             return resourceString;
         }
-
         char[] chr = resourceString.toCharArray();
         int strNum = 0;
         int strGBKNum = 0;
         boolean isHaveDot = false;
-
         for (int i = 0; i < resourceString.length(); i++) {
             if (chr[i] >= 0xa1) {// 0xa1汉字最小位开始
                 strNum = strNum + 2;
@@ -207,7 +206,6 @@ public class StringUtils {
             } else {
                 strNum++;
             }
-
             if (strNum == length || strNum == length + 1) {
                 if (i + 1 < resourceString.length()) {
                     isHaveDot = true;
@@ -219,7 +217,6 @@ public class StringUtils {
         if (isHaveDot) {
             resultString = resultString + "...";
         }
-
         return resultString;
     }
 
@@ -260,8 +257,7 @@ public class StringUtils {
 
         Pattern p_space = Pattern.compile(regEx_space, Pattern.CASE_INSENSITIVE);
         Matcher m_space = p_space.matcher(htmlStr);
-        htmlStr = m_space.replaceAll(""); // 过滤空格回车标签  
-
+        htmlStr = m_space.replaceAll(""); // 过滤空格回车标签
         return htmlStr.trim(); // 返回文本字符串
     }
 
@@ -376,8 +372,8 @@ public class StringUtils {
      * @param beginIndex 开始索引, 允许负数值, 表示从后往前
      * @return
      */
-    public static String substring(String source, int beginIndex) {
-        return substring(source, beginIndex, source.length());
+    public static String subStringFunction(String source, int beginIndex) {
+        return subStringFunction(source, beginIndex, source.length());
     }
 
     /**
@@ -388,7 +384,7 @@ public class StringUtils {
      * @param endIndex   结束索引, 允许负数值, 表示从后往前
      * @return 返回字符串
      */
-    public static String substring(String source, int beginIndex, int endIndex) {
+    public static String subStringFunction(String source, int beginIndex, int endIndex) {
         int length = source.length();
         if (beginIndex < 0) {
             beginIndex += length;

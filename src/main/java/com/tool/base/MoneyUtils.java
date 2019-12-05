@@ -58,7 +58,7 @@ public class MoneyUtils {
      * @return
      */
     public static String number2CNMontray(BigDecimal numberOfMoney) {
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
         int signum = numberOfMoney.signum();
         // 零元整的情况
         if (signum == 0) {
@@ -174,7 +174,7 @@ public class MoneyUtils {
     private static String accountantMoney(BigDecimal money, int scale, double divisor) {
         String disposeMoneyStr = formatMoney(money, scale, divisor);
         //小数点处理  
-        int dotPosition = disposeMoneyStr.indexOf(".");
+        int dotPosition = disposeMoneyStr.indexOf('.');
         String exceptDotMoeny = null;//小数点之前的字符串  
         String dotMeony = null;//小数点之后的字符串  
         if (dotPosition > 0) {
@@ -184,14 +184,14 @@ public class MoneyUtils {
             exceptDotMoeny = disposeMoneyStr;
         }
         //负数处理  
-        int negativePosition = exceptDotMoeny.indexOf("-");
+        int negativePosition = exceptDotMoeny.indexOf('-');
         if (negativePosition == 0) {
             exceptDotMoeny = exceptDotMoeny.substring(1);
         }
-        StringBuffer reverseExceptDotMoney = new StringBuffer(exceptDotMoeny);
+        StringBuilder reverseExceptDotMoney = new StringBuilder(exceptDotMoeny);
         reverseExceptDotMoney.reverse();//字符串倒转  
         char[] moneyChar = reverseExceptDotMoney.toString().toCharArray();
-        StringBuffer returnMeony = new StringBuffer();//返回值  
+        StringBuilder returnMeony = new StringBuilder();//返回值
         for (int i = 0; i < moneyChar.length; i++) {
             if (i != 0 && i % 3 == 0) {
                 returnMeony.append(",");//每隔3位加','  
@@ -224,13 +224,13 @@ public class MoneyUtils {
         if (scale < 0) {
             return "0.00";
         }
-        BigDecimal divisorBD = new BigDecimal(divisor);
+        BigDecimal divisorBD = BigDecimal.valueOf(divisor);
         return money.divide(divisorBD, scale, RoundingMode.HALF_UP).toString();
     }
 
     private static String getCellFormat(double divisor) {
         String str = String.valueOf(divisor);
-        int len = str.substring(0, str.indexOf(".")).length();
+        int len = str.substring(0, str.indexOf('.')).length();
         String cell = "";
         switch (len) {
             case 1:
@@ -263,6 +263,8 @@ public class MoneyUtils {
             case 10:
                 cell = "十亿元";
                 break;
+            default:
+                cell = "-1";
         }
         return cell;
     }

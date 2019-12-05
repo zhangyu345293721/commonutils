@@ -16,7 +16,7 @@ public class ReplacePattern890 {
         /*String[] words = {"abc", "cba", "xyx", "yxx", "yyx"};
         String pattern = "abc";*/
 
-        String[] words = {"abc","deq","mee","aqq","dkd","ccc"};
+        String[] words = {"abc", "deq", "mee", "aqq", "dkd", "ccc"};
         String pattern = "abb";
         List<String> patternStrs = findAndReplacePattern(words, pattern);
         System.out.println("patternStrs = " + patternStrs);
@@ -48,7 +48,7 @@ public class ReplacePattern890 {
      * @return 返回规律串
      */
     private String getFigureStr(String pattern) {
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
         char[] chs = pattern.toCharArray();
         int count = 1;
         for (int i = 1; i < chs.length; i++) {

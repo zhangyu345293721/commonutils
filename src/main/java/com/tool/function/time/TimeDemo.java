@@ -109,7 +109,7 @@ public class TimeDemo {
 
     // localTime平移操作
     @Test
-    public void LocalDateTestDemo() {
+    public void localDateTest() {
         LocalDate date1 = LocalDate.of(2014, 3, 18);
         LocalDate date2 = date1.plusWeeks(1);
         System.out.println(date1);
@@ -127,8 +127,8 @@ public class TimeDemo {
         LocalDate date = LocalDate.of(2014, 3, 18);
         date = date.with(ChronoField.MONTH_OF_YEAR, 9);
         date = date.plusYears(2).minusDays(10);
-        date.withYear(2011);
-        System.out.println(date);
+        LocalDate localDate = date.withYear(2011);
+        System.out.println(localDate);
     }
 
     @Test

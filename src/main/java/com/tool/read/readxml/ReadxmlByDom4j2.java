@@ -41,8 +41,6 @@ public class ReadxmlByDom4j2 {
             List<Element> bookElementList = mapRoot.elements("book");
             for (Element bookElement : bookElementList) {
                 Book book = new Book();
-                // private String name;
-                // private String author;
                 String name = bookElement.element("name").getText();
                 String author = bookElement.element("author").getText();
                 book.setName(name);
@@ -50,7 +48,6 @@ public class ReadxmlByDom4j2 {
                 booksList.add(book);
             }
         } catch (Exception e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         return booksList;

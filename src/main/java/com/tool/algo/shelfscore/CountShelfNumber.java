@@ -20,7 +20,8 @@ public class CountShelfNumber {
         List<String> list = FileUtils.getFileToList("shelf_score.csv");
         System.out.println(list.size());
         Map<String, Long> result = list.stream().collect(Collectors.groupingBy(e -> e.split(",")[0], Collectors.counting()));
-        for (String shelfCode : result.keySet()) {
+        for (Map.Entry<String, Long> entry : result.entrySet()) {
+            String shelfCode = entry.getKey();
             int sum = 0;
             for (String s : list) {
                 // System.out.println(s);
@@ -36,8 +37,8 @@ public class CountShelfNumber {
             result.put(shelfCode, avg);
         }
         List<String> avgShelfScoreList = new ArrayList<>();
-        for (String shelfCode : result.keySet()) {
-            // System.out.println(shelfCode + ":" + result.get(shelfCode));
+        for (Map.Entry<String, Long> entry : result.entrySet()) {
+            String shelfCode = entry.getKey();
             avgShelfScoreList.add(shelfCode + "," + result.get(shelfCode));
         }
         FileUtils.listToFile("avg_shelf_score.csv", avgShelfScoreList);

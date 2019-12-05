@@ -20,10 +20,10 @@ public class MergeArrayDemo {
     }
 
     private int[] mergeTwoArr(int[] arr1, int[] arr2) {
-        if (arr1.length == 0 || arr1 == null) {
+        if (arr1 == null || arr1.length == 0) {
             return arr2;
         }
-        if (arr2.length == 0 || arr2 == null) {
+        if (arr2 == null || arr2.length == 0) {
             return arr1;
         }
 

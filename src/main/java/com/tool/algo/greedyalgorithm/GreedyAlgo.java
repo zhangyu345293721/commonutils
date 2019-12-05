@@ -1,5 +1,7 @@
 package com.tool.algo.greedyalgorithm;
 
+import com.tool.base.ArrayUtils;
+import com.tool.base.CollectionUtil;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashSet;
@@ -42,34 +44,32 @@ public class GreedyAlgo {
     }
 
     private double[] getNextPoint(Set<Integer> set, double[] row) {
+        if (CollectionUtil.isEmpty(set) || ArrayUtils.isEmpty(row)) {
+            return new double[0];
+        }
         double[] nextArr = new double[2];
         double min = Integer.MAX_VALUE;
         for (int i = 0; i < row.length; i++) {
-            if (row[i] != 0) {
-                if (!set.contains(i)) {
-                    if (min > row[i]) {
-                        min = row[i];
-                    }
-                }
+            if (row[i] != 0 && !set.contains(i) && min > row[i]) {
+                min = row[i];
             }
         }
 
         for (int i = 0; i < row.length; i++) {
-            if (row[i] != 0) {
-                if (!set.contains(i)) {
-                    if (min == row[i]) {
-                        nextArr[0] = min;
-                        nextArr[1] = i;
-                        return nextArr;
-                    }
-                }
+            if (row[i] != 0 && !set.contains(i) && min == row[i]) {
+                nextArr[0] = min;
+                nextArr[1] = i;
+                return nextArr;
             }
         }
-        return null;
+        return new double[0];
     }
 
     // 获取最小值，已经下标
     private double[] getDistanceAndIndex(double[] pointStart) {
+        if (ArrayUtils.isEmpty(pointStart)) {
+            return new double[0];
+        }
         double[] firstDistanceAndIndexArr = new double[2];
         double min = Integer.MAX_VALUE;
         for (int i = 0; i < pointStart.length; i++) {
@@ -85,6 +85,6 @@ public class GreedyAlgo {
                 return firstDistanceAndIndexArr;
             }
         }
-        return null;
+        return new double[0];
     }
 }

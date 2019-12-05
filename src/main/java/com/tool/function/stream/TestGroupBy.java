@@ -33,7 +33,8 @@ public class TestGroupBy {
         Map<String, Map<Integer, Long>> map = list.stream().
                 collect(Collectors.groupingBy(User::getUserName, Collectors.groupingBy(User::getAge, Collectors.counting())));
 
-        for (String name : map.keySet()) {
+        for (Map.Entry<String, Map<Integer, Long>> entry : map.entrySet()) {
+            String name = entry.getKey();
             System.out.println(name + ";" + map.get(name));
         }
     }

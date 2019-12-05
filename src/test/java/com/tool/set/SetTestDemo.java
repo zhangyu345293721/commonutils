@@ -11,7 +11,7 @@ import java.util.Set;
  *
  * @author: zhangyu
  */
-public class SetTestDemo {
+public class  SetTestDemo {
     @Test
     public void setTestDemo1() {
         Set<Integer> set1 = new HashSet();

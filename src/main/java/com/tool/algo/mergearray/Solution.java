@@ -38,7 +38,7 @@ class Solution {
        /* for(Interval interval:intervals){
             System.out.println(interval.start+"--"+interval.end);
         }*/
-        LinkedList<Interval> merged = new LinkedList<Interval>();
+        LinkedList<Interval> merged = new LinkedList();
         for (Interval interval : intervals) {
             if (merged.isEmpty() || merged.getLast().end < interval.start) {
                 merged.add(interval);

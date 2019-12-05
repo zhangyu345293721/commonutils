@@ -10,6 +10,9 @@ import java.math.BigDecimal;
  */
 public class BigDecimalUtils {
 
+    private BigDecimalUtils() {
+    }
+
     /**
      * 默认保留位：2
      */
@@ -18,7 +21,7 @@ public class BigDecimalUtils {
     /**
      * 默认四舍五入规则为：向上舍入
      */
-    private static int DEFAULT_ROUND = BigDecimal.ROUND_HALF_UP;
+    //private static int DEFAULT_ROUND = BigDecimal.ROUND_HALF_UP;
 
     /**
      * 加法运算
@@ -53,7 +56,7 @@ public class BigDecimalUtils {
         }
 
         if (ClassHelper.isEmpty(round)) {
-            round = DEFAULT_ROUND;
+            //round = DEFAULT_ROUND;
         }
 
         BigDecimal b1 = new BigDecimal(v1);
@@ -124,7 +127,7 @@ public class BigDecimalUtils {
      * @return 返回整数
      */
     public static BigDecimal getBigDecimal(Object value) {
-        BigDecimal resultValue = new BigDecimal(0);
+        BigDecimal resultValue;
         if (value instanceof String) {
             resultValue = new BigDecimal((String) value);
         } else if (value instanceof Integer) {
@@ -166,7 +169,7 @@ public class BigDecimalUtils {
      */
     public static Long bigDecimalToLong(BigDecimal value) {
         if (value != null) {
-            return new Long(value.longValue());
+            return value.longValue();
         }
         return null;
     }
@@ -179,7 +182,7 @@ public class BigDecimalUtils {
      */
     public static Integer bigDecimalToInteger(BigDecimal value) {
         if (value != null) {
-            return new Integer(value.intValue());
+            return value.intValue();
         }
         return null;
     }

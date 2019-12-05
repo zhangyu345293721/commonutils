@@ -96,11 +96,9 @@ public class ComputeTime {
                 long longTime1 = getLongTime(startTime);
                 long longTime2 = getLongTime(endTime);
                 Long gapTime = longTime2 - longTime1;
-                if (flag == 0) {
-                    if (gapTime > 0 && gapTime < 1000) {
-                        //System.out.println("运行时间为：" + gapTime + "ms");\
-                        timeList.add(gapTime.intValue());
-                    }
+                if (flag == 0 && gapTime > 0 && gapTime < 1000) {
+                    //System.out.println("运行时间为：" + gapTime + "ms");\
+                    timeList.add(gapTime.intValue());
                 }
             }
         }
@@ -132,7 +130,8 @@ public class ComputeTime {
      */
     public void buildMapInFile(Map<Integer, Integer> map, String mapName) {
         List<String> line = new ArrayList<>();
-        for (int key : map.keySet()) {
+        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+            int key = entry.getKey();
             line.add(key + "," + map.get(key));
         }
         FileUtils.listToFile(mapName, line);

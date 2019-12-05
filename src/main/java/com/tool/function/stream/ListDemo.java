@@ -3,7 +3,6 @@ package com.tool.function.stream;
 import org.junit.jupiter.api.Test;
 import org.raistlic.common.permutation.Permutation;
 
-import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
@@ -30,7 +29,7 @@ public class ListDemo {
         System.out.println(Permutation.of(Arrays.asList("a", "b", "c"), 3).iterator());
         Iterator iter = Permutation.of(Arrays.asList("a", "b", "c"), 3).iterator();
         List<List<String>> list = new ArrayList<>();
-        BigInteger b = Permutation.of(Arrays.asList("a", "b", "c")).getPermutationCount();
+        // BigInteger b = Permutation.of(Arrays.asList("a", "b", "c")).getPermutationCount();
         //System.out.println(b);
         while (iter.hasNext()) {
             List<String> oneList = (List<String>) iter.next();

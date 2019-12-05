@@ -25,7 +25,7 @@ public class UniqueMorse804 {
         String[] tableComparisons = {".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.."};
         Set<String> set = new HashSet<>();
         for (String word : words) {
-            StringBuffer sb = new StringBuffer();
+            StringBuilder sb = new StringBuilder();
             for (char ch : word.toCharArray()) {
                 int index = ch - 'a';
                 sb.append(tableComparisons[index]);

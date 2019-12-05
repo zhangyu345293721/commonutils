@@ -28,7 +28,7 @@ public class ReverseString {
      */
     public String getReverseString(String str, int n) {
         List<String> list = getStringList(str, n);
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
         for (int i = 0; i < list.size(); i++) {
             if ((i & 1) == 0) {
                 sb.append(new StringBuffer(list.get(i)).reverse().toString());

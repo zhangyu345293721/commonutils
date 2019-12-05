@@ -24,7 +24,7 @@ public class JudgeSystem {
         return System.getProperty("os.name").toLowerCase().contains("windows");
     }
 
-    public String JudgeSystem() {
+    public String judgeSystem() {
         if (isLinux()) {
             return "linux";
         } else if (isWindows()) {
@@ -36,15 +36,15 @@ public class JudgeSystem {
 
     @Test
     public void fun() {
-        boolean flag1 = isLinux();
+        //boolean flag1 = isLinux();
         // System.out.println(flag1);
 
-        boolean flag2 = isWindows();
+        //boolean flag2 = isWindows();
         // System.out.println(flag2);
 
         // System.out.println(System.getProperty("os.name"));
 
-        String sys = JudgeSystem();
+        String sys = judgeSystem();
         System.out.println(sys);
     }
 }

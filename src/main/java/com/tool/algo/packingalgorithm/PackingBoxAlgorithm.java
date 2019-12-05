@@ -40,7 +40,7 @@ public class PackingBoxAlgorithm {
     //执行装箱
     private void executePackingBox() {
         Integer[] boxkeys = boxTypeArr.keySet().toArray(new Integer[]{});
-        aBoxType:
+        //aBoxType:
         for (Integer boxkey : boxkeys) {
             tryInSpance(boxTypeArr.get(boxkey), orderItemArr);
         }

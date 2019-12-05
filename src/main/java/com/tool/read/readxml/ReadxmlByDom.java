@@ -37,39 +37,43 @@ public class ReadxmlByDom {
         }
     }
 
-    public static List<Book> getBooks(String fileName) throws Exception {
-        //将给定 URI 的内容解析为一个 XML 文档,并返回Document对象
-        document = db.parse(fileName);
-        //按文档顺序返回包含在文档中且具有给定标记名称的所有 Element 的 NodeList
-        NodeList bookList = document.getElementsByTagName("book");
-        books = new ArrayList<Book>();
-        //遍历books
-        for (int i = 0; i < bookList.getLength(); i++) {
-            Book book = new Book();
-            //获取第i个book结点
-            org.w3c.dom.Node node = bookList.item(i);
-            //获取第i个book的所有属性
-            NamedNodeMap namedNodeMap = node.getAttributes();
-            //获取已知名为id的属性值
-            String id = namedNodeMap.getNamedItem("id").getTextContent();
-            book.setId(Integer.parseInt(id));
-            //获取book结点的子节点,包含了Test类型的换行
-            NodeList cList = node.getChildNodes();
-            // System.out.println(node.getTextContent());
-            // System.out.println(cList.getLength());
-            //将一个book里面的属性加入数组
-            ArrayList<String> contents = new ArrayList();
-            // 注意这里也解析了换行符，也算它的子节点
-            for (int j = 1; j < cList.getLength(); j += 2) {
-                org.w3c.dom.Node cNode = cList.item(j);
-                String content = cNode.getFirstChild().getTextContent();
-                contents.add(content);
+    public static List<Book> getBooks(String fileName) {
+        try {
+            //将给定 URI 的内容解析为一个 XML 文档,并返回Document对象
+            document = db.parse(fileName);
+            //按文档顺序返回包含在文档中且具有给定标记名称的所有 Element 的 NodeList
+            NodeList bookList = document.getElementsByTagName("book");
+            books = new ArrayList<Book>();
+            //遍历books
+            for (int i = 0; i < bookList.getLength(); i++) {
+                Book book = new Book();
+                //获取第i个book结点
+                org.w3c.dom.Node node = bookList.item(i);
+                //获取第i个book的所有属性
+                NamedNodeMap namedNodeMap = node.getAttributes();
+                //获取已知名为id的属性值
+                String id = namedNodeMap.getNamedItem("id").getTextContent();
+                book.setId(Integer.parseInt(id));
+                //获取book结点的子节点,包含了Test类型的换行
+                NodeList cList = node.getChildNodes();
+                // System.out.println(node.getTextContent());
+                // System.out.println(cList.getLength());
+                //将一个book里面的属性加入数组
+                ArrayList<String> contents = new ArrayList();
+                // 注意这里也解析了换行符，也算它的子节点
+                for (int j = 1; j < cList.getLength(); j += 2) {
+                    org.w3c.dom.Node cNode = cList.item(j);
+                    String content = cNode.getFirstChild().getTextContent();
+                    contents.add(content);
+                }
+                book.setName(contents.get(0));
+                book.setAuthor(contents.get(1));
+                book.setYear(Integer.parseInt(contents.get(2)));
+                book.setPrice(Double.parseDouble(contents.get(3)));
+                books.add(book);
             }
-            book.setName(contents.get(0));
-            book.setAuthor(contents.get(1));
-            book.setYear(Integer.parseInt(contents.get(2)));
-            book.setPrice(Double.parseDouble(contents.get(3)));
-            books.add(book);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
         return books;
     }

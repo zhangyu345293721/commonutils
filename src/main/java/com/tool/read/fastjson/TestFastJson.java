@@ -15,6 +15,16 @@ import java.util.stream.Collectors;
  * @author: zhangyu
  */
 public class TestFastJson {
+    public TestFastJson() {
+        Person person1 = new Person("zhangyu", "male", 19);
+        Person person2 = new Person("lisi", "female", 23);
+        Person person3 = new Person("wangwu", "female", 21);
+        Person person4 = new Person("zhaoliu", "male", 24);
+
+        personList = new ArrayList<>();
+        personList.addAll(Arrays.asList(person1, person2, person3, person4));
+    }
+
     // 测试fastJson解析数据
     @Test
     public void fun() {
@@ -47,15 +57,6 @@ public class TestFastJson {
 
     private List<Person> personList;
 
-    {
-        Person person1 = new Person("zhangyu", "male", 19);
-        Person person2 = new Person("lisi", "female", 23);
-        Person person3 = new Person("wangwu", "female", 21);
-        Person person4 = new Person("zhaoliu", "male", 24);
-
-        personList = new ArrayList<>();
-        personList.addAll(Arrays.asList(person1, person2, person3, person4));
-    }
 
     // 测试map变成json，json变成map
     @Test

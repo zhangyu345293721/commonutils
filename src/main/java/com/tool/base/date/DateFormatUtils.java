@@ -8,6 +8,9 @@ import java.util.Date;
  * 日期格式化工具类
  */
 public class DateFormatUtils {
+    private DateFormatUtils() {
+    }
+
     /**
      * yyyy:年
      */
@@ -144,6 +147,7 @@ public class DateFormatUtils {
             }
             return outFmt.format(dt);
         } catch (Exception ex) {
+            ex.printStackTrace();
         }
         return date;
     }

@@ -20,20 +20,20 @@ public class DayYear1154 {
 
     public int dayOfYear(String date) {
         String[] strs = date.split("-");
-        int year = Integer.valueOf(strs[0]);
-        int month = Integer.valueOf(strs[1]);
-        int day = Integer.valueOf(strs[2]);
+        int year = Integer.parseInt(strs[0]);
+        int month = Integer.parseInt(strs[1]);
+        int day = Integer.parseInt(strs[2]);
         LocalDate d = LocalDate.of(year, month, day);
         return d.getDayOfYear();
     }
 
     public int dayOfYear2(String date) {
         String[] strs = date.split("-");
-        int year = Integer.valueOf(strs[0]);
-        int month = Integer.valueOf(strs[1]);
-        int day = Integer.valueOf(strs[2]);
+        int year = Integer.parseInt(strs[0]);
+        int month = Integer.parseInt(strs[1]);
+        int day = Integer.parseInt(strs[2]);
         Calendar calendar = Calendar.getInstance();
-        calendar.set(year, month-1, day);
+        calendar.set(year, month - 1, day);
         int days = calendar.get(Calendar.DAY_OF_YEAR);
         return days;
     }

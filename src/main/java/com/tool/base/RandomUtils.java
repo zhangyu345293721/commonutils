@@ -8,6 +8,12 @@ import java.math.BigDecimal;
  */
 public class RandomUtils {
 
+    private RandomUtils() {
+    }
+
+    static Random random = new Random();
+    static String GREATER_THAN = "x must be greater than or equal 0";
+    static String Y_GREATER_THAN_X = "y must be greater than x";
     private static final int DISPLAYABLE_MIN_INDEX = 33;
     private static final int DISPLAYABLE_MAX_INDEX = 127 - 1;
     private static final String ALL_CHAR = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -28,8 +34,7 @@ public class RandomUtils {
      * @return 返回字符串
      */
     public static String generateString(int length) {
-        StringBuffer sb = new StringBuffer();
-        Random random = new Random();
+        StringBuilder sb = new StringBuilder();
         for (int i = 0; i < length; i++) {
             sb.append(ALL_CHAR.charAt(random.nextInt(ALL_CHAR.length())));
         }
@@ -43,8 +48,7 @@ public class RandomUtils {
      * @return 返回字符串
      */
     public static String generateMixString(int length) {
-        StringBuffer sb = new StringBuffer();
-        Random random = new Random();
+        StringBuilder sb = new StringBuilder();
         for (int i = 0; i < length; i++) {
             sb.append(LETTER_CHAR.charAt(random.nextInt(LETTER_CHAR.length())));
         }
@@ -78,8 +82,7 @@ public class RandomUtils {
      * @return 返回字符串
      */
     public static String generateNumberString(int length) {
-        StringBuffer sb = new StringBuffer();
-        Random random = new Random();
+        StringBuilder sb = new StringBuilder();
         for (int i = 0; i < length; i++) {
             sb.append(NUMBER_CHAR.charAt(random.nextInt(NUMBER_CHAR.length())));
         }
@@ -115,10 +118,10 @@ public class RandomUtils {
     public static int intSeed(int x, int y) {
         if (x < 0) { // ensure x >= 0
             throw new IllegalArgumentException(
-                    "x must be greater than or equal 0");
+                    Y_GREATER_THAN_X);
         }
         if (x >= y) { // ensure y > x
-            throw new IllegalArgumentException("y must be greater than x");
+            throw new IllegalArgumentException("");
         }
         return x + getRandom().nextInt(y - x + 1);
     }
@@ -143,10 +146,10 @@ public class RandomUtils {
     public static long longSeed(long x, long y) {
         if (x < 0) { // ensure x >= 0
             throw new IllegalArgumentException(
-                    "x must be greater than or equal 0");
+                    GREATER_THAN);
         }
         if (x >= y) { // ensure y > x
-            throw new IllegalArgumentException("y must be greater than x");
+            throw new IllegalArgumentException(Y_GREATER_THAN_X);
         }
         return Math.abs(getRandom().nextLong() % (y - x + 1)) + x;
     }
@@ -192,10 +195,10 @@ public class RandomUtils {
     public static double doubleSeed(double x, double y) {
         if (x < 0) { // ensure x >= 0
             throw new IllegalArgumentException(
-                    "x must be greater than or equal 0");
+                    "GREATER_THAN");
         }
         if (x >= y) { // ensure y > x
-            throw new IllegalArgumentException("y must be greater than x");
+            throw new IllegalArgumentException("Y_GREATER_THAN_X");
         }
         BigDecimal dx = new BigDecimal(String.valueOf(x));
         BigDecimal dy = new BigDecimal(String.valueOf(y));
@@ -227,7 +230,7 @@ public class RandomUtils {
                     "x must be greater than or equal '!'");
         }
         if (x >= y) { // ensure y > x
-            throw new IllegalArgumentException("y must be greater than x");
+            throw new IllegalArgumentException("Y_GREATER_THAN_X");
         }
         if (y > DISPLAYABLE_MAX_INDEX) { // ensure y <= 126 ('~')
             throw new IllegalArgumentException(

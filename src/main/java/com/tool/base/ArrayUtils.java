@@ -660,7 +660,6 @@ public class ArrayUtils {
         int min_a = 0;
         for (int i = 0; i < list.size(); i++) {
             if (list.get(i) < list.get(min_a)) {
-                min = list.get(i);
                 min_a = i;
             }
         }

@@ -27,10 +27,10 @@ public class GreatestCommon1071 {
      */
     public String gcdOfStrings(String str1, String str2) {
         if (str1 == null || str1.length() < 1) {
-            return new String();
+            return "";
         }
         if (str2 == null || str2.length() < 1) {
-            return new String();
+            return "";
         }
         if (str2.equals(str1)) {
             return str1;
@@ -44,7 +44,7 @@ public class GreatestCommon1071 {
             shortStr = str1;
             longStr = str2;
         }
-        String temp = new String();
+        String temp = "";
         int end = shortStr.length();
         for (int i = 1; i <= end; i++) {
             String sub = shortStr.substring(0, i);

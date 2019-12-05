@@ -474,6 +474,7 @@ public class ListStreamDemo {
 
     private static List<Person> personList = new ArrayList<>();
 
+
     {
         Person p1 = new Person();
         p1.setUserName("zhangyu");

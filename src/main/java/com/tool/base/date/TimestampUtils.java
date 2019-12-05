@@ -8,6 +8,8 @@ import java.util.Date;
  * TimeStamp工具类，提供TimeStamp与String、Date的转换
  */
 public class TimestampUtils {
+    private TimestampUtils() {
+    }
 
     /**
      * String转换为TimeStamp
@@ -16,11 +18,10 @@ public class TimestampUtils {
      * @return java.sql.Timestamp
      */
     public static Timestamp string2Timestamp(String value) {
-        if (value == null && !"".equals(value.trim())) {
-            return null;
+        if (value == null || !"".equals(value.trim())) {
+            return Timestamp.valueOf("");
         }
-        Timestamp ts = new Timestamp(System.currentTimeMillis());
-        ts = Timestamp.valueOf(value);
+        Timestamp ts = Timestamp.valueOf(value);
         return ts;
     }
 

@@ -13,8 +13,8 @@ public class InvertNumber {
     public void invertNumberFun() {
         int number = 36;
         int n = 9;
-        StringBuffer sb = new StringBuffer();
-        convertNumber(number, n, sb);
+        StringBuilder sb = new StringBuilder();
+        getConvertNumber(number, n, sb);
         System.out.println("figure = " + sb.toString());
     }
 
@@ -23,7 +23,7 @@ public class InvertNumber {
      * @param n      转换的进制
      * @param sb     存储转换的字符串
      */
-    private void convertNumber(int number, int n, StringBuffer sb) {
+    private void getConvertNumber(int number, int n, StringBuilder sb) {
         int leftNumber = 0;
         int totalNumber = number;
         int count = 0;
@@ -54,11 +54,9 @@ public class InvertNumber {
                     count--;
                 }
                 return;
-            } else {
-                continue;
             }
         }
-        convertNumber(leftNumber, n, sb);
+        getConvertNumber(leftNumber, n, sb);
     }
 
 

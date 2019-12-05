@@ -9,6 +9,10 @@ import org.dom4j.Document;
  * @author: zhangyu
  */
 public class DocumentUtils {
+
+    private DocumentUtils() {
+    }
+
     /**
      * 字符串封装成文档
      *
