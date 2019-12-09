@@ -9,6 +9,8 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * 测试字符串操作
@@ -62,5 +64,26 @@ public class StringTestDemo {
         List<List<Integer>> allList = new ArrayList<>();
         combination.forEach(e -> allList.add(new ArrayList<>(e)));
         System.out.println(allList.size());
+    }
+
+    @Test
+    public void stringJoinDemo() {
+        String[] s = {"a", "b", "c", "d", "e"};
+        String joinStr = String.join("", s);
+        System.out.println(joinStr);
+    }
+
+    @Test
+    public void stringJoinStreamDemo() {
+        int[] s = {1, 2, 3, 4, 5, 6, 6, 7};
+        String collect = Stream.of(s).map(e -> String.valueOf(e)).collect(Collectors.joining(""));
+        System.out.println(collect);
+    }
+
+    @Test
+    public void stringJoinStreamDemo2() {
+        int[] s = {1, 2, 3, 4, 5, 6, 6, 7};
+        String collect = Arrays.stream(s).boxed().map(e -> String.valueOf(e)).collect(Collectors.joining(""));
+        System.out.println(collect);
     }
 }

@@ -1,10 +1,0 @@
-
-Ksquid:S10661"/Merge this if statement with the enclosing one.(‰¹Üîûÿÿÿÿ
-Fsquid:S10662"/Merge this if statement with the enclosing one.(¸¶¹ï
-Ksquid:S1066;"/Merge this if statement with the enclosing one.(‰¹Üîûÿÿÿÿ
-Fsquid:S1066<"/Merge this if statement with the enclosing one.(šüı¦
-nsquid:S3776,"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(Ù§Ô úÿÿÿÿ
-tsquid:S2259"XA "NullPointerException" could be thrown; "firstdtDistanceAndIndexArr" is nullable here.(´Å¦Ûûÿÿÿÿ
-[squid:S2259$"EA "NullPointerException" could be thrown; "nextArr" is nullable here.(øÓæ
-=squid:S1168D"&Return an empty array instead of null.(¥¹ï
-=squid:S1168X"&Return an empty array instead of null.(¥¹ï

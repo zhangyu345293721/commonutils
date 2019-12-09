@@ -98,6 +98,13 @@ public class SreamTestDemo {
         System.out.println("totalPowSum = " + totalPowSum);
     }
 
+    @Test
+    public void testSystem() {
+        System.out.println(String.format("Hi,%s,知道我吗!", "王力"));
+        System.out.println(String.format("Hi,%d,知道我吗!", 10));
+        System.out.println(String.format("Hi,%f,知道我吗!", 10.0f));
+    }
+
     public int addInteger(List<Integer> values) {
         return values.parallelStream().mapToInt(i -> i).sum();
     }

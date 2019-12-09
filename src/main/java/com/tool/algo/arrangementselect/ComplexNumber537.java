@@ -14,74 +14,24 @@ public class ComplexNumber537 {
         String b = "55+-69i";
         // String a = "1+-1i";
         // String b = "1+-1i";
-        String result = complexNumberMultiply2(a, b);
+        String result = complexNumberMultiply(a, b);
         System.out.println("result = " + result);
     }
 
     public String complexNumberMultiply(String a, String b) {
-        if (a.contains("+-") && b.contains("+-")) {
-            String[] strsA = a.split("\\+-");
-            int numA = Integer.parseInt(strsA[0]);
-            int iA = Integer.parseInt(strsA[1].substring(0, strsA[1].length() - 1));
-            String[] strsB = a.split("\\+-");
-            int numB = Integer.parseInt(strsB[0]);
-            int iB = Integer.parseInt(strsB[1].substring(0, strsB[1].length() - 1));
-            int result1 = numA * numB;
-            int reuslt2 = -numA * iB;
-            int result3 = -iA * numB;
-            int result4 = iA * iB;
-            return (result1 - result4) + "+" + (reuslt2 + result3) + "i";
-        } else if (a.contains("+") && b.contains("+")) {
-            String[] strsA = a.split("\\+");
-            int numA = Integer.parseInt(strsA[0]);
-            int iA = Integer.parseInt(strsA[1].substring(0, strsA[1].length() - 1));
-            String[] strsB = b.split("\\+");
-            int numB = Integer.parseInt(strsB[0]);
-            int iB = Integer.parseInt(strsB[1].substring(0, strsB[1].length() - 1));
-            int result1 = numA * numB;
-            int reuslt2 = numA * iB;
-            int result3 = iA * numB;
-            int result4 = iA * iB;
-            return (result1 - result4) + "+" + (reuslt2 + result3) + "i";
+        int i1 = a.indexOf('+');
+        int i2 = a.indexOf('i');
+        int j1 = b.indexOf('+');
+        int j2 = b.indexOf('i');
 
-        } else if (a.contains("+") && b.contains("+-")) {
-            String[] strsA = a.split("\\+");
-            int numA = Integer.parseInt(strsA[0]);
-            int iA = Integer.parseInt(strsA[1].substring(0, strsA[1].length() - 1));
-            String[] strsB = b.split("\\+-");
-            int numB = Integer.parseInt(strsB[0]);
-            int iB = Integer.parseInt(strsB[1].substring(0, strsB[1].length() - 1));
-            int result1 = numA * numB;
-            int reuslt2 = numA * iB;
-            int result3 = iA * numB;
-            int result4 = iA * iB;
-            return (result1 - result4) + "+" + (reuslt2 + result3) + "i";
-        } else {
-            String[] strsA = a.split("\\+-");
-            int numA = Integer.parseInt(strsA[0]);
-            int iA = Integer.parseInt(strsA[1].substring(0, strsA[0].length() - 1));
-            String[] strsB = b.split("\\+");
-            int numB = Integer.parseInt(strsB[0]);
-            int iB = Integer.parseInt(strsB[1].substring(0, strsB[1].length() - 1));
-            int result1 = numA * numB;
-            int reuslt2 = numA * iB;
-            int result3 = iA * numB;
-            int result4 = iA * iB;
-            return (result1 - result4) + "+" + (reuslt2 + result3) + "i";
-        }
-    }
+        int a1 = Integer.parseInt(a.substring(0, i1));
+        int b1 = Integer.parseInt(a.substring(i1 + 1, i2));
+        int a2 = Integer.parseInt(b.substring(0, j1));
+        int b2 = Integer.parseInt(b.substring(j1 + 1, j2));
 
-    public String complexNumberMultiply2(String a, String b) {
-        String[] strsA = a.split("\\+");
-        int numA = Integer.parseInt(strsA[0]);
-        int iA = Integer.parseInt(strsA[1].substring(0, strsA[0].length()));
-        String[] strsB = b.split("\\+");
-        int numB = Integer.parseInt(strsB[0]);
-        int iB = Integer.parseInt(strsB[1].substring(0, strsB[1].length() - 1));
-        int result1 = numA * numB;
-        int reuslt2 = numA * iB;
-        int result3 = iA * numB;
-        int result4 = iA * iB;
-        return (result1 + result4) + "+" + (reuslt2 + result3) + "i";
+        int aa = a1 * a2 - b1 * b2;
+        int bb = a1 * b2 + a2 * b1;
+
+        return aa + "+" + bb + "i";
     }
 }

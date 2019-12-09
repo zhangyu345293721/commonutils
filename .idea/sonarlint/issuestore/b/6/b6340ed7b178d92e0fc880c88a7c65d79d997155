@@ -1,26 +1,23 @@
 
-Fsquid:S1125")Remove the literal "false" boolean value.(‚†Ïßÿÿÿÿÿ
-`squid:S1126½"AReplace this if-then-else statement by a single return statement.(²¶í‡8•Õ§òÜ-
-osquid:S00117õ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÒÎ˜Šúÿÿÿÿ
-vsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùöèÉúÿÿÿÿ8œª”ÉÜ-
-isquid:S00117÷"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡îâm
-esquid:S1126“"AReplace this if-then-else statement by a single return statement.(ÔÔ²‰üÿÿÿÿ8•Õ§òÜ-
-esquid:S1126¯"AReplace this if-then-else statement by a single return statement.(¥•œúÿÿÿÿ8•Õ§òÜ-
-8squid:S1643'"Use a StringBuilder instead.(Ô»–Êúÿÿÿÿ
-esquid:S1126¡"AReplace this if-then-else statement by a single return statement.(Šï–Çÿÿÿÿÿ8•Õ§òÜ-
-Vsquid:S1118":Add a private constructor to hide the implicit public one.(Íë¹’ûÿÿÿÿ
-jsquid:S00117ş"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤æÛ‹
-Gsquid:S1125¡")Remove the literal "false" boolean value.(ûŒ’*8áÕ“ÉÜ-
-squid:S1845û"lRename method "substring" to prevent any misunderstanding/clash with method "subString" defined on line 188.(”¿òüÿÿÿÿÿ8ıä¿ôÜ-
-qsquid:S00117…"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰ÒŸÃ8œª”ÉÜ-
-osquid:S00117‚"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´í“Áøÿÿÿÿ
-jsquid:S00117ö"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Éî‘í
-esquid:S1126Ë"AReplace this if-then-else statement by a single return statement.(È›ôÕÿÿÿÿÿ8•Õ§òÜ-
-vsquid:S00117ô"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†©ìËûÿÿÿÿ8œª”ÉÜ-
-esquid:S1126Ù"AReplace this if-then-else statement by a single return statement.(æ·ıÿÿÿÿÿÿ8•Õ§òÜ-
-qsquid:S00117ı"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õâƒ8œª”ÉÜ-
-jsquid:S00117†"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤Îè–
-3squid:S1643%"Use a StringBuilder instead.(¡İ¥¥
-vsquid:S00117ù"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åíÓ½ÿÿÿÿÿ8œª”ÉÜ-
-‹squid:S1845‡"lRename method "substring" to prevent any misunderstanding/clash with method "subString" defined on line 188.(¦‰¾ˆ8ÈÁôÜ-
-jsquid:S00117ú"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñ¬ˆ
+vsquid:S00117ş"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùöèÉúÿÿÿÿ8œª”ÉÜ-
+jsquid:S00117ƒ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤Îè–
+3squid:S1643("Use a StringBuilder instead.(¡İ¥¥
+8squid:S1643*"Use a StringBuilder instead.(Ô»–Êúÿÿÿÿ
+esquid:S1126"AReplace this if-then-else statement by a single return statement.(Šï–Çÿÿÿÿÿ8•Õ§òÜ-
+Fsquid:S1125‘")Remove the literal "false" boolean value.(‚†Ïßÿÿÿÿÿ
+qsquid:S00117ú"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õâƒ8œª”ÉÜ-
+vsquid:S00117ñ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†©ìËûÿÿÿÿ8œª”ÉÜ-
+isquid:S00117ô"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡îâm
+jsquid:S00117÷"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñ¬ˆ
+esquid:S1126«"AReplace this if-then-else statement by a single return statement.(¥•œúÿÿÿÿ8•Õ§òÜ-
+jsquid:S00117ó"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Éî‘í
+Gsquid:S1125£")Remove the literal "false" boolean value.(ûŒ’*8áÕ“ÉÜ-
+osquid:S00117ÿ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´í“Áøÿÿÿÿ
+jsquid:S00117û"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤æÛ‹
+`squid:S1126¹"AReplace this if-then-else statement by a single return statement.(²¶í‡8•Õ§òÜ-
+vsquid:S00117ö"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åíÓ½ÿÿÿÿÿ8œª”ÉÜ-
+esquid:S1126Õ"AReplace this if-then-else statement by a single return statement.(æ·ıÿÿÿÿÿÿ8•Õ§òÜ-
+qsquid:S00117‚"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰ÒŸÃ8œª”ÉÜ-
+esquid:S1126Ç"AReplace this if-then-else statement by a single return statement.(È›ôÕÿÿÿÿÿ8•Õ§òÜ-
+osquid:S00117ò"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÒÎ˜Šúÿÿÿÿ
+esquid:S1126"AReplace this if-then-else statement by a single return statement.(ÔÔ²‰üÿÿÿÿ8•Õ§òÜ-

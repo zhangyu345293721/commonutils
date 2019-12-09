@@ -19,7 +19,7 @@ public class DefangingIP1108 {
     /**
      * 对于.位置改为[.]
      *
-     * @param address
+     * @param address 地址
      * @return
      */
     public String defangIPaddr(String address) {
@@ -29,8 +29,8 @@ public class DefangingIP1108 {
     /**
      * 对于.位置改为[.]
      *
-     * @param address
-     * @return
+     * @param address 地址
+     * @return 修改
      */
     public String defangIPaddr2(String address) {
         StringBuilder sb = new StringBuilder();

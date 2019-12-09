@@ -15,7 +15,6 @@ public class GreatestCommon1071 {
         String str2 = "ABC";
         String maxString = gcdOfStrings(str1, str2);
         System.out.println("maxString = " + maxString);
-
     }
 
     /**

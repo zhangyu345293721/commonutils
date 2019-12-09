@@ -1,14 +1,5 @@
 
-esquid:S3027é"FPut single-quotes around '.' to use the faster "indexOf(char)" method.(§Ëã—8´©‡ÉÜ-
-Csquid:S2129ã"$Remove this "BigDecimal" constructor(¨…ŒÎ8´©‡ÉÜ-
-@squid:S2111ã"!Use "BigDecimal.valueOf" instead.(¨…ŒÎ8´©‡ÉÜ-
-jsquid:S3027»"FPut single-quotes around '-' to use the faster "indexOf(char)" method.(ñü¸‹øÿÿÿÿ8´©‡ÉÜ-
-~squid:S1149¿"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(ƒéë8´©‡ÉÜ-
 nsquid:S3776<"RRefactor this method to reduce its Cognitive Complexity from 32 to the 15 allowed.(Û³éÈıÿÿÿÿ
-~squid:S1149Â"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(é‡âÅ8´©‡ÉÜ-
-X"squid:SwitchLastCaseIsDefaultCheckë""Add a default case to this switch.(ı¦Á8´©‡ÉÜ-
 Esquid:S1940K")Use the opposite operator ("<=") instead.(á“éøúÿÿÿÿ
 Esquid:S1940P")Use the opposite operator ("<=") instead.(˜ãÈÒøÿÿÿÿ
-dsquid:S3027±"FPut single-quotes around '.' to use the faster "indexOf(char)" method.(ãX8´©‡ÉÜ-
-vsquid:S1149="_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(í…Ò‰
 Esquid:S1940~")Use the opposite operator ("<=") instead.(á“éøúÿÿÿÿ
