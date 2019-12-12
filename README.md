@@ -30,7 +30,12 @@
       - SensitivewordFilterUtil 敏感词过滤工具类
       - SensitiveWordInit 初始化敏感词库
    - sequence   生成唯一序列
+      - GenerateSequenceUtils 生成唯一时间序列
    - sort        排序
+      - BinarySearch 二分查找
+      - BubbleSort 冒泡排序
+      - QuickSort  快速排序
+      - SelectSort 选择排序
    - beanconvert  bean的转换
    - database     数据库操作
    - function     function操作
