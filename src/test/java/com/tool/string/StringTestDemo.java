@@ -1,5 +1,6 @@
 package com.tool.string;
 
+import com.tool.base.stream.IntUtils;
 import org.junit.jupiter.api.Test;
 import org.raistlic.common.permutation.Combination;
 
@@ -10,7 +11,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 /**
  * 测试字符串操作
@@ -74,16 +74,20 @@ public class StringTestDemo {
     }
 
     @Test
-    public void stringJoinStreamDemo() {
-        int[] s = {1, 2, 3, 4, 5, 6, 6, 7};
-        String collect = Stream.of(s).map(e -> String.valueOf(e)).collect(Collectors.joining(""));
+    public void stringJoinStreamDemo2() {
+        int[] s = {1, 2, 3, 4, 5, 6, 7};
+        String collect = Arrays.stream(s).boxed().map(e -> String.valueOf(e)).collect(Collectors.joining(""));
         System.out.println(collect);
     }
 
     @Test
-    public void stringJoinStreamDemo2() {
-        int[] s = {1, 2, 3, 4, 5, 6, 6, 7};
-        String collect = Arrays.stream(s).boxed().map(e -> String.valueOf(e)).collect(Collectors.joining(""));
-        System.out.println(collect);
+    public void stringJoinStreamDemo3() {
+        String str = "12345";
+        int[] arrays = IntUtils.string2IntArrays(str);
+        for (int num : arrays) {
+            System.out.println(num);
+        }
     }
 }
+
+
