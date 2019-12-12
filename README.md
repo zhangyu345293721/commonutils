@@ -50,18 +50,24 @@
         - RedisSaveListDemo redis保存链表工具类
         - RedisSaveObjectDemo redis存储对象
    - function     function操作
-        - function
+        - function 方法
            - FunctionOperatorDemo function操作
            - FunctionSupplierDemo suplier操作
-        - generics
+        - generics 泛型使用
            - GenericsClassTestDemo 泛型例子
-        - javalinux
+        - javalinux java调用scp命令
            - scpTestDemo java操作scp
-        - streamdemo
+        - streamdemo stream测试例子
           -  ListDemo List类操作
           -  ListGroupByDemo list分组操作
-         -
+        - time jdk8时间类
+   - treetool  生成二叉树工具
+        - TreeTool 二叉树生成工具
    - read         读取操作
+     - fastjson 
+         -  TestFastJson 测试fastjson工具类
+     - readxml
+         - ReadxmlByDom 读取xml
    - stream       jdk8流操作
      - IntStreamUtils   int流工具类操作
      - IntArrayStreamUtils int数组流工具类
