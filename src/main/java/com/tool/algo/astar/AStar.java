@@ -7,7 +7,7 @@ import java.util.Queue;
 
 /**
  * A星算法
- *
+ * https://www.gamedev.net/articles/programming/artificial-intelligence/a-pathfinding-for-beginners-r2003/
  * @author: zhangyu
  */
 public class AStar {
