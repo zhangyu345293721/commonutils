@@ -18,6 +18,7 @@
      -  Base64Utils BASE64加解密工具类
      -  DESUtils DES加解密工具类
      -  EncryptAndDecryptUtils 加解密工具类
+     -  MD5Utils MD5加密
    - file    文件操作
    - image   图像处理
    - math    数学操作
