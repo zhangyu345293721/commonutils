@@ -23,8 +23,12 @@
      -  FileUtils 文件工具类
      -  ZipUitls 文件压缩工具类
    - image   图像处理
+     -  ImageUtil 图像处理工具类
    - math    数学操作
+      - BigDecimalUtils 大数计算工具类
    - sensitiveword 敏感词操作
+      - SensitivewordFilterUtil 敏感词过滤工具类
+      - SensitiveWordInit 初始化敏感词库
    - sequence   生成唯一序列
    - sort        排序
    - beanconvert  bean的转换
