@@ -4,9 +4,7 @@ import java.util.Arrays;
  
 /**
 *类描述:二分查找的精髓在于控制循环的次数，进行遍历
-*@author: 张宇
-*@date: 日期: 2018年8月20日 时间: 上午10:31:45
-*@version 1.0
+*@author: zhangyu
  */
  
 public class QuickSort {

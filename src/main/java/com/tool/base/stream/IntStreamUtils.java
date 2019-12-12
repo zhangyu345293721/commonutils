@@ -7,7 +7,7 @@ package com.tool.base.stream;
  * <p>
  * 不同的是parseInt()方法的返回值是int类型，而valueOf()返回值是Integer对象
  */
-public class IntUtils {
+public class IntStreamUtils {
     /**
      * 2进制字符串
      *

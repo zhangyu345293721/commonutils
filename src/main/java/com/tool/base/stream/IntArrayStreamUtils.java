@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
  *
  * @author: zhangyu
  */
-public class StreamUtils {
+public class IntArrayStreamUtils {
 
     /**
      * 将int数组连接成字符串

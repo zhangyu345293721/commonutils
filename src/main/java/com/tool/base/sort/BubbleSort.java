@@ -3,11 +3,10 @@ package com.tool.base.sort;
 import java.util.Arrays;
 
 /**
+ *
+ * 冒泡排序(时间复杂度：O(n^2) 空间复杂度:O(1))
  * @author zhangyu
- * @version V1.0
- * @ClassName: BubbleSort
- * @Description: 时间复杂度：O(n^2) 空间复杂度:O(1)
- * @date 2018/11/19 19:45
+ *
  **/
 
 public class BubbleSort {

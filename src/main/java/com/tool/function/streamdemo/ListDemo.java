@@ -1,4 +1,4 @@
-package com.tool.function.stream;
+package com.tool.function.streamdemo;
 
 import org.junit.jupiter.api.Test;
 import org.raistlic.common.permutation.Permutation;

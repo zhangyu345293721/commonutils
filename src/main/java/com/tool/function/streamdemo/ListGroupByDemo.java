@@ -1,4 +1,4 @@
-package com.tool.function.stream;
+package com.tool.function.streamdemo;
 
 import com.tool.bean.User;
 import org.junit.jupiter.api.Test;
@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
  *
  * @author: zhangyu
  */
-public class TestGroupBy {
+public class ListGroupByDemo {
     // 对统计此时进行分组
     @Test
     public void GroupDemo1() {
