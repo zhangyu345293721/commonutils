@@ -1,7 +1,14 @@
 # commonutils
 ### 常用工具帮助类
 - base包下
+   - ArrayUtils   数据操作
+   - CollectionUtils 集合操作
+   - DocumentUtils 文档操作
+   - RegexUtils 正则操作
+   - StringUtils 字符串操作
+   - RandomUtils 随机操作
    - clone  克隆对象
+      -  CloneUtils 克隆工具类
    - date   时间转换
    - encrypt 加密解密
    - file    文件操作
@@ -14,12 +21,6 @@
    - database     数据库操作
    - function     function操作
    - read          读取操作
-   - ArrayUtils   数据操作
-   - CollectionUtils 集合操作
-   - DocumentUtils 文档操作
-   - RegexUtils 正则操作
-   - StringUtils 字符串操作
-   - RandomUtils 随机操作
 - algo包下
    -  astar A*算法
    -  dijkstra 迪杰斯特拉算法
