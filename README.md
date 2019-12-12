@@ -20,4 +20,5 @@
    - RegexUtils 正则操作
    - StringUtils 字符串操作
    - RandomUtils 随机操作
-   - algo 一些常用算法实现的包
+- algo包下
+   -  一些常用算法实现的包
