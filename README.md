@@ -21,4 +21,4 @@
    - StringUtils 字符串操作
    - RandomUtils 随机操作
 - algo包下
-   -  一些常用算法实现的包
+   -  一些常用算法实现
