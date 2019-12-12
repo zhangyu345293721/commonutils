@@ -14,6 +14,10 @@
       -  DateUtils 日期转换工具类
       -  TimestampUtils 时间戳转换工具类
    - encrypt 加密解密
+     -  AESUtils AES加密工具类
+     -  Base64Utils BASE64加解密工具类
+     -  DESUtils DES加解密工具类
+     -  EncryptAndDecryptUtils 加解密工具类
    - file    文件操作
    - image   图像处理
    - math    数学操作
