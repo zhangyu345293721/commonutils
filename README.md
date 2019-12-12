@@ -7,6 +7,11 @@
    - RegexUtils 正则操作
    - StringUtils 字符串操作
    - RandomUtils 随机操作
+   - BaseTypeUtils 类型之间转换
+   - ClassHelper 类转换工具
+   - ConvertDateUtils 转换日期工具类
+   - IdcardUtils 身份证识别工具类
+   - MoneyUtils 钱处理工具类
    - clone  克隆对象
       -  CloneUtils 克隆工具类
    - date   时间转换
@@ -37,8 +42,25 @@
       - QuickSort  快速排序
       - SelectSort 选择排序
    - beanconvert  bean的转换
+      - BeanMapConvert Bean与Map的转换
    - database     数据库操作
+      - jdbc
+        - ConnectDatabase 连接数据库
+      - redis
+        - RedisSaveListDemo redis保存链表工具类
+        - RedisSaveObjectDemo redis存储对象
    - function     function操作
+        - function
+           - FunctionOperatorDemo function操作
+           - FunctionSupplierDemo suplier操作
+        - generics
+           - GenericsClassTestDemo 泛型例子
+        - javalinux
+           - scpTestDemo java操作scp
+        - streamdemo
+          -  ListDemo List类操作
+          -  ListGroupByDemo list分组操作
+         -
    - read         读取操作
    - stream       jdk8流操作
      - IntStreamUtils   int流工具类操作
