@@ -21,4 +21,6 @@
    - StringUtils 字符串操作
    - RandomUtils 随机操作
 - algo包下
-   -  一些常用算法实现
+   -  astar A*算法
+   -  dijkstra 迪杰斯特拉算法
+   -  tsp  旅行商问题
