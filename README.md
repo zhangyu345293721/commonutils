@@ -39,7 +39,10 @@
    - beanconvert  bean的转换
    - database     数据库操作
    - function     function操作
-   - read          读取操作
+   - read         读取操作
+   - stream       jdk8流操作
+     - IntStreamUtils   int流工具类操作
+     - IntArrayStreamUtils int数组流工具类
 - algo包下
    -  astar A*算法
    -  dijkstra 迪杰斯特拉算法
