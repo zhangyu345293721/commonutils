@@ -1,6 +1,6 @@
 package com.tool.string;
 
-import com.tool.base.stream.IntUtils;
+import com.tool.base.stream.IntStreamUtils;
 import org.junit.jupiter.api.Test;
 import org.raistlic.common.permutation.Combination;
 
@@ -83,7 +83,7 @@ public class StringTestDemo {
     @Test
     public void stringJoinStreamDemo3() {
         String str = "12345";
-        int[] arrays = IntUtils.string2IntArrays(str);
+        int[] arrays = IntStreamUtils.string2IntArrays(str);
         for (int num : arrays) {
             System.out.println(num);
         }

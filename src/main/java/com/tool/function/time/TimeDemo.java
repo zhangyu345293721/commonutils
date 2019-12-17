@@ -3,6 +3,7 @@ package com.tool.function.time;
 import org.junit.jupiter.api.Test;
 
 import java.time.*;
+import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoField;
 import java.time.temporal.ChronoUnit;
 
@@ -149,9 +150,27 @@ public class TimeDemo {
         int start = Integer.MAX_VALUE - 100;
         int end = Integer.MAX_VALUE;
         int count = 0;
-        for (int i = start; i < end; i++) {
+        for (int i = start; i <= end; i++) {
             count++;
         }
         System.out.println(count);
     }
+
+    /**
+     * 将Long类型的时间戳转换成String 类型的时间格式，时间格式为：yyyy-MM-dd HH:mm:ss
+     */
+    public static String convertTimeToString(Long time) {
+        DateTimeFormatter ftf = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        return ftf.format(LocalDateTime.ofInstant(Instant.ofEpochMilli(time), ZoneId.systemDefault()));
+    }
+
+    /**
+     * 将字符串转日期成Long类型的时间戳，格式为：yyyy-MM-dd HH:mm:ss
+     */
+    public static Long convertTimeToLong(String time) {
+        DateTimeFormatter ftf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        LocalDateTime parse = LocalDateTime.parse("2018-05-29 13:52:50", ftf);
+        return LocalDateTime.from(parse).atZone(ZoneId.systemDefault()).toInstant().toEpochMilli();
+    }
+
 }

@@ -69,8 +69,6 @@ j
 :src/main/java/com/tool/algo/computetime/DemoStatistic.java,c\8\c83a9ba94bfe86ae97576360dc0fefc2846b163e
 j
 :src/main/java/com/tool/algo/mergearray/MergeArrayDemo.java,d\e\de30a14f4938e23e0044617e229082c9fae4b91d
-]
--src/main/java/com/tool/base/ConvertUtils.java,9\2\92ad83b620bb9ebecbfd9f828530c7298a8dbc5c
 [
 +src/main/java/com/tool/base/MoneyUtils.java,a\5\a5f2dec7c1014b3418f02389811d7d39a10831f0
 [
@@ -145,14 +143,8 @@ Xsrc/main/java/com/tool/algo/packingalgorithm/onlyvolumeconsidered/PackingBoxCon
 bsrc/main/java/com/tool/algo/packingalgorithm/onlyvolumeconsidered/PackingBoxAlgorithmTestDemo.java,2\b\2bc5c00309e63d2674a24114cae49c4b9c9a05b3
 Š
 Zsrc/main/java/com/tool/algo/packingalgorithm/onlyvolumeconsidered/PackingBoxAlgorithm.java,0\b\0baa97fe2afdd0b63eddbdd9b3ea43c6e2e13d6a
-j
-:src/main/java/com/tool/function/stream/ListStreamDemo.java,4\f\4fb0e982e331ee623ea62b45a022d93594bc8947
-g
-7src/main/java/com/tool/function/stream/TestGroupBy.java,8\7\873443bb3a5df32373b082116b3a2bb913fbefee
 f
 6src/main/java/com/tool/read/fastjson/TestFastJson.java,a\b\ab73e0295ec38c48588c43199c1b5c5af5170e29
-d
-4src/main/java/com/tool/function/stream/ListDemo.java,8\3\83a6c979cb969b593e0d2bf34d4314d9205da360
 Z
 *src/main/java/com/tool/algo/SetRetain.java,e\b\eb7a733bf4f5ef4ef6e239c361381a3bae3e82cc
 _
