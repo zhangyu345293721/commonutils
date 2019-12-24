@@ -32,7 +32,7 @@
    - math    数学操作
       - BigDecimalUtils 大数计算工具类
    - sensitiveword 敏感词操作
-      - SensitivewordFilterUtil 敏感词过滤工具类
+      - SensitiveWordFilterUtil 敏感词过滤工具类
       - SensitiveWordInit 初始化敏感词库
    - sequence   生成唯一序列
       - GenerateSequenceUtils 生成唯一时间序列
