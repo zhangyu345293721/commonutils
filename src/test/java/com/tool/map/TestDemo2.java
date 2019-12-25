@@ -23,7 +23,14 @@ public class TestDemo2 {
     @Test
     public void streamTestDemo2() {
         List<Integer> strList = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5));
-        Integer integer = strList.stream().reduce(Integer::sum).get();
+        Integer integer = strList.stream().reduce(Integer::sum).orElse(0);
         System.out.println(integer);
+    }
+
+    @Test
+    public void streamTestDemo3() {
+        List<Integer> strList = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5));
+        int sum = strList.stream().mapToInt(e -> Integer.valueOf(e)).sum();
+        System.out.println(sum);
     }
 }
