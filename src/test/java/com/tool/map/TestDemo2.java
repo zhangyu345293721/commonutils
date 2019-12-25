@@ -19,4 +19,11 @@ public class TestDemo2 {
         }
         System.out.println(map.toString());
     }
+
+    @Test
+    public void streamTestDemo2() {
+        List<Integer> strList = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5));
+        Integer integer = strList.stream().reduce(Integer::sum).get();
+        System.out.println(integer);
+    }
 }
