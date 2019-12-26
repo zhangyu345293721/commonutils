@@ -14,10 +14,8 @@ import java.util.Set;
 public class PropertiesTest2 {
     public void printAll() {
         Properties prop = new Properties();
-        InputStream input = null;
-        try {
-            String file = "config.properties";
-            input = getClass().getClassLoader().getResourceAsStream(file);
+        String file = "config.properties";
+        try(InputStream input= getClass().getClassLoader().getResourceAsStream(file);) {
             if(input == null) {
                 System.out.println("无法加载文件" + file);
                 return ;
@@ -43,14 +41,6 @@ public class PropertiesTest2 {
 
         }catch (Exception e) {
             e.printStackTrace();
-        }finally {
-            if(input != null) {
-                try {
-                    input.close();
-                }catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
         }
     }
     public static void main(String[] args) {

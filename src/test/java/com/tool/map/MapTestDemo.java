@@ -40,5 +40,4 @@ public class MapTestDemo {
         String a = "abc";
         System.out.println(a.substring(1));
     }
-
 }

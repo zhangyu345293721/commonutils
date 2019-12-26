@@ -2,6 +2,7 @@ package com.tool.map;
 
 /**
  * 读取配置文件
+ * 读取文件流时候，在try后面处理，不用写finally来关闭流
  *
  * @author: zhangyu
  */
@@ -14,9 +15,7 @@ import java.util.Properties;
 public class LoadProperties {
     public void loadProperties() {
         Properties properties = new Properties();
-        InputStream inputStream = null;
-        try {
-            inputStream = new FileInputStream("config.properties");
+        try (InputStream inputStream = new FileInputStream("config.properties")) {
             properties.load(inputStream);
             System.out.println("url:" + properties.getProperty("url"));
             System.out.println("username:" + properties.getProperty("username"));
@@ -24,14 +23,6 @@ public class LoadProperties {
             System.out.println("databases:" + properties.getProperty("databases"));
         } catch (IOException e) {
             e.printStackTrace();
-        } finally {
-            if (inputStream != null) {
-                try {
-                    inputStream.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
         }
     }
 
