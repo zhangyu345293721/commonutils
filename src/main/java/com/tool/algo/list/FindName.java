@@ -24,6 +24,5 @@ public class FindName {
         for (String name : set) {
             System.out.println(name);
         }
-        //System.out.println(set.size());
     }
 }

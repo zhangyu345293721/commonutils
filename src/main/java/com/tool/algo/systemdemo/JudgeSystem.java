@@ -3,10 +3,9 @@ package com.tool.algo.systemdemo;
 import org.junit.jupiter.api.Test;
 
 /**
- * @program: utilsdemo
- * @description: 判断运行的系统是windows还是linux
+ * 判断运行的系统是windows还是linux
+ *
  * @author: zhangyu
- * @create: 2019-08-12 10:07
  */
 public class JudgeSystem {
 

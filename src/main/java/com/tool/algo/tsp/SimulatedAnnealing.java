@@ -60,9 +60,7 @@ public class SimulatedAnnealing {
      * @return best tour
      */
     public Tour anneal() {
-        /*DynamicDataWindow ddWindow=new DynamicDataWindow("模拟退火算法收敛过程");
-        ddWindow.setY_Coordinate_Name("所有路径和 ");
-        ddWindow.setVisible(true);*/
+
         long tp = 0;
 
         Tour bestSolution = new Tour(currentSolution.getCitiesList());

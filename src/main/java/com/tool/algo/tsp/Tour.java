@@ -4,10 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 /**
- * @program: utilsdemo
- * @description: tour类
  * @author: zhangyu
- * @create: 2019-09-25 12:30
  */
 
 public class Tour {

@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Test;
  * 转换数字（将10进制整数转成n进制）n>=2 n<=16
  *
  * @author: zhangyu
- * @date: 2019/12/02 22:38
  */
 public class InvertNumber {
     @Test

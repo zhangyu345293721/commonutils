@@ -9,10 +9,9 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
- * @program: utilsdemo
- * @description: 计算货架的数量
+ * 计算货架的数量
+ *
  * @author: zhangyu
- * @create: 2019-07-08 11:00
  */
 public class CountShelfNumber {
     @Test
@@ -24,12 +23,9 @@ public class CountShelfNumber {
             String shelfCode = entry.getKey();
             int sum = 0;
             for (String s : list) {
-                // System.out.println(s);
                 String s1 = s.split(",")[0];
-                // System.out.println(s1);
                 if (shelfCode.equals(s1)) {
                     Integer shelfScore = Integer.valueOf(s.split(",")[1]);
-                    //System.out.println(shelfCode);
                     sum += shelfScore;
                 }
             }

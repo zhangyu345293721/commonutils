@@ -11,10 +11,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * @program: utilsdemo
- * @description: 获取货架的分数
+ * 获取货架的分数
  * @author: zhangyu
- * @create: 2019-07-08 10:05
  */
 public class GetShelfScoreForMap {
     @Test

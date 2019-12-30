@@ -1,10 +1,7 @@
 package com.tool.algo.tsp;
 
 /**
- * @program: utilsdemo
- * @description: city类
  * @author: zhangyu
- * @create: 2019-09-25 12:29
  */
 
 public class City {

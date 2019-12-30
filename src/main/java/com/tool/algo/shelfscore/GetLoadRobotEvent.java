@@ -11,10 +11,9 @@ import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 /**
- * @program: utilsdemo
- * @description: 获取货架的数据
+ * 获取货架的数据
+ *
  * @author: zhangyu
- * @create: 2019-07-08 13:54
  */
 public class GetLoadRobotEvent {
     @Test
