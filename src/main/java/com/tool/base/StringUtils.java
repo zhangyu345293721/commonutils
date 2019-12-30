@@ -7,6 +7,8 @@ import java.util.regex.Pattern;
 
 /**
  * 字符串工具类，对字符串进行常规的处理
+ *
+ * @author :zhangyu
  */
 public class StringUtils {
 

@@ -5,6 +5,8 @@ import java.math.BigDecimal;
 
 /**
  * 随机方法工具类
+ *
+ * @author :zhangyu
  */
 public class RandomUtils {
 

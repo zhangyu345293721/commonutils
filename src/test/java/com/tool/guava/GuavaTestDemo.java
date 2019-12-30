@@ -234,7 +234,7 @@ public class GuavaTestDemo {
         try {
             list = Files.readLines(file, Charsets.UTF_8);
         } catch (Exception e) {
+            e.printStackTrace();
         }
-
     }
 }

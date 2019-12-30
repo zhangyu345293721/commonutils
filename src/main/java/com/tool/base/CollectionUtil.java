@@ -5,6 +5,8 @@ import java.util.function.Function;
 
 /**
  * 集合工具类
+ *
+ * @author :zhangyu
  */
 public class CollectionUtil {
 

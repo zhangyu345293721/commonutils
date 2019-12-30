@@ -7,6 +7,8 @@ import java.util.Date;
 /**
  * 时间转换工具类
  * 若待转换值为null或者出现异常，则使用默认值
+ *
+ * @author :zhangyu
  */
 public class ConvertDateUtils {
 

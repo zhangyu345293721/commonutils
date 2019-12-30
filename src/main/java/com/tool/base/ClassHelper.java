@@ -6,13 +6,15 @@ import java.util.Map;
 
 /**
  * 判断对象、字符串、集合是否为空、不为空
+ *
+ * @author ：zhangyu
  */
 public final class ClassHelper {
 
     /**
      * 判断数组是否为空
      *
-     * @param array array
+     * @param array 数组
      * @return boolean类型
      */
     private static <T> boolean isEmptyArray(T[] array) {
@@ -26,7 +28,7 @@ public final class ClassHelper {
     /**
      * 检验对象是否为空,String 中只有空格在对象中也算空.
      *
-     * @param object object
+     * @param object 对象
      * @return 为空返回true, 否则false.
      */
     public static boolean isEmpty(Object object) {
