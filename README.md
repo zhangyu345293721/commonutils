@@ -73,7 +73,7 @@
      - IntStreamUtils   int流工具类操作
      - IntArrayStreamUtils int数组流工具类
 - algo包下
-   -  astar A*算法
-   -  dijkstra 迪杰斯特拉算法
+   -  astar  A*算法
+   -  dijkstra  迪杰斯特拉算法
    -  tsp  旅行商问题
    -  ortools 线性规划工具
