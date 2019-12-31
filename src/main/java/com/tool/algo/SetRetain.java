@@ -4,9 +4,17 @@ import java.util.ArrayList;
 
 /**
  * set求交集
+ *
  * @author: zhangyu
  */
 public class SetRetain {
+    /**
+     * 比较两个集合并留下相同部分
+     *
+     * @param arr1 数组1
+     * @param arr2 数组2
+     * @return 布尔值
+     */
     public static boolean compare(int[] arr1, int[] arr2) {
         ArrayList<Integer> list1 = new ArrayList<>();
         ArrayList<Integer> list2 = new ArrayList<>();

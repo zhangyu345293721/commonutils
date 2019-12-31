@@ -13,7 +13,6 @@ public class Tour {
     private int distance = 0;
 
     public Tour() {
-        // TODO Auto-generated constructor stub
         citiesList = new ArrayList<City>();
     }
 

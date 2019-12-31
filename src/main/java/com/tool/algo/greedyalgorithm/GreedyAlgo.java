@@ -8,10 +8,9 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * @program javacode
- * @description: 使用贪心算法遍历路径
+ * 使用贪心算法遍历路径
+ *
  * @author: zhangyu
- * @create: 2019/09/27 21:36
  */
 public class GreedyAlgo {
     @Test
@@ -43,6 +42,13 @@ public class GreedyAlgo {
         System.out.println(totalDistance);
     }
 
+    /**
+     * 获取下一个节点
+     *
+     * @param set 集合
+     * @param row 行
+     * @return 下一行
+     */
     private double[] getNextPoint(Set<Integer> set, double[] row) {
         if (CollectionUtil.isEmpty(set) || ArrayUtils.isEmpty(row)) {
             return new double[0];
@@ -54,7 +60,6 @@ public class GreedyAlgo {
                 min = row[i];
             }
         }
-
         for (int i = 0; i < row.length; i++) {
             if (row[i] != 0 && !set.contains(i) && min == row[i]) {
                 nextArr[0] = min;
@@ -65,7 +70,13 @@ public class GreedyAlgo {
         return new double[0];
     }
 
-    // 获取最小值，已经下标
+
+    /**
+     * 获取最小值，已经下标
+     *
+     * @param pointStart 起始点
+     * @return 数组
+     */
     private double[] getDistanceAndIndex(double[] pointStart) {
         if (ArrayUtils.isEmpty(pointStart)) {
             return new double[0];
@@ -77,7 +88,6 @@ public class GreedyAlgo {
                 min = pointStart[i];
             }
         }
-
         for (int i = 0; i < pointStart.length; i++) {
             if (min == pointStart[i]) {
                 firstDistanceAndIndexArr[0] = min;

@@ -72,9 +72,9 @@ public class GreatestCommonDivisor1071 {
     /**
      * 判断字符串是否能被整除
      *
-     * @param str
-     * @param shortStr
-     * @return
+     * @param str      字符串
+     * @param shortStr 短字符串
+     * @return 字符串
      */
     private String getString(String str, String shortStr) {
         StringBuilder sb = new StringBuilder();
@@ -89,7 +89,7 @@ public class GreatestCommonDivisor1071 {
      * 找出一个字符串的所有子串
      *
      * @param shortStr 主字符串
-     * @return
+     * @return 字符串链表
      */
     private List<String> getAllSubString(String shortStr) {
         List<String> list = new ArrayList<>();

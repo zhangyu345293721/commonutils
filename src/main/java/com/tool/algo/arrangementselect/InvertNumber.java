@@ -1,4 +1,4 @@
-package com.tool.algo.list;
+package com.tool.algo.arrangementselect;
 
 import org.junit.jupiter.api.Test;
 

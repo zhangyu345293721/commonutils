@@ -7,10 +7,9 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * @program javacode
- * @description: 使用贪心算法遍历路径
+ * 使用贪心算法遍历路径
+ *
  * @author: zhangyu
- * @create: 2019/09/27 23:03
  */
 public class GreedyAlgo2 {
     @Test
@@ -39,19 +38,23 @@ public class GreedyAlgo2 {
         System.out.println("最短路径为:" + totalDistance);
     }
 
-    // 返回距离和已经遍历过的数的点
+
+    /**
+     * 返回距离和已经遍历过的数的点
+     *
+     * @param set set集合
+     * @param row 数组
+     * @return 键值对
+     */
     private Pair<Double, Integer> getNextPoint(Set<Integer> set, double[] row) {
         int minIndex = -1;
         double min = Integer.MAX_VALUE;
         for (int i = 0; i < row.length; i++) {
             if (row[i] != 0 && !set.contains(i) && min > row[i]) {
-                // 后面要在该逻辑上加限制条件
                 min = row[i];
                 minIndex = i;
             }
         }
-        // 输出按照行的顺序
-        // System.out.println(minIndex);
         return new Pair<>(min, minIndex);
     }
 }
