@@ -46,7 +46,7 @@ public class MaximumNumberofBalloons11892 {
     }
 
     /**
-     * @return 返回有顺序字符串
+     * 统计字符出现次数
      */
     private Map<Character, Integer> getMap(String str) {
         Map<Character, Integer> map = new HashMap<>();

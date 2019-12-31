@@ -16,6 +16,13 @@ public class LongPressed925 {
         System.out.println("b = " + b);
     }
 
+    /**
+     * 是不是长类型名字
+     *
+     * @param name  名字
+     * @param typed 类型
+     * @return 布尔值
+     */
     public boolean isLongPressedName(String name, String typed) {
         if (name == null || name.length() < 1) {
             return false;

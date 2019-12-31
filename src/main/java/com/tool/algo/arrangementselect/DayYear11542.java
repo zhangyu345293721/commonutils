@@ -15,6 +15,12 @@ public class DayYear11542 {
         System.out.println("daysOfYear = " + daysOfYear);
     }
 
+    /**
+     * 日期是一年中的多少天
+     *
+     * @param date 日期
+     * @return number
+     */
     public int dayOfYear(String date) {
         String[] strs = date.split("-");
         int year = Integer.valueOf(strs[0]);

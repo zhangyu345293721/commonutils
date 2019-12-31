@@ -11,12 +11,17 @@ public class FirstUniqueCharacter387 {
 
     @Test
     public void firstAppearDemo() {
-        // String s = "leetcode";
         String s = "aadadaae";
         int index = getFirstUniqueCharacterIndex(s);
         System.out.println(index);
     }
 
+    /**
+     * 不重复字符串下标
+     *
+     * @param s 字符串
+     * @return 字符串下标
+     */
     private int getFirstUniqueCharacterIndex(String s) {
         if (s == null || s.length() < 1) {
             return -1;
@@ -33,16 +38,16 @@ public class FirstUniqueCharacter387 {
                 return i;
             }
         }
-        // 最后一个是第一个出现
-       /* char ch = s.charAt(s.length() - 1);
-        String sub = s.substring(0, s.length() - 1);
-        if (sub.indexOf(ch) == -1) {
-            return s.length() - 1;
-        }*/
         return -1;
     }
 
 
+    /**
+     * 字符串下标
+     *
+     * @param s 字符串
+     * @return 下标
+     */
     private int getFirstUniqueCharacterIndex2(String s) {
         if (s == null || s.length() < 1) {
             return -1;
@@ -53,13 +58,5 @@ public class FirstUniqueCharacter387 {
             }
         }
         return -1;
-    }
-
-
-    @Test
-    public void listTestDemo() {
-        String ss = "abc";
-        String s = ss.substring(4);
-        System.out.println(s);
     }
 }

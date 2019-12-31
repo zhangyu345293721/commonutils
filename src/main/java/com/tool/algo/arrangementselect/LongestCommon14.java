@@ -17,6 +17,8 @@ public class LongestCommon14 {
     }
 
     /**
+     * 最长相同字符串
+     *
      * @param strs strs
      * @return 返回最长相同字符串
      */
@@ -41,6 +43,8 @@ public class LongestCommon14 {
     }
 
     /**
+     * 是否全部匹配
+     *
      * @param sub  输入子串
      * @param strs 总的字符串
      * @return 返回布尔值
