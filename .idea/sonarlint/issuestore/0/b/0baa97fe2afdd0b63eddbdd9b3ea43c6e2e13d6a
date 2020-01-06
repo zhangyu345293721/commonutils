@@ -1,0 +1,5 @@
+
+€squid:S1488Y"iImmediately return this expression instead of assigning it to the temporary variable "boxsTypeAndNumMap".(Þ«×ñ
+dsquid:HiddenFieldCheck"=Rename "goodsList" which hides the field declared at line 17.(‡ß Õþÿÿÿÿ
+^squid:HiddenFieldCheck"<Rename "boxsList" which hides the field declared at line 16.(‘»™¯
+Zsquid:S1155*">Use isEmpty() to check whether the collection is empty or not.(’¦ßæÿÿÿÿÿ
