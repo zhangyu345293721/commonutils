@@ -1,7 +1,7 @@
 # commonutils
 ### 常用工具帮助类
-- base包下
-   - ArrayUtils   数组操作工具类
+- base包下：
+   - ArrayUtils    数组操作工具类
    - CollectionUtils 集合操作
    - DocumentUtils 文档操作
    - RegexUtils 正则操作
