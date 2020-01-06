@@ -43,6 +43,7 @@ public class PropertiesTest2 {
             e.printStackTrace();
         }
     }
+
     public static void main(String[] args) {
         PropertiesTest2 p = new PropertiesTest2();
         p.printAll();

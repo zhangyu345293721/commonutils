@@ -5,7 +5,7 @@ import org.junit.Test;
 import java.util.*;
 
 /**
- * demo
+ * 测试流操作
  *
  * @author: zhangyu
  */

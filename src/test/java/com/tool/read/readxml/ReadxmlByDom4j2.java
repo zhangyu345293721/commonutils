@@ -37,7 +37,6 @@ public class ReadxmlByDom4j2 {
         try {
             Document document = reader.read(new File(mapPath));
             Element mapRoot = document.getRootElement();
-            // System.out.println(mapRoot.getName());
             List<Element> bookElementList = mapRoot.elements("book");
             for (Element bookElement : bookElementList) {
                 Book book = new Book();

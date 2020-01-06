@@ -84,24 +84,16 @@ public class GetMessageFromPython {
         try {
             // 初始化套接字，设置访问服务的主机和进程端口号，HOST是访问python进程的主机名称，可以是IP地址或者域名，PORT是python进程绑定的端口号
             socket = new Socket(host, port);
-            // 获取输出流对象
             OutputStream os = socket.getOutputStream();
             PrintStream out = new PrintStream(os);
-            // 发送内容
             out.print(message);
-            // 告诉服务进程，内容发送完毕，可以开始处理
             out.print("over");
-
-            // 获取服务进程的输入流
             InputStream is = socket.getInputStream();
             BufferedReader br = new BufferedReader(new InputStreamReader(is, "utf-8"));
             String tmp = new String();
-            // 读取内容
             while ((tmp = br.readLine()) != null) {
                 sb.append(tmp).append('\n');
             }
-            // System.out.print(sb.toString());
-
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
@@ -112,7 +104,6 @@ public class GetMessageFromPython {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-            // System.out.print("远程接口调用结束.");
         }
         return sb.toString();
     }
