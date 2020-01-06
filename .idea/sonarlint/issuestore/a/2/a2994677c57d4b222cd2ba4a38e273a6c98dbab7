@@ -1,0 +1,13 @@
+
+^squid:S1075k"ARefactor your code to get this URI from a customizable parameter.(¡“#8Öìããİ-
+"squid:ClassVariableVisibilityCheck"\Make sensitiveWordMap a static final constant or non-public and provide accessors if needed.(ÃÖ§Ò8ÌÛããİ-
+jsquid:S00116"SRename this field "ENCODING" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ä·	
+jsquid:S00112h"FDefine and throw a dedicated exception instead of using a generic one.(¬ÏÍªúÿÿÿÿ8Öìããİ-
+jsquid:S2095p"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(âûáş8Öìããİ-
+Msquid:S2093m"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ8Öìããİ-
+|squid:S2293o"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÀŞ‰¾şÿÿÿÿ8Öìããİ-
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Öìããİ-
+usquid:S2737y"WAdd logic to this catch clause or eliminate it and rethrow the exception automatically.(ö™û8Öìããİ-
+esquid:S00112v"FDefine and throw a dedicated exception instead of using a generic one.(ï‰Åæ8Öìããİ-
+tsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ö”½78Öìããİ-
+squid:S1319"xThe type of the "sensitiveWordMap" object should be an interface such as "Map" rather than the implementation "HashMap".(ÃÖ§Ò

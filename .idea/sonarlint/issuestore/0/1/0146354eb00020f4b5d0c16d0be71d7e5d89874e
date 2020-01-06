@@ -1,0 +1,33 @@
+
+qsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(³¢Üü8½É¡•ß-
+Hsquid:S1125¿")Remove the literal "false" boolean value.(¿íŞğ8½É¡•ß-
+psquid:S3457Å"Q%n should be used in place of \n to produce the platform-specific line separator.(ï«¨°8½É¡•ß-
+Dsquid:S3457ç"%String contains no format specifiers.(ï«¨°8½É¡•ß-
+Dsquid:S3457Å"%String contains no format specifiers.(ï«¨°8½É¡•ß-
+psquid:S3457ç"Q%n should be used in place of \n to produce the platform-specific line separator.(ï«¨°8½É¡•ß-
+Csquid:S3457?"%String contains no format specifiers.(öàŸ‰8½É¡•ß-
+Ssquid:EmptyStatementUsageCheck×"Remove this empty statement.(ôŸìúÿÿÿÿ8½É¡•ß-
+usquid:S3457Ç"Q%n should be used in place of \n to produce the platform-specific line separator.(–ÍéØûÿÿÿÿ8½É¡•ß-
+tsquid:S3457"Q%n should be used in place of \n to produce the platform-specific line separator.(µ¹‹€ıÿÿÿÿ8½É¡•ß-
+Dsquid:S3457¾"%String contains no format specifiers.(ï«¨°8½É¡•ß-
+osquid:S3457?"Q%n should be used in place of \n to produce the platform-specific line separator.(öàŸ‰8½É¡•ß-
+psquid:S3457¾"Q%n should be used in place of \n to produce the platform-specific line separator.(ï«¨°8½É¡•ß-
+msquid:S00100Ë"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶œ±8½É¡•ß-
+psquid:S3457ò"Q%n should be used in place of \n to produce the platform-specific line separator.(ï«¨°8½É¡•ß-
+Csquid:S3457"%String contains no format specifiers.(Õ…ò…8½É¡•ß-
+usquid:S3457É"Q%n should be used in place of \n to produce the platform-specific line separator.(ëœô´ıÿÿÿÿ8½É¡•ß-
+nsquid:S00100¹"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨É…Å8½É¡•ß-
+Isquid:S3457À"%String contains no format specifiers.(ÿïÿÿÿÿÿ8½É¡•ß-
+vsquid:S3776ü"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(ë¸µØùÿÿÿÿ8½É¡•ß-
+psquid:S3457ã"Q%n should be used in place of \n to produce the platform-specific line separator.(ï«¨°8½É¡•ß-
+nsquid:S00100«"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·ƒÈÓ8½É¡•ß-
+\squid:S1197Ü"8Move the array designator from the variable to the type.(ı³¾¿ûÿÿÿÿ8½É¡•ß-
+Dsquid:S3457î"%String contains no format specifiers.(êå8½É¡•ß-
+Dsquid:S3457ã"%String contains no format specifiers.(ï«¨°8½É¡•ß-
+Hsquid:S3457"%String contains no format specifiers.(·¦ñùÿÿÿÿ8½É¡•ß-
+psquid:S3457î"Q%n should be used in place of \n to produce the platform-specific line separator.(êå8½É¡•ß-
+Dsquid:S3457ò"%String contains no format specifiers.(ï«¨°8½É¡•ß-
+Hsquid:S3457"%String contains no format specifiers.(µ¹‹€ıÿÿÿÿ8½É¡•ß-
+Isquid:S3457Ô"%String contains no format specifiers.(ûùÆ‰úÿÿÿÿ8½É¡•ß-
+Hsquid:S1125³")Remove the literal "false" boolean value.(–Ã–©8½É¡•ß-
+Fsquid:S1148{"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8½É¡•ß-
