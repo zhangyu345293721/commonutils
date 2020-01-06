@@ -19,14 +19,17 @@ public class SplitDemo {
         Iterable<String> result = Splitter.on("\\n").split(line);
         List<String> tempList = new ArrayList<>();
         for (String s : result) {
-            tempList.add(new String(s));
+            tempList.add(s);
         }
         System.out.println(tempList.size());
 
 
     }
 
-    //这种切割是有问题
+
+    /**
+     * 字符串切割:
+     */
     @Test
     public void splitTestDemo2() {
         String path = "C:\\Users\\octopus\\Desktop\\beetle929\\output.txt";

@@ -223,10 +223,12 @@ public class GuavaTestDemo {
                 return strProValue;
             }
         });
-        System.out.println("value : " + resultVal); //value : begin code!
+        System.out.println("value : " + resultVal);
     }
 
-    // 测试读取文件
+    /**
+     * 测试读取文件
+     */
     @Test
     public void IoTestDemo() {
         File file = new File("test.txt");

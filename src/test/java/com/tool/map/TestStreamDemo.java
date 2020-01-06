@@ -9,7 +9,7 @@ import java.util.*;
  *
  * @author: zhangyu
  */
-public class TestDemo2 {
+public class TestStreamDemo {
     @Test
     public void mapTestDemo() {
         Map<String, Integer> map = new HashMap<>();
