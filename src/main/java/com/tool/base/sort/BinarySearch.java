@@ -1,10 +1,10 @@
 package com.tool.base.sort;
 
 /**
+ * 时间复杂度:Log(n) 空间复杂度:O(1)
+ *
  * @author zhangyu
  * <p>
- * 时间复杂度:Log(n) 空间复杂度:O(1)
- * @date 2018/11/19 20:06
  **/
 
 

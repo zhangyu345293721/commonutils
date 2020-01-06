@@ -20,20 +20,16 @@ public class CloneUtils {
      * @param obj 待克隆的对象
      * @return 返回泛型对象
      */
-    @SuppressWarnings("unchecked")
     public static <T extends Serializable> T cloneObject(T obj) {
         T cloneObj = null;
         try {
-            // 写入字节流
             ByteArrayOutputStream out = new ByteArrayOutputStream();
             ObjectOutputStream obs = new ObjectOutputStream(out);
             obs.writeObject(obj);
             obs.close();
 
-            // 分配内存，写入原始对象，生成新对象
             ByteArrayInputStream ios = new ByteArrayInputStream(out.toByteArray());
             ObjectInputStream ois = new ObjectInputStream(ios);
-            // 返回生成的新对象
             cloneObj = (T) ois.readObject();
             ois.close();
         } catch (Exception e) {
@@ -50,7 +46,6 @@ public class CloneUtils {
      * @throws ClassNotFoundException
      * @throws IOException
      */
-    @SuppressWarnings("unchecked")
     public static <T> Collection<T> cloneCollection(Collection<T> collection) throws ClassNotFoundException, IOException {
         ByteArrayOutputStream byteOut = new ByteArrayOutputStream();
         ObjectOutputStream out = new ObjectOutputStream(byteOut);
@@ -61,7 +56,6 @@ public class CloneUtils {
         ObjectInputStream in = new ObjectInputStream(byteIn);
         Collection<T> dest = (Collection<T>) in.readObject();
         in.close();
-
         return dest;
     }
 }

@@ -244,20 +244,16 @@ public class ImageUtil {
             int newwidth = (width > 0) ? width : img.getWidth(null);
             //如果用户输入的图片参数合法则按用户定义的复制,负值参数表示执行默认值
             int newheight = (height > 0) ? height : img.getHeight(null);
-            //如果是自适应大小则进行比例缩放
             if (autoSize) {
-                // 为等比缩放计算输出的图片宽度及高度
                 double Widthrate = ((double) img.getWidth(null)) / (double) width + 0.1;
                 double heightrate = ((double) img.getHeight(null)) / (double) height + 0.1;
                 double rate = Widthrate > heightrate ? Widthrate : heightrate;
                 newwidth = (int) (((double) img.getWidth(null)) / rate);
                 newheight = (int) (((double) img.getHeight(null)) / rate);
             }
-            //创建目标图像文件
             targetImage = new BufferedImage(newwidth, newheight, BufferedImage.TYPE_INT_RGB);
             Graphics2D g = targetImage.createGraphics();
             g.drawImage(img, 0, 0, newwidth, newheight, null);
-            //如果添加水印或者文字则继续下面操作,不添加的话直接返回目标文件----------------------
             g.dispose();
 
         } catch (Exception e) {

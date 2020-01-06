@@ -1,5 +1,5 @@
 
-_squid:S2095:"CUse try-with-resources or close this "Jedis" in a "finally" clause.(¨÷ëğüÿÿÿÿ
-|squid:S1171"YMove the contents of this initializer to a standard constructor or to field initializers.(ÒÌâ–øÿÿÿÿ8¿—öòİ-
 _squid:S2095&"CUse try-with-resources or close this "Jedis" in a "finally" clause.(¨÷ëğüÿÿÿÿ
+_squid:S2095:"CUse try-with-resources or close this "Jedis" in a "finally" clause.(¨÷ëğüÿÿÿÿ
 Ksquid:S28643"4Iterate over the "entrySet" instead of the "keySet".(üØ£½
+|squid:S1171"YMove the contents of this initializer to a standard constructor or to field initializers.(ÒÌâ–øÿÿÿÿ8¿—öòİ-

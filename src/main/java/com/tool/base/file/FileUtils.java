@@ -234,7 +234,6 @@ public class FileUtils {
             File filename = new File(filePath);
             org.apache.commons.io.FileUtils.writeLines(filename, infoList, true);
             long sizeOf = org.apache.commons.io.FileUtils.sizeOf(new File(filePath));
-            // System.out.println(sizeOf);
         } catch (Exception e) {
             e.printStackTrace();
         }
