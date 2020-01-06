@@ -1,10 +1,8 @@
 package com.tool.database.jdbc;
 
 /**
- * @program: utilsdemo
- * @description: 连接数据库
+ * 连接数据库
  * @author: zhangyu
- * @create: 2019-05-24 11:54
  */
 
 import com.tool.bean.StationData;

@@ -1,4 +1,4 @@
-package com.tool.function.streamdemo;
+package com.tool.streamdemo;
 
 import com.tool.bean.Person;
 import com.tool.bean.TestObject;

@@ -1,4 +1,4 @@
-package com.tool.function.time;
+package com.tool.time;
 
 import org.junit.jupiter.api.Test;
 

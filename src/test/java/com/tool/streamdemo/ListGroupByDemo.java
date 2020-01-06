@@ -1,4 +1,4 @@
-package com.tool.function.streamdemo;
+package com.tool.streamdemo;
 
 import com.tool.bean.User;
 import org.junit.jupiter.api.Test;
