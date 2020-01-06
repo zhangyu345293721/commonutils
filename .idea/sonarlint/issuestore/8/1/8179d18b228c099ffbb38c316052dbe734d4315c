@@ -1,9 +1,0 @@
-
-Asquid:S2129‡"$Remove this "BigDecimal" constructor(ø„ß‹ÿÿÿÿÿ
-Usquid:S18548"9Remove this useless assignment to local variable "round".(’Ş›¢úÿÿÿÿ
-[squid:S1854"?Remove this useless assignment to local variable "resultValue".(Ã–÷™ûÿÿÿÿ
-9squid:S2129¶"!Remove this "Integer" constructor(ÿ‡Æ
-tsquid:S3008"XRename this field "DEFAULT_SCALE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²µíÓøÿÿÿÿ
-osquid:S3008"XRename this field "DEFAULT_ROUND" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ó¹Ú…
-;squid:S2129©"Remove this "Long" constructor(Ğ©±üÿÿÿÿ
-Vsquid:S1118":Add a private constructor to hide the implicit public one.(½èàÍşÿÿÿÿ

@@ -1,10 +1,0 @@
-
-œ%squid:RedundantThrowsDeclarationCheckÑ"jRemove the declaration of thrown exception 'java.lang.NumberFormatException' which is a runtime exception.(Ù§î
-Nsquid:S1854\"7Remove this useless assignment to local variable "bit".(†¤Á‚
-Osquid:S1197"8Move the array designator from the variable to the type.(Ô—â™
-Asquid:S1125")Remove the literal "false" boolean value.(×ºò²
-Osquid:S1197\"8Move the array designator from the variable to the type.(†¤Á‚
-Lsquid:S1066â"/Merge this if statement with the enclosing one.(ÌÔƒÚıÿÿÿÿ
-Tsquid:S1197R"8Move the array designator from the variable to the type.(İ®¼ºüÿÿÿÿ
-V"squid:SwitchLastCaseIsDefaultCheck¤""Add a default case to this switch.(ÆÿôÚşÿÿÿÿ
-Qsquid:S2209""5Change this instance-reference to a static reference.(‚ÑÍïûÿÿÿÿ

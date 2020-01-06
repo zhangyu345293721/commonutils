@@ -6,10 +6,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * @program javacode
- * @description: 使用贪心算法遍历路径
+ * 使用贪心算法遍历路径
  * @author: zhangyu
- * @create: 2019/09/27 21:36
  */
 public class GreedyAlgo {
     @Test

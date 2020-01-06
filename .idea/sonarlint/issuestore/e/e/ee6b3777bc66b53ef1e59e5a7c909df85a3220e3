@@ -1,13 +1,0 @@
-
-:squid:S2629g"$Invoke method(s) only conditionally.(Î®
-bsquid:S1192!"FDefine a constant instead of duplicating this literal "test:" 5 times.(ğ³äıÿÿÿÿ
-csquid:S1192"GDefine a constant instead of duplicating this literal "myTest" 4 times.(ÚÅ¡Ëüÿÿÿÿ
-@squid:S14814")Remove this unused "list" local variable.(ŠŒÖ
-]squid:S2142%"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€
-]squid:S2142>"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€
-]squid:S2142d"FEither re-interrupt this method or rethrow the "InterruptedException".(‘í†
-Dsquid:S1604S"(Make this anonymous inner class a lambda(Ó›ï¦üÿÿÿÿ
-Osquid:S18544"8Remove this useless assignment to local variable "list".(ŠŒÖ
-?squid:S1148&"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
-?squid:S1148?"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
-?squid:S1148e"#Use a logger to log this exception.(Âşÿâûÿÿÿÿ
