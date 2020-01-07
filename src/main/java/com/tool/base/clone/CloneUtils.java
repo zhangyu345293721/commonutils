@@ -1,0 +1,61 @@
+package com.tool.base.clone;
+
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+import java.util.Collection;
+
+/**
+ * 克隆工具类，进行深克隆,包括对象、集合
+ */
+public class CloneUtils {
+
+
+    /**
+     * 采用对象的序列化完成对象的深克隆
+     *
+     * @param obj 待克隆的对象
+     * @return 返回泛型对象
+     */
+    public static <T extends Serializable> T cloneObject(T obj) {
+        T cloneObj = null;
+        try {
+            ByteArrayOutputStream out = new ByteArrayOutputStream();
+            ObjectOutputStream obs = new ObjectOutputStream(out);
+            obs.writeObject(obj);
+            obs.close();
+
+            ByteArrayInputStream ios = new ByteArrayInputStream(out.toByteArray());
+            ObjectInputStream ois = new ObjectInputStream(ios);
+            cloneObj = (T) ois.readObject();
+            ois.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return cloneObj;
+    }
+
+    /**
+     * 利用序列化完成集合的深克隆
+     *
+     * @param collection 待克隆的集合
+     * @return 返回泛型对象
+     * @throws ClassNotFoundException
+     * @throws IOException
+     */
+    public static <T> Collection<T> cloneCollection(Collection<T> collection) throws ClassNotFoundException, IOException {
+        ByteArrayOutputStream byteOut = new ByteArrayOutputStream();
+        ObjectOutputStream out = new ObjectOutputStream(byteOut);
+        out.writeObject(collection);
+        out.close();
+
+        ByteArrayInputStream byteIn = new ByteArrayInputStream(byteOut.toByteArray());
+        ObjectInputStream in = new ObjectInputStream(byteIn);
+        Collection<T> dest = (Collection<T>) in.readObject();
+        in.close();
+        return dest;
+    }
+}

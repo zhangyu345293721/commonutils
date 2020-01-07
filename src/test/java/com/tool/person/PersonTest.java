@@ -40,7 +40,6 @@ public class PersonTest {
         }
     }
 
-
     @Test
     public void personDemo2() {
         Person p1 = new Person("zhang", "123", 12);
