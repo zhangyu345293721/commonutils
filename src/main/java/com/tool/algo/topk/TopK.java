@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import java.util.PriorityQueue;
 
 /**
- * topk算法
+ * topK算法
  *
  * @author: zhangyu
  */
@@ -18,6 +18,8 @@ public class TopK {
     }
 
     /**
+     * 找到第K个最大数
+     *
      * @param arr 数组
      * @param k   最大k个
      * @return 返回数字

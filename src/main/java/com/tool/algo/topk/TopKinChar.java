@@ -9,7 +9,7 @@ import java.util.*;
 /**
  * 统计一串字符中，出现次数最多的k个数
  *
- * @author zhangyu
+ * @author: zhangyu
  **/
 
 
