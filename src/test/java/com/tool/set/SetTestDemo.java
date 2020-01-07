@@ -35,7 +35,6 @@ public class  SetTestDemo {
     @Test
     public void testVar() {
         Person person = new Person();
-        int a = 1;
         addNumber(person);
         System.out.println(person.getUserName());
     }

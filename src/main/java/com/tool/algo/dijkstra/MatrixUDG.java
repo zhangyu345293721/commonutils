@@ -26,9 +26,9 @@ public class MatrixUDG {
         int vlen = readInt();
         System.out.printf("input edge number: ");
         int elen = readInt();
-        if ( vlen < 1 || elen < 1 || (elen > (vlen*(vlen - 1)))) {
+        if (vlen < 1 || elen < 1 || (elen > (vlen * (vlen - 1)))) {
             System.out.printf("input error: invalid parameters!\n");
-            return ;
+            return;
         }
 
         // 初始化"顶点"
@@ -43,7 +43,7 @@ public class MatrixUDG {
         mMatrix = new int[vlen][vlen];
         for (int i = 0; i < vlen; i++) {
             for (int j = 0; j < vlen; j++) {
-                if (i==j)
+                if (i == j)
                     mMatrix[i][j] = 0;
                 else
                     mMatrix[i][j] = INF;
@@ -59,9 +59,9 @@ public class MatrixUDG {
 
             int p1 = getPosition(c1);
             int p2 = getPosition(c2);
-            if (p1==-1 || p2==-1) {
+            if (p1 == -1 || p2 == -1) {
                 System.out.printf("input error: invalid edge!\n");
-                return ;
+                return;
             }
 
             mMatrix[p1][p2] = weight;
@@ -69,12 +69,12 @@ public class MatrixUDG {
         }
     }
 
-    /*
+
+    /**
      * 创建图(用已提供的矩阵)
      *
-     * 参数说明：
-     *     vexs  -- 顶点数组
-     *     matrix-- 矩阵(数据)
+     * @param vexs   顶点数组
+     * @param matrix 矩阵(数据)
      */
     public MatrixUDG(char[] vexs, int[][] matrix) {
 
@@ -95,77 +95,77 @@ public class MatrixUDG {
         // 统计"边"
         mEdgNum = 0;
         for (int i = 0; i < vlen; i++)
-            for (int j = i+1; j < vlen; j++)
-                if (mMatrix[i][j]!=INF)
+            for (int j = i + 1; j < vlen; j++)
+                if (mMatrix[i][j] != INF)
                     mEdgNum++;
     }
 
-    /*
+
+    /**
      * 返回ch位置
+     *
+     * @param ch 字符
+     * @return ch位置
      */
     private int getPosition(char ch) {
-        for(int i=0; i<mVexs.length; i++)
-            if(mVexs[i]==ch)
+        for (int i = 0; i < mVexs.length; i++)
+            if (mVexs[i] == ch)
                 return i;
         return -1;
     }
 
-    /*
+    /**
      * 读取一个输入字符
+     *
+     * @return 字符
      */
     private char readChar() {
-        char ch='0';
-
+        char ch = '0';
         do {
             try {
-                ch = (char)System.in.read();
+                ch = (char) System.in.read();
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        } while(!((ch>='a'&&ch<='z') || (ch>='A'&&ch<='Z')));
-
+        } while (!((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')));
         return ch;
     }
 
-    /*
+    /**
      * 读取一个输入字符
+     *
+     * @return 数字
      */
     private int readInt() {
         Scanner scanner = new Scanner(System.in);
         return scanner.nextInt();
     }
 
-    /*
+    /**
      * 返回顶点v的第一个邻接顶点的索引，失败则返回-1
      */
     private int firstVertex(int v) {
-
-        if (v<0 || v>(mVexs.length-1))
+        if (v < 0 || v > (mVexs.length - 1))
             return -1;
-
         for (int i = 0; i < mVexs.length; i++)
-            if (mMatrix[v][i]!=0 && mMatrix[v][i]!=INF)
+            if (mMatrix[v][i] != 0 && mMatrix[v][i] != INF)
                 return i;
-
         return -1;
     }
 
-    /*
+    /**
      * 返回顶点v相对于w的下一个邻接顶点的索引，失败则返回-1
      */
     private int nextVertex(int v, int w) {
-
-        if (v<0 || v>(mVexs.length-1) || w<0 || w>(mVexs.length-1))
+        if (v < 0 || v > (mVexs.length - 1) || w < 0 || w > (mVexs.length - 1))
             return -1;
-
         for (int i = w + 1; i < mVexs.length; i++)
-            if (mMatrix[v][i]!=0 && mMatrix[v][i]!=INF)
+            if (mMatrix[v][i] != 0 && mMatrix[v][i] != INF)
                 return i;
-
         return -1;
     }
 
-    /*
+    /**
      * 深度优先搜索遍历图的递归实现
      */
     private void DFS(int i, boolean[] visited) {
@@ -184,11 +184,10 @@ public class MatrixUDG {
      */
     public void DFS() {
         boolean[] visited = new boolean[mVexs.length];       // 顶点访问标记
-
         // 初始化所有顶点都没有被访问
-        for (int i = 0; i < mVexs.length; i++)
+        for (int i = 0; i < mVexs.length; i++) {
             visited[i] = false;
-
+        }
         System.out.printf("DFS: ");
         for (int i = 0; i < mVexs.length; i++) {
             if (!visited[i])
@@ -197,7 +196,7 @@ public class MatrixUDG {
         System.out.printf("\n");
     }
 
-    /*
+    /**
      * 广度优先搜索（类似于树的层次遍历）
      */
     public void BFS() {
@@ -231,7 +230,7 @@ public class MatrixUDG {
         System.out.printf("\n");
     }
 
-    /*
+    /**
      * 打印矩阵队列图
      */
     public void print() {
@@ -243,24 +242,23 @@ public class MatrixUDG {
         }
     }
 
-    /*
+
+    /**
      * prim最小生成树
      *
-     * 参数说明：
-     *   start -- 从图中的第start个元素开始，生成最小树
+     * @param start 从图中的第start个元素开始，生成最小树
      */
     public void prim(int start) {
         int num = mVexs.length;         // 顶点个数
-        int index=0;                    // prim最小树的索引，即prims数组的索引
-        char[] prims  = new char[num];  // prim最小树的结果数组
+        int index = 0;                    // prim最小树的索引，即prims数组的索引
+        char[] prims = new char[num];  // prim最小树的结果数组
         int[] weights = new int[num];   // 顶点间边的权值
 
         // prim最小生成树中第一个数是"图中第start个顶点"，因为是从start开始的。
         prims[index++] = mVexs[start];
 
-        // 初始化"顶点的权值数组"，
         // 将每个顶点的权值初始化为"第start个顶点"到"该顶点"的权值。
-        for (int i = 0; i < num; i++ )
+        for (int i = 0; i < num; i++)
             weights[i] = mMatrix[start][i];
         // 将第start个顶点的权值初始化为0。
         // 可以理解为"第start个顶点到它自身的距离为0"。
@@ -268,7 +266,7 @@ public class MatrixUDG {
 
         for (int i = 0; i < num; i++) {
             // 由于从start开始的，因此不需要再对第start个顶点进行处理。
-            if(start == i)
+            if (start == i)
                 continue;
 
             int j = 0;
@@ -290,7 +288,7 @@ public class MatrixUDG {
             // 将"第k个顶点的权值"标记为0，意味着第k个顶点已经排序过了(或者说已经加入了最小树结果中)。
             weights[k] = 0;
             // 当第k个顶点被加入到最小生成树的结果数组中之后，更新其它顶点的权值。
-            for (j = 0 ; j < num; j++) {
+            for (j = 0; j < num; j++) {
                 // 当第j个节点没有被处理，并且需要更新时才被更新。
                 if (weights[j] != 0 && mMatrix[k][j] < weights[j])
                     weights[j] = mMatrix[k][j];
@@ -306,7 +304,7 @@ public class MatrixUDG {
             // 在vexs[0...i]中，找出到j的权值最小的顶点。
             for (int j = 0; j < i; j++) {
                 int m = getPosition(prims[j]);
-                if (mMatrix[m][n]<min)
+                if (mMatrix[m][n] < min)
                     min = mMatrix[m][n];
             }
             sum += min;
@@ -318,7 +316,7 @@ public class MatrixUDG {
         System.out.printf("\n");
     }
 
-    /*
+    /**
      * 克鲁斯卡尔（Kruskal)最小生成树
      */
     public void kruskal() {
@@ -326,13 +324,11 @@ public class MatrixUDG {
         int[] vends = new int[mEdgNum];     // 用于保存"已有最小生成树"中每个顶点在该最小树中的终点。
         EData[] rets = new EData[mEdgNum];  // 结果数组，保存kruskal最小生成树的边
         EData[] edges;                      // 图对应的所有边
-
         // 获取"图中所有的边"
         edges = getEdges();
         // 将边按照"权"的大小进行排序(从小到大)
         sortEdges(edges, mEdgNum);
-
-        for (int i=0; i<mEdgNum; i++) {
+        for (int i = 0; i < mEdgNum; i++) {
             int p1 = getPosition(edges[i].start);      // 获取第i条边的"起点"的序号
             int p2 = getPosition(edges[i].end);        // 获取第i条边的"终点"的序号
 
@@ -344,7 +340,6 @@ public class MatrixUDG {
                 rets[index++] = edges[i];           // 保存结果
             }
         }
-
         // 统计并打印"kruskal最小生成树"的信息
         int length = 0;
         for (int i = 0; i < index; i++)
@@ -355,32 +350,30 @@ public class MatrixUDG {
         System.out.printf("\n");
     }
 
-    /*
+    /**
      * 获取图中的边
      */
     private EData[] getEdges() {
-        int index=0;
+        int index = 0;
         EData[] edges;
-
         edges = new EData[mEdgNum];
-        for (int i=0; i < mVexs.length; i++) {
-            for (int j=i+1; j < mVexs.length; j++) {
-                if (mMatrix[i][j]!=INF) {
+        for (int i = 0; i < mVexs.length; i++) {
+            for (int j = i + 1; j < mVexs.length; j++) {
+                if (mMatrix[i][j] != INF) {
                     edges[index++] = new EData(mVexs[i], mVexs[j], mMatrix[i][j]);
                 }
             }
         }
-
         return edges;
     }
 
-    /*
+    /**
      * 对边按照权值大小进行排序(由小到大)
      */
     private void sortEdges(EData[] edges, int elen) {
 
-        for (int i=0; i<elen; i++) {
-            for (int j=i+1; j<elen; j++) {
+        for (int i = 0; i < elen; i++) {
+            for (int j = i + 1; j < elen; j++) {
 
                 if (edges[i].weight > edges[j].weight) {
                     // 交换"边i"和"边j"
@@ -392,7 +385,7 @@ public class MatrixUDG {
         }
     }
 
-    /*
+    /**
      * 获取i的终点
      */
     private int getEnd(int[] vends, int i) {
@@ -401,38 +394,34 @@ public class MatrixUDG {
         return i;
     }
 
-    /*
+    /**
      * Dijkstra最短路径。
      * 即，统计图中"顶点vs"到其它各个顶点的最短路径。
      *
-     * 参数说明：
-     *       vs -- 起始顶点(start vertex)。即计算"顶点vs"到其它顶点的最短路径。
-     *     prev -- 前驱顶点数组。即，prev[i]的值是"顶点vs"到"顶点i"的最短路径所经历的全部顶点中，位于"顶点i"之前的那个顶点。
-     *     dist -- 长度数组。即，dist[i]是"顶点vs"到"顶点i"的最短路径的长度。
+     * @param vs 起始顶点(start vertex)。即计算"顶点vs"到其它顶点的最短路径
+     * @param prev 前驱顶点数组。即，prev[i]的值是"顶点vs"到"顶点i"的最短路径所经历的全部顶点中，位于"顶点i"之前的那个顶点
+     * @param dist 长度数组。即，dist[i]是"顶点vs"到"顶点i"的最短路径的长度
      */
     public void dijkstra(int vs, int[] prev, int[] dist) {
         // flag[i]=true表示"顶点vs"到"顶点i"的最短路径已成功获取
         boolean[] flag = new boolean[mVexs.length];
-
         // 初始化
         for (int i = 0; i < mVexs.length; i++) {
             flag[i] = false;          // 顶点i的最短路径还没获取到。
             prev[i] = 0;              // 顶点i的前驱顶点为0。
             dist[i] = mMatrix[vs][i];  // 顶点i的最短路径为"顶点vs"到"顶点i"的权。
         }
-
         // 对"顶点vs"自身进行初始化
         flag[vs] = true;
         dist[vs] = 0;
-
         // 遍历mVexs.length-1次；每次找出一个顶点的最短路径。
-        int k=0;
+        int k = 0;
         for (int i = 1; i < mVexs.length; i++) {
             // 寻找当前最小的路径；
             // 即，在未获取最短路径的顶点中，找到离vs最近的顶点(k)。
             int min = INF;
             for (int j = 0; j < mVexs.length; j++) {
-                if (flag[j]==false && dist[j]<min) {
+                if (flag[j] == false && dist[j] < min) {
                     min = dist[j];
                     k = j;
                 }
@@ -443,21 +432,22 @@ public class MatrixUDG {
             // 修正当前最短路径和前驱顶点
             // 即，当已经"顶点k的最短路径"之后，更新"未获取最短路径的顶点的最短路径和前驱顶点"。
             for (int j = 0; j < mVexs.length; j++) {
-                int tmp = (mMatrix[k][j]==INF ? INF : (min + mMatrix[k][j]));
-                if (flag[j]==false && (tmp<dist[j]) ) {
+                int tmp = (mMatrix[k][j] == INF ? INF : (min + mMatrix[k][j]));
+                if (flag[j] == false && (tmp < dist[j])) {
                     dist[j] = tmp;
                     prev[j] = k;
                 }
             }
         }
-
         // 打印dijkstra最短路径的结果
         System.out.printf("dijkstra(%c): \n", mVexs[vs]);
-        for (int i=0; i < mVexs.length; i++)
+        for (int i = 0; i < mVexs.length; i++)
             System.out.printf("  shortest(%c, %c)=%d\n", mVexs[vs], mVexs[i], dist[i]);
     }
 
-    // 边的结构体
+    /**
+     * 边的结构体
+     */
     private static class EData {
         char start; // 边的起点
         char end;   // 边的终点
@@ -468,20 +458,22 @@ public class MatrixUDG {
             this.end = end;
             this.weight = weight;
         }
-    };
+    }
+
+    ;
 
 
     public static void main(String[] args) {
         char[] vexs = {'A', 'B', 'C', 'D', 'E', 'F', 'G'};
         int matrix[][] = {
                 /*A*//*B*//*C*//*D*//*E*//*F*//*G*/
-                /*A*/ {   0,  12, INF, INF, INF,  16,  14},
-                /*B*/ {  12,   0,  10, INF, INF,   7, INF},
-                /*C*/ { INF,  10,   0,   3,   5,   6, INF},
-                /*D*/ { INF, INF,   3,   0,   4, INF, INF},
-                /*E*/ { INF, INF,   5,   4,   0,   2,   8},
-                /*F*/ {  16,   7,   6, INF,   2,   0,   9},
-                /*G*/ {  14, INF, INF, INF,   8,   9,   0}};
+                /*A*/ {0, 12, INF, INF, INF, 16, 14},
+                /*B*/ {12, 0, 10, INF, INF, 7, INF},
+                /*C*/ {INF, 10, 0, 3, 5, 6, INF},
+                /*D*/ {INF, INF, 3, 0, 4, INF, INF},
+                /*E*/ {INF, INF, 5, 4, 0, 2, 8},
+                /*F*/ {16, 7, 6, INF, 2, 0, 9},
+                /*G*/ {14, INF, INF, INF, 8, 9, 0}};
         MatrixUDG pG;
 
         // 自定义"图"(输入矩阵队列)

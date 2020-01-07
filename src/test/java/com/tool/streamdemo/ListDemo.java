@@ -30,7 +30,6 @@ public class ListDemo {
         Iterator iter = Permutation.of(Arrays.asList("a", "b", "c"), 3).iterator();
         List<List<String>> list = new ArrayList<>();
         // BigInteger b = Permutation.of(Arrays.asList("a", "b", "c")).getPermutationCount();
-        //System.out.println(b);
         while (iter.hasNext()) {
             List<String> oneList = (List<String>) iter.next();
             System.out.println(list.add(oneList));
@@ -53,14 +52,15 @@ public class ListDemo {
         newList.stream().forEach(e -> System.out.println(e[0]));
     }
 
+    /**
+     * map和flatmap的区别
+     */
     @Test
     public void mapTestFlatMapTestDemo() {
         List<String> list = Arrays.asList("hello welcome", "world hello", "hello world", "hello world welcome");
-        // map和flatmap的区别
         list.stream().map(item -> Arrays.stream(item.split(" "))).distinct().collect(Collectors.toList()).forEach(System.out::println);
-        System.out.println("---------- ");
+        System.out.println("------------------------------------------------------------------------------------------- ");
         list.stream().flatMap(item -> Arrays.stream(item.split(" "))).distinct().collect(Collectors.toList()).forEach(System.out::println);
-
     }
 
     @Test

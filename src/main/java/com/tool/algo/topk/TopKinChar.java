@@ -42,7 +42,6 @@ public class TopKinChar {
         Map<Character, Integer> map = new TreeMap<>();
         List<Map.Entry<Character, Integer>> list = new ArrayList<>();
         List<Character> newList = new ArrayList<>();
-
         for (Character ch : chs) {
             if (!map.keySet().contains(ch)) {
                 map.put(ch, 1);

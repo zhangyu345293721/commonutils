@@ -22,7 +22,6 @@ public class StringTestDemo {
     public void joinTestDemo() {
         String s = String.join("_", "I", "love", "china");
         System.out.println(s);
-
     }
 
     @Test
@@ -54,7 +53,6 @@ public class StringTestDemo {
         long time = 15727680000000l;
         Date date = new Date(time);
         System.out.println(date);
-
     }
 
     @Test

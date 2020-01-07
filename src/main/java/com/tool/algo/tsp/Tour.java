@@ -25,7 +25,6 @@ public class Tour {
         for (City city : tour) {
             this.citiesList.add(city);
         }
-
     }
 
     /** Returns citiesList information*/

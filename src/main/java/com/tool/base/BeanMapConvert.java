@@ -1,4 +1,4 @@
-package com.tool.beanconvert;
+package com.tool.base;
 
 import java.beans.BeanInfo;
 import java.beans.IntrospectionException;
@@ -11,6 +11,8 @@ import java.util.Map;
 
 /**
  * Bean与Map的转换
+ *
+ * @author zhangyu
  */
 public class BeanMapConvert {
     /**
