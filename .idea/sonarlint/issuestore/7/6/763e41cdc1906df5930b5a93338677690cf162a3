@@ -1,5 +1,5 @@
 
-gsquid:S1206"PThis class overrides "equals()" and should therefore also override "hashCode()".(ÜÑã
-€"squid:ClassVariableVisibilityCheck	"MMake x a static final constant or non-public and provide accessors if needed.(±Šõ¶ûÿÿÿÿ
 €"squid:ClassVariableVisibilityCheck
 "MMake y a static final constant or non-public and provide accessors if needed.(ÔçÛşÿÿÿÿ
+gsquid:S1206"PThis class overrides "equals()" and should therefore also override "hashCode()".(ÜÑã
+€"squid:ClassVariableVisibilityCheck	"MMake x a static final constant or non-public and provide accessors if needed.(±Šõ¶ûÿÿÿÿ

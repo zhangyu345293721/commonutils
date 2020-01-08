@@ -1,6 +1,6 @@
 
+osquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(ÃïÀ»üÿÿÿÿ
 osquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(†úô’úÿÿÿÿ
 csquid:S2259N"@A "NullPointerException" could be thrown; "bi" is nullable here.(úØÒ©ûÿÿÿÿ8¤˜ÏòÜ-
-osquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(ÃïÀ»üÿÿÿÿ
-Qsquid:S1118":Add a private constructor to hide the implicit public one.(Ïüø•
 Fsquid:S1148L"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8¤˜ÏòÜ-
+Qsquid:S1118":Add a private constructor to hide the implicit public one.(Ïüø•

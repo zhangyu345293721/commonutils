@@ -1,10 +1,0 @@
-
-Vsquid:S1118":Add a private constructor to hide the implicit public one.(åßßÌøÿÿÿÿ
-wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Şä¬ùÿÿÿÿ
-[squid:S2147M"DCombine this catch with the one at line 73, which has the same body.(Å¡ß
-usquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(™ºöºıÿÿÿÿ
-?squid:S1148+"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
-?squid:S1148J"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
-?squid:S1148L"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
-[squid:S2147K"DCombine this catch with the one at line 73, which has the same body.(åşáÿ
-?squid:S1148N"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ

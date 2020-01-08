@@ -1,11 +1,11 @@
 
-Isquid:S1444"2Make this "public static maxMatchType" field final(Äôàœ
-Isquid:S1444"2Make this "public static minMatchTYpe" field final(Íè™º
-osquid:S22931"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÓŠÓd
 t
-squid:S135r"YReduce the total number of break and continue statements in this loop to use at most one.(÷µ•˜øÿÿÿÿ
-†"squid:ClassVariableVisibilityCheck"XMake maxMatchType a static final constant or non-public and provide accessors if needed.(Äôàœ
+squid:S135q"YReduce the total number of break and continue statements in this loop to use at most one.(÷µ•˜øÿÿÿÿ
+ksquid:S00100l"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤š¸şÿÿÿÿ
+Nsquid:S1444"2Make this "public static minMatchTYpe" field final(´¡âäüÿÿÿÿ
+osquid:S22931"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÓŠÓd
+‹"squid:ClassVariableVisibilityCheck"XMake maxMatchType a static final constant or non-public and provide accessors if needed.(óË“àûÿÿÿÿ
+Nsquid:S1444"2Make this "public static maxMatchType" field final(óË“àûÿÿÿÿ
 8squid:S1643^"Use a StringBuilder instead.(—¦áùÿÿÿÿ
-ksquid:S00100m"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤š¸şÿÿÿÿ
-†"squid:ClassVariableVisibilityCheck"XMake minMatchTYpe a static final constant or non-public and provide accessors if needed.(Íè™º
-„ squid:ForLoopCounterChangedCheck7"XRefactor the code in order to not assign to this loop counter from within the loop body.(îÕ™
+‹"squid:ClassVariableVisibilityCheck"XMake minMatchTYpe a static final constant or non-public and provide accessors if needed.(´¡âäüÿÿÿÿ
+„ squid:ForLoopCounterChangedCheck7"XRefactor the code in order to not assign to this loop counter from within the loop body.(›‹‰í

@@ -1,12 +1,0 @@
-
-isquid:S2077H"RUse a variable binding mechanism to construct this query instead of concatenation.(ª÷ÅÖ
-rsquid:S2068"V'Password' detected in this expression, review this potentially hard-coded credential.(«±õÊúÿÿÿÿ
-csquid:S2095G"GUse try-with-resources or close this "Statement" in a "finally" clause.(íñéþÿÿÿÿ
-?squid:S1148>"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
-7squid:S2068F" Remove this hard-coded password.(ýåê˜
-^squid:S2095H"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(ª÷ÅÖ
-tsquid:S1488f"]Immediately return this expression instead of assigning it to the temporary variable "time2".(ö³×ð
-?squid:S1148V"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
-?squid:S1148N"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
-?squid:S1148i"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
-Csquid:S1612,",Replace this lambda with a method reference.(©ºªÂ

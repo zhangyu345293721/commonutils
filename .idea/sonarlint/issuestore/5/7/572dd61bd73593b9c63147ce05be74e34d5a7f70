@@ -1,26 +1,26 @@
 
-Jsquid:S1075š"&Remove this hard-coded path-delimiter.(ÍŸÜ®ûÿÿÿÿ8Ç¾‚Î÷-
-lsquid:S4042i"IUse "java.nio.Files#delete" here for better messages on error conditions.(”ñ¬õıÿÿÿÿ8Ç¾‚Î÷-
-lsquid:S4042p"IUse "java.nio.Files#delete" here for better messages on error conditions.(”ñ¬õıÿÿÿÿ8Ç¾‚Î÷-
-msquid:S4042¬"IUse "java.nio.Files#delete" here for better messages on error conditions.(¥ÎÎìÿÿÿÿÿ8Ç¾‚Î÷-
-Nsquid:S2093ü"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ8Ç¾‚Î÷-
-lsquid:S2095´"MUse try-with-resources or close this "FileInputStream" in a "finally" clause.(¼Á8Ç¾‚Î÷-
-psquid:S2095T"MUse try-with-resources or close this "FileInputStream" in a "finally" clause.(ÓĞÊışÿÿÿÿ8Ç¾‚Î÷-
-msquid:S2095µ"NUse try-with-resources or close this "FileOutputStream" in a "finally" clause.(ªöïä8Ç¾‚Î÷-
-Jsquid:S1481ì"+Remove this unused "sizeOf" local variable.(ÅíúŒ8Ç¾‚Î÷-
-esquid:S00112P"FDefine and throw a dedicated exception instead of using a generic one.(¦Ë†«8Ç¾‚Î÷-
+Gsquid:S1148‘"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ç¾‚Î÷-
 ksquid:S00112ƒ"FDefine and throw a dedicated exception instead of using a generic one.(Àòùëÿÿÿÿÿ8Ç¾‚Î÷-
-ksquid:S00112­"FDefine and throw a dedicated exception instead of using a generic one.(ù‰ñëüÿÿÿÿ8Ç¾‚Î÷-
+Jsquid:S1075š"&Remove this hard-coded path-delimiter.(ÍŸÜ®ûÿÿÿÿ8Ç¾‚Î÷-
+Gsquid:S1148î"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ç¾‚Î÷-
+lsquid:S4042p"IUse "java.nio.Files#delete" here for better messages on error conditions.(”ñ¬õıÿÿÿÿ8Ç¾‚Î÷-
+lsquid:S4042i"IUse "java.nio.Files#delete" here for better messages on error conditions.(”ñ¬õıÿÿÿÿ8Ç¾‚Î÷-
+Jsquid:S1481ì"+Remove this unused "sizeOf" local variable.(ÅíúŒ8Ç¾‚Î÷-
+Gsquid:S1148ÿ"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ç¾‚Î÷-
 Ysquid:S1854ì":Remove this useless assignment to local variable "sizeOf".(ÅíúŒ8Ç¾‚Î÷-
-Fsquid:S1148s"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ç¾‚Î÷-
-Gsquid:S1148ï"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ç¾‚Î÷-
-Gsquid:S1148€"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ç¾‚Î÷-
-Gsquid:S1148’"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ç¾‚Î÷-
-Gsquid:S1148º"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ç¾‚Î÷-
-Gsquid:S1148É"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ç¾‚Î÷-
-d
-squid:S899W"BDo something with the "boolean" value returned by "createNewFile".(Ğ’Íùÿÿÿÿ8Ç¾‚Î÷-
-]
-squid:S899i";Do something with the "boolean" value returned by "delete".(”ñ¬õıÿÿÿÿ8Ç¾‚Î÷-
+esquid:S00112P"FDefine and throw a dedicated exception instead of using a generic one.(¦Ë†«8Ç¾‚Î÷-
+lsquid:S2095´"MUse try-with-resources or close this "FileInputStream" in a "finally" clause.(¼Á8Ç¾‚Î÷-
+msquid:S2095µ"NUse try-with-resources or close this "FileOutputStream" in a "finally" clause.(ªöïä8Ç¾‚Î÷-
 ]
 squid:S899p";Do something with the "boolean" value returned by "delete".(”ñ¬õıÿÿÿÿ8Ç¾‚Î÷-
+Fsquid:S1148s"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ç¾‚Î÷-
+Gsquid:S1148¹"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ç¾‚Î÷-
+]
+squid:S899i";Do something with the "boolean" value returned by "delete".(”ñ¬õıÿÿÿÿ8Ç¾‚Î÷-
+psquid:S2095T"MUse try-with-resources or close this "FileInputStream" in a "finally" clause.(ÓĞÊışÿÿÿÿ8Ç¾‚Î÷-
+ksquid:S00112­"FDefine and throw a dedicated exception instead of using a generic one.(ù‰ñëüÿÿÿÿ8Ç¾‚Î÷-
+Gsquid:S1148È"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ç¾‚Î÷-
+d
+squid:S899W"BDo something with the "boolean" value returned by "createNewFile".(Ğ’Íùÿÿÿÿ8Ç¾‚Î÷-
+Nsquid:S2093û"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ8Ç¾‚Î÷-
+msquid:S4042¬"IUse "java.nio.Files#delete" here for better messages on error conditions.(¥ÎÎìÿÿÿÿÿ8Ç¾‚Î÷-

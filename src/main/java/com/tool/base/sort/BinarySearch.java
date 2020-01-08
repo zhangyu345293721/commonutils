@@ -4,7 +4,6 @@ package com.tool.base.sort;
  * 时间复杂度:Log(n) 空间复杂度:O(1)
  *
  * @author zhangyu
- * <p>
  **/
 
 
@@ -16,7 +15,13 @@ public class BinarySearch {
         System.out.println(index);
     }
 
-    // 如果找到了直接进行返回，如果没有找到就继续去找
+    /**
+     * 如果找到了直接进行返回，如果没有找到就继续去找
+     *
+     * @param arr 数组
+     * @param key 关键字
+     * @return 位置
+     */
     private static int binarySearchTest(int[] arr, int key) {
         int i = 0;
         int j = arr.length - 1;
