@@ -20,8 +20,6 @@ public class MatrixUDG {
      * 创建图(自己输入数据)
      */
     public MatrixUDG() {
-
-        // 输入"顶点数"和"边数"
         System.out.printf("input vertex number: ");
         int vlen = readInt();
         System.out.printf("input edge number: ");
@@ -176,7 +174,7 @@ public class MatrixUDG {
      * 深度优先搜索遍历图
      */
     public void DFS() {
-        boolean[] visited = new boolean[mVexs.length];       // 顶点访问标记
+        boolean[] visited = new boolean[mVexs.length];      
         for (int i = 0; i < mVexs.length; i++) {
             visited[i] = false;
         }
@@ -194,8 +192,8 @@ public class MatrixUDG {
     public void BFS() {
         int head = 0;
         int rear = 0;
-        int[] queue = new int[mVexs.length];            // 辅组队列
-        boolean[] visited = new boolean[mVexs.length];  // 顶点访问标记
+        int[] queue = new int[mVexs.length];            
+        boolean[] visited = new boolean[mVexs.length];  
 
         for (int i = 0; i < mVexs.length; i++)
             visited[i] = false;
@@ -205,12 +203,12 @@ public class MatrixUDG {
             if (!visited[i]) {
                 visited[i] = true;
                 System.out.printf("%c ", mVexs[i]);
-                queue[rear++] = i;  // 入队列
+                queue[rear++] = i;  
             }
 
             while (head != rear) {
-                int j = queue[head++];  // 出队列
-                for (int k = firstVertex(j); k >= 0; k = nextVertex(j, k)) { //k是为访问的邻接顶点
+                int j = queue[head++];  
+                for (int k = firstVertex(j); k >= 0; k = nextVertex(j, k)) { 
                     if (!visited[k]) {
                         visited[k] = true;
                         System.out.printf("%c ", mVexs[k]);
@@ -241,10 +239,10 @@ public class MatrixUDG {
      * @param start 从图中的第start个元素开始，生成最小树
      */
     public void prim(int start) {
-        int num = mVexs.length;         // 顶点个数
-        int index = 0;                    // prim最小树的索引，即prims数组的索引
-        char[] prims = new char[num];  // prim最小树的结果数组
-        int[] weights = new int[num];   // 顶点间边的权值
+        int num = mVexs.length;         
+        int index = 0;                    
+        char[] prims = new char[num];  
+        int[] weights = new int[num];   
 
         prims[index++] = mVexs[start];
 
@@ -297,21 +295,21 @@ public class MatrixUDG {
      * 克鲁斯卡尔（Kruskal)最小生成树
      */
     public void kruskal() {
-        int index = 0;                      // rets数组的索引
-        int[] vends = new int[mEdgNum];     // 用于保存"已有最小生成树"中每个顶点在该最小树中的终点。
-        EData[] rets = new EData[mEdgNum];  // 结果数组，保存kruskal最小生成树的边
-        EData[] edges;                      // 图对应的所有边
+        int index = 0;                      
+        int[] vends = new int[mEdgNum];     
+        EData[] rets = new EData[mEdgNum];  
+        EData[] edges;                      
         edges = getEdges();
         sortEdges(edges, mEdgNum);
         for (int i = 0; i < mEdgNum; i++) {
-            int p1 = getPosition(edges[i].start);      // 获取第i条边的"起点"的序号
-            int p2 = getPosition(edges[i].end);        // 获取第i条边的"终点"的序号
+            int p1 = getPosition(edges[i].start);      
+            int p2 = getPosition(edges[i].end);        
 
-            int m = getEnd(vends, p1);                 // 获取p1在"已有的最小生成树"中的终点
-            int n = getEnd(vends, p2);                 // 获取p2在"已有的最小生成树"中的终点
+            int m = getEnd(vends, p1);                 
+            int n = getEnd(vends, p2);                 
             if (m != n) {
-                vends[m] = n;                       // 设置m在"已有的最小生成树"中的终点为n
-                rets[index++] = edges[i];           // 保存结果
+                vends[m] = n;                      
+                rets[index++] = edges[i];           
             }
         }
         int length = 0;
@@ -412,9 +410,9 @@ public class MatrixUDG {
      * 边的结构体
      */
     private static class EData {
-        char start; // 边的起点
-        char end;   // 边的终点
-        int weight; // 边的权重
+        char start; 
+        char end;   
+        int weight; 
 
         public EData(char start, char end, int weight) {
             this.start = start;
@@ -438,21 +436,10 @@ public class MatrixUDG {
                 /*F*/ {16, 7, 6, INF, 2, 0, 9},
                 /*G*/ {14, INF, INF, INF, 8, 9, 0}};
         MatrixUDG pG;
-
-        // 自定义"图"(输入矩阵队列)
-        //pG = new MatrixUDG();
-        // 采用已有的"图"
         pG = new MatrixUDG(vexs, matrix);
-
-        //pG.print();   // 打印图
-        //pG.DFS();     // 深度优先遍历
-        //pG.BFS();     // 广度优先遍历
-        //pG.prim(0);   // prim算法生成最小生成树
-        //pG.kruskal(); // Kruskal算法生成最小生成树
 
         int[] prev = new int[pG.mVexs.length];
         int[] dist = new int[pG.mVexs.length];
-        // dijkstra算法获取"第4个顶点"到其它各个顶点的最短距离
         pG.dijkstra(3, prev, dist);
     }
 }
