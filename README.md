@@ -12,8 +12,6 @@
    - ConvertDateUtils 转换日期工具类
    - IdcardUtils 身份证识别工具类
    - MoneyUtils 钱处理工具类
-   - clone  克隆对象
-      -  CloneUtils 克隆工具类
    - date   时间转换
       -  DateFormatUtils 日期时间转换工具类
       -  DateUtils 日期转换工具类
