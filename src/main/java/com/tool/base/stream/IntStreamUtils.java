@@ -21,7 +21,7 @@ public class IntStreamUtils {
     /**
      * 8进制字符串
      *
-     * @param i 十进制数
+     * @param i 八进制数
      * @return 字符串
      */
     public static String integer2OctalStr(int i) {
@@ -31,7 +31,7 @@ public class IntStreamUtils {
     /**
      * 16进制字符串
      *
-     * @param i 十进制数
+     * @param i 16进制数
      * @return 字符串
      */
     public static String integer2HexStr(int i) {
