@@ -44,7 +44,7 @@ public class MoneyUtils {
      * 人民币转换为大写,格式为：x万x千x百x十x元x角x分
      *
      * @param numberOfMoney 传入的金额
-     * @return
+     * @return 字符串
      */
     public static String number2CNMontray(String numberOfMoney) {
         return number2CNMontray(new BigDecimal(numberOfMoney));
@@ -55,18 +55,15 @@ public class MoneyUtils {
      * 人民币转换为大写,格式为：x万x千x百x十x元x角x分
      *
      * @param numberOfMoney 传入的金额
-     * @return
+     * @return 字符串
      */
     public static String number2CNMontray(BigDecimal numberOfMoney) {
         StringBuilder sb = new StringBuilder();
         int signum = numberOfMoney.signum();
-        // 零元整的情况
         if (signum == 0) {
             return CN_ZEOR_FULL;
         }
-        //这里会进行金额的四舍五入
         long number = numberOfMoney.movePointRight(MONEY_PRECISION).setScale(0, 4).abs().longValue();
-        // 得到小数点后两位值
         long scale = number % 100;
         int numUnit = 0;
         int numIndex = 0;
@@ -133,7 +130,7 @@ public class MoneyUtils {
      * 将人民币转换为会计格式金额(xxxx,xxxx,xxxx.xx),保留两位小数
      *
      * @param money 待转换的金额
-     * @return
+     * @return 字符串
      */
     public static String accountantMoney(BigDecimal money) {
         return accountantMoney(money, 2, 1);
@@ -145,7 +142,7 @@ public class MoneyUtils {
      * @param money   待处理的金额
      * @param scale   小数点后保留的位数
      * @param divisor 格式化值（10:十元、100:百元,1000千元，10000万元......）
-     * @return
+     * @return 字符串
      */
     public static String getFormatMoney(BigDecimal money, int scale, double divisor) {
         return formatMoney(money, scale, divisor) + getCellFormat(divisor);
@@ -157,7 +154,7 @@ public class MoneyUtils {
      * @param money   待处理的金额
      * @param scale   小数点后保留的位数
      * @param divisor 格式化值（10:十元、100:百元,1000千元，10000万元......）
-     * @return
+     * @return 字符串
      */
     public static String getAccountantMoney(BigDecimal money, int scale, double divisor) {
         return accountantMoney(money, scale, divisor) + getCellFormat(divisor);
@@ -169,11 +166,10 @@ public class MoneyUtils {
      * @param money   待处理的金额
      * @param scale   小数点后保留的位数
      * @param divisor 格式化值
-     * @return
+     * @return 字符串
      */
     private static String accountantMoney(BigDecimal money, int scale, double divisor) {
         String disposeMoneyStr = formatMoney(money, scale, divisor);
-        //小数点处理  
         int dotPosition = disposeMoneyStr.indexOf('.');
         String exceptDotMoeny = null;//小数点之前的字符串  
         String dotMeony = null;//小数点之后的字符串  
@@ -215,7 +211,7 @@ public class MoneyUtils {
      * @param money   待处理的金额
      * @param scale   小数点后保留的位数
      * @param divisor 格式化值
-     * @return
+     * @return 字符串
      */
     private static String formatMoney(BigDecimal money, int scale, double divisor) {
         if (divisor == 0) {
@@ -267,13 +263,5 @@ public class MoneyUtils {
                 cell = "-1";
         }
         return cell;
-    }
-
-    @Test
-    public void moneyUtilsTestDemo() {
-        String num = "1234.4";
-        BigDecimal b = new BigDecimal(num);
-        String str = number2CNMontray(b);
-        System.out.println(str);
     }
 }
