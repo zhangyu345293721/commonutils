@@ -15,7 +15,7 @@ public class DateUtils {
     /**
      * 根据指定格式获取当前时间
      *
-     * @param format format
+     * @param format 日期字符串
      * @return String
      */
     public static String getCurrentTime(String format) {
@@ -36,7 +36,7 @@ public class DateUtils {
     /**
      * 获取指定格式的当前时间：为空时格式为yyyy-mm-dd HH:mm:ss
      *
-     * @param format format
+     * @param format 日期字符串
      * @return 返回日期
      */
     public static Date getCurrentDate(String format) {
@@ -66,7 +66,7 @@ public class DateUtils {
      * @param year   年份  正数相加、负数相减
      * @param date   为空时，默认为当前时间
      * @param format 默认格式为：yyyy-MM-dd HH:mm:ss
-     * @return String
+     * @return 字符串
      */
     public static String addYearToDate(int year, Date date, String format) {
         Calendar calender = getCalendar(date, format);
@@ -83,7 +83,7 @@ public class DateUtils {
      * @param year   年份  正数相加、负数相减
      * @param date   为空时，默认为当前时间
      * @param format 默认格式为：yyyy-MM-dd HH:mm:ss
-     * @return String
+     * @return 字符串
      */
     public static String addYearToDate(int year, String date, String format) {
         Date newDate = new Date();
@@ -100,7 +100,7 @@ public class DateUtils {
      * @param month  增加月份  正数相加、负数相减
      * @param date   指定时间
      * @param format 指定格式 为空默认 yyyy-mm-dd HH:mm:ss
-     * @return String
+     * @return 字符串
      */
     public static String addMothToDate(int month, Date date, String format) {
         Calendar calender = getCalendar(date, format);
@@ -117,7 +117,7 @@ public class DateUtils {
      * @param month  增加月份  正数相加、负数相减
      * @param date   指定时间
      * @param format 指定格式 为空默认 yyyy-mm-dd HH:mm:ss
-     * @return String
+     * @return 字符串
      */
     public static String addMothToDate(int month, String date, String format) {
         Date newDate = new Date();
@@ -134,7 +134,7 @@ public class DateUtils {
      * @param day    增加天数 正数相加、负数相减
      * @param date   指定日期
      * @param format 日期格式 为空默认 yyyy-mm-dd HH:mm:ss
-     * @return String
+     * @return 字符串
      */
     public static String addDayToDate(int day, Date date, String format) {
         Calendar calendar = getCalendar(date, format);
@@ -151,7 +151,7 @@ public class DateUtils {
      * @param day    增加天数 正数相加、负数相减
      * @param date   指定日期
      * @param format 日期格式 为空默认 yyyy-mm-dd HH:mm:ss
-     * @return String
+     * @return 字符串
      */
     public static String addDayToDate(int day, String date, String format) {
         Date newDate = new Date();
@@ -168,7 +168,7 @@ public class DateUtils {
      * @param hour   增加小时  正数相加、负数相减
      * @param date   指定日期
      * @param format 日期格式 为空默认 yyyy-mm-dd HH:mm:ss
-     * @return String
+     * @return 字符串
      */
     public static String addHourToDate(int hour, Date date, String format) {
         Calendar calendar = getCalendar(date, format);
@@ -185,7 +185,7 @@ public class DateUtils {
      * @param hour   增加小时  正数相加、负数相减
      * @param date   指定日期
      * @param format 日期格式 为空默认 yyyy-mm-dd HH:mm:ss
-     * @return String
+     * @return 字符串
      */
     public static String addHourToDate(int hour, String date, String format) {
         Date newDate = new Date();
@@ -202,7 +202,7 @@ public class DateUtils {
      * @param minute 增加分钟  正数相加、负数相减
      * @param date   指定日期
      * @param format 日期格式 为空默认 yyyy-mm-dd HH:mm:ss
-     * @return String
+     * @return 字符串
      */
     public static String addMinuteToDate(int minute, Date date, String format) {
         Calendar calendar = getCalendar(date, format);
@@ -219,7 +219,7 @@ public class DateUtils {
      * @param minute 增加分钟  正数相加、负数相减
      * @param date   指定日期
      * @param format 日期格式 为空默认 yyyy-mm-dd HH:mm:ss
-     * @return String
+     * @return 字符串
      */
     public static String addMinuteToDate(int minute, String date, String format) {
         Date newDate = new Date();
@@ -236,7 +236,7 @@ public class DateUtils {
      * @param second 增加秒 正数相加、负数相减
      * @param date   指定日期
      * @param format 日期格式 为空默认 yyyy-mm-dd HH:mm:ss
-     * @return String
+     * @return 字符串
      */
     public static String addSecondToDate(int second, Date date, String format) {
         Calendar calendar = getCalendar(date, format);
@@ -270,7 +270,7 @@ public class DateUtils {
      *
      * @param date   时间
      * @param format 格式
-     * @return Calendar
+     * @return 日期
      */
     public static Calendar getCalendar(Date date, String format) {
         if (date == null) {
@@ -286,8 +286,8 @@ public class DateUtils {
     /**
      * 字符串转换为日期，日期格式为
      *
-     * @param value value
-     * @return
+     * @param value 字符串值
+     * @return 日期
      */
     public static Date string2Date(String value) {
         if (value == null || "".equals(value)) {
@@ -311,7 +311,7 @@ public class DateUtils {
      *
      * @param value  需要转换的字符串
      * @param format 日期格式
-     * @return Date
+     * @return 日期
      */
     public static Date string2Date(String value, String format) {
         if (value == null || "".equals(value)) {
@@ -335,7 +335,7 @@ public class DateUtils {
      *
      * @param value  需要转换的日期
      * @param format 日期格式
-     * @return String
+     * @return 字符串
      */
     public static String date2String(Date value, String format) {
         if (value == null) {
@@ -348,7 +348,7 @@ public class DateUtils {
     /**
      * 日期转换为字符串
      *
-     * @param value value
+     * @param value 日期值
      * @return 返回字符串
      */
     public static String date2String(Date value) {
@@ -364,7 +364,7 @@ public class DateUtils {
      * 获取指定日期的年份
      *
      * @param value 日期
-     * @return int
+     * @return 数字
      */
     public static int getCurrentYear(Date value) {
         String date = date2String(value, DateFormatUtils.DATE_YEAR);
@@ -375,7 +375,7 @@ public class DateUtils {
      * 获取指定日期的年份
      *
      * @param value 日期
-     * @return int
+     * @return 数字
      */
     public static int getCurrentYear(String value) {
         Date date = string2Date(value, DateFormatUtils.DATE_YEAR);
@@ -387,7 +387,7 @@ public class DateUtils {
      * 获取指定日期的月份
      *
      * @param value 日期
-     * @return int
+     * @return 数字
      */
     public static int getCurrentMonth(Date value) {
         String date = date2String(value, DateFormatUtils.DATE_MONTH);
@@ -398,7 +398,7 @@ public class DateUtils {
      * 获取指定日期的月份
      *
      * @param value 日期
-     * @return int
+     * @return 数字
      */
     public static int getCurrentMonth(String value) {
         Date date = string2Date(value, DateFormatUtils.DATE_MONTH);
@@ -410,7 +410,7 @@ public class DateUtils {
     /**
      * 获取指定日期的天份
      *
-     * @return int
+     * @return 数字
      */
     public static int getCurrentDay(Date value) {
         String date = date2String(value, DateFormatUtils.DATE_DAY);
@@ -421,7 +421,7 @@ public class DateUtils {
      * 获取指定日期的天份
      *
      * @param value 日期
-     * @return int
+     * @return 数字
      */
     public static int getCurrentDay(String value) {
         Date date = string2Date(value, DateFormatUtils.DATE_DAY);
@@ -434,7 +434,7 @@ public class DateUtils {
      * 获取当前日期为星期几
      *
      * @param value 日期
-     * @return String
+     * @return 字符串
      */
     public static String getCurrentWeek(Date value) {
         Calendar calendar = getCalendar(value, DateFormatUtils.DATE_FORMAT1);
@@ -447,7 +447,7 @@ public class DateUtils {
      * 获取当前日期为星期几
      *
      * @param value 日期
-     * @return String
+     * @return 字符串
      */
     public static String getCurrentWeek(String value) {
         Date date = string2Date(value, DateFormatUtils.DATE_FORMAT1);
@@ -458,7 +458,7 @@ public class DateUtils {
      * 获取指定日期的小时
      *
      * @param value 日期
-     * @return int
+     * @return 数字
      */
     public static int getCurrentHour(Date value) {
         String date = date2String(value, DateFormatUtils.DATE_HOUR);
@@ -469,7 +469,7 @@ public class DateUtils {
      * 获取指定日期的小时
      *
      * @param value 日期
-     * @return int
+     * @return 数字
      */
     public static int getCurrentHour(String value) {
         Date date = string2Date(value, DateFormatUtils.DATE_HOUR);
@@ -482,7 +482,7 @@ public class DateUtils {
      * 获取指定日期的分钟
      *
      * @param value 日期
-     * @return int
+     * @return 数字
      */
     public static int getCurrentMinute(Date value) {
         String date = date2String(value, DateFormatUtils.DATE_MINUTE);
@@ -493,7 +493,7 @@ public class DateUtils {
      * 获取指定日期的分钟
      *
      * @param value 日期
-     * @return int
+     * @return 数字
      */
     public static int getCurrentMinute(String value) {
         Date date = string2Date(value, DateFormatUtils.DATE_MINUTE);
@@ -510,7 +510,7 @@ public class DateUtils {
      * @param startDay 需要比较的时间 不能为空(null),需要正确的日期格式 ,如：2009-09-12
      * @param endDay   被比较的时间  为空(null)则为当前时间
      * @param stype    返回值类型   0为多少天，1为多少个月，2为多少年
-     * @return int
+     * @return 数字
      */
     public static int compareDate(String startDay, String endDay, int stype) {
         int n = 0;
@@ -559,7 +559,6 @@ public class DateUtils {
      * @return int类型数
      */
     public static int compareTime(String startTime, String endTime, int type) {
-        //endTime是否为空，为空默认当前时间
         if (endTime == null || "".equals(endTime)) {
             endTime = getCurrentTime();
         }
@@ -641,7 +640,7 @@ public class DateUtils {
     /**
      * 获取所在星期的第一天
      *
-     * @param date date
+     * @param date 日期
      * @return 返回date
      */
     public static Date getWeekFirstDate(Date date) {
@@ -656,7 +655,7 @@ public class DateUtils {
     /**
      * 获取所在星期的最后一天
      *
-     * @param date date
+     * @param date 日期
      * @return 返回date
      */
     public static Date geWeektLastDate(Date date) {
@@ -697,6 +696,4 @@ public class DateUtils {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss:SSS");
         return String.valueOf(sdf.format(d));
     }
-
-
 }
