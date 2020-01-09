@@ -223,10 +223,4 @@ public class IdcardUtils {
 
         return Integer.parseInt(sex) % 2 == 0 ? 0 : 1;
     }
-
-    @Test
-    public void authenticationDemo() {
-        int flag = IdcardUtils.getUserSex("421181199308247616");
-        System.out.println(flag);
-    }
 }
