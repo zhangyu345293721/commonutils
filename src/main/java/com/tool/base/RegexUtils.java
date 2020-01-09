@@ -70,10 +70,4 @@ public class RegexUtils {
         Pattern pattern = Pattern.compile("^[-\\+]?[\\d]+$");
         return pattern.matcher(value).matches();
     }
-
-    @Test
-    public void regexUtilsTestDemo() {
-        String a = "44.4";
-        System.out.println(isDouble(a));
-    }
 }
