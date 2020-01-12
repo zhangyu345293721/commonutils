@@ -8,8 +8,6 @@
    - RegexUtils 正则操作
    - StringUtils 字符串操作
    - RandomUtils 随机操作
-   - BaseTypeUtils 类型之间转换
-   - ClassHelper 类转换工具
    - ConvertDateUtils 转换日期工具类
    - IdcardUtils 身份证识别工具类
    - MoneyUtils 钱处理工具类
