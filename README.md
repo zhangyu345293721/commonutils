@@ -3,6 +3,7 @@
 感觉自己写代码，有些时候，代码逻辑写过，为了不做重复性工作，我将平时经常用到的一些方法封装成类<br>
 - base包下：
    - ArrayUtils    数组操作工具类
+   - MapSortUtils    map排序工具类
    - CollectionUtils 集合操作
    - DocumentUtils 文档操作
    - RegexUtils 正则操作
