@@ -1,33 +1,33 @@
 
-Hsquid:S3457"%String contains no format specifiers.(µ¹‹€ıÿÿÿÿ8½É¡•ß-
-Ssquid:EmptyStatementUsageCheckª"Remove this empty statement.(Åñ­õşÿÿÿÿ8´¶î÷-
-Csquid:S3457="%String contains no format specifiers.(öàŸ‰8“Œ‹î÷-
-Hsquid:S1125‡")Remove the literal "false" boolean value.(–Ã–©8”Íî÷-
-Dsquid:S3457¥"%String contains no format specifiers.(ï«¨°8ûúî÷-
-usquid:S3457˜"Q%n should be used in place of \n to produce the platform-specific line separator.(ëœô´ıÿÿÿÿ8´¶î÷-
 Dsquid:S3457Ş"%String contains no format specifiers.(ï«¨°8ä£Œî÷-
-Dsquid:S3457Ã"%String contains no format specifiers.(ï«¨°8”Íî÷-
+psquid:S3457¥"Q%n should be used in place of \n to produce the platform-specific line separator.(ï«¨°8ûúî÷-
+Hsquid:S3457"%String contains no format specifiers.(·¦ñùÿÿÿÿ8½É¡•ß-
+osquid:S3457="Q%n should be used in place of \n to produce the platform-specific line separator.(öàŸ‰8“Œ‹î÷-
+\squid:S1197¯"8Move the array designator from the variable to the type.(ı³¾¿ûÿÿÿÿ8´¶î÷-
+usquid:S3457–"Q%n should be used in place of \n to produce the platform-specific line separator.(–ÍéØûÿÿÿÿ8´¶î÷-
+Dsquid:S3457¼"%String contains no format specifiers.(ï«¨°8ä£Œî÷-
+Csquid:S3457"%String contains no format specifiers.(Õ…ò…8½É¡•ß-
+vsquid:S3776ó"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(ë¸µØùÿÿÿÿ8ä£Œî÷-
+nsquid:S00100²"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨É…Å8“Œ‹î÷-
+psquid:S3457é"Q%n should be used in place of \n to produce the platform-specific line separator.(ï«¨°8ä£Œî÷-
+Dsquid:S3457é"%String contains no format specifiers.(ï«¨°8ä£Œî÷-
+Fsquid:S1148z"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8“Œ‹î÷-
+psquid:S3457¼"Q%n should be used in place of \n to produce the platform-specific line separator.(ï«¨°8ä£Œî÷-
+Ssquid:EmptyStatementUsageCheckª"Remove this empty statement.(Åñ­õşÿÿÿÿ8´¶î÷-
+Dsquid:S3457¥"%String contains no format specifiers.(ï«¨°8ûúî÷-
+psquid:S3457Ã"Q%n should be used in place of \n to produce the platform-specific line separator.(ï«¨°8”Íî÷-
+Hsquid:S1125‡")Remove the literal "false" boolean value.(–Ã–©8”Íî÷-
+nsquid:S00100¥"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·ƒÈÓ8“Œ‹î÷-
+qsquid:S3776ú"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(³¢Üü8”Íî÷-
+Hsquid:S3457"%String contains no format specifiers.(µ¹‹€ıÿÿÿÿ8½É¡•ß-
+Isquid:S3457·"%String contains no format specifiers.(ÿïÿÿÿÿÿ8ä£Œî÷-
+msquid:S00100Â"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶œ±8ä£Œî÷-
+Csquid:S3457="%String contains no format specifiers.(öàŸ‰8“Œ‹î÷-
+Hsquid:S1125")Remove the literal "false" boolean value.(¿íŞğ8”Íî÷-
 psquid:S3457å"Q%n should be used in place of \n to produce the platform-specific line separator.(êå8ä£Œî÷-
 tsquid:S3457"Q%n should be used in place of \n to produce the platform-specific line separator.(µ¹‹€ıÿÿÿÿ8½É¡•ß-
-Fsquid:S1148z"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8“Œ‹î÷-
-osquid:S3457="Q%n should be used in place of \n to produce the platform-specific line separator.(öàŸ‰8“Œ‹î÷-
-nsquid:S00100¥"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·ƒÈÓ8“Œ‹î÷-
-psquid:S3457¥"Q%n should be used in place of \n to produce the platform-specific line separator.(ï«¨°8ûúî÷-
-usquid:S3457–"Q%n should be used in place of \n to produce the platform-specific line separator.(–ÍéØûÿÿÿÿ8´¶î÷-
-Csquid:S3457"%String contains no format specifiers.(Õ…ò…8½É¡•ß-
 Isquid:S3457Ë"%String contains no format specifiers.(ûùÆ‰úÿÿÿÿ8ä£Œî÷-
-Hsquid:S3457"%String contains no format specifiers.(·¦ñùÿÿÿÿ8½É¡•ß-
-Dsquid:S3457é"%String contains no format specifiers.(ï«¨°8ä£Œî÷-
-msquid:S00100Â"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶œ±8ä£Œî÷-
-Isquid:S3457·"%String contains no format specifiers.(ÿïÿÿÿÿÿ8ä£Œî÷-
-Dsquid:S3457¼"%String contains no format specifiers.(ï«¨°8ä£Œî÷-
-nsquid:S00100²"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨É…Å8“Œ‹î÷-
-Dsquid:S3457å"%String contains no format specifiers.(êå8ä£Œî÷-
-psquid:S3457¼"Q%n should be used in place of \n to produce the platform-specific line separator.(ï«¨°8ä£Œî÷-
-psquid:S3457é"Q%n should be used in place of \n to produce the platform-specific line separator.(ï«¨°8ä£Œî÷-
-psquid:S3457Ã"Q%n should be used in place of \n to produce the platform-specific line separator.(ï«¨°8”Íî÷-
 psquid:S3457Ş"Q%n should be used in place of \n to produce the platform-specific line separator.(ï«¨°8ä£Œî÷-
-vsquid:S3776ó"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(ë¸µØùÿÿÿÿ8ä£Œî÷-
-qsquid:S3776ú"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(³¢Üü8”Íî÷-
-Hsquid:S1125")Remove the literal "false" boolean value.(¿íŞğ8”Íî÷-
-\squid:S1197¯"8Move the array designator from the variable to the type.(ı³¾¿ûÿÿÿÿ8´¶î÷-
+Dsquid:S3457å"%String contains no format specifiers.(êå8ä£Œî÷-
+Dsquid:S3457Ã"%String contains no format specifiers.(ï«¨°8”Íî÷-
+usquid:S3457˜"Q%n should be used in place of \n to produce the platform-specific line separator.(ëœô´ıÿÿÿÿ8´¶î÷-

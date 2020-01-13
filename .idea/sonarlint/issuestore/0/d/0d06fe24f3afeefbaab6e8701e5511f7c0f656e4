@@ -1,8 +1,8 @@
 
 nsquid:S00117b"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Àí’–ÿÿÿÿÿ
-jsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(¤çŠ˜
-osquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(Êêåêýÿÿÿÿ
+jsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(Í­É®
 ^squid:S1126š"AReplace this if-then-else statement by a single return statement.(Ô®¤øüÿÿÿÿ
 osquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(œšüâúÿÿÿÿ
+jsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(¤çŠ˜
+osquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(Êêåêýÿÿÿÿ
 isquid:S00117_"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡º™Ü
-jsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(Í­É®
