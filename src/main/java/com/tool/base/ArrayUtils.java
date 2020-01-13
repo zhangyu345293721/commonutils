@@ -690,17 +690,4 @@ public class ArrayUtils {
             return es[index++];
         }
     }
-
-    @Test
-    public void ArrayUtilsTestDemo() {
-        double[][] arr = {{1, 1}};
-        boolean flag = ArrayUtils.isEmpty(arr);
-        System.out.println(flag);
-    }
-
-    @Test
-    public void arrayTest() {
-        Integer arr[] = null;
-        System.out.println(isEmpty(arr));
-    }
 }

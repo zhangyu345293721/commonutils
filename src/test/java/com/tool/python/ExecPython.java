@@ -85,7 +85,6 @@ public class ExecPython {
             interp.exec("x = np.sqrt(a)");
             Object result1 = interp.getValue("x");
             System.out.println(result1);
-            // System.out.println(nd.);
         } catch (JepException e) {
             e.printStackTrace();
         }

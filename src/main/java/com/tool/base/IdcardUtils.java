@@ -27,7 +27,7 @@ public class IdcardUtils {
      * 验证身份证是否合法
      *
      * @param idcard
-     * @return
+     * @return 布尔值
      */
     public boolean isValidatedAllIdcard(String idcard) {
         return IdcardUtils.isValidate18Idcard(idcard);
@@ -212,7 +212,7 @@ public class IdcardUtils {
     }
 
     /**
-     * @param idno idno
+     * @param idno 身份字符串
      * @return 身份证信息中代表性别的数值
      */
     public static int getUserSex(String idno) {
@@ -222,11 +222,5 @@ public class IdcardUtils {
         }
 
         return Integer.parseInt(sex) % 2 == 0 ? 0 : 1;
-    }
-
-    @Test
-    public void authenticationDemo() {
-        int flag = IdcardUtils.getUserSex("421181199308247616");
-        System.out.println(flag);
     }
 }

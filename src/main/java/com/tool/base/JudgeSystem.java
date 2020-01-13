@@ -38,11 +38,4 @@ public class JudgeSystem {
             return "other system";
         }
     }
-
-    @Test
-    public void fun() {
-
-        String sys = judgeSystem();
-        System.out.println(sys);
-    }
 }
