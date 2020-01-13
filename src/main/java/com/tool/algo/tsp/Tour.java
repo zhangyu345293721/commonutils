@@ -8,7 +8,6 @@ import java.util.Collections;
  */
 
 public class Tour {
-    /** Holds our citiesList of cities*/
     private ArrayList<City> citiesList ; // Cache
     private int distance = 0;
 
@@ -17,9 +16,7 @@ public class Tour {
     }
 
 
-    /**
-     * Constructs a citiesList from another citiesList
-     * */
+
     public Tour(ArrayList<City> tour){
         citiesList = new ArrayList<City>();
         for (City city : tour) {
@@ -27,14 +24,11 @@ public class Tour {
         }
     }
 
-    /** Returns citiesList information*/
     public ArrayList<City> getCitiesList(){
         return citiesList;
     }
 
-    /** Creates a random individual*/
     public Tour generateIndividual() {
-        // Loop through all our destination cities and add them to our citiesList
         for (int cityIndex = 0; cityIndex < citiesList.size(); cityIndex++) {
             setCity(cityIndex, this.getCity(cityIndex));
         }
@@ -51,7 +45,6 @@ public class Tour {
         City citySwap1 = newSolution.getCity(tourPos1);
         City citySwap2 = newSolution.getCity(tourPos2);
 
-        // Swap them
         newSolution.setCity(tourPos2, citySwap1);
         newSolution.setCity(tourPos1, citySwap2);
         return newSolution;
