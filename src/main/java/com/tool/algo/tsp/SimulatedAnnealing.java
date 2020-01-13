@@ -65,33 +65,26 @@ public class SimulatedAnnealing {
 
         Tour bestSolution = new Tour(currentSolution.getCitiesList());
         Tour newSolution = null;
-        // Loop until system has cooled
         while (currentTemperature > minTemperature) {
             for (int i = 0; i < internalLoop; i++) {
-                //get a solution from neighbour
                 newSolution = currentSolution.generateNeighourTour();
-                // Get energy of solutions
                 int currentEnergy = currentSolution.getDistance();
                 int neighbourEnergy = newSolution.getDistance();
 
-                // Decide if we should accept the neighbour
                 if (acceptanceProbability(currentEnergy, neighbourEnergy,
                         currentTemperature) > Math.random()) {
                     currentSolution = new Tour(newSolution.getCitiesList());
                 }
 
-                // Keep track of the best solution found
                 if (currentSolution.getDistance() < bestSolution.getDistance()) {
                     bestSolution = new Tour(currentSolution.getCitiesList());
                 }
             }
-            // Cool system
             currentTemperature *= 1 - coolingRate;
 
             long millis = System.currentTimeMillis();
             if (millis - tp > 300) {
                 tp = millis;
-                //ddWindow.addData(millis, bestSolution.getDistance());
             }
             try {
                 Thread.sleep(10L);
@@ -106,11 +99,9 @@ public class SimulatedAnnealing {
      * Calculate the acceptance probability
      **/
     private double acceptanceProbability(int energy, int newEnergy, double temperature) {
-        // If the new solution is better, accept it
         if (newEnergy < energy) {
             return 1.0;
         }
-        // If the new solution is worse, calculate an acceptance probability
         return Math.exp((energy - newEnergy) / temperature);
     }
 

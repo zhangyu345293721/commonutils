@@ -181,3 +181,5 @@ T
 $src/test/java/com/tool/bean/Use.java,9\2\92a4304824fee4ff6d07d7bed2d945f7254a05bc
 U
 %src/test/java/com/tool/bean/User.java,8\e\8edda1077642dbd9c6a32ecb6372488dd8729331
+]
+-src/main/java/com/tool/base/MapSortUtils.java,f\e\fedc251a080f797ad76d7dfb1bc955b284840156

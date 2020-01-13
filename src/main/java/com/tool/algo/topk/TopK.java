@@ -11,7 +11,7 @@ import java.util.PriorityQueue;
  */
 public class TopK {
     @Test
-    public void fun() {
+    public void testTopK() {
         int arr[] = {-3, 1, 2, 9, 7, 5, 6, 8};
         int num = findKthLargest(arr, 2);
         System.out.println(num);

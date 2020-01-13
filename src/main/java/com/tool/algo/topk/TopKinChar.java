@@ -15,7 +15,7 @@ import java.util.*;
 
 public class TopKinChar {
     @Test
-    public void fun() {
+    public void testTopKinChar() {
         char[] chs = {'a', 'a', 'a', 'c', 'b', 'c', 'd'};
         int k = 1;
         List<Character> list = getTopK(chs, k);
