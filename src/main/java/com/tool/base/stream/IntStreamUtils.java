@@ -2,10 +2,9 @@ package com.tool.base.stream;
 
 /**
  * int工具类
- *
- * @author: zhangyu
- * <p>
  * 不同的是parseInt()方法的返回值是int类型，而valueOf()返回值是Integer对象
+ * @author: zhangyu
+ * 
  */
 public class IntStreamUtils {
     /**
