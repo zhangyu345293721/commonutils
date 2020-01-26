@@ -1,19 +1,19 @@
 
-ssquid:S00100·"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ώρ­Δώÿÿÿÿ8‚½¶Μγ-
+[squid:S1854ϊ"7Remove this useless assignment to local variable "max".(ΏμΛΕψÿÿÿÿ8½’¬χά-
+Gsquid:S1481υ"(Remove this unused "max" local variable.(ιρΦ†8½’¬χά-
 fsquid:UnusedPrivateMethodκ"4Remove this unused private "getListMaxValue" method.(ιΠ€Ψψÿÿÿÿ8¶ΝΝχά-
 ]squid:S1155ή">Use isEmpty() to check whether the collection is empty or not.(βΏ®‹8“τά-
-qsquid:S00117χ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Θυ–8ΟÒ¥χά-
-ksquid:UnusedPrivateMethodτ"9Remove this unused private "getListMaxValueIndex" method.(¨ηΈωÿÿÿÿ8φ²Νχά-
-\squid:S1197Ώ"8Move the array designator from the variable to the type.(¤°υϊÿÿÿÿ8¦Εη-
-Esquid:S1168ί"&Return an empty array instead of null.(¥Ήο8“τά-
-[squid:S1854ϊ"7Remove this useless assignment to local variable "max".(ΏμΛΕψÿÿÿÿ8½’¬χά-
-fsquid:UnusedPrivateMethod‡"4Remove this unused private "getListMinValue" method.(ƒλÒΖωÿÿÿÿ8ωΝχά-
-€squid:S1488π"\Immediately return this expression instead of assigning it to the temporary variable "type".(¤γόοψÿÿÿÿ8ΰνφά-
-xsquid:S2293Ύ"YReplace the type specification in this constructor call with the diamond operator ("<>").(μω•ι8“τά-
-Lsquid:S1481’"(Remove this unused "min" local variable.(φϋΞύÿÿÿÿ8βÿήχά-
-vsquid:S00117”"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²ϋ‡Ύωÿÿÿÿ8βÿήχά-
-Gsquid:S1481υ"(Remove this unused "max" local variable.(ιρΦ†8½’¬χά-
-[squid:S1854’"7Remove this useless assignment to local variable "min".(φϋΞύÿÿÿÿ8βÿήχά-
 Osquid:S1150 "+Implement Iterator rather than Enumeration.(ΓΠªωÿÿÿÿ8“τά-
+[squid:S1854’"7Remove this useless assignment to local variable "min".(φϋΞύÿÿÿÿ8βÿήχά-
+vsquid:S00117”"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²ϋ‡Ύωÿÿÿÿ8βÿήχά-
+ksquid:UnusedPrivateMethodτ"9Remove this unused private "getListMaxValueIndex" method.(¨ηΈωÿÿÿÿ8φ²Νχά-
+€squid:S1488π"\Immediately return this expression instead of assigning it to the temporary variable "type".(¤γόοψÿÿÿÿ8ΰνφά-
+Esquid:S1168ί"&Return an empty array instead of null.(¥Ήο8“τά-
 Vsquid:S1854υ"7Remove this useless assignment to local variable "max".(ιρΦ†8Ξ¬χά-
+qsquid:S00117χ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Θυ–8ΟÒ¥χά-
+xsquid:S2293Ύ"YReplace the type specification in this constructor call with the diamond operator ("<>").(μω•ι8“τά-
+fsquid:UnusedPrivateMethod‡"4Remove this unused private "getListMinValue" method.(ƒλÒΖωÿÿÿÿ8ωΝχά-
+Lsquid:S1481’"(Remove this unused "min" local variable.(φϋΞύÿÿÿÿ8βÿήχά-
 ksquid:UnusedPrivateMethod‘"9Remove this unused private "getListMinValueIndex" method.(…“‰Ϊÿÿÿÿÿ8βÿήχά-
+Xsquid:S1118":Add a private constructor to hide the implicit public one.(γ…8ΐψΓϋω-
+bsquid:UselessImportCheck"7Remove this unused import 'org.junit.jupiter.api.Test'.(ΦΊί8ΐψΓϋω-

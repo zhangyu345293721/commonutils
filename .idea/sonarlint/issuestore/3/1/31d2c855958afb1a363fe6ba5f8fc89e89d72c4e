@@ -1,5 +1,5 @@
 
-wsquid:S1488%"`Immediately return this expression instead of assigning it to the temporary variable "distance".(®ËŒº
-@squid:S2140")Use "java.util.Random.nextInt()" instead.(åû£à
-Ysquid:S2184%"BCast one of the operands of this addition operation to a "double".(®ËŒº
-Esquid:S2140")Use "java.util.Random.nextInt()" instead.(Ä™¥ëüÿÿÿÿ
+wsquid:S1488 "`Immediately return this expression instead of assigning it to the temporary variable "distance".(®ËŒº
+Esquid:S2140")Use "java.util.Random.nextInt()" instead.(Ä™¥ëüÿÿÿÿ
+Ysquid:S2184 "BCast one of the operands of this addition operation to a "double".(®ËŒº
+@squid:S2140")Use "java.util.Random.nextInt()" instead.(åû£à

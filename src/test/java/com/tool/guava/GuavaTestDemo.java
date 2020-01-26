@@ -4,11 +4,9 @@ import com.google.common.base.*;
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
 import com.google.common.collect.*;
-import com.google.common.io.Files;
 import com.tool.bean.Person;
 import org.junit.jupiter.api.Test;
 
-import java.io.File;
 import java.util.*;
 import java.util.concurrent.Callable;
 import java.util.concurrent.TimeUnit;
@@ -29,7 +27,7 @@ public class GuavaTestDemo {
         for (String s : list) {
             System.out.print(s + " ");
         }
-
+        System.out.println();
         ImmutableSet<String> iSet = ImmutableSet.of("e1", "e2");
         System.out.println(iSet);
 
@@ -105,8 +103,8 @@ public class GuavaTestDemo {
             map.put(strs[0], Integer.valueOf(strs[1]));
         });
 
-        for (String s : map.keySet()) {
-            System.out.println(s + ":" + map.get(s));
+        for (Map.Entry<String, Integer> entry : map.entrySet()) {
+            System.out.println(entry.getKey() + ":" + entry.getValue());
         }
     }
 
@@ -116,7 +114,7 @@ public class GuavaTestDemo {
         String str = "xiaoming=11,xiaohong=23 ";
         Map<String, Integer> map = new LinkedHashMap<>();
 
-        Splitter.on(",").split(str).forEach(e -> {
+        Splitter.on(",").trimResults().split(str).forEach(e -> {
             String strs[] = e.split("=");
             map.put(strs[0], Integer.valueOf(strs[1]));
         });
@@ -138,8 +136,8 @@ public class GuavaTestDemo {
     @Test
     public void collectFilterTestDemo() {
         ImmutableList<String> names = ImmutableList.of("begin", "code", "Guava", "Java");
-        Iterable<String> fitered = Iterables.filter(names, Predicates.or(Predicates.equalTo("guava"), Predicates.equalTo("Java")));
-        System.out.println(fitered); // [Guava, Java]
+        Iterable<String> filter = Iterables.filter(names, Predicates.or(Predicates.equalTo("guava"), Predicates.equalTo("Java")));
+        System.out.println(filter); // [Guava, Java]
     }
 
     //测试map的交集
@@ -163,9 +161,13 @@ public class GuavaTestDemo {
         Map entriesDeffRight = difference.entriesOnlyOnRight();
         Map entriesDeffCommon = difference.entriesInCommon();
 
+        // 不同的部分
         System.out.println(entriesDiff);
+        // 只有左边部分
         System.out.println(entriesDiffLeft);
+        // 只有右边部分
         System.out.println(entriesDeffRight);
+        // 全部相同
         System.out.println(entriesDeffCommon);
 
     }
@@ -176,6 +178,7 @@ public class GuavaTestDemo {
         System.out.println(Strings.isNullOrEmpty(s));
     }
 
+    // 将对象变成字符串
     @Test
     public void moreObjectTestDemo() {
         Person p = new Person();
@@ -191,7 +194,7 @@ public class GuavaTestDemo {
     @Test
     public void orderTestDemo() {
         Person p1 = new Person("zhangyu", "123", 12);
-        Person p2 = new Person("zhangsan", "1234", 14);
+        Person p2 = new Person("zhangsan", "1234", 10);
 
         Ordering<Person> byOrdering = Ordering.natural().nullsFirst().onResultOf(new Function<Person, Integer>() {
             public Integer apply(Person person) {
@@ -224,19 +227,5 @@ public class GuavaTestDemo {
             }
         });
         System.out.println("value : " + resultVal);
-    }
-
-    /**
-     * 测试读取文件
-     */
-    @Test
-    public void IoTestDemo() {
-        File file = new File("test.txt");
-        List<String> list = null;
-        try {
-            list = Files.readLines(file, Charsets.UTF_8);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
 }

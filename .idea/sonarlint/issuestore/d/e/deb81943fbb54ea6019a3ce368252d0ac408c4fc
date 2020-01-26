@@ -1,9 +1,9 @@
 
-usquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÿà™ˆÿÿÿÿÿ
-‹squid:S1319"oThe type of the "tour" object should be an interface such as "List" rather than the implementation "ArrayList".(áõžÙüÿÿÿÿ
-3squid:S1643x"Use a StringBuilder instead.(„Ð¢é
-Esquid:S21402")Use "java.util.Random.nextInt()" instead.(Þ£ƒŠþÿÿÿÿ
-usquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÿà™ˆÿÿÿÿÿ
-Jsquid:S1905B"'Remove this unnecessary cast to "City".(—€Ô‚ÿÿÿÿÿ8ëŠ ÈÜ-
-Œsquid:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(¥Ï“ýùÿÿÿÿ
-Esquid:S21404")Use "java.util.Random.nextInt()" instead.(ù§„†øÿÿÿÿ
+usquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÿà™ˆÿÿÿÿÿ
+Œsquid:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(¥Ï“ýùÿÿÿÿ
+Jsquid:S19056"'Remove this unnecessary cast to "City".(—€Ô‚ÿÿÿÿÿ8ëŠ ÈÜ-
+usquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÿà™ˆÿÿÿÿÿ
+Esquid:S2140)")Use "java.util.Random.nextInt()" instead.(Þ£ƒŠþÿÿÿÿ
+3squid:S1643_"Use a StringBuilder instead.(„Ð¢é
+Esquid:S2140+")Use "java.util.Random.nextInt()" instead.(ù§„†øÿÿÿÿ
+‹squid:S1319"oThe type of the "tour" object should be an interface such as "List" rather than the implementation "ArrayList".(áõžÙüÿÿÿÿ
