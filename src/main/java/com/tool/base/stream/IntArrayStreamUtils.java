@@ -44,7 +44,7 @@ public class IntArrayStreamUtils {
     }
 
     /**
-     * List< Integer > 转 int[ ]
+     * List< Integer > 转 int[]
      *
      * @param list int类型链表
      * @return int数组

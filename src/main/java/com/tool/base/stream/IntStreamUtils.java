@@ -3,8 +3,8 @@ package com.tool.base.stream;
 /**
  * int工具类
  * 不同的是parseInt()方法的返回值是int类型，而valueOf()返回值是Integer对象
+ *
  * @author: zhangyu
- * 
  */
 public class IntStreamUtils {
     /**
@@ -57,9 +57,8 @@ public class IntStreamUtils {
         }
         char[] chs = str.toCharArray();
         int[] arrays = new int[chs.length];
-        int index = 0;
-        for (char ch : chs) {
-            arrays[index++] = ch - '0';
+        for (int i=0;i<chs.length; i++) {
+            arrays[i] = chs[i] - '0';
         }
         return arrays;
     }
