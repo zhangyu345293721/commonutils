@@ -177,3 +177,11 @@ U
 -src/main/java/com/tool/base/MapSortUtils.java,f\e\fedc251a080f797ad76d7dfb1bc955b284840156
 _
 /src/test/java/com/tool/astar/test/TestDemo.java,e\f\ef6eb900741e67a4b67664cddf03e0de07caef96
+k
+;src/test/java/com/tool/base/file/sort/TestBinarySearch.java,6\9\69c6807120a7292aa99bae374e065d027a1bedb6
+i
+9src/test/java/com/tool/base/file/sort/TestBubbleSort.java,f\a\fa4cf82e0467ee3b89f16d67316ebe0e19503b17
+h
+8src/test/java/com/tool/base/file/sort/TestQuickSort.java,d\3\d32bddd44bcd1b9f9c3eaa0d3690177e38352963
+i
+9src/test/java/com/tool/base/file/sort/TestSelectSort.java,1\d\1d2bcad2ed66ad475c004d68fc3b8930c88ebcc4
