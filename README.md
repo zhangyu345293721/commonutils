@@ -5,13 +5,13 @@
    - ArrayUtils     数组操作工具类
    - MapSortUtils    map排序工具类
    - CollectionUtils 集合操作
-   - DocumentUtils 文档操作
+   - DocumentUtils  文档操作
    - RegexUtils 正则操作
    - StringUtils 字符串操作
    - RandomUtils 随机操作
    - ConvertDateUtils 转换日期工具类
    - IdcardUtils 身份证识别工具类
-   - MoneyUtils 钱处理工具类
+   - MoneyUtils  钱处理工具类
    - date   时间转换
       -  DateFormatUtils 日期时间转换工具类
       -  DateUtils 日期转换工具类
