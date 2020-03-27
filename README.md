@@ -5,7 +5,7 @@
    - ArrayUtils     数组操作工具类
    - MapSortUtils    map排序工具类
    - CollectionUtils 集合操作
-   - DocumentUtils  文档操作
+   - DocumentUtils   文档操作
    - RegexUtils 正则操作
    - StringUtils 字符串操作
    - RandomUtils 随机操作
