@@ -1,11 +1,11 @@
 # commonutils
 ### java常用帮助类
-很多逻辑写过，为了减少重复性工作，我将平时经常用到的一些方法封装成类<br>
+很多逻辑写过,为了减少重复性工作，将平时经常用到的一些方法封装成类 <br>
 - base包下：
    - ArrayUtils     数组操作工具类
    - MapSortUtils    map排序工具类
    - CollectionUtils 集合操作
-   - DocumentUtils  文档操作
+   - DocumentUtils   文档操作
    - RegexUtils 正则操作
    - StringUtils 字符串操作
    - RandomUtils 随机操作
@@ -35,7 +35,7 @@
       - QuickSort  快速排序
       - SelectSort 选择排序
 - algo包下
-   -  astar  A*算法
+   -  astar   A*算法
    -  dijkstra  迪杰斯特拉算法
    -  tsp  旅行商问题
    -  topK    topk问题
