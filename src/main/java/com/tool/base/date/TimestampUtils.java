@@ -37,7 +37,6 @@ public class TimestampUtils {
             return "";
         }
         SimpleDateFormat sdf = DateFormatUtils.getFormat(format);
-
         return sdf.format(value);
     }
 

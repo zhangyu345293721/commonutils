@@ -8,7 +8,13 @@ import java.util.Collections;
  */
 
 public class Tour {
-    private ArrayList<City> citiesList ; // Cache
+    /**
+     * 城市缓存
+     */
+    private ArrayList<City> citiesList; // Cache
+    /**
+     * 距离初始值
+     */
     private int distance = 0;
 
     public Tour() {
@@ -16,15 +22,14 @@ public class Tour {
     }
 
 
-
-    public Tour(ArrayList<City> tour){
+    public Tour(ArrayList<City> tour) {
         citiesList = new ArrayList<City>();
         for (City city : tour) {
             this.citiesList.add(city);
         }
     }
 
-    public ArrayList<City> getCitiesList(){
+    public ArrayList<City> getCitiesList() {
         return citiesList;
     }
 
@@ -36,7 +41,7 @@ public class Tour {
         return this;
     }
 
-    public Tour generateNeighourTour(){
+    public Tour generateNeighourTour() {
         Tour newSolution = new Tour(this.citiesList);
         int tourPos1 = (int) (newSolution.numberOfCities() * Math
                 .random());
@@ -51,7 +56,7 @@ public class Tour {
     }
 
     public City getCity(int tourPosition) {
-        return (City)citiesList.get(tourPosition);
+        return (City) citiesList.get(tourPosition);
     }
 
     public void setCity(int tourPosition, City city) {
@@ -65,16 +70,20 @@ public class Tour {
     }
 
 
-    public int getDistance(){
+    /**
+     * 获取距离
+     *
+     * @return int值
+     */
+    public int getDistance() {
         if (distance == 0) {
             int tourDistance = 0;
-            for (int cityIndex=0; cityIndex < numberOfCities(); cityIndex++) {
+            for (int cityIndex = 0; cityIndex < numberOfCities(); cityIndex++) {
                 City fromCity = getCity(cityIndex);
                 City destinationCity;
-                if(cityIndex+1 < numberOfCities()){
-                    destinationCity = getCity(cityIndex+1);
-                }
-                else{
+                if (cityIndex + 1 < numberOfCities()) {
+                    destinationCity = getCity(cityIndex + 1);
+                } else {
                     destinationCity = getCity(0);
                 }
                 tourDistance += fromCity.distanceTo(destinationCity);
@@ -92,7 +101,7 @@ public class Tour {
     public String toString() {
         String geneString = "|";
         for (int i = 0; i < numberOfCities(); i++) {
-            geneString += getCity(i)+"|";
+            geneString += getCity(i) + "|";
         }
         return geneString;
     }

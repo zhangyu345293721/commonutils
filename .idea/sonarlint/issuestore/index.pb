@@ -69,8 +69,6 @@ g
 7src/test/java/com/tool/remote/GetMessageFromPython.java,6\0\603da5a947deed2c931c0720180cd0593231962e
 b
 2src/main/java/com/tool/base/sort/BinarySearch.java,1\6\16c6aeac083b10d3b29d92865ddaefd14af44be7
-]
--src/test/java/com/tool/python/ExecPython.java,3\8\385c048e16ac096466d0a6e37ebcc5210f9a60c4
 a
 1src/test/java/com/tool/string/StringTestDemo.java,2\6\2634b074aef2cfce705703f40db3125f7de3544a
 _
@@ -83,14 +81,8 @@ _
 .src/test/java/com/tool/map/LoadProperties.java,3\3\33e75d13994869c98a039082fea1c97449b91b0d
 _
 /src/test/java/com/tool/map/PropertiesTest2.java,2\0\200e4281672b588fb5ac202807d0e58b01af19f4
-X
-(src/test/java/com/tool/python/Test2.java,9\d\9d9128a258a623fa0cfbde064dedf8209b7b1bf1
-X
-(src/test/java/com/tool/python/Test3.java,9\c\9cbbaf508cff19c031e2f01c2726b98519018c74
 ^
 .src/test/java/com/tool/map/TestProperties.java,f\5\f543e9248156b1e78bec14f7132263b55171f0f0
-[
-+src/test/java/com/tool/python/JavaDemo.java,2\b\2b8033297a18a9361111f538ecbba69b1b6c3d3f
 f
 6src/main/java/com/tool/base/stream/IntStreamUtils.java,5\a\5a5210edd0fac5c19cc84fdefee443259e7c03c7
 \
@@ -185,3 +177,9 @@ h
 8src/test/java/com/tool/base/file/sort/TestQuickSort.java,d\3\d32bddd44bcd1b9f9c3eaa0d3690177e38352963
 i
 9src/test/java/com/tool/base/file/sort/TestSelectSort.java,1\d\1d2bcad2ed66ad475c004d68fc3b8930c88ebcc4
+`
+0src/main/java/com/tool/base/sort/QuickSort2.java,5\6\56a6d9fdd20dd24a13927a9d048331d3a7e6036f
+[
++src/test/java/com/tool/array/ArrayTest.java,b\7\b7482e9f088701a03d6ae1c200afd6633f19ce58
+c
+3src/test/java/com/tool/array/TestLinkedHashSet.java,5\2\5277a3d819720d4da65c36d8f3342c6f6d246b88

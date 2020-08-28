@@ -98,10 +98,10 @@ public class FileUtils {
     public static void deleteAll(String dirPath) {
         File path = new File(dirPath);
         try {
-            if (!path.exists())
-                return;// 目录不存在退出
-            if (path.isFile()) // 如果是文件删除
-            {
+            if (!path.exists()) {
+                return;
+            }
+            if (path.isFile()) {
                 path.delete();
                 return;
             }

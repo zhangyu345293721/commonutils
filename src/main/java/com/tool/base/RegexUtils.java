@@ -1,7 +1,5 @@
 package com.tool.base;
 
-import org.junit.jupiter.api.Test;
-
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -9,6 +7,14 @@ import java.util.regex.Pattern;
  * 正则表达式工具类，验证数据是否符合规范
  */
 public class RegexUtils {
+
+    private static final Pattern pattern2 = Pattern.compile("^\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$");
+    private static final Pattern pattern3 = Pattern.compile("[\u0391-\uFFE5]+$");
+    private static final Pattern pattern4 = Pattern.compile("^[-\\+]?\\d+\\.\\d+$");
+    private static final Pattern pattern5 = Pattern.compile("^[-\\+]?[\\d]+$");
+
+    private RegexUtils() {
+    }
 
     /**
      * 判断字符串是否符合正则表达式
@@ -34,8 +40,7 @@ public class RegexUtils {
         if (email == null || email.length() < 1 || email.length() > 256) {
             return false;
         }
-        Pattern pattern = Pattern.compile("^\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$");
-        return pattern.matcher(email).matches();
+        return pattern2.matcher(email).matches();
     }
 
     /**
@@ -45,8 +50,7 @@ public class RegexUtils {
      * @return 返回布尔数
      */
     public static boolean isChinese(String value) {
-        Pattern pattern = Pattern.compile("[\u0391-\uFFE5]+$");
-        return pattern.matcher(value).matches();
+        return pattern3.matcher(value).matches();
     }
 
     /**
@@ -56,8 +60,7 @@ public class RegexUtils {
      * @return 返回布尔值
      */
     public static boolean isDouble(String value) {
-        Pattern pattern = Pattern.compile("^[-\\+]?\\d+\\.\\d+$");
-        return pattern.matcher(value).matches();
+        return pattern4.matcher(value).matches();
     }
 
     /**
@@ -67,7 +70,6 @@ public class RegexUtils {
      * @return 返回布尔值
      */
     public static boolean isInteger(String value) {
-        Pattern pattern = Pattern.compile("^[-\\+]?[\\d]+$");
-        return pattern.matcher(value).matches();
+        return pattern5.matcher(value).matches();
     }
 }

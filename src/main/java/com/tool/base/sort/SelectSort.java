@@ -6,10 +6,12 @@ package com.tool.base.sort;
  * @author:zhangyu
  */
 public class SelectSort {
+
     /**
      * 选择排序
      *
      * @param arr 数组
+     * @return int[] 数组
      */
     public static int[] selectSort(int[] arr) {
         for (int i = 0; i < arr.length - 1; i++) {

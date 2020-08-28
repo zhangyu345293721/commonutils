@@ -26,6 +26,7 @@ public class TopKinChar {
      * 定义一个比较器的内部类
      */
     private class ValueComparator implements Comparator<Map.Entry<Character, Integer>> {
+        @Override
         public int compare(Map.Entry<Character, Integer> m, Map.Entry<Character, Integer> n) {
             return n.getValue() - m.getValue();
         }

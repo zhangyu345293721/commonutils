@@ -15,6 +15,7 @@ import java.util.stream.Collectors;
  */
 public class IntArrayStreamUtils {
 
+    private IntArrayStreamUtils(){}
     /**
      * 将int数组连接成字符串
      *

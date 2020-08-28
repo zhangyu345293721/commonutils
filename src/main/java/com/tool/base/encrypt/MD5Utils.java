@@ -10,6 +10,9 @@ import java.security.NoSuchAlgorithmException;
  * MD5加密
  */
 class MD5Utils {
+    private MD5Utils() {
+    }
+
     protected final static String MD5_KEY = "MD5";
 
     protected final static String SHA_KEY = "SHA1";

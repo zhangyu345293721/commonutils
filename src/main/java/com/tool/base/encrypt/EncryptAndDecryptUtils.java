@@ -7,6 +7,9 @@ package com.tool.base.encrypt;
  */
 public class EncryptAndDecryptUtils {
 
+    private EncryptAndDecryptUtils() {
+    }
+
     /**
      * MD5 加密
      *

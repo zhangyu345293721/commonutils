@@ -7,6 +7,9 @@ import java.io.UnsupportedEncodingException;
  */
 class Base64Utils {
 
+    private Base64Utils() {
+    }
+
     private static char[] base64EncodeChars = new char[]{'A', 'B', 'C', 'D',
             'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q',
             'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd',
@@ -80,16 +83,16 @@ class Base64Utils {
             do {
                 b1 = base64DecodeChars[data[i++]];
             } while (i < len && b1 == -1);
-            if (b1 == -1)
+            if (b1 == -1) {
                 break;
-
+            }
             do {
                 b2 = base64DecodeChars[data[i++]];
             } while (i < len && b2 == -1);
-            if (b2 == -1)
+            if (b2 == -1) {
                 break;
+            }
             sb.append((char) ((b1 << 2) | ((b2 & 0x30) >>> 4)));
-
             do {
                 b3 = data[i++];
                 if (b3 == 61)
@@ -99,7 +102,6 @@ class Base64Utils {
             if (b3 == -1)
                 break;
             sb.append((char) (((b2 & 0x0f) << 4) | ((b3 & 0x3c) >>> 2)));
-
             do {
                 b4 = data[i++];
                 if (b4 == 61)

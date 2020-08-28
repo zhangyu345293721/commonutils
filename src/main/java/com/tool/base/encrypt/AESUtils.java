@@ -9,7 +9,10 @@ import java.security.SecureRandom;
 /**
  * AES加解密
  */
-class AESUtils {
+public class AESUtils {
+    private AESUtils() {
+    }
+
     /**
      * 默认秘钥
      */
@@ -44,27 +47,23 @@ class AESUtils {
     }
 
     private static byte[] base64Decode(String base64Code) throws Exception {
-        return base64Code == null ? null : new Base64Utils().decrypt(base64Code);
+        return base64Code == null ? null : Base64Utils.decrypt(base64Code);
     }
 
     private static byte[] aesEncryptToBytes(String content, String encryptKey) throws Exception {
         KeyGenerator kgen = KeyGenerator.getInstance("AES");
         kgen.init(128, new SecureRandom(encryptKey.getBytes()));
-
         Cipher cipher = Cipher.getInstance("AES");
         cipher.init(Cipher.ENCRYPT_MODE, new SecretKeySpec(kgen.generateKey().getEncoded(), "AES"));
-
         return cipher.doFinal(content.getBytes("utf-8"));
     }
 
     private static String aesDecryptByBytes(byte[] encryptBytes, String decryptKey) throws Exception {
         KeyGenerator kgen = KeyGenerator.getInstance("AES");
         kgen.init(128, new SecureRandom(decryptKey.getBytes()));
-
         Cipher cipher = Cipher.getInstance("AES");
         cipher.init(Cipher.DECRYPT_MODE, new SecretKeySpec(kgen.generateKey().getEncoded(), "AES"));
         byte[] decryptBytes = cipher.doFinal(encryptBytes);
-
         return new String(decryptBytes);
     }
 

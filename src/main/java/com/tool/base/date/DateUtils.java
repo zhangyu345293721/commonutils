@@ -10,6 +10,9 @@ import java.util.Date;
  * 时间处理工具类，主要是日期时间转换
  */
 public class DateUtils {
+    private DateUtils() {
+    }
+
     private static final String[] weeks = {"星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"};
 
     /**
@@ -158,7 +161,6 @@ public class DateUtils {
         if (null != date && !"".equals(date)) {
             newDate = string2Date(date, format);
         }
-
         return addDayToDate(day, newDate, format);
     }
 
@@ -173,9 +175,7 @@ public class DateUtils {
     public static String addHourToDate(int hour, Date date, String format) {
         Calendar calendar = getCalendar(date, format);
         SimpleDateFormat sdf = DateFormatUtils.getFormat(format);
-
         calendar.add(Calendar.HOUR, hour);
-
         return sdf.format(calendar.getTime());
     }
 
@@ -192,7 +192,6 @@ public class DateUtils {
         if (null != date && !"".equals(date)) {
             newDate = string2Date(date, format);
         }
-
         return addHourToDate(hour, newDate, format);
     }
 
@@ -207,9 +206,7 @@ public class DateUtils {
     public static String addMinuteToDate(int minute, Date date, String format) {
         Calendar calendar = getCalendar(date, format);
         SimpleDateFormat sdf = DateFormatUtils.getFormat(format);
-
         calendar.add(Calendar.MINUTE, minute);
-
         return sdf.format(calendar.getTime());
     }
 
@@ -226,7 +223,6 @@ public class DateUtils {
         if (null != date && !"".equals(date)) {
             newDate = string2Date(date, format);
         }
-
         return addMinuteToDate(minute, newDate, format);
     }
 
@@ -241,9 +237,7 @@ public class DateUtils {
     public static String addSecondToDate(int second, Date date, String format) {
         Calendar calendar = getCalendar(date, format);
         SimpleDateFormat sdf = DateFormatUtils.getFormat(format);
-
         calendar.add(Calendar.SECOND, second);
-
         return sdf.format(calendar.getTime());
     }
 
@@ -261,7 +255,6 @@ public class DateUtils {
         if (null != date && !"".equals(date)) {
             newDate = string2Date(date, format);
         }
-
         return addSecondToDate(second, newDate, format);
     }
 
@@ -276,10 +269,8 @@ public class DateUtils {
         if (date == null) {
             date = getCurrentDate(format);
         }
-
         Calendar calender = Calendar.getInstance();
         calender.setTime(date);
-
         return calender;
     }
 
@@ -293,10 +284,8 @@ public class DateUtils {
         if (value == null || "".equals(value)) {
             return null;
         }
-
         SimpleDateFormat sdf = DateFormatUtils.getFormat(DateFormatUtils.DATE_FORMAT2);
         Date date = null;
-
         try {
             value = DateFormatUtils.formatDate(value, DateFormatUtils.DATE_FORMAT2);
             date = sdf.parse(value);
@@ -317,10 +306,8 @@ public class DateUtils {
         if (value == null || "".equals(value)) {
             return null;
         }
-
         SimpleDateFormat sdf = DateFormatUtils.getFormat(format);
         Date date = null;
-
         try {
             value = DateFormatUtils.formatDate(value, format);
             date = sdf.parse(value);
@@ -355,7 +342,6 @@ public class DateUtils {
         if (value == null) {
             return null;
         }
-
         SimpleDateFormat sdf = DateFormatUtils.getFormat(DateFormatUtils.DATE_FORMAT2);
         return sdf.format(value);
     }
@@ -403,7 +389,6 @@ public class DateUtils {
     public static int getCurrentMonth(String value) {
         Date date = string2Date(value, DateFormatUtils.DATE_MONTH);
         Calendar calendar = getCalendar(date, DateFormatUtils.DATE_MONTH);
-
         return calendar.get(Calendar.MONTH);
     }
 
@@ -426,7 +411,6 @@ public class DateUtils {
     public static int getCurrentDay(String value) {
         Date date = string2Date(value, DateFormatUtils.DATE_DAY);
         Calendar calendar = getCalendar(date, DateFormatUtils.DATE_DAY);
-
         return calendar.get(Calendar.DATE);
     }
 
@@ -439,7 +423,6 @@ public class DateUtils {
     public static String getCurrentWeek(Date value) {
         Calendar calendar = getCalendar(value, DateFormatUtils.DATE_FORMAT1);
         int weekIndex = calendar.get(Calendar.DAY_OF_WEEK) - 1 < 0 ? 0 : calendar.get(Calendar.DAY_OF_WEEK) - 1;
-
         return weeks[weekIndex];
     }
 
@@ -474,7 +457,6 @@ public class DateUtils {
     public static int getCurrentHour(String value) {
         Date date = string2Date(value, DateFormatUtils.DATE_HOUR);
         Calendar calendar = getCalendar(date, DateFormatUtils.DATE_HOUR);
-
         return calendar.get(Calendar.DATE);
     }
 
@@ -498,7 +480,6 @@ public class DateUtils {
     public static int getCurrentMinute(String value) {
         Date date = string2Date(value, DateFormatUtils.DATE_MINUTE);
         Calendar calendar = getCalendar(date, DateFormatUtils.DATE_MINUTE);
-
         return calendar.get(Calendar.MINUTE);
     }
 
@@ -516,14 +497,12 @@ public class DateUtils {
         int n = 0;
         startDay = DateFormatUtils.formatDate(startDay, "yyyy-MM-dd");
         endDay = DateFormatUtils.formatDate(endDay, "yyyy-MM-dd");
-
         String formatStyle = "yyyy-MM-dd";
         if (1 == stype) {
             formatStyle = "yyyy-MM";
         } else if (2 == stype) {
             formatStyle = "yyyy";
         }
-
         endDay = endDay == null ? getCurrentTime("yyyy-MM-dd") : endDay;
 
         DateFormat df = new SimpleDateFormat(formatStyle);
@@ -562,7 +541,6 @@ public class DateUtils {
         if (endTime == null || "".equals(endTime)) {
             endTime = getCurrentTime();
         }
-
         SimpleDateFormat sdf = DateFormatUtils.getFormat("");
         int value = 0;
         try {
@@ -694,6 +672,6 @@ public class DateUtils {
     public static String getDateTime(long time) {
         Date d = new Date(time);
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss:SSS");
-        return String.valueOf(sdf.format(d));
+        return sdf.format(d);
     }
 }

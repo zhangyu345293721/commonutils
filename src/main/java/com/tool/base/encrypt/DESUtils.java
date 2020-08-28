@@ -9,7 +9,10 @@ import java.security.SecureRandom;
 /**
  * DES加解密工具类
  */
-class DESUtils {
+public class DESUtils {
+    private DESUtils() {
+    }
+
     /**
      * 默认key
      */

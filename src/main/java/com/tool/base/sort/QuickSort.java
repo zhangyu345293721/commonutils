@@ -1,5 +1,9 @@
 package com.tool.base.sort;
 
+import com.google.common.primitives.Ints;
+
+import java.util.Arrays;
+
 /**
  * 类描述:二分查找的精髓在于控制循环的次数，进行遍历
  *
@@ -45,5 +49,22 @@ public class QuickSort {
         if (end < high) {
             quickSort(arr, end + 1, high);
         }
+    }
+
+    /**
+     * 快速排序,递归算法
+     *
+     * @param arr 输入数组
+     * @return
+     */
+    public static int[] quickSort(int[] arr) {
+        if (arr == null || arr.length < 2) {
+            return arr;
+        }
+        int pivot = arr[arr.length / 2];
+        int[] left = Arrays.stream(arr).boxed().filter(e -> e < pivot).mapToInt(e -> e).toArray();
+        int[] middle = Arrays.stream(arr).boxed().filter(e -> e == pivot).mapToInt(e -> e).toArray();
+        int[] right = Arrays.stream(arr).boxed().filter(e -> e > pivot).mapToInt(e -> e).toArray();
+        return Ints.concat(quickSort(left), middle, quickSort(right));
     }
 }

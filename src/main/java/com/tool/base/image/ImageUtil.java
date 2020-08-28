@@ -15,6 +15,9 @@ import java.io.IOException;
  */
 public class ImageUtil {
 
+    private ImageUtil() {
+    }
+
     public static final float DEFAULT_QUALITY = 0.2125f;
 
 

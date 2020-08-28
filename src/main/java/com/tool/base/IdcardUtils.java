@@ -12,6 +12,9 @@ import java.util.regex.Pattern;
  */
 public class IdcardUtils {
 
+    private IdcardUtils() {
+    }
+
     /**
      * 省，直辖市代码表： { 11:"北京",12:"天津",13:"河北",14:"山西",15:"内蒙古",
      * 21:"辽宁",22:"吉林",23:"黑龙江",31:"上海",32:"江苏",
@@ -328,17 +331,6 @@ public class IdcardUtils {
                 return 1.0;
             }
             return Math.exp((energy - newEnergy) / temperature);
-        }
-
-        public static void main(String[] args) {
-            long startTime = System.currentTimeMillis();
-            SimulatedAnnealing sa = new SimulatedAnnealing();
-            sa.initTour();
-            Tour besTour = sa.anneal();
-            System.out.println("Final solution distance: " + besTour.getDistance());
-            System.out.println("Tour: " + besTour);
-            long endTime = System.currentTimeMillis();
-            System.out.println("运行时间:" + (endTime - startTime) / 1000 + "s");
         }
     }
 }

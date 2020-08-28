@@ -76,8 +76,9 @@ public class ConvertDateUtils {
      * @return 返回字符串
      */
     public static String strToStr(String str, String defaultValue) {
-        if ((str != null) && (!(str.isEmpty())))
+        if ((str != null) && (!(str.isEmpty()))) {
             defaultValue = str;
+        }
         return defaultValue;
     }
 

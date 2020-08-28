@@ -7,6 +7,9 @@ package com.tool.base.stream;
  * @author: zhangyu
  */
 public class IntStreamUtils {
+    private IntStreamUtils() {
+    }
+
     /**
      * 2进制字符串
      *
@@ -57,7 +60,7 @@ public class IntStreamUtils {
         }
         char[] chs = str.toCharArray();
         int[] arrays = new int[chs.length];
-        for (int i=0;i<chs.length; i++) {
+        for (int i = 0; i < chs.length; i++) {
             arrays[i] = chs[i] - '0';
         }
         return arrays;

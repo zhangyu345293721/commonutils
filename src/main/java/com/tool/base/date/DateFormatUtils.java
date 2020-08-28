@@ -76,8 +76,9 @@ public class DateFormatUtils {
      */
     public static String formatString(String value) {
         String sReturn = "";
-        if (value == null || "".equals(value))
+        if (value == null || "".equals(value)) {
             return sReturn;
+        }
         if (value.length() == 14) {   //长度为14格式转换成yyyy-mm-dd hh:mm:ss
             sReturn = value.substring(0, 4) + "-" + value.substring(4, 6) + "-" + value.substring(6, 8) + " "
                     + value.substring(8, 10) + ":" + value.substring(10, 12) + ":" + value.substring(12, 14);
@@ -106,11 +107,13 @@ public class DateFormatUtils {
         SimpleDateFormat outFmt = null;
         ParsePosition pos = new ParsePosition(0);
         date = date.replace("-", "").replace(":", "");
-        if ((date == null) || ("".equals(date.trim())))
+        if ((date == null) || ("".equals(date.trim()))) {
             return "";
+        }
         try {
-            if (Long.parseLong(date) == 0L)
+            if (Long.parseLong(date) == 0L) {
                 return "";
+            }
         } catch (Exception nume) {
             return date;
         }
@@ -138,8 +141,9 @@ public class DateFormatUtils {
                 default:
                     return date;
             }
-            if ((dt = inFmt.parse(date, pos)) == null)
+            if ((dt = inFmt.parse(date, pos)) == null) {
                 return date;
+            }
             if ((format == null) || ("".equals(format.trim()))) {
                 outFmt = new SimpleDateFormat("yyyy年MM月dd日");
             } else {
