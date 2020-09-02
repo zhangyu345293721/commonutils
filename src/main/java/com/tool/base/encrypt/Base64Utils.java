@@ -4,6 +4,8 @@ import java.io.UnsupportedEncodingException;
 
 /**
  * BASE64加解密工具类
+ *
+ * @author zhangyu
  */
 class Base64Utils {
 

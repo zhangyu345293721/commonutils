@@ -74,9 +74,7 @@ public class DateUtils {
     public static String addYearToDate(int year, Date date, String format) {
         Calendar calender = getCalendar(date, format);
         SimpleDateFormat sdf = DateFormatUtils.getFormat(format);
-
         calender.add(Calendar.YEAR, year);
-
         return sdf.format(calender.getTime());
     }
 
@@ -93,7 +91,6 @@ public class DateUtils {
         if (null != date && !"".equals(date)) {
             newDate = string2Date(date, format);
         }
-
         return addYearToDate(year, newDate, format);
     }
 
@@ -108,9 +105,7 @@ public class DateUtils {
     public static String addMothToDate(int month, Date date, String format) {
         Calendar calender = getCalendar(date, format);
         SimpleDateFormat sdf = DateFormatUtils.getFormat(format);
-
         calender.add(Calendar.MONTH, month);
-
         return sdf.format(calender.getTime());
     }
 
@@ -127,7 +122,6 @@ public class DateUtils {
         if (null != date && !"".equals(date)) {
             newDate = string2Date(date, format);
         }
-
         return addMothToDate(month, newDate, format);
     }
 
@@ -142,9 +136,7 @@ public class DateUtils {
     public static String addDayToDate(int day, Date date, String format) {
         Calendar calendar = getCalendar(date, format);
         SimpleDateFormat sdf = DateFormatUtils.getFormat(format);
-
         calendar.add(Calendar.DATE, day);
-
         return sdf.format(calendar.getTime());
     }
 
@@ -626,7 +618,7 @@ public class DateUtils {
         now.setTime(date);
         int today = now.get(Calendar.DAY_OF_WEEK);
         int first_day_of_week = now.get(Calendar.DATE) + 2 - today; // 星期一
-        now.set(now.DATE, first_day_of_week);
+        now.set(Calendar.DATE, first_day_of_week);
         return now.getTime();
     }
 
@@ -642,12 +634,13 @@ public class DateUtils {
         int today = now.get(Calendar.DAY_OF_WEEK);
         int first_day_of_week = now.get(Calendar.DATE) + 2 - today; // 星期一
         int last_day_of_week = first_day_of_week + 6; // 星期日
-        now.set(now.DATE, last_day_of_week);
+        now.set(Calendar.DATE, last_day_of_week);
         return now.getTime();
     }
 
     /**
-     * 把时间转成毫秒值    2019-09-27 15:18:48:310
+     * 把时间转成毫秒值
+     * 如:2019-09-27 15:18:48:310
      *
      * @param date 时间参数
      * @return 返回长整型13位毫秒数
@@ -664,7 +657,7 @@ public class DateUtils {
     }
 
     /**
-     * 将毫秒值转成日期时间    2019-09-27 15:18:48:310
+     * 将毫秒值转成日期时间
      *
      * @param time 时间参数
      * @return 返回长整型13位毫秒数

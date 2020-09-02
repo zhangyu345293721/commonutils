@@ -177,9 +177,9 @@ h
 8src/test/java/com/tool/base/file/sort/TestQuickSort.java,d\3\d32bddd44bcd1b9f9c3eaa0d3690177e38352963
 i
 9src/test/java/com/tool/base/file/sort/TestSelectSort.java,1\d\1d2bcad2ed66ad475c004d68fc3b8930c88ebcc4
-`
-0src/main/java/com/tool/base/sort/QuickSort2.java,5\6\56a6d9fdd20dd24a13927a9d048331d3a7e6036f
 [
 +src/test/java/com/tool/array/ArrayTest.java,b\7\b7482e9f088701a03d6ae1c200afd6633f19ce58
 c
 3src/test/java/com/tool/array/TestLinkedHashSet.java,5\2\5277a3d819720d4da65c36d8f3342c6f6d246b88
+\
+,.idea/inspectionProfiles/Project_Default.xml,4\9\496a238a6afa168dbaf6efd37bb459331589579c

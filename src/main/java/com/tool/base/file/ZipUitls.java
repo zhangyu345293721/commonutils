@@ -13,6 +13,10 @@ import java.util.zip.ZipOutputStream;
  * 文件压缩、解压工具类。文件压缩格式为zip
  */
 public class ZipUitls {
+
+    private ZipUitls() {
+    }
+
     /**
      * 文件后缀名
      */
@@ -28,7 +32,6 @@ public class ZipUitls {
     public static void zipFile(String resourcePath, String targetPath) {
         File resourcesFile = new File(resourcePath);
         File targetFile = new File(targetPath);
-
         //目的文件不存在，则新建
         if (!targetFile.exists()) {
             targetFile.mkdirs();
@@ -40,7 +43,6 @@ public class ZipUitls {
         try {
             FileOutputStream outputStream = new FileOutputStream(targetPath + "//" + targetName);
             out = new ZipOutputStream(new BufferedOutputStream(outputStream));
-
             compressedFile(out, resourcesFile, "");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -69,16 +71,13 @@ public class ZipUitls {
                 File[] files = file.listFiles();
                 // 将文件夹添加到下一级打包目录
                 out.putNextEntry(new ZipEntry(dir + "/"));
-
                 dir = dir.length() == 0 ? "" : dir + "/";
-
                 // 循环将文件夹中的文件打包
                 for (int i = 0; i < files.length; i++) {
                     compressedFile(out, files[i], dir + files[i].getName()); // 递归处理
                 }
             } else {    //如果是文件则打包处理
                 fis = new FileInputStream(file);
-
                 out.putNextEntry(new ZipEntry(dir));
                 // 进行写操作
                 int j = 0;

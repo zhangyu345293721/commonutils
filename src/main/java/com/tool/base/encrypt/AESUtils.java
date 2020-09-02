@@ -8,6 +8,8 @@ import java.security.SecureRandom;
 
 /**
  * AES加解密
+ *
+ * @author zhangyu
  */
 public class AESUtils {
     private AESUtils() {

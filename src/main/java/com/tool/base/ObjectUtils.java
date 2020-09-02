@@ -6,6 +6,10 @@ package com.tool.base;
  * @author: zhangyu
  */
 public class ObjectUtils {
+
+    private ObjectUtils() {
+    }
+
     /**
      * 判断对象数组是否为空
      *

@@ -21,8 +21,7 @@ public class TimestampUtils {
         if (value == null || !"".equals(value.trim())) {
             return Timestamp.valueOf("");
         }
-        Timestamp ts = Timestamp.valueOf(value);
-        return ts;
+        return Timestamp.valueOf(value);
     }
 
     /**

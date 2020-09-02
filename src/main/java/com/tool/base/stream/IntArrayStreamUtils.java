@@ -15,7 +15,9 @@ import java.util.stream.Collectors;
  */
 public class IntArrayStreamUtils {
 
-    private IntArrayStreamUtils(){}
+    private IntArrayStreamUtils() {
+    }
+
     /**
      * 将int数组连接成字符串
      *
@@ -26,8 +28,7 @@ public class IntArrayStreamUtils {
         if (ArrayUtils.isEmpty(arrays)) {
             return "";
         }
-        String collect = Arrays.stream(arrays).boxed().map(e -> String.valueOf(e)).collect(Collectors.joining(""));
-        return collect;
+        return Arrays.stream(arrays).boxed().map(e -> String.valueOf(e)).collect(Collectors.joining(""));
     }
 
     /**
@@ -36,26 +37,23 @@ public class IntArrayStreamUtils {
      * @param arrays int数组
      * @return
      */
-    public List<Integer> intArray2List(int[] arrays) {
+    public List<Integer> intArray2IntList(int[] arrays) {
         if (ArrayUtils.isEmpty(arrays)) {
             return new ArrayList<>();
         }
-        List<Integer> list = Arrays.stream(arrays).boxed().collect(Collectors.toList());
-        return list;
+        return Arrays.stream(arrays).boxed().collect(Collectors.toList());
     }
 
     /**
      * List< Integer > 转 int[]
      *
-     * @param list int类型链表
+     * @param intList int类型链表
      * @return int数组
      */
-    public int[] list2IntArray(List<Integer> list) {
-        if (CollectionUtil.isEmpty(list)) {
+    public int[] intList2IntArray(List<Integer> intList) {
+        if (CollectionUtil.isEmpty(intList)) {
             return new int[0];
         }
-        int[] ints = list.stream().mapToInt(Integer::valueOf).toArray();
-        return ints;
+        return intList.stream().mapToInt(Integer::valueOf).toArray();
     }
-
 }

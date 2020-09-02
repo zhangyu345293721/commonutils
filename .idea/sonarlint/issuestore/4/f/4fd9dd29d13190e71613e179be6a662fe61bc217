@@ -1,16 +1,15 @@
 
-<squid:S1659N" Declare "b3" on a separate line.(ùìÃ»üÿÿÿÿ
-Qsquid:S1118":Add a private constructor to hide the implicit public one.(€­Ú«
-<squid:S1659%" Declare "b2" on a separate line.(ßöôÿùÿÿÿÿ
-vsquid:S1149""_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(í…Ò‰
-nsquid:S3776I"RRefactor this method to reduce its Cognitive Complexity from 27 to the 15 allowed.(Õ­ìáúÿÿÿÿ
+vsquid:S1149%"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(í…Ò‰
+<squid:S1659(" Declare "b2" on a separate line.(ßöôÿùÿÿÿÿ
+<squid:S1659(" Declare "b3" on a separate line.(ßöôÿùÿÿÿÿ
+vsquid:S1149M"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(í…Ò‰
+<squid:S1659Q" Declare "b4" on a separate line.(ùìÃ»üÿÿÿÿ
+fsquid:S1192c"JDefine a constant instead of duplicating this literal "iso8859-1" 3 times.(ýˆ÷ûþÿÿÿÿ
 o
-squid:S135&"YReduce the total number of break and continue statements in this loop to use at most one.(Øæ¥Â
-fsquid:S1192`"JDefine a constant instead of duplicating this literal "iso8859-1" 3 times.(ýˆ÷ûþÿÿÿÿ
-<squid:S1659%" Declare "b3" on a separate line.(ßöôÿùÿÿÿÿ
-<squid:S1659N" Declare "b4" on a separate line.(ùìÃ»üÿÿÿÿ
+squid:S135)"YReduce the total number of break and continue statements in this loop to use at most one.(Øæ¥Â
+csquid:S00112L"FDefine and throw a dedicated exception instead of using a generic one.(Õ­ìáúÿÿÿÿ
+nsquid:S3776L"RRefactor this method to reduce its Cognitive Complexity from 27 to the 15 allowed.(Õ­ìáúÿÿÿÿ
+<squid:S1659Q" Declare "b3" on a separate line.(ùìÃ»üÿÿÿÿ
 o
-squid:S135O"YReduce the total number of break and continue statements in this loop to use at most one.(Øæ¥Â
-vsquid:S1149J"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(í…Ò‰
-<squid:S1659N" Declare "b2" on a separate line.(ùìÃ»üÿÿÿÿ
-csquid:S00112I"FDefine and throw a dedicated exception instead of using a generic one.(Õ­ìáúÿÿÿÿ
+squid:S135R"YReduce the total number of break and continue statements in this loop to use at most one.(Øæ¥Â
+<squid:S1659Q" Declare "b2" on a separate line.(ùìÃ»üÿÿÿÿ

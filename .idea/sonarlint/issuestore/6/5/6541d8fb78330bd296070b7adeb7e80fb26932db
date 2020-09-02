@@ -1,35 +1,34 @@
 
-ksquid:S00112œ"FDefine and throw a dedicated exception instead of using a generic one.(‹ãÊˆıÿÿÿÿ8îøÔí÷-
-csquid:S00112u"FDefine and throw a dedicated exception instead of using a generic one.(Ñ¡ÊÚùÿÿÿÿ
-dsquid:S00112„"FDefine and throw a dedicated exception instead of using a generic one.(’Ò½îúÿÿÿÿ
-dsquid:S00112Ü"FDefine and throw a dedicated exception instead of using a generic one.(„–¸‰şÿÿÿÿ
-^squid:S00112¬"FDefine and throw a dedicated exception instead of using a generic one.(«ù—
-_squid:S00112®"FDefine and throw a dedicated exception instead of using a generic one.(Û¤¯
-dsquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(Ñ¡ÊÚùÿÿÿÿ
-^squid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(åøj
-_squid:S00112î"FDefine and throw a dedicated exception instead of using a generic one.(ÑÈ¼à
-_squid:S00112 "FDefine and throw a dedicated exception instead of using a generic one.(ã‹å§
-%squid:RedundantThrowsDeclarationCheck¬"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(«ù—
-osquid:S00117¢"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½Î‘³üÿÿÿÿ
-_squid:S00112¦"FDefine and throw a dedicated exception instead of using a generic one.(Ê Ÿ“
-_squid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(ã‹å§
-_squid:S00112‰"FDefine and throw a dedicated exception instead of using a generic one.(“°¹¼
-dsquid:S00112É"FDefine and throw a dedicated exception instead of using a generic one.(£Ô€Œúÿÿÿÿ
-jsquid:S00117÷"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é¨Í¿
-osquid:S00117ø"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Í”¥æüÿÿÿÿ
-csquid:S00112K"FDefine and throw a dedicated exception instead of using a generic one.(Şúú şÿÿÿÿ
-^squid:S00112;"FDefine and throw a dedicated exception instead of using a generic one.(ëÀ»Ş
-^squid:S00112%"FDefine and throw a dedicated exception instead of using a generic one.(ëÀ»Ş
-osquid:S00117õ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰ÿò³úÿÿÿÿ
-Tsquid:S00107p"<Method has 8 parameters, which is greater than 7 authorized.(Ğ²ıœ
-Tsquid:S00107ˆ"<Method has 9 parameters, which is greater than 7 authorized.(ÖØàs
-Qsquid:S1118":Add a private constructor to hide the implicit public one.(Æë…
-dsquid:S00112Å"FDefine and throw a dedicated exception instead of using a generic one.(„–¸‰şÿÿÿÿ
-Xsquid:S1854ï";Remove this useless assignment to local variable "quality".(ô¡¯µúÿÿÿÿ
-csquid:S00112\"FDefine and throw a dedicated exception instead of using a generic one.(Ñô—¡ıÿÿÿÿ
-dsquid:S00112ì"FDefine and throw a dedicated exception instead of using a generic one.(ğ«³Øøÿÿÿÿ
-jsquid:S00117ö"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Í£æŠ
-dsquid:S00112·"FDefine and throw a dedicated exception instead of using a generic one.(£Ô€Œúÿÿÿÿ
-%squid:RedundantThrowsDeclarationCheckî"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(ÑÈ¼à
-_squid:S00112Ÿ"FDefine and throw a dedicated exception instead of using a generic one.(¿İ”
-_squid:S00112â"FDefine and throw a dedicated exception instead of using a generic one.(«Š„ú
+dsquid:S00112È"FDefine and throw a dedicated exception instead of using a generic one.(„–¸‰şÿÿÿÿ
+osquid:S00117û"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Í”¥æüÿÿÿÿ
+dsquid:S00112‡"FDefine and throw a dedicated exception instead of using a generic one.(’Ò½îúÿÿÿÿ
+Xsquid:S1854ò";Remove this useless assignment to local variable "quality".(ô¡¯µúÿÿÿÿ
+dsquid:S00112º"FDefine and throw a dedicated exception instead of using a generic one.(£Ô€Œúÿÿÿÿ
+jsquid:S00117ú"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é¨Í¿
+_squid:S00112Œ"FDefine and throw a dedicated exception instead of using a generic one.(“°¹¼
+_squid:S00112ñ"FDefine and throw a dedicated exception instead of using a generic one.(ÑÈ¼à
+ksquid:S00112Ÿ"FDefine and throw a dedicated exception instead of using a generic one.(‹ãÊˆıÿÿÿÿ8îøÔí÷-
+_squid:S00112å"FDefine and throw a dedicated exception instead of using a generic one.(«Š„ú
+_squid:S00112±"FDefine and throw a dedicated exception instead of using a generic one.(Û¤¯
+^squid:S00112¡"FDefine and throw a dedicated exception instead of using a generic one.(åøj
+dsquid:S00112Ì"FDefine and throw a dedicated exception instead of using a generic one.(£Ô€Œúÿÿÿÿ
+%squid:RedundantThrowsDeclarationCheck¯"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(«ù—
+_squid:S00112©"FDefine and throw a dedicated exception instead of using a generic one.(Ê Ÿ“
+osquid:S00117ø"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰ÿò³úÿÿÿÿ
+dsquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(Ñ¡ÊÚùÿÿÿÿ
+Tsquid:S00107s"<Method has 8 parameters, which is greater than 7 authorized.(Ğ²ıœ
+dsquid:S00112ß"FDefine and throw a dedicated exception instead of using a generic one.(„–¸‰şÿÿÿÿ
+_squid:S00112£"FDefine and throw a dedicated exception instead of using a generic one.(ã‹å§
+csquid:S00112x"FDefine and throw a dedicated exception instead of using a generic one.(Ñ¡ÊÚùÿÿÿÿ
+^squid:S00112¯"FDefine and throw a dedicated exception instead of using a generic one.(«ù—
+osquid:S00117¥"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½Î‘³üÿÿÿÿ
+Tsquid:S00107‹"<Method has 9 parameters, which is greater than 7 authorized.(ÖØàs
+^squid:S00112("FDefine and throw a dedicated exception instead of using a generic one.(ëÀ»Ş
+^squid:S00112>"FDefine and throw a dedicated exception instead of using a generic one.(ëÀ»Ş
+csquid:S00112N"FDefine and throw a dedicated exception instead of using a generic one.(Şúú şÿÿÿÿ
+_squid:S00112¢"FDefine and throw a dedicated exception instead of using a generic one.(¿İ”
+_squid:S00112‘"FDefine and throw a dedicated exception instead of using a generic one.(ã‹å§
+jsquid:S00117ù"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Í£æŠ
+dsquid:S00112ï"FDefine and throw a dedicated exception instead of using a generic one.(ğ«³Øøÿÿÿÿ
+%squid:RedundantThrowsDeclarationCheckñ"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(ÑÈ¼à
+csquid:S00112_"FDefine and throw a dedicated exception instead of using a generic one.(Ñô—¡ıÿÿÿÿ

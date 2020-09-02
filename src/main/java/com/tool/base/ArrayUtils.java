@@ -1,7 +1,5 @@
 package com.tool.base;
 
-import org.junit.jupiter.api.Test;
-
 import java.lang.reflect.Array;
 import java.util.*;
 
@@ -11,6 +9,9 @@ import java.util.*;
  * @author: zhangyu
  */
 public class ArrayUtils {
+    private ArrayUtils() {
+    }
+
     /**
      * 判断数组是否为空
      *

@@ -1,12 +1,12 @@
 package com.tool.base;
 
-import org.junit.jupiter.api.Test;
-
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
 /**
  * 金钱处理工具类
+ *
+ * @author zhangyu
  */
 public class MoneyUtils {
 

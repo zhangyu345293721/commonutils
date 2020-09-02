@@ -8,6 +8,8 @@ import java.security.SecureRandom;
 
 /**
  * DES加解密工具类
+ *
+ * @author zhangyu
  */
 public class DESUtils {
     private DESUtils() {
@@ -23,7 +25,7 @@ public class DESUtils {
      *
      * @param data 待加密字符串
      * @param key  校验位
-     * @return
+     * @return 字符串
      */
     @SuppressWarnings("restriction")
     protected static String encrypt(String data, String key) {

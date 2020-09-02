@@ -51,6 +51,8 @@ public class IntStreamUtils {
     }
 
     /**
+     * 将字符链表变成数字数组
+     *
      * @param str 输入字符串
      * @return int类型数组
      */

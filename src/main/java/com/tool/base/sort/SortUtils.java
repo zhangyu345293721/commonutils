@@ -5,12 +5,55 @@ import com.google.common.primitives.Ints;
 import java.util.Arrays;
 
 /**
- * 类描述:二分查找的精髓在于控制循环的次数，进行遍历
+ * 二分查找，选择排序，快速排序，冒泡排序
  *
- * @author: zhangyu
- */
+ * @author zhangyu
+ **/
 
-public class QuickSort {
+public class SortUtils {
+
+    private SortUtils() {
+    }
+
+    /**
+     * 如果找到了直接进行返回，如果没有找到就继续去找
+     *
+     * @param arr 数组
+     * @param key 关键字
+     * @return 位置
+     */
+    public int binarySearch(int[] arr, int key) {
+        int i = 0;
+        int j = arr.length - 1;
+        while (i < j) {
+            int middle = i + (j - i) / 2;  //防止middle的和超过Integer.MAX_VALUE的值
+            if (key > arr[middle]) {
+                i = middle + 1;
+            } else if (key < arr[middle]) {
+                j = middle - 1;
+            } else {
+                return middle;
+            }
+        }
+        return -1;
+    }
+
+    /**
+     * 选择排序
+     *
+     * @param arr 数组
+     * @return int[] 数组
+     */
+    public static int[] selectSort(int[] arr) {
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[i] > arr[j]) {
+                    swap(arr, i, j);
+                }
+            }
+        }
+        return arr;
+    }
 
     /**
      * 快速排序,递归算法
@@ -66,5 +109,33 @@ public class QuickSort {
         int[] middle = Arrays.stream(arr).boxed().filter(e -> e == pivot).mapToInt(e -> e).toArray();
         int[] right = Arrays.stream(arr).boxed().filter(e -> e > pivot).mapToInt(e -> e).toArray();
         return Ints.concat(quickSort(left), middle, quickSort(right));
+    }
+
+    /**
+     * 冒泡排序
+     *
+     * @param arr 数组
+     */
+    public void bubbleSort(int[] arr) {
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = 0; j < arr.length - 1 - i; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    swap(arr, j, j + 1);
+                }
+            }
+        }
+    }
+
+    /**
+     * 交换他们数字的值
+     *
+     * @param arr 数组
+     * @param i   位置i
+     * @param j   位置j
+     */
+    private static void swap(int[] arr, int i, int j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
     }
 }

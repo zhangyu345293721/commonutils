@@ -45,7 +45,6 @@ public class AStar {
         if (mapInfo == null) {
             return;
         }
-        // clean
         openList.clear();
         closeList.clear();
         // 开始搜索

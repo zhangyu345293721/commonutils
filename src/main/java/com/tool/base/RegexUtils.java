@@ -5,6 +5,8 @@ import java.util.regex.Pattern;
 
 /**
  * 正则表达式工具类，验证数据是否符合规范
+ *
+ * @author zhangyu
  */
 public class RegexUtils {
 

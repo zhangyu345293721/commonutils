@@ -42,7 +42,7 @@ public class EncryptAndDecryptUtils {
      * BASE64 加密
      *
      * @param value 待加密字符串
-     * @return
+     * @return 字符串
      */
     public static String base64Encrypt(String value) {
         String result = null;
@@ -50,14 +50,13 @@ public class EncryptAndDecryptUtils {
             result = Base64Utils.encrypt(value.getBytes());
         }
         return result;
-
     }
 
     /**
      * BASE64 解密
      *
      * @param value 待解密字符串
-     * @return
+     * @return 字符串
      */
     public static String base64Decrypt(String value) {
         String result = null;
@@ -103,7 +102,6 @@ public class EncryptAndDecryptUtils {
     public static String desDecrypt(String value, String key) {
         key = key == null ? DESUtils.KEY : key;
         String result = null;
-
         try {
             if (value != null && !"".equals(value.trim())) {
                 result = DESUtils.decrypt(value, key);
@@ -131,7 +129,6 @@ public class EncryptAndDecryptUtils {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
         return result;
     }
 
@@ -140,7 +137,7 @@ public class EncryptAndDecryptUtils {
      *
      * @param value 待解密内容
      * @param key   秘钥
-     * @return
+     * @return 加密后字符串
      */
     public static String aesDecrypt(String value, String key) {
         key = key == null ? AESUtils.KEY : key;
@@ -152,7 +149,6 @@ public class EncryptAndDecryptUtils {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
         return result;
     }
 }

@@ -8,6 +8,8 @@ import java.security.NoSuchAlgorithmException;
 
 /**
  * MD5加密
+ *
+ * @author zhangyu
  */
 class MD5Utils {
     private MD5Utils() {
@@ -27,7 +29,6 @@ class MD5Utils {
             messageDigest.update(inputByteArray);
             // 转换并返回结果，也是字节数组，包含16个元素
             byte[] resultByteArray = messageDigest.digest();
-            // 字符数组转换成字符串返回
             return byteArrayToHex(resultByteArray);
         } catch (NoSuchAlgorithmException e) {
             return null;
@@ -50,7 +51,6 @@ class MD5Utils {
             resultCharArray[index++] = hexDigits[b >>> 4 & 0xf];
             resultCharArray[index++] = hexDigits[b & 0xf];
         }
-        // 字符数组组合成字符串返回
         return new String(resultCharArray);
     }
 
@@ -59,7 +59,6 @@ class MD5Utils {
      *
      * @param: path:文件的地址
      * @return: 传递文件的md5, 得到文件的32位字符串
-     * @author: zhangyu
      */
     public static String getFileMD5Value(String path) {
         BigInteger bi = null;

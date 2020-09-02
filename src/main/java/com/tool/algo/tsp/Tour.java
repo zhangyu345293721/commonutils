@@ -93,6 +93,11 @@ public class Tour {
         return distance;
     }
 
+    /**
+     * 获取城市的个数
+     *
+     * @return 城市数量
+     */
     public int numberOfCities() {
         return citiesList.size();
     }

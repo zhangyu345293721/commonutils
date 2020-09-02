@@ -98,6 +98,11 @@ public class DateFormatUtils {
         return sReturn;
     }
 
+    /**
+     * @param date   日期
+     * @param format 日期格式
+     * @return 将日期格式转成字符串
+     */
     public static String formatDate(String date, String format) {
         if (date == null || "".equals(date)) {
             return "";

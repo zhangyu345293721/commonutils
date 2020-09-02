@@ -13,8 +13,14 @@ import java.util.zip.GZIPInputStream;
 
 /**
  * 文件工具类
+ *
+ * @author zhangyu
  */
 public class FileUtils {
+
+    private FileUtils() {
+    }
+
     private static final String FOLDER_SEPARATOR = "/";
     private static final char EXTENSION_SEPARATOR = '.';
 
@@ -44,7 +50,7 @@ public class FileUtils {
     public static String getFileName(String type, String prefix, String suffix) {
         String date = DateUtils.getCurrentTime("yyyyMMddHH24mmss");   //当前时间
         String random = RandomUtils.generateNumberString(10);   //10位随机数
-        //返回文件名
+        // 返回文件名
         return prefix + date + random + suffix + "" + type;
     }
 
@@ -168,12 +174,11 @@ public class FileUtils {
     private static void copySimpleFile(File inputFile, File outputFile,
                                        boolean isOverWrite) throws IOException {
         if (outputFile.exists()) {
-            if (isOverWrite) {        //可以覆盖
+            if (isOverWrite) {
                 if (!outputFile.delete()) {
                     throw new RuntimeException(outputFile.getPath() + "无法覆盖！");
                 }
             } else {
-                // 不允许覆盖
                 return;
             }
         }
@@ -290,7 +295,7 @@ public class FileUtils {
                 filesPath.add(tempList[i].toString());
             }
             if (tempList[i].isDirectory()) {
-                //这里就不递归了，
+                //这里就不递归了
             }
         }
         return filesPath;
