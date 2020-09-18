@@ -1,11 +1,10 @@
 
-[squid:S2147]"DCombine this catch with the one at line 91, which has the same body.(ï­£Ä
-Fsquid:S2093("*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ
-Qsquid:S1118":Add a private constructor to hide the implicit public one.(¸ŠÑÉ
-?squid:S1148\"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
-?squid:S1148d"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
-?squid:S1148^"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
-?squid:S1148."#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
-Fsquid:S2093B"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ
-?squid:S11484"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
-jsquid:S2095)"NUse try-with-resources or close this "FileOutputStream" in a "finally" clause.(ðýäúÿÿÿÿÿ
+[squid:S2147\"DCombine this catch with the one at line 90, which has the same body.(ï­£Ä
+?squid:S11480"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+?squid:S1148c"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+jsquid:S2095,"NUse try-with-resources or close this "FileOutputStream" in a "finally" clause.(ðýäúÿÿÿÿÿ
+?squid:S11486"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+?squid:S1148]"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+Fsquid:S2093D"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ
+?squid:S1148["#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+Fsquid:S2093+"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ

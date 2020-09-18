@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
  * --18位身份证号码
  * ：第7、8、9、10位为出生年份(四位数)，第11、第12位为出生月份，第13、14位代表出生日期，第17位代表性别，奇数为男，偶数为女。
  *
- * @author zhangyu
+ * @author zhangyu (zhangyuyu417@gmail.com)
  */
 public class IdcardUtils {
 

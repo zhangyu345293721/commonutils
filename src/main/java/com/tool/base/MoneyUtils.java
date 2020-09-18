@@ -6,7 +6,7 @@ import java.math.RoundingMode;
 /**
  * 金钱处理工具类
  *
- * @author zhangyu
+ * @author zhangyu (zhangyuyu417@gmail.com)
  */
 public class MoneyUtils {
 

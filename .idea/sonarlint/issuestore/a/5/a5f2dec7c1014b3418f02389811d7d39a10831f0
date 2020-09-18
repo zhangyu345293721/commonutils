@@ -1,7 +1,6 @@
 
-Esquid:S1940H")Use the opposite operator ("<=") instead.(á“éøúÿÿÿÿ
-bsquid:UselessImportCheck"7Remove this unused import 'org.junit.jupiter.api.Test'.(Öºˆß8˜¤èœÃ.
 ]squid:S1118":Add a private constructor to hide the implicit public one.(âæíÓûÿÿÿÿ8˜¤èœÃ.
-Esquid:S1940M")Use the opposite operator ("<=") instead.(˜ãÈÒøÿÿÿÿ
 nsquid:S3776<"RRefactor this method to reduce its Cognitive Complexity from 32 to the 15 allowed.(Û³éÈýÿÿÿÿ
+Esquid:S1940H")Use the opposite operator ("<=") instead.(á“éøúÿÿÿÿ
 Esquid:S1940{")Use the opposite operator ("<=") instead.(á“éøúÿÿÿÿ
+Esquid:S1940M")Use the opposite operator ("<=") instead.(˜ãÈÒøÿÿÿÿ

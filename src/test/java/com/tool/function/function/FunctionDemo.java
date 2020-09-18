@@ -58,7 +58,7 @@ public class FunctionDemo {
 
     @Test
     public void toDoubleFunction() {
-        ToDoubleFunction<Float> toDoubleFunction = floa -> floa.doubleValue();
+        ToDoubleFunction<Float> toDoubleFunction = f -> f.doubleValue();
         System.out.println(toDoubleFunction.applyAsDouble(12345f));
     }
 }

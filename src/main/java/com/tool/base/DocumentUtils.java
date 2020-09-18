@@ -6,7 +6,7 @@ import org.dom4j.Document;
 /**
  * 将xml转成字符串
  *
- * @author: zhangyu
+ * @author zhangyu (zhangyuyu417@gmail.com)
  */
 public class DocumentUtils {
 

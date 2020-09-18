@@ -14,7 +14,7 @@ import java.util.zip.GZIPInputStream;
 /**
  * 文件工具类
  *
- * @author zhangyu
+ * @author zhangyu (zhangyuyu417@gmail.com)
  */
 public class FileUtils {
 
@@ -149,10 +149,10 @@ public class FileUtils {
      * @throws IOException
      */
     private static void copyPri(File inputFile, File outputFile, boolean isOverWrite) throws IOException {
-        if (inputFile.isFile()) {        //文件
+        if (inputFile.isFile()) {
             copySimpleFile(inputFile, outputFile, isOverWrite);
         } else {
-            if (!outputFile.exists()) {        //文件夹
+            if (!outputFile.exists()) {
                 outputFile.mkdirs();
             }
             // 循环子文件夹

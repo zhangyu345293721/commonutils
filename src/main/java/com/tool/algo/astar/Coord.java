@@ -3,7 +3,7 @@ package com.tool.algo.astar;
 /**
  * 坐标
  *
- * @author: zhangyu
+ * @author zhangyu (zhangyuyu417@gmail.com)
  */
 public class Coord {
     /**

@@ -6,7 +6,7 @@ import java.util.*;
 /**
  * 数组的工具类
  *
- * @author: zhangyu
+ * @author zhangyu (zhangyuyu417@gmail.com)
  */
 public class ArrayUtils {
     private ArrayUtils() {

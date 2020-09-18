@@ -9,7 +9,7 @@ import java.security.SecureRandom;
 /**
  * AES加解密
  *
- * @author zhangyu
+ * @author zhangyu (zhangyuyu417@gmail.com)
  */
 public class AESUtils {
     private AESUtils() {

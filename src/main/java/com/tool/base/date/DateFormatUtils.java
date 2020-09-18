@@ -6,6 +6,7 @@ import java.util.Date;
 
 /**
  * 日期格式化工具类
+ * @author zhangyu (zhangyuyu417@gmail.com)
  */
 public class DateFormatUtils {
     private DateFormatUtils() {

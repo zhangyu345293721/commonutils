@@ -8,6 +8,8 @@ import java.util.Date;
 
 /**
  * 时间处理工具类，主要是日期时间转换
+ *
+ * @author zhangyu (zhangyuyu417@gmail.com)
  */
 public class DateUtils {
     private DateUtils() {

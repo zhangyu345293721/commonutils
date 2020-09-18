@@ -3,7 +3,7 @@ package com.tool.algo.astar;
 /**
  * 路径结点
  *
- * @author: zhangyu
+ * @author zhangyu (zhangyuyu417@gmail.com)
  */
 public class Node implements Comparable<Node> {
     /**

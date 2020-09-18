@@ -9,7 +9,7 @@ import java.security.SecureRandom;
 /**
  * DES加解密工具类
  *
- * @author zhangyu
+ * @author zhangyu (zhangyuyu417@gmail.com)
  */
 public class DESUtils {
     private DESUtils() {

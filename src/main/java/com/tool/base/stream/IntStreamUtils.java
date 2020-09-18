@@ -4,7 +4,7 @@ package com.tool.base.stream;
  * int工具类
  * 不同的是parseInt()方法的返回值是int类型，而valueOf()返回值是Integer对象
  *
- * @author: zhangyu
+ * @author zhangyu (zhangyuyu417@gmail.com)
  */
 public class IntStreamUtils {
     private IntStreamUtils() {

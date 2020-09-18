@@ -6,7 +6,7 @@ import java.util.function.Function;
 /**
  * 集合工具类
  *
- * @author :zhangyu
+ * @author zhangyu (zhangyuyu417@gmail.com)
  */
 public class CollectionUtil {
 

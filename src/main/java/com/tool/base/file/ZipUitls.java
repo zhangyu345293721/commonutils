@@ -11,6 +11,8 @@ import java.util.zip.ZipOutputStream;
 
 /**
  * 文件压缩、解压工具类。文件压缩格式为zip
+ *
+ * @author zhangyu (zhangyuyu417@gmail.com)
  */
 public class ZipUitls {
 

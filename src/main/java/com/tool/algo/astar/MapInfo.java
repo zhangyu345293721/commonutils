@@ -3,7 +3,7 @@ package com.tool.algo.astar;
 /**
  * 包含地图所需的所有输入数据
  *
- * @author: zhangyu
+ * @author zhangyu (zhangyuyu417@gmail.com)
  */
 public class MapInfo {
     /**

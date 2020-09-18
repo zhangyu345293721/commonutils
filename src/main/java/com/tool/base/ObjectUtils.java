@@ -3,7 +3,7 @@ package com.tool.base;
 /**
  * 判断对象是否为空
  *
- * @author: zhangyu
+ * @author zhangyu (zhangyuyu417@gmail.com)
  */
 public class ObjectUtils {
 

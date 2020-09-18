@@ -7,7 +7,7 @@ import java.util.Arrays;
 /**
  * 二分查找，选择排序，快速排序，冒泡排序
  *
- * @author zhangyu
+ * @author zhangyu (zhangyuyu417@gmail.com)
  **/
 
 public class SortUtils {

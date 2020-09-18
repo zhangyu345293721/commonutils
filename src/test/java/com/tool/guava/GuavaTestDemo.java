@@ -49,7 +49,8 @@ public class GuavaTestDemo {
         set.add("a");
         set.add("a");
         set.add("c");
-        System.out.println(set.count("a"));
+        System.out.println(new HashSet<>(set));
+        System.out.println(set.count("d"));
         System.out.println(set.elementSet());
     }
 
@@ -62,6 +63,7 @@ public class GuavaTestDemo {
         Map<String, String> map1 = new HashMap<>();
         biMap.forEach((k, v) -> map1.put(k, v));
         System.out.println(biMap.get("a"));
+        System.out.println(map1);
     }
 
     // 测试使用table
@@ -135,7 +137,7 @@ public class GuavaTestDemo {
     //按照条件过滤
     @Test
     public void collectFilterTestDemo() {
-        ImmutableList<String> names = ImmutableList.of("begin", "code", "Guava", "Java");
+        ImmutableList<String> names = ImmutableList.of("begin", "code", "guava", "Java");
         Iterable<String> filter = Iterables.filter(names, Predicates.or(Predicates.equalTo("guava"), Predicates.equalTo("Java")));
         System.out.println(filter); // [Guava, Java]
     }
@@ -186,7 +188,7 @@ public class GuavaTestDemo {
         p.setPassword("123");
         p.setAge(23);
 
-        String str = MoreObjects.toStringHelper("Person").add("age", p.getAge()).toString();
+        String str = MoreObjects.toStringHelper("hahhah").add("age", p.getAge()).toString();
         System.out.println(str);
     }
 
@@ -209,7 +211,7 @@ public class GuavaTestDemo {
     @Test
     public void computeTimesTestDemo() {
         Stopwatch stopwatch = Stopwatch.createStarted();
-        for (int i = 0; i < 10000000; i++) {
+        for (int i = 0; i < 100000000; i++) {
             // do some thing
         }
         long nanos = stopwatch.elapsed(TimeUnit.MILLISECONDS);

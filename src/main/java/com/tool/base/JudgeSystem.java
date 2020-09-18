@@ -1,11 +1,10 @@
 package com.tool.base;
 
-import org.junit.jupiter.api.Test;
 
 /**
  * 判断运行的系统是windows还是linux
  *
- * @author: zhangyu
+ * @author zhangyu (zhangyuyu417@gmail.com)
  */
 public class JudgeSystem {
 

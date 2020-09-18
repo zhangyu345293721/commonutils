@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 /**
  * jdk8流的工具类
  *
- * @author: zhangyu
+ * @author zhangyu (zhangyuyu417@gmail.com)
  */
 public class IntArrayStreamUtils {
 

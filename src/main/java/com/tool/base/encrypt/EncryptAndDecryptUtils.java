@@ -4,6 +4,8 @@ package com.tool.base.encrypt;
 /**
  * 加解密工具类<br>
  * 工具类包括：MD5加密、SHA加密、Base64加解密、DES加解密、AES加解密<br>
+ *
+ * @author zhangyu (zhangyuyu417@gmail.com)
  */
 public class EncryptAndDecryptUtils {
 

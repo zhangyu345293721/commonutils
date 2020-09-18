@@ -9,7 +9,7 @@ import java.security.NoSuchAlgorithmException;
 /**
  * MD5加密
  *
- * @author zhangyu
+ * @author zhangyu (zhangyuyu417@gmail.com)
  */
 class MD5Utils {
     private MD5Utils() {

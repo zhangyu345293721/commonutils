@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 /**
- * @author: zhangyu
+ * @@author zhangyu (zhangyuyu417@gmail.com)
  */
 
 public class Tour {

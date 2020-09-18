@@ -7,7 +7,7 @@ import java.util.PriorityQueue;
 /**
  * topK算法
  *
- * @author: zhangyu
+ * @@author zhangyu (zhangyuyu417@gmail.com)
  */
 public class TopK {
     @Test

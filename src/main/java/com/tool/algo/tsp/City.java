@@ -1,7 +1,7 @@
 package com.tool.algo.tsp;
 
 /**
- * @author: zhangyu
+ * @author zhangyu (zhangyuyu417@gmail.com)
  */
 
 public class City {

@@ -6,6 +6,8 @@ import java.util.Date;
 
 /**
  * TimeStamp工具类，提供TimeStamp与String、Date的转换
+ *
+ * @author zhangyu (zhangyuyu417@gmail.com)
  */
 public class TimestampUtils {
     private TimestampUtils() {

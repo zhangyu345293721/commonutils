@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * map进行测试
  *
- * @author: zhangyu
+ * @@author zhangyu (zhangyuyu417@gmail.com)
  */
 public class MapSortUtils {
     /**
