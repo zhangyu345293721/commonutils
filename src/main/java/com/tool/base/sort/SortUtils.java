@@ -98,7 +98,7 @@ public class SortUtils {
      * 快速排序,递归算法
      *
      * @param arr 输入数组
-     * @return
+     * @return  新数组
      */
     public static int[] quickSort(int[] arr) {
         if (arr == null || arr.length < 2) {
