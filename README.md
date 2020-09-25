@@ -25,7 +25,7 @@
    - file    文件操作
      -  FileUtils 文件工具类
      -  ZipUitls 文件压缩工具类
-   - image   图像处理
+   - image    图像处理
      -  ImageUtil 图像处理工具类
    - math    数学操作
       - BigDecimalUtils 大数计算工具类
