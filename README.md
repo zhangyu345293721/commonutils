@@ -1,6 +1,6 @@
 # commonutils
 ###  java常用帮助类
-很多逻辑写过,为了减少重复性工作，将平时经常用到的一些方法封装成类 <br>
+很多逻辑写过,为了减少重复性工作,将平时经常用到的一些方法封装成类 <br>
 - base包下：
    - ArrayUtils     数组操作工具类
    - MapSortUtils    map排序工具类
@@ -10,7 +10,7 @@
    - StringUtils 字符串操作
    - RandomUtils 随机操作
    - ConvertDateUtils 转换日期工具类
-   - IdcardUtils 身份证识别工具类
+   - IdcardUtils  身份证识别工具类
    - MoneyUtils  钱处理工具类
    - date   时间转换
       -  DateFormatUtils 日期时间转换工具类
