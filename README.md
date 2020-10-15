@@ -34,8 +34,3 @@
       - BubbleSort 冒泡排序
       - QuickSort  快速排序
       - SelectSort 选择排序
-- algo包下
-   -  astar   A*算法
-   -  dijkstra 迪杰斯特拉算法
-   -  tsp  旅行商问题
-   -  topK    topk问题
