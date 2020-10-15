@@ -1,7 +1,7 @@
 
-Tsquid:S1197U"8Move the array designator from the variable to the type.(İ®¼ºüÿÿÿÿ
-œ%squid:RedundantThrowsDeclarationCheckÓ"jRemove the declaration of thrown exception 'java.lang.NumberFormatException' which is a runtime exception.(Ù§î
-Asquid:S1125‚")Remove the literal "false" boolean value.(×ºò²
 Osquid:S1197"8Move the array designator from the variable to the type.(Ô—â™
 Gsquid:S1148Â"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8í÷Îûù-
+Tsquid:S1197U"8Move the array designator from the variable to the type.(İ®¼ºüÿÿÿÿ
 Tsquid:S1197_"8Move the array designator from the variable to the type.(ëÌÎ¾ûÿÿÿÿ
+œ%squid:RedundantThrowsDeclarationCheckÓ"jRemove the declaration of thrown exception 'java.lang.NumberFormatException' which is a runtime exception.(Ù§î
+Asquid:S1125‚")Remove the literal "false" boolean value.(×ºò²

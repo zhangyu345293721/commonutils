@@ -15,7 +15,7 @@ public class ArrayUtils {
     /**
      * 判断数组是否为空
      *
-     * @param array
+     * @param array 数组
      * @return 布尔值
      */
     public static boolean isNotEmpty(Object[] array) {
@@ -25,7 +25,7 @@ public class ArrayUtils {
     /**
      * 判断数组是否非空
      *
-     * @param array array
+     * @param array 数组
      * @return 返回布尔值
      */
     public static boolean isEmpty(Object[] array) {
@@ -369,7 +369,7 @@ public class ArrayUtils {
      *
      * @param array 数组
      * @param arg   元素参数
-     * @return
+     * @return 布尔值
      */
     public static boolean contains(byte[] array, byte arg) {
         return indexOf(array, arg) >= 0;
@@ -380,7 +380,7 @@ public class ArrayUtils {
      *
      * @param array 数组
      * @param arg   元素参数
-     * @return
+     * @return 布尔值
      */
     public static boolean contains(char[] array, char arg) {
         return indexOf(array, arg) >= 0;
@@ -391,7 +391,7 @@ public class ArrayUtils {
      *
      * @param array 数组
      * @param arg   元素参数
-     * @return
+     * @return 布尔值
      */
     public static boolean contains(short[] array, short arg) {
         return indexOf(array, arg) >= 0;

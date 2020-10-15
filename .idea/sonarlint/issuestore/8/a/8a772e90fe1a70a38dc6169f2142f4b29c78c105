@@ -1,8 +1,8 @@
 
+usquid:S12104"YOverride "equals(Object obj)" to comply with the contract of the "compareTo(T o)" method.(áÂ¦ÿÿÿÿÿ
+~"squid:ClassVariableVisibilityCheck"QMake coord a static final constant or non-public and provide accessors if needed.(–˜×
+€"squid:ClassVariableVisibilityCheck"MMake H a static final constant or non-public and provide accessors if needed.(´Š¦ øÿÿÿÿ
+isquid:S00116"LRename this field "H" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´Š¦ øÿÿÿÿ
 isquid:S00116"LRename this field "G" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜Üà½şÿÿÿÿ
 €"squid:ClassVariableVisibilityCheck"MMake G a static final constant or non-public and provide accessors if needed.(˜Üà½şÿÿÿÿ
-usquid:S12104"YOverride "equals(Object obj)" to comply with the contract of the "compareTo(T o)" method.(áÂ¦ÿÿÿÿÿ
-€"squid:ClassVariableVisibilityCheck"MMake H a static final constant or non-public and provide accessors if needed.(´Š¦ øÿÿÿÿ
 €"squid:ClassVariableVisibilityCheck"RMake parent a static final constant or non-public and provide accessors if needed.(ÑÅÿ
-isquid:S00116"LRename this field "H" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´Š¦ øÿÿÿÿ
-~"squid:ClassVariableVisibilityCheck"QMake coord a static final constant or non-public and provide accessors if needed.(–˜×

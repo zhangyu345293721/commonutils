@@ -8,6 +8,8 @@ package com.tool.base;
  */
 public class JudgeSystem {
 
+    private JudgeSystem() {
+    }
 
     /**
      * 判断运行的系统是不是linux
@@ -26,7 +28,6 @@ public class JudgeSystem {
 
     /**
      * 判断系统是windows还是linux
-     *
      */
     public String judgeSystem() {
         if (isLinux()) {

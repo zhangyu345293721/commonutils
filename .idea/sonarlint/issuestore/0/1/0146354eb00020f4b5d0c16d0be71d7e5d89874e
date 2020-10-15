@@ -1,34 +1,0 @@
-
-Dsquid:S3457…"%String contains no format specifiers.(ï«¨°8˜ÃÿÃ.
-usquid:S3457º"Q%n should be used in place of \n to produce the platform-specific line separator.(–ÍéØûÿÿÿÿ8˜ÃÿÃ.
-"squid:ClassVariableVisibilityCheck"SMake mMatrix a static final constant or non-public and provide accessors if needed.(ÙÒİıÿÿÿÿ8ú—×ëÄ.
-qsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(³¢Üü8˜ÃÿÃ.
-tsquid:S3457)"Q%n should be used in place of \n to produce the platform-specific line separator.(µ¹‹€ıÿÿÿÿ8˜ÃÿÃ.
-msquid:S00100Ü"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶œ±8˜ÃÿÃ.
-Hsquid:S1125´")Remove the literal "false" boolean value.(¿íŞğ8˜ÃÿÃ.
-Isquid:S3457æ"%String contains no format specifiers.(ûùÆ‰úÿÿÿÿ8˜ÃÿÃ.
-nsquid:S00100½"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·ƒÈÓ8˜ÃÿÃ.
-Hsquid:S3457)"%String contains no format specifiers.(µ¹‹€ıÿÿÿÿ8˜ÃÿÃ.
-osquid:S3457I"Q%n should be used in place of \n to produce the platform-specific line separator.(öàŸ‰8˜ÃÿÃ.
-psquid:S3457æ"Q%n should be used in place of \n to produce the platform-specific line separator.(ï«¨°8˜ÃÿÃ.
-†"squid:ClassVariableVisibilityCheck"QMake mVexs a static final constant or non-public and provide accessors if needed.(³¡ñ½8™úÖëÄ.
-Gsquid:S1148Œ"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8˜ÃÿÃ.
-Csquid:S3457I"%String contains no format specifiers.(öàŸ‰8˜ÃÿÃ.
-"squid:ClassVariableVisibilityCheck"SMake mEdgNum a static final constant or non-public and provide accessors if needed.(ÔØø¶üÿÿÿÿ8™úÖëÄ.
-vsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(ë¸µØùÿÿÿÿ8˜ÃÿÃ.
-Dsquid:S3457Ö"%String contains no format specifiers.(ï«¨°8˜ÃÿÃ.
-nsquid:S00100Ë"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨É…Å8˜ÃÿÃ.
-psquid:S3457…"Q%n should be used in place of \n to produce the platform-specific line separator.(ï«¨°8˜ÃÿÃ.
-Hsquid:S1125«")Remove the literal "false" boolean value.(–Ã–©8˜ÃÿÃ.
-usquid:S3457¼"Q%n should be used in place of \n to produce the platform-specific line separator.(ëœô´ıÿÿÿÿ8´¶î÷-
-psquid:S3457Ö"Q%n should be used in place of \n to produce the platform-specific line separator.(ï«¨°8˜ÃÿÃ.
-psquid:S3457Æ"Q%n should be used in place of \n to produce the platform-specific line separator.(ï«¨°8˜ÃÿÃ.
-psquid:S3457ù"Q%n should be used in place of \n to produce the platform-specific line separator.(ï«¨°8˜ÃÿÃ.
-Dsquid:S3457Æ"%String contains no format specifiers.(ï«¨°8˜ÃÿÃ.
-Csquid:S3457&"%String contains no format specifiers.(Õ…ò…8½É¡•ß-
-psquid:S3457€"Q%n should be used in place of \n to produce the platform-specific line separator.(êå8˜ÃÿÃ.
-Dsquid:S3457æ"%String contains no format specifiers.(ï«¨°8˜ÃÿÃ.
-Isquid:S3457Ğ"%String contains no format specifiers.(ÿïÿÿÿÿÿ8˜ÃÿÃ.
-Dsquid:S3457€"%String contains no format specifiers.(êå8˜ÃÿÃ.
-Hsquid:S3457$"%String contains no format specifiers.(·¦ñùÿÿÿÿ8˜ÃÿÃ.
-Dsquid:S3457ù"%String contains no format specifiers.(ï«¨°8˜ÃÿÃ.
