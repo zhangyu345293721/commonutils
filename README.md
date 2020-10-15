@@ -1,16 +1,16 @@
-# commonutils
-###  java常用帮助类
-很多逻辑写过,为了减少重复性工作，将平时经常用到的一些方法封装成类 <br>
+#  commonutils
+###    java  常用帮助类
+很多逻辑写过,为了减少重复性工作,将平时经常用到的一些方法封装成类 <br>
 - base包下：
-   - ArrayUtils     数组操作工具类
-   - MapSortUtils    map排序工具类
+   - ArrayUtils    数组操作工具类
+   - MapSortUtils   map排序工具类
    - CollectionUtils 集合操作
-   - DocumentUtils   文档操作
+   - DocumentUtils  文档操作
    - RegexUtils 正则操作
    - StringUtils 字符串操作
    - RandomUtils 随机操作
    - ConvertDateUtils 转换日期工具类
-   - IdcardUtils 身份证识别工具类
+   - IdcardUtils  身份证识别工具类
    - MoneyUtils  钱处理工具类
    - date   时间转换
       -  DateFormatUtils 日期时间转换工具类
@@ -25,7 +25,7 @@
    - file    文件操作
      -  FileUtils 文件工具类
      -  ZipUitls 文件压缩工具类
-   - image   图像处理
+   - image    图像处理
      -  ImageUtil 图像处理工具类
    - math    数学操作
       - BigDecimalUtils 大数计算工具类
@@ -34,8 +34,3 @@
       - BubbleSort 冒泡排序
       - QuickSort  快速排序
       - SelectSort 选择排序
-- algo包下
-   -  astar   A*算法
-   -  dijkstra  迪杰斯特拉算法
-   -  tsp  旅行商问题
-   -  topK    topk问题
