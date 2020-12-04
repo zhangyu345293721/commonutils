@@ -1,5 +1,5 @@
 # commonutils
-###    java    常用帮助类
+###    java     常用帮助类
 很多逻辑写过,为了减少重复性工作, 将平时经常用到的一些方法封装成工具类 <br>
 - base包下：
    - ArrayUtils   数组操作工具类
