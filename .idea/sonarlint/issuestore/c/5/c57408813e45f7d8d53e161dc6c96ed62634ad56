@@ -1,13 +1,13 @@
 
-osquid:S1192ì"KDefine a constant instead of duplicating this literal "yyyy-MM-dd" 4 times.(ğ£¨µüÿÿÿÿ8İ·–Ã.
-Gsquid:S1148¨"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8İ·–Ã.
-vsquid:S00117ş"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Å³÷Œşÿÿÿÿ8…éŸœé-
-Gsquid:S1148Ÿ"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8İ·–Ã.
-vsquid:S00117ı"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“øØêşÿÿÿÿ8İ·–Ã.
-Gsquid:S1148ı"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8İ·–Ã.
-Gsquid:S1148µ"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8İ·–Ã.
 Esquid:S1905‰"&Remove this unnecessary cast to "int".(è§¹8İ·–Ã.
+Gsquid:S1148ı"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8İ·–Ã.
 ?squid:S11486"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
-Bsquid:S1148Å"#Use a logger to log this exception.(òçøì8İ·–Ã.
+osquid:S1192ì"KDefine a constant instead of duplicating this literal "yyyy-MM-dd" 4 times.(ğ£¨µüÿÿÿÿ8İ·–Ã.
 vsquid:S00117î"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“øØêşÿÿÿÿ8İ·–Ã.
+Gsquid:S1148¨"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8İ·–Ã.
+vsquid:S00117ı"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“øØêşÿÿÿÿ8İ·–Ã.
+vsquid:S00117ş"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Å³÷Œşÿÿÿÿ8…éŸœé-
+Bsquid:S1148Å"#Use a logger to log this exception.(òçøì8İ·–Ã.
+Gsquid:S1148µ"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8İ·–Ã.
 Gsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8İ·–Ã.
+Gsquid:S1148Ÿ"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8İ·–Ã.

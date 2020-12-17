@@ -99,7 +99,7 @@ public class EncryptAndDecryptUtils {
      *
      * @param value 待解密字符
      * @param key   若key为空，则使用默认key
-     * @return
+     * @return 字符串
      */
     public static String desDecrypt(String value, String key) {
         key = key == null ? DESUtils.KEY : key;

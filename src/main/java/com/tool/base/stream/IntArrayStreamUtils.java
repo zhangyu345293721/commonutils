@@ -35,7 +35,7 @@ public class IntArrayStreamUtils {
      * int数组变成字list
      *
      * @param arrays int数组
-     * @return
+     * @return list
      */
     public List<Integer> intArray2IntList(int[] arrays) {
         if (ArrayUtils.isEmpty(arrays)) {
@@ -55,5 +55,18 @@ public class IntArrayStreamUtils {
             return new int[0];
         }
         return intList.stream().mapToInt(Integer::valueOf).toArray();
+    }
+
+    /**
+     * Integer[] 转 int[]
+     *
+     * @param intArray Integer类型数组
+     * @return int数组
+     */
+    public int[] intsArray2IntArray(Integer[] intArray) {
+        if (ArrayUtils.isEmpty(intArray)) {
+            return new int[0];
+        }
+        return Arrays.stream(intArray).mapToInt(e -> e).toArray();
     }
 }

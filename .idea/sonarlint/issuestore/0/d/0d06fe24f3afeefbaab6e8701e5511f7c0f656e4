@@ -1,8 +1,0 @@
-
-isquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(ô®f
-_squid:S1126Ô"AReplace this if-then-else statement by a single return statement.(É”“A8øü¹Ã.
-osquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(âééıúÿÿÿÿ
-osquid:S00117…"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Àí’–ÿÿÿÿÿ
-osquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(üÛï‘øÿÿÿÿ
-osquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(Å³”åüÿÿÿÿ
-jsquid:S00117‚"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡º™Ü
