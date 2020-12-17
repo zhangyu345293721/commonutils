@@ -1,8 +1,8 @@
-#  commonutils
-###    java  常用帮助类
-很多逻辑写过,为了减少重复性工作,将平时经常用到的一些方法封装成类 <br>
+# commonutils
+###    java      常用帮助类
+ 很多逻辑写过,为了减少重复性工作, 将平时经常用到的一些方法封装成工具类 <br>
 - base包下：
-   - ArrayUtils    数组操作工具类
+   - ArrayUtils   数组操作工具类
    - MapSortUtils   map排序工具类
    - CollectionUtils 集合操作
    - DocumentUtils  文档操作
@@ -27,7 +27,7 @@
      -  ZipUitls 文件压缩工具类
    - image    图像处理
      -  ImageUtil 图像处理工具类
-   - math    数学操作
+   - math     数学操作
       - BigDecimalUtils 大数计算工具类
    - sort        排序
       - BinarySearch 二分查找
