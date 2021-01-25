@@ -1,6 +1,8 @@
 package com.tool.base;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -521,5 +523,31 @@ public class StringUtils {
                     arg == null ? NULL : arg.toString());
         }
         return origin;
+    }
+
+    /**
+     * 将字符串转成字符分段链表
+     *
+     * @param str    字符串
+     * @param length 要切成的字符长度
+     * @return 字符串链表
+     */
+    public static List<String> getStrList(String str, int length) {
+        if (isEmpty(str)) {
+            return new ArrayList<>();
+        }
+        List<String> result = new ArrayList<>();
+        int start = 0;
+        int end = str.length();
+        while (start < end) {
+            int last = start + length;
+            if (last < end) {
+                result.add(str.substring(start, last));
+            } else {
+                result.add(str.substring(start, end));
+            }
+            start += length;
+        }
+        return result;
     }
 }

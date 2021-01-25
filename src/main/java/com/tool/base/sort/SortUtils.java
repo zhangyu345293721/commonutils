@@ -56,13 +56,24 @@ public class SortUtils {
     }
 
     /**
+     * 快速排序
+     *
+     * @param arr 数组
+     */
+    public static void quickSort(int[] arr) {
+        int low = 0;
+        int high = arr.length - 1;
+        quickSortHelper(arr, low, high);
+    }
+
+    /**
      * 快速排序,递归算法
      *
      * @param arr  数组
      * @param low  低位
      * @param high 高位
      */
-    public static void quickSort(int[] arr, int low, int high) {
+    public static void quickSortHelper(int[] arr, int low, int high) {
         int start = low;
         int end = high;
         int key = arr[start];
@@ -72,35 +83,32 @@ public class SortUtils {
                 end--;
             }
             if (arr[end] <= key) {
-                int temp = arr[end];
-                arr[end] = arr[start];
-                arr[start] = temp;
+                swap(arr, start, end);
             }
             // 要从前到后进行比较
             while (start < end && arr[start] <= key) {
                 start++;
             }
             if (arr[start] >= key) {
-                int temp = arr[start];
-                arr[start] = arr[end];
-                arr[end] = temp;
+                swap(arr, start, end);
             }
         }
         if (start > low) {
-            quickSort(arr, low, start - 1);
+            quickSortHelper(arr, low, start - 1);
         }
         if (end < high) {
-            quickSort(arr, end + 1, high);
+            quickSortHelper(arr, end + 1, high);
         }
     }
+
 
     /**
      * 快速排序,递归算法
      *
      * @param arr 输入数组
-     * @return  新数组
+     * @return 新数组
      */
-    public static int[] quickSort(int[] arr) {
+    public static int[] quickSort2(int[] arr) {
         if (arr == null || arr.length < 2) {
             return arr;
         }
@@ -108,7 +116,7 @@ public class SortUtils {
         int[] left = Arrays.stream(arr).boxed().filter(e -> e < pivot).mapToInt(e -> e).toArray();
         int[] middle = Arrays.stream(arr).boxed().filter(e -> e == pivot).mapToInt(e -> e).toArray();
         int[] right = Arrays.stream(arr).boxed().filter(e -> e > pivot).mapToInt(e -> e).toArray();
-        return Ints.concat(quickSort(left), middle, quickSort(right));
+        return Ints.concat(quickSort2(left), middle, quickSort2(right));
     }
 
     /**
