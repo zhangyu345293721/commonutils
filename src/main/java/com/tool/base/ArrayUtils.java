@@ -691,4 +691,22 @@ public class ArrayUtils {
             return es[index++];
         }
     }
+
+    /**
+     * 链表中随机选择一定数量的元素
+     *
+     * @param list 对象链表
+     * @param num  选择链表长度
+     * @return 字符串链表
+     */
+    public static <T> List<T> getRandomList(List<T> list, int num) {
+        if (CollectionUtil.isEmpty(list)) {
+            return new ArrayList<>();
+        }
+        if (list.size() <= num) {
+            return list;
+        }
+        Collections.shuffle(list);
+        return list.subList(0, num);
+    }
 }
