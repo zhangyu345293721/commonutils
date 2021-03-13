@@ -1,5 +1,5 @@
 # commonutils 
-###    java           常用帮助类
+###   java         常用帮助类
  很多逻辑写过,为了减少重复性工作, 将平时经常用到的一些方法封装成工具类 <br>
 - base包下：
    - ArrayUtils  数组操作工具类
@@ -29,7 +29,7 @@
      -  ImageUtil 图像处理工具类
    - math     数学操作
       - BigDecimalUtils 大数计算工具类
-   - sort        排序
+   - sort       排序
       - BinarySearch 二分查找
       - BubbleSort 冒泡排序
       - QuickSort  快速排序
