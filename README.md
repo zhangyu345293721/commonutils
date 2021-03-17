@@ -29,8 +29,3 @@
      -  ImageUtil 图像处理工具类
    - math     数学操作
       - BigDecimalUtils 大数计算工具类
-   - sort       排序
-      - BinarySearch 二分查找
-      - BubbleSort 冒泡排序
-      - QuickSort  快速排序
-      - SelectSort 选择排序
