@@ -4,7 +4,7 @@ import java.lang.reflect.Array;
 import java.util.*;
 
 /**
- * 数组的工具类
+ * 数组工具类
  *
  * @author zhangyu (zhangyuyu417@gmail.com)
  */
