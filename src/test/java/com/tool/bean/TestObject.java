@@ -6,7 +6,6 @@ import lombok.Data;
 /**
  * @author: zhangyu
  */
-
 @Data
 @AllArgsConstructor
 public class TestObject {
