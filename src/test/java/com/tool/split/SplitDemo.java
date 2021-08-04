@@ -22,8 +22,6 @@ public class SplitDemo {
             tempList.add(s);
         }
         System.out.println(tempList.size());
-
-
     }
 
 
