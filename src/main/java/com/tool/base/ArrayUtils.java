@@ -112,7 +112,6 @@ public class ArrayUtils {
         return array == null || array.length == 0;
     }
 
-
     /**
      * 数组是否为不空
      *
@@ -628,7 +627,7 @@ public class ArrayUtils {
      */
     private static int getListMaxValueIndex(List<Integer> list) {
         int max = list.get(0);
-        //最大值下标
+        // 最大值下标
         int max_a = 0;
         for (int i = 0; i < list.size(); i++) {
             if (list.get(i) > list.get(max_a)) {
@@ -657,7 +656,7 @@ public class ArrayUtils {
      */
     private static int getListMinValueIndex(List<Integer> list) {
         int min = list.get(0);
-        //最大值下标
+        // 最大值下标
         int min_a = 0;
         for (int i = 0; i < list.size(); i++) {
             if (list.get(i) < list.get(min_a)) {
