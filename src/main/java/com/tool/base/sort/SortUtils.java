@@ -16,7 +16,7 @@ public class SortUtils {
     }
 
     /**
-     * 如果找到了直接进行返回，如果没有找到就继续去找
+     *  如果找到了直接进行返回，如果没有找到就继续去找
      *
      * @param arr 数组
      * @param key 关键字
