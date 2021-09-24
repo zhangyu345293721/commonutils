@@ -14,9 +14,9 @@ import java.util.zip.ZipOutputStream;
  *
  * @author zhangyu (zhangyuyu417@gmail.com)
  */
-public class ZipUitls {
+public class ZipUtils {
 
-    private ZipUitls() {
+    private ZipUtils() {
     }
 
     /**

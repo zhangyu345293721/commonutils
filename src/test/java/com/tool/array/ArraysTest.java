@@ -115,7 +115,7 @@ public class ArraysTest {
     }
 
     @Test
-    public void merageArrayTestDemo() {
+    public void mergeArrayTestDemo() {
         int[] nums1 = {1, 2, 3, 0, 0, 0};
         int[] nums2 = {2, 5, 6};
         merge(nums1, 3, nums2, 3);
