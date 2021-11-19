@@ -655,6 +655,7 @@ public class ArrayUtils {
      * @return 返回int最下值的下标
      */
     private static int getListMinValueIndex(List<Integer> list) {
+        int min = list.get(0);
         // 最大值下标
         int min_a = 0;
         for (int i = 0; i < list.size(); i++) {
@@ -691,7 +692,7 @@ public class ArrayUtils {
     }
 
     /**
-     * 链表中随机选择一定数量的元素，随机选择数组
+     * 链表中随机选择一定数量的元素
      *
      * @param list 对象链表
      * @param num  选择链表长度

@@ -1,6 +1,6 @@
 
-^squid:S00112I"FDefine and throw a dedicated exception instead of using a generic one.(ÐÔÞ±
-Vsquid:S2278D"?Use the recommended AES (Advanced Encryption Standard) instead.(°‘€­
-csquid:S00112."FDefine and throw a dedicated exception instead of using a generic one.(ÆŠ¶ºýÿÿÿÿ
 Vsquid:S2278)"?Use the recommended AES (Advanced Encryption Standard) instead.(°‘€­
+csquid:S00112."FDefine and throw a dedicated exception instead of using a generic one.(ÆŠ¶ºýÿÿÿÿ
+^squid:S00112I"FDefine and throw a dedicated exception instead of using a generic one.(ÐÔÞ±
 osquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(ª¡ãßøÿÿÿÿ
+Vsquid:S2278D"?Use the recommended AES (Advanced Encryption Standard) instead.(°‘€­
