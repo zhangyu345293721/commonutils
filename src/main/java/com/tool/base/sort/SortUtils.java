@@ -22,7 +22,7 @@ public class SortUtils {
      * @param key 关键字
      * @return 位置
      */
-    public int binarySearch(int[] arr, int key) {
+    public static int binarySearch(int[] arr, int key) {
         int i = 0;
         int j = arr.length - 1;
         while (i < j) {
@@ -124,7 +124,7 @@ public class SortUtils {
      *
      * @param arr 数组
      */
-    public void bubbleSort(int[] arr) {
+    public static void bubbleSort(int[] arr) {
         for (int i = 0; i < arr.length - 1; i++) {
             for (int j = 0; j < arr.length - 1 - i; j++) {
                 if (arr[j] > arr[j + 1]) {
