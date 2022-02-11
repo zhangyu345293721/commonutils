@@ -138,6 +138,9 @@ public class CollectionUtil {
      * @return String
      */
     public static String getMinKeysValue(Map<Integer, String> map) {
+        if (map == null || map.size() < 1) {
+            return new String();
+        }
         int key = map.keySet().stream().min(Comparator.comparing(Function.identity())).get();
         return map.get(key);
     }
