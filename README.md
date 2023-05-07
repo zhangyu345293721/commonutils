@@ -22,7 +22,7 @@
      -  DESUtils DES加解密工具类
      -  EncryptAndDecryptUtils 加解密工具类
      -  MD5Utils MD5加密
-   - file    文件操作
+   - file   文件操作
      -  FileUtils 文件工具类
      -  ZipUitls 文件压缩工具类
    - image    图像处理
