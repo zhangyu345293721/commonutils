@@ -45,8 +45,9 @@ public class SortUtils {
      * @return int[] 数组
      */
     public static int[] selectSort(int[] arr) {
-        for (int i = 0; i < arr.length - 1; i++) {
-            for (int j = i + 1; j < arr.length; j++) {
+        int len = arr.length;
+        for (int i = 0; i < len - 1; i++) {
+            for (int j = i + 1; j < len; j++) {
                 if (arr[i] > arr[j]) {
                     swap(arr, i, j);
                 }
