@@ -45,6 +45,9 @@ public class SortUtils {
      * @return int[] 数组
      */
     public static int[] selectSort(int[] arr) {
+        if(arr == null || arr.length < 2) {
+            return arr;
+        }
         int len = arr.length;
         for (int i = 0; i < len - 1; i++) {
             for (int j = i + 1; j < len; j++) {
@@ -126,6 +129,9 @@ public class SortUtils {
      * @param arr 数组
      */
     public static void bubbleSort(int[] arr) {
+        if(arr == null || arr.length < 2) {
+            return arr;
+        }
         int len = arr.length;
         for (int i = 0; i < len - 1; i++) {
             for (int j = 0; j < len - 1 - i; j++) {
