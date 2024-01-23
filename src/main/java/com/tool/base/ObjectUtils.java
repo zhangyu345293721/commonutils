@@ -1,7 +1,7 @@
 package com.tool.base;
 
 /**
- * 判断对象是否为空
+ * ObjectUtils
  *
  * @author zhangyu (zhangyuyu417@gmail.com)
  */
@@ -60,7 +60,6 @@ public class ObjectUtils {
     /**
      * 判断运行的系统是不是windows
      */
-
     public static boolean isWindows() {
         return System.getProperty("os.name").toLowerCase().contains("windows");
     }
