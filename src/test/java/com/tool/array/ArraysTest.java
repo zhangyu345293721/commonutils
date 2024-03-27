@@ -1,7 +1,7 @@
 package com.tool.array;
 
 /**
- * 随机打印出来所有的数组
+ *  随机打印出来所有的数组
  *
  * @author zhangyu
  */
