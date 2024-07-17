@@ -628,14 +628,14 @@ public class ArrayUtils {
     private static int getListMaxValueIndex(List<Integer> list) {
         int max = list.get(0);
         // 最大值下标
-        int max_a = 0;
+        int maxA = 0;
         for (int i = 0; i < list.size(); i++) {
-            if (list.get(i) > list.get(max_a)) {
+            if (list.get(i) > list.get(maxA)) {
                 max = list.get(i);
-                max_a = i;
+                maxA = i;
             }
         }
-        return max_a;
+        return maxA;
     }
 
     /**
@@ -657,13 +657,13 @@ public class ArrayUtils {
     private static int getListMinValueIndex(List<Integer> list) {
         int min = list.get(0);
         // 最大值下标
-        int min_a = 0;
+        int maxA = 0;
         for (int i = 0; i < list.size(); i++) {
-            if (list.get(i) < list.get(min_a)) {
-                min_a = i;
+            if (list.get(i) < list.get(maxA)) {
+                maxA = i;
             }
         }
-        return min_a;
+        return maxA;
     }
 
     /**
