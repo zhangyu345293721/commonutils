@@ -708,4 +708,104 @@ public class ArrayUtils {
         Collections.shuffle(list);
         return list.subList(0, num);
     }
+   
+    /**
+     * 扁平化二维对象数组为一维数组
+     */
+    public static <E> E[] flatten(E[][] array2d) {
+        if (array2d == null) return null;
+        int total = 0;
+        for (E[] row : array2d) total += (row == null ? 0 : row.length);
+        Class<?> componentType = array2d.getClass().getComponentType().getComponentType();
+        @SuppressWarnings("unchecked")
+        E[] result = (E[]) Array.newInstance(componentType, total);
+        int idx = 0;
+        for (E[] row : array2d) {
+            if (row == null) continue;
+            for (E e : row) result[idx++] = e;
+        }
+        return result;
+    }
+     // ---------- 随机选择（数组/集合） ----------
+
+    /**
+     * 从数组中随机选择num个元素（不改变原数组），当num>=数组长度时返回原数组的副本
+     */
+    public static <E> E[] randomPick(E[] array, int num) {
+        if (array == null) return null;
+        int len = array.length;
+        if (num <= 0) {
+            @SuppressWarnings("unchecked")
+            E[] empty = (E[]) Array.newInstance(array.getClass().getComponentType(), 0);
+            return empty;
+        }
+        if (num >= len) return Arrays.copyOf(array, len);
+        List<E> list = new ArrayList<>(Arrays.asList(array));
+        Collections.shuffle(list);
+        @SuppressWarnings("unchecked")
+        E[] result = (E[]) Array.newInstance(array.getClass().getComponentType(), num);
+        for (int i = 0; i < num; i++) result[i] = list.get(i);
+        return result;
+    }
+    /**
+     * 修正：不依赖外部CollectionUtil
+     */
+    public static <T> List<T> getRandomListSafe(List<T> list, int num) {
+        if (list == null || list.isEmpty()) {
+            return new ArrayList<>();
+        }
+        if (num <= 0) {
+            return new ArrayList<>();
+        }
+        if (list.size() <= num) {
+            return new ArrayList<>(list);
+        }
+        List<T> copy = new ArrayList<>(list);
+        Collections.shuffle(copy);
+        return new ArrayList<>(copy.subList(0, num));
+    }
+     /**
+     * 复制数组（对象数组）
+     */
+    public static <E> E[] copyOf(E[] array) {
+        return array == null ? null : Arrays.copyOf(array, array.length);
+    }
+     /**
+     * 复制数组（原始类型）
+     */
+    public static boolean[] copyOf(boolean[] array) {
+        return array == null ? null : Arrays.copyOf(array, array.length);
+    }
+     /**
+     * 提取子数组：start（包含）到 end（不包含），越界将裁剪到有效范围
+     */
+    public static <E> E[] subArray(E[] array, int start, int end) {
+        if (array == null) return null;
+        int len = array.length;
+        int s = Math.max(0, start);
+        int e = Math.min(len, Math.max(s, end));
+        return Arrays.copyOfRange(array, s, e);
+    }
+     /**
+     * 拼接两个对象数组（保持组件类型）
+     */
+    public static <E> E[] concat(E[] a, E[] b) {
+        if (a == null) return b == null ? null : Arrays.copyOf(b, b.length);
+        if (b == null) return Arrays.copyOf(a, a.length);
+        Class<?> componentType = a.getClass().getComponentType();
+        @SuppressWarnings("unchecked")
+        E[] result = (E[]) Array.newInstance(componentType, a.length + b.length);
+        System.arraycopy(a, 0, result, 0, a.length);
+        System.arraycopy(b, 0, result, a.length, b.length);
+        return result;
+    }
+
+    public static int[] concat(int[] a, int[] b) {
+        if (a == null) return b == null ? null : Arrays.copyOf(b, b.length);
+        if (b == null) return Arrays.copyOf(a, a.length);
+        int[] r = new int[a.length + b.length];
+        System.arraycopy(a, 0, r, 0, a.length);
+        System.arraycopy(b, 0, r, a.length, b.length);
+        return r;
+    }
 }
