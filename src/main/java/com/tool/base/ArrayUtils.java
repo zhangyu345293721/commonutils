@@ -786,4 +786,26 @@ public class ArrayUtils {
         int e = Math.min(len, Math.max(s, end));
         return Arrays.copyOfRange(array, s, e);
     }
+     /**
+     * 拼接两个对象数组（保持组件类型）
+     */
+    public static <E> E[] concat(E[] a, E[] b) {
+        if (a == null) return b == null ? null : Arrays.copyOf(b, b.length);
+        if (b == null) return Arrays.copyOf(a, a.length);
+        Class<?> componentType = a.getClass().getComponentType();
+        @SuppressWarnings("unchecked")
+        E[] result = (E[]) Array.newInstance(componentType, a.length + b.length);
+        System.arraycopy(a, 0, result, 0, a.length);
+        System.arraycopy(b, 0, result, a.length, b.length);
+        return result;
+    }
+
+    public static int[] concat(int[] a, int[] b) {
+        if (a == null) return b == null ? null : Arrays.copyOf(b, b.length);
+        if (b == null) return Arrays.copyOf(a, a.length);
+        int[] r = new int[a.length + b.length];
+        System.arraycopy(a, 0, r, 0, a.length);
+        System.arraycopy(b, 0, r, a.length, b.length);
+        return r;
+    }
 }
