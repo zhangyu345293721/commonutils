@@ -747,4 +747,21 @@ public class ArrayUtils {
         for (int i = 0; i < num; i++) result[i] = list.get(i);
         return result;
     }
+    /**
+     * 修正：不依赖外部CollectionUtil
+     */
+    public static <T> List<T> getRandomListSafe(List<T> list, int num) {
+        if (list == null || list.isEmpty()) {
+            return new ArrayList<>();
+        }
+        if (num <= 0) {
+            return new ArrayList<>();
+        }
+        if (list.size() <= num) {
+            return new ArrayList<>(list);
+        }
+        List<T> copy = new ArrayList<>(list);
+        Collections.shuffle(copy);
+        return new ArrayList<>(copy.subList(0, num));
+    }
 }
