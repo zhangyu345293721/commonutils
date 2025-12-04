@@ -726,4 +726,25 @@ public class ArrayUtils {
         }
         return result;
     }
+     // ---------- 随机选择（数组/集合） ----------
+
+    /**
+     * 从数组中随机选择num个元素（不改变原数组），当num>=数组长度时返回原数组的副本
+     */
+    public static <E> E[] randomPick(E[] array, int num) {
+        if (array == null) return null;
+        int len = array.length;
+        if (num <= 0) {
+            @SuppressWarnings("unchecked")
+            E[] empty = (E[]) Array.newInstance(array.getClass().getComponentType(), 0);
+            return empty;
+        }
+        if (num >= len) return Arrays.copyOf(array, len);
+        List<E> list = new ArrayList<>(Arrays.asList(array));
+        Collections.shuffle(list);
+        @SuppressWarnings("unchecked")
+        E[] result = (E[]) Array.newInstance(array.getClass().getComponentType(), num);
+        for (int i = 0; i < num; i++) result[i] = list.get(i);
+        return result;
+    }
 }
