@@ -776,4 +776,14 @@ public class ArrayUtils {
     public static boolean[] copyOf(boolean[] array) {
         return array == null ? null : Arrays.copyOf(array, array.length);
     }
+     /**
+     * 提取子数组：start（包含）到 end（不包含），越界将裁剪到有效范围
+     */
+    public static <E> E[] subArray(E[] array, int start, int end) {
+        if (array == null) return null;
+        int len = array.length;
+        int s = Math.max(0, start);
+        int e = Math.min(len, Math.max(s, end));
+        return Arrays.copyOfRange(array, s, e);
+    }
 }
