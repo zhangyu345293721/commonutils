@@ -708,4 +708,22 @@ public class ArrayUtils {
         Collections.shuffle(list);
         return list.subList(0, num);
     }
+   
+    /**
+     * 扁平化二维对象数组为一维数组
+     */
+    public static <E> E[] flatten(E[][] array2d) {
+        if (array2d == null) return null;
+        int total = 0;
+        for (E[] row : array2d) total += (row == null ? 0 : row.length);
+        Class<?> componentType = array2d.getClass().getComponentType().getComponentType();
+        @SuppressWarnings("unchecked")
+        E[] result = (E[]) Array.newInstance(componentType, total);
+        int idx = 0;
+        for (E[] row : array2d) {
+            if (row == null) continue;
+            for (E e : row) result[idx++] = e;
+        }
+        return result;
+    }
 }
