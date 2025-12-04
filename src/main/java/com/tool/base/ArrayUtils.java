@@ -764,4 +764,10 @@ public class ArrayUtils {
         Collections.shuffle(copy);
         return new ArrayList<>(copy.subList(0, num));
     }
+     /**
+     * 复制数组（对象数组）
+     */
+    public static <E> E[] copyOf(E[] array) {
+        return array == null ? null : Arrays.copyOf(array, array.length);
+    }
 }
