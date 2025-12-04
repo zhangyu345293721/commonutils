@@ -770,4 +770,10 @@ public class ArrayUtils {
     public static <E> E[] copyOf(E[] array) {
         return array == null ? null : Arrays.copyOf(array, array.length);
     }
+     /**
+     * 复制数组（原始类型）
+     */
+    public static boolean[] copyOf(boolean[] array) {
+        return array == null ? null : Arrays.copyOf(array, array.length);
+    }
 }
