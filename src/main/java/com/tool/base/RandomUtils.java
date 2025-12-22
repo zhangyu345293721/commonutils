@@ -323,4 +323,17 @@ public class RandomUtils {
             return out;
         }
     }
+    /**
+     * 4) 正态分布随机数，指定均值与标准差
+     *
+     * @param mean 均值
+     * @param stdDev 标准差（>0）
+     * @return 服从N(mean, stdDev^2)的随机数
+     */
+    public static double gaussian(double mean, double stdDev) {
+        if (stdDev <= 0) {
+            throw new IllegalArgumentException("stdDev must be > 0");
+        }
+        return mean + stdDev * getRandom().nextGaussian();
+    }
 }
