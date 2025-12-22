@@ -273,4 +273,54 @@ public class RandomUtils {
         }
         return getRandom().nextDouble() < p;
     }
+    /**
+     * 3) 生成区间内不重复的n个随机整数（[x, y] 且 x>=0, y>x）
+     *
+     * @param n 需要的数量（0 <= n <= y-x+1）
+     * @param x 区间下界（包含，且 >=0）
+     * @param y 区间上界（包含，且 > x）
+     * @return 不重复的随机整数数组（长度为n）
+     */
+    public static int[] distinctIntSeeds(int n, int x, int y) {
+        if (x < 0) {
+            throw new IllegalArgumentException(GREATER_THAN);
+        }
+        if (x >= y) {
+            throw new IllegalArgumentException(Y_GREATER_THAN_X);
+        }
+        int size = y - x + 1;
+        if (n < 0 || n > size) {
+            throw new IllegalArgumentException("n must be in [0, y-x+1]");
+        }
+        // 当n接近size时，使用池抽取更高效；当n远小于size时，用set采样
+        if (n > size / 2) {
+            // 生成池然后部分洗牌
+            int[] pool = new int[size];
+            for (int i = 0; i < size; i++) {
+                pool[i] = x + i;
+            }
+            Random r = getRandom();
+            for (int i = 0; i < n; i++) {
+                int j = i + r.nextInt(size - i);
+                int tmp = pool[i];
+                pool[i] = pool[j];
+                pool[j] = tmp;
+            }
+            int[] out = new int[n];
+            System.arraycopy(pool, 0, out, 0, n);
+            return out;
+        } else {
+            HashSet<Integer> set = new HashSet<>(n * 2 + 1);
+            Random r = getRandom();
+            while (set.size() < n) {
+                set.add(x + r.nextInt(size));
+            }
+            int[] out = new int[n];
+            int idx = 0;
+            for (Integer v : set) {
+                out[idx++] = v;
+            }
+            return out;
+        }
+    }
 }
