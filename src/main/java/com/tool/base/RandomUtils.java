@@ -336,4 +336,34 @@ public class RandomUtils {
         }
         return mean + stdDev * getRandom().nextGaussian();
     }
+    /**
+     * 5) 生成指定区间的随机BigDecimal，保留scale位小数
+     *
+     * @param min 最小值（包含）
+     * @param max 最大值（包含，且 > min）
+     * @param scale 小数位（>=0）
+     * @return 随机BigDecimal
+     */
+    public static BigDecimal bigDecimalSeed(BigDecimal min, BigDecimal max, int scale) {
+        if (min == null || max == null) {
+            throw new IllegalArgumentException("min/max must not be null");
+        }
+        if (min.compareTo(max) >= 0) {
+            throw new IllegalArgumentException("max must be greater than min");
+        }
+        if (scale < 0) {
+            throw new IllegalArgumentException("scale must be >= 0");
+        }
+        BigDecimal range = max.subtract(min);
+        // 生成[0,1)的随机BigDecimal
+        double u = getRandom().nextDouble();
+        BigDecimal rnd = new BigDecimal(Double.toString(u));
+        BigDecimal value = min.add(range.multiply(rnd));
+        return value.setScale(scale, BigDecimal.ROUND_HALF_UP);
+    }
+
+    // 可选：便捷方法：生成十六进制字符串（如需要可使用 generateString(length, "0123456789abcdef")）
+    public static String generateHexString(int length) {
+        return generateString(length, "0123456789abcdef");
+    }
 }
