@@ -145,4 +145,21 @@ public class ConvertDateUtils {
         }
         return defaultValue;
     }
+     /**
+     * 日期转换为纪元秒（Unix Timestamp，单位秒）
+     *
+     * @param date          待转换日期
+     * @param defaultValue  默认值
+     * @return              纪元秒，或默认值
+     */
+    public static long dateToEpochSeconds(Date date, long defaultValue) {
+        try {
+            if (date == null) {
+                return defaultValue;
+            }
+            return date.getTime() / 1000L;
+        } catch (Exception e) {
+            return defaultValue;
+        }
+    }
 }
