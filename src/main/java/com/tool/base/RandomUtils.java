@@ -240,4 +240,25 @@ public class RandomUtils {
         }
         return (char) (getRandom().nextInt(y - x + 1) + x);
     }
+     /**
+     * 1) 按给定字符集生成定长随机字符串
+     *
+     * @param length 生成长度（>=0）
+     * @param charset 字符集，非空且长度>0
+     * @return 随机字符串
+     */
+    public static String generateString(int length, String charset) {
+        if (length < 0) {
+            throw new IllegalArgumentException("length must be >= 0");
+        }
+        if (charset == null || charset.isEmpty()) {
+            throw new IllegalArgumentException("charset must not be empty");
+        }
+        StringBuilder sb = new StringBuilder(length);
+        Random r = getRandom();
+        for (int i = 0; i < length; i++) {
+            sb.append(charset.charAt(r.nextInt(charset.length())));
+        }
+        return sb.toString();
+    }
 }
