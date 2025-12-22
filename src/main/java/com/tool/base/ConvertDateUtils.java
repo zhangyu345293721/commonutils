@@ -121,4 +121,28 @@ public class ConvertDateUtils {
     public static java.util.Date qlTimestampToDate(Timestamp date) {
         return new Date(date.getTime());
     }
+    /**
+     * 使用多个日期格式尝试解析字符串，成功则返回解析结果，否则返回默认值
+     *
+     * @param str           待解析的字符串
+     * @param formats       日期格式数组，例如：{"yyyy-MM-dd", "yyyy/MM/dd HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss.SSSXXX"}
+     * @param defaultValue  默认日期
+     * @return              解析得到的日期或默认值
+     */
+    public static Date strToDateTryFormats(String str, String[] formats, Date defaultValue) {
+        if (str == null || formats == null) {
+            return defaultValue;
+        }
+        for (String format : formats) {
+            try {
+                SimpleDateFormat sdf = new SimpleDateFormat(format);
+                Date parsed = sdf.parse(str);
+                if (parsed != null) {
+                    return parsed;
+                }
+            } catch (Exception ignore) {
+            }
+        }
+        return defaultValue;
+    }
 }
