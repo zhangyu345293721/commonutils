@@ -261,4 +261,16 @@ public class RandomUtils {
         }
         return sb.toString();
     }
+     /**
+     * 2) 带概率的布尔随机：返回true的概率为p（0<=p<=1）
+     *
+     * @param p 返回true的概率
+     * @return 随机布尔
+     */
+    public static boolean boolSeed(double p) {
+        if (p < 0.0 || p > 1.0) {
+            throw new IllegalArgumentException("p must be in [0,1]");
+        }
+        return getRandom().nextDouble() < p;
+    }
 }
