@@ -162,4 +162,21 @@ public class ConvertDateUtils {
             return defaultValue;
         }
     }
+    /**
+     * 纪元秒（Unix Timestamp，单位秒）转换为日期
+     *
+     * @param epochSeconds  纪元秒
+     * @param defaultValue  默认日期
+     * @return              日期，或默认值
+     */
+    public static Date epochSecondsToDate(Long epochSeconds, Date defaultValue) {
+        try {
+            if (epochSeconds == null) {
+                return defaultValue;
+            }
+            return new Date(epochSeconds * 1000L);
+        } catch (Exception e) {
+            return defaultValue;
+        }
+    }
 }
