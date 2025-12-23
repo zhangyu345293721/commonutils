@@ -240,4 +240,130 @@ public class RandomUtils {
         }
         return (char) (getRandom().nextInt(y - x + 1) + x);
     }
+     /**
+     * 1) 按给定字符集生成定长随机字符串
+     *
+     * @param length 生成长度（>=0）
+     * @param charset 字符集，非空且长度>0
+     * @return 随机字符串
+     */
+    public static String generateString(int length, String charset) {
+        if (length < 0) {
+            throw new IllegalArgumentException("length must be >= 0");
+        }
+        if (charset == null || charset.isEmpty()) {
+            throw new IllegalArgumentException("charset must not be empty");
+        }
+        StringBuilder sb = new StringBuilder(length);
+        Random r = getRandom();
+        for (int i = 0; i < length; i++) {
+            sb.append(charset.charAt(r.nextInt(charset.length())));
+        }
+        return sb.toString();
+    }
+     /**
+     * 2) 带概率的布尔随机：返回true的概率为p（0<=p<=1）
+     *
+     * @param p 返回true的概率
+     * @return 随机布尔
+     */
+    public static boolean boolSeed(double p) {
+        if (p < 0.0 || p > 1.0) {
+            throw new IllegalArgumentException("p must be in [0,1]");
+        }
+        return getRandom().nextDouble() < p;
+    }
+    /**
+     * 3) 生成区间内不重复的n个随机整数（[x, y] 且 x>=0, y>x）
+     *
+     * @param n 需要的数量（0 <= n <= y-x+1）
+     * @param x 区间下界（包含，且 >=0）
+     * @param y 区间上界（包含，且 > x）
+     * @return 不重复的随机整数数组（长度为n）
+     */
+    public static int[] distinctIntSeeds(int n, int x, int y) {
+        if (x < 0) {
+            throw new IllegalArgumentException(GREATER_THAN);
+        }
+        if (x >= y) {
+            throw new IllegalArgumentException(Y_GREATER_THAN_X);
+        }
+        int size = y - x + 1;
+        if (n < 0 || n > size) {
+            throw new IllegalArgumentException("n must be in [0, y-x+1]");
+        }
+        // 当n接近size时，使用池抽取更高效；当n远小于size时，用set采样
+        if (n > size / 2) {
+            // 生成池然后部分洗牌
+            int[] pool = new int[size];
+            for (int i = 0; i < size; i++) {
+                pool[i] = x + i;
+            }
+            Random r = getRandom();
+            for (int i = 0; i < n; i++) {
+                int j = i + r.nextInt(size - i);
+                int tmp = pool[i];
+                pool[i] = pool[j];
+                pool[j] = tmp;
+            }
+            int[] out = new int[n];
+            System.arraycopy(pool, 0, out, 0, n);
+            return out;
+        } else {
+            HashSet<Integer> set = new HashSet<>(n * 2 + 1);
+            Random r = getRandom();
+            while (set.size() < n) {
+                set.add(x + r.nextInt(size));
+            }
+            int[] out = new int[n];
+            int idx = 0;
+            for (Integer v : set) {
+                out[idx++] = v;
+            }
+            return out;
+        }
+    }
+    /**
+     * 4) 正态分布随机数，指定均值与标准差
+     *
+     * @param mean 均值
+     * @param stdDev 标准差（>0）
+     * @return 服从N(mean, stdDev^2)的随机数
+     */
+    public static double gaussian(double mean, double stdDev) {
+        if (stdDev <= 0) {
+            throw new IllegalArgumentException("stdDev must be > 0");
+        }
+        return mean + stdDev * getRandom().nextGaussian();
+    }
+    /**
+     * 5) 生成指定区间的随机BigDecimal，保留scale位小数
+     *
+     * @param min 最小值（包含）
+     * @param max 最大值（包含，且 > min）
+     * @param scale 小数位（>=0）
+     * @return 随机BigDecimal
+     */
+    public static BigDecimal bigDecimalSeed(BigDecimal min, BigDecimal max, int scale) {
+        if (min == null || max == null) {
+            throw new IllegalArgumentException("min/max must not be null");
+        }
+        if (min.compareTo(max) >= 0) {
+            throw new IllegalArgumentException("max must be greater than min");
+        }
+        if (scale < 0) {
+            throw new IllegalArgumentException("scale must be >= 0");
+        }
+        BigDecimal range = max.subtract(min);
+        // 生成[0,1)的随机BigDecimal
+        double u = getRandom().nextDouble();
+        BigDecimal rnd = new BigDecimal(Double.toString(u));
+        BigDecimal value = min.add(range.multiply(rnd));
+        return value.setScale(scale, BigDecimal.ROUND_HALF_UP);
+    }
+
+    // 可选：便捷方法：生成十六进制字符串（如需要可使用 generateString(length, "0123456789abcdef")）
+    public static String generateHexString(int length) {
+        return generateString(length, "0123456789abcdef");
+    }
 }

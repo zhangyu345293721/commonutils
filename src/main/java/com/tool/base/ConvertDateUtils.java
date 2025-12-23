@@ -121,4 +121,62 @@ public class ConvertDateUtils {
     public static java.util.Date qlTimestampToDate(Timestamp date) {
         return new Date(date.getTime());
     }
+    /**
+     * 使用多个日期格式尝试解析字符串，成功则返回解析结果，否则返回默认值
+     *
+     * @param str           待解析的字符串
+     * @param formats       日期格式数组，例如：{"yyyy-MM-dd", "yyyy/MM/dd HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss.SSSXXX"}
+     * @param defaultValue  默认日期
+     * @return              解析得到的日期或默认值
+     */
+    public static Date strToDateTryFormats(String str, String[] formats, Date defaultValue) {
+        if (str == null || formats == null) {
+            return defaultValue;
+        }
+        for (String format : formats) {
+            try {
+                SimpleDateFormat sdf = new SimpleDateFormat(format);
+                Date parsed = sdf.parse(str);
+                if (parsed != null) {
+                    return parsed;
+                }
+            } catch (Exception ignore) {
+            }
+        }
+        return defaultValue;
+    }
+     /**
+     * 日期转换为纪元秒（Unix Timestamp，单位秒）
+     *
+     * @param date          待转换日期
+     * @param defaultValue  默认值
+     * @return              纪元秒，或默认值
+     */
+    public static long dateToEpochSeconds(Date date, long defaultValue) {
+        try {
+            if (date == null) {
+                return defaultValue;
+            }
+            return date.getTime() / 1000L;
+        } catch (Exception e) {
+            return defaultValue;
+        }
+    }
+    /**
+     * 纪元秒（Unix Timestamp，单位秒）转换为日期
+     *
+     * @param epochSeconds  纪元秒
+     * @param defaultValue  默认日期
+     * @return              日期，或默认值
+     */
+    public static Date epochSecondsToDate(Long epochSeconds, Date defaultValue) {
+        try {
+            if (epochSeconds == null) {
+                return defaultValue;
+            }
+            return new Date(epochSeconds * 1000L);
+        } catch (Exception e) {
+            return defaultValue;
+        }
+    }
 }
